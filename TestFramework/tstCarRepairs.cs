@@ -95,7 +95,24 @@ namespace TestFramework
             Int32 CarRepairID = 1;
             Found = AnCarRepair.Find(CarRepairID);
             Assert.IsTrue(Found);
-            //njdsfhbdfshbdsfjbsaliodhkabfkjsdbfjkdbfkjsbdfkjbsdkjfbskjdbfksjbdf
+            
+        }
+
+        [TestMethod]
+        public void TestCarRepairFound()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CarRepairID = 2;
+            Found = AnCarRepair.Find(CarRepairID);
+            if (AnCarRepair.CarRepairID != 2)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+
         }
     }
 }

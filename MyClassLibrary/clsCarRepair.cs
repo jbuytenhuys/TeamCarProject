@@ -4,6 +4,17 @@ namespace MyClassLibrary
 {
     public class clsCarRepair
     {
+        public int CarRepairID
+        {
+            get
+            {
+                return mCarRepairID;
+            }
+            set
+            {
+                mCarRepairID = value;
+            }
+        }
         public string CarManufacturer { get; set; }
         public string CarModel { get; set; }
         public int DaysInForRepair { get; set; }
@@ -11,10 +22,17 @@ namespace MyClassLibrary
         public decimal PartPrice { get; set; }
         public string PartRequired { get; set; }
         public bool RepairStatus { get; set; }
+        private Int32 mCarRepairID;
 
         public bool Find(int CarRepairID)
         {
+            mCarRepairID = 2;
             return true;
         }
+
+        
+        
+        
+
     }
 }

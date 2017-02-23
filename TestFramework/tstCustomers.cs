@@ -73,7 +73,7 @@ namespace Test_Framework
         [TestMethod]
         public void FindCustomerIDOK()
         {
-            //create an instance of the class we want to create
+            //create an instance of the class we want to create zad
             clsCustomer Customer = new clsCustomer();
             Boolean Found = false;
             Int32 CustomerID = 1;

@@ -18,7 +18,7 @@ namespace Test_Framework
         [TestMethod]
         public void ActiveOK()
         {
-            //create an instance of the class we want to create
+            //create an instance of the class we want to create zaddy
             clsCustomer Customer = new clsCustomer();
             Boolean TestData = true;
             Customer.Active = TestData;

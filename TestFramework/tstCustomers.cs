@@ -18,7 +18,7 @@ namespace Test_Framework
         [TestMethod]
         public void ActiveOK()
         {
-            //create an instance of the class we want to create zaddy
+            //create an instance of the class we want to create 
             clsCustomer Customer = new clsCustomer();
             Boolean TestData = true;
             Customer.Active = TestData;
@@ -32,6 +32,7 @@ namespace Test_Framework
             clsCustomer Customer = new clsCustomer();
             string TestData = "20 Forest Road";
             Customer.CustomerAddress = TestData;
+            //test to see that it exists
             Assert.AreEqual(Customer.CustomerAddress, TestData);
         }
         [TestMethod]
@@ -41,6 +42,7 @@ namespace Test_Framework
             clsCustomer Customer = new clsCustomer();
             string TestData = "smith@dmu.ac.uk";
             Customer.CustomerEmail = TestData;
+            //test to see that it exists
             Assert.AreEqual(Customer.CustomerEmail, TestData);
         }
         [TestMethod]
@@ -50,6 +52,7 @@ namespace Test_Framework
             clsCustomer Customer = new clsCustomer();
             string TestData = "smith";
             Customer.CustomerFirstName = TestData;
+            //test to see that it exists
             Assert.AreEqual(Customer.CustomerFirstName, TestData);
         }
         [TestMethod]
@@ -59,6 +62,7 @@ namespace Test_Framework
             clsCustomer Customer = new clsCustomer();
             string TestData = "LE1 5TH";
             Customer.CustomerPostCode = TestData;
+            //test to see that it exists
             Assert.AreEqual(Customer.CustomerPostCode, TestData);
         }
         [TestMethod]
@@ -68,6 +72,7 @@ namespace Test_Framework
             clsCustomer Customer = new clsCustomer();
             string TestData = "Paul";
             Customer.CustomerLastName = TestData;
+            //test to see that it exists
             Assert.AreEqual(Customer.CustomerLastName, TestData);
         }
         [TestMethod]
@@ -75,8 +80,11 @@ namespace Test_Framework
         {
             //create an instance of the class we want to create zad
             clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation 
             Boolean Found = false;
+            //create some test data to use with method
             Int32 CustomerID = 1;
+            //test to see that the result is correct
             Found = Customer.Find(CustomerID);
             Assert.IsTrue(Found);
         }

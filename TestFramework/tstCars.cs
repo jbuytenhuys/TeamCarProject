@@ -162,5 +162,27 @@ namespace TestFramework
             Assert.IsTrue(Ok);
         }
 
+        [TestMethod]
+        public void TestCarRegistrationPlateFound()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarManufacturer = new clsCar();
+            //boolean variable to store the result of search
+            Boolean Found = false;
+            //boolean variable to record if data is okay (assume it is).
+            Boolean Ok = true;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            //Invoke the method.
+            Found = AnCarManufacturer.Find(CarManufacturer);
+            //Check the Manufacturer.
+            if (AnCarManufacturer.CarRegistrationPlate != "GV06 DTN")
+            {
+                Ok = false;
+            }
+            //test to see if the result is correct.      
+            Assert.IsTrue(Ok);
+        }
+
     }
 }

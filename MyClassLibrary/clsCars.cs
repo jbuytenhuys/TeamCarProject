@@ -12,6 +12,7 @@ namespace MyClassLibrary
         private string mCarManufacturer;
         private string mCarModel;
         private string mCarColour;
+        private string mCarRegistration;
 
         public string CarColour
         {
@@ -48,7 +49,16 @@ namespace MyClassLibrary
         public bool CarNeedsRepair { get; set; }
         public int CarNumberOfDoors { get; set; }
         public int CarNumberOfSeats { get; set; }
-        public string CarRegistrationPlate { get; set; }
+        public string CarRegistrationPlate
+        {
+            get
+            //return the private data.
+            { return mCarRegistration; }
+
+            set
+            //set the value pf the private data member.
+            { mCarRegistration = value; }
+        }
         public bool CarSold { get; set; }
 
 
@@ -59,6 +69,7 @@ namespace MyClassLibrary
             mCarManufacturer = "Audi";
             mCarModel = "Test Model";
             mCarColour = "Test Colour";
+            mCarRegistration = "GV06 DTN";
             //always return true.
             return true;
         }

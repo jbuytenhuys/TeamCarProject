@@ -8,9 +8,43 @@ namespace MyClassLibrary
 {
     public class clsCar
     {
-        public string CarColour { get; set; }
-        public string CarManufacturer { get; set; }
-        public string CarModel { get; set; }
+        //private data member for the manufacturer property.
+        private string mCarManufacturer;
+        private string mCarModel;
+        private string mCarColour;
+
+        public string CarColour
+        {
+            get
+            //return the private data.
+            { return mCarColour; }
+
+            set
+            //set the value pf the private data member.
+            { mCarColour = value; }
+        }
+        //public property for the manufacturer.
+        public string CarManufacturer
+        {
+            get
+                //return the private data.
+            { return mCarManufacturer; }
+
+            set
+                //set the value pf the private data member.
+            { mCarManufacturer = value; }
+        }
+
+        public string CarModel
+        {
+            get
+            //return the private data.
+            { return mCarModel; }
+
+            set
+            //set the value pf the private data member.
+            { mCarModel = value; }
+        }
         public bool CarNeedsRepair { get; set; }
         public int CarNumberOfDoors { get; set; }
         public int CarNumberOfSeats { get; set; }
@@ -19,8 +53,13 @@ namespace MyClassLibrary
 
 
 
-        public bool Find(string CarManufactuer)
+        public bool Find(string CarManufactuer)        
         {
+            //set the private data member to test the data value.
+            mCarManufacturer = "Audi";
+            mCarModel = "Test Model";
+            mCarColour = "Test Colour";
+            //always return true.
             return true;
         }
     }

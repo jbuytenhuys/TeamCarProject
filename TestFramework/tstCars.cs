@@ -87,7 +87,7 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void FindManufacturerMethodOK()
+        public void FindMethodOK()
         {
             clsCar AnCarManufacturer = new clsCar();
             Boolean Found = false;
@@ -184,5 +184,92 @@ namespace TestFramework
             Assert.IsTrue(Ok);
         }
 
+        [TestMethod]
+        public void TestCarNeedsRepairFound()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarManufacturer = new clsCar();
+            //boolean variable to store the result of search
+            Boolean Found = false;
+            //boolean variable to record if data is okay (assume it is).
+            Boolean Ok = true;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            //Invoke the method.
+            Found = AnCarManufacturer.Find(CarManufacturer);
+            //Check the Manufacturer.
+            if (AnCarManufacturer.CarNeedsRepair != true)
+            {
+                Ok = false;
+            }
+            //test to see if the result is correct.      
+            Assert.IsTrue(Ok);
+        }
+
+        [TestMethod]
+        public void TestNumberOfDoorsFound()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarManufacturer = new clsCar();
+            //boolean variable to store the result of search
+            Boolean Found = false;
+            //boolean variable to record if data is okay (assume it is).
+            Boolean Ok = true;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            //Invoke the method.
+            Found = AnCarManufacturer.Find(CarManufacturer);
+            //Check the Manufacturer.
+            if (AnCarManufacturer.CarNumberOfDoors != 5)
+            {
+                Ok = false;
+            }
+            //test to see if the result is correct.      
+            Assert.IsTrue(Ok);
+        }
+
+        [TestMethod]
+        public void TestNumberOfSeatsFound()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarManufacturer = new clsCar();
+            //boolean variable to store the result of search
+            Boolean Found = false;
+            //boolean variable to record if data is okay (assume it is).
+            Boolean Ok = true;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            //Invoke the method.
+            Found = AnCarManufacturer.Find(CarManufacturer);
+            //Check the Manufacturer.
+            if (AnCarManufacturer.CarNumberOfSeats != 5)
+            {
+                Ok = false;
+            }
+            //test to see if the result is correct.      
+            Assert.IsTrue(Ok);
+        }
+
+        [TestMethod]
+        public void TestCarSoldFound()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarManufacturer = new clsCar();
+            //boolean variable to store the result of search
+            Boolean Found = false;
+            //boolean variable to record if data is okay (assume it is).
+            Boolean Ok = true;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            //Invoke the method.
+            Found = AnCarManufacturer.Find(CarManufacturer);
+            //Check the Manufacturer.
+            if (AnCarManufacturer.CarSold != true)
+            {
+                Ok = false;
+            }
+            //test to see if the result is correct.      
+            Assert.IsTrue(Ok);
+        }
     }
 }

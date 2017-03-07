@@ -13,6 +13,10 @@ namespace MyClassLibrary
         private string mCarModel;
         private string mCarColour;
         private string mCarRegistration;
+        private Boolean mCarNeedsRepair;
+        private Int32 mCarNumberOfDoors;
+        private Int32 mCarNumberOfSeats;
+        private Boolean mCarSold;
 
         public string CarColour
         {
@@ -46,9 +50,36 @@ namespace MyClassLibrary
             //set the value pf the private data member.
             { mCarModel = value; }
         }
-        public bool CarNeedsRepair { get; set; }
-        public int CarNumberOfDoors { get; set; }
-        public int CarNumberOfSeats { get; set; }
+        public bool CarNeedsRepair
+        {
+            get
+            //return the private data.
+            { return mCarNeedsRepair; }
+
+            set
+            //set the value pf the private data member.
+            { mCarNeedsRepair = value; }
+        }
+        public int CarNumberOfDoors
+        {
+            get
+            //return the private data.
+            { return mCarNumberOfDoors; }
+
+            set
+            //set the value pf the private data member.
+            { mCarNumberOfDoors = value; }
+        }
+        public int CarNumberOfSeats
+        {
+            get
+            //return the private data.
+            { return mCarNumberOfSeats; }
+
+            set
+            //set the value pf the private data member.
+            { mCarNumberOfSeats = value; }
+        }
         public string CarRegistrationPlate
         {
             get
@@ -59,7 +90,19 @@ namespace MyClassLibrary
             //set the value pf the private data member.
             { mCarRegistration = value; }
         }
-        public bool CarSold { get; set; }
+        public bool CarSold
+        {
+            get
+            //return the private data.
+            { return mCarSold; }
+
+            set
+            //set the value pf the private data member.
+            { mCarSold= value; }
+        }
+
+
+
 
 
 
@@ -70,6 +113,10 @@ namespace MyClassLibrary
             mCarModel = "Test Model";
             mCarColour = "Test Colour";
             mCarRegistration = "GV06 DTN";
+            mCarNeedsRepair = true;
+            mCarNumberOfDoors = 5;
+            mCarNumberOfSeats = 5;
+            mCarSold = true;
             //always return true.
             return true;
         }

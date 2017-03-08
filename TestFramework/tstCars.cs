@@ -89,10 +89,10 @@ namespace TestFramework
         [TestMethod]
         public void FindMethodOK()
         {
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             Boolean Found = false;
-            string CarManufacturer = "BMW";
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Int32 CarID = 2;
+            Found = AnCarID.Find(CarID);
             Assert.IsTrue(Found);
         }
 
@@ -100,17 +100,17 @@ namespace TestFramework
         public void TestManufacturerFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarManufacturer != "Audi")
+            if (AnCarID.CarManufacturer != "BMW")
             {
                 Ok = false;
             }
@@ -122,17 +122,17 @@ namespace TestFramework
         public void TestModelFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarModel != "Test Model")
+            if (AnCarID.CarModel != "DAVE")
             {
                 Ok = false;
             }
@@ -144,17 +144,17 @@ namespace TestFramework
         public void TestColourFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarColour != "Test Colour")
+            if (AnCarID.CarColour != "Blue")
             {
                 Ok = false;
             }
@@ -166,17 +166,17 @@ namespace TestFramework
         public void TestCarRegistrationPlateFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarRegistrationPlate != "GV06 DTN")
+            if (AnCarID.CarRegistrationPlate != "FE66 GTH")
             {
                 Ok = false;
             }
@@ -188,17 +188,17 @@ namespace TestFramework
         public void TestCarNeedsRepairFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarNeedsRepair != true)
+            if (AnCarID.CarNeedsRepair != false)
             {
                 Ok = false;
             }
@@ -210,17 +210,17 @@ namespace TestFramework
         public void TestNumberOfDoorsFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarNumberOfDoors != 5)
+            if (AnCarID.CarNumberOfDoors != 3)
             {
                 Ok = false;
             }
@@ -232,17 +232,17 @@ namespace TestFramework
         public void TestNumberOfSeatsFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarNumberOfSeats != 5)
+            if (AnCarID.CarNumberOfSeats != 2)
             {
                 Ok = false;
             }
@@ -254,17 +254,17 @@ namespace TestFramework
         public void TestCarSoldFound()
         {
             //create an instance of the class we want to create.
-            clsCar AnCarManufacturer = new clsCar();
+            clsCar AnCarID = new clsCar();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            string CarManufacturer = "Audi";
+            Int32 CarID = 2;
             //Invoke the method.
-            Found = AnCarManufacturer.Find(CarManufacturer);
+            Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
-            if (AnCarManufacturer.CarSold != true)
+            if (AnCarID.CarSold != false)
             {
                 Ok = false;
             }

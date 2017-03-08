@@ -4,35 +4,90 @@ namespace MyClassLibrary
 {
     public class clsCarRepair
     {
-        public int CarRepairID
+        private Int32 mCarID;
+        private int mDaysInForRepair;
+        private DateTime mDeadlineDate;
+        private decimal mPartPrice;
+        private string mPartRequired;
+        private bool mRepairStatus;
+
+        public int CarID
         {
             get
             {
-                return mCarRepairID;
+                return mCarID;
             }
             set
             {
-                mCarRepairID = value;
+                mCarID = value;
             }
         }
-        public string CarManufacturer { get; set; }
-        public string CarModel { get; set; }
-        public int DaysInForRepair { get; set; }
-        public DateTime DeadlineDate { get; set; }
-        public decimal PartPrice { get; set; }
-        public string PartRequired { get; set; }
-        public bool RepairStatus { get; set; }
-        private Int32 mCarRepairID;
-
-        public bool Find(int CarRepairID)
+        public int DaysInForRepair
         {
-            mCarRepairID = 2;
-            return true;
+            get
+            {
+                return mDaysInForRepair;
+            }
+            set
+            {
+                mDaysInForRepair = value;
+            }
+        }
+        public DateTime DeadlineDate
+        {
+            get
+            {
+                return mDeadlineDate;
+            }
+            set
+            {
+                mDeadlineDate = value;
+            }
+        }
+        public decimal PartPrice
+        {
+            get
+            {
+                return mPartPrice;
+            }
+            set
+            {
+                mPartPrice = value;
+            }
+        }
+        public string PartRequired
+        {
+            get
+            {
+                return mPartRequired;
+            }
+            set
+            {
+                mPartRequired = value;
+            }
+        }
+        public bool RepairStatus
+        {
+            get
+            {
+                return mRepairStatus;
+            }
+            set
+            {
+                mRepairStatus = value;
+            }
         }
 
-        
-        
-        
 
+        public bool Find(int CarID)
+        {
+            mCarID = 2;
+            mDaysInForRepair = 32;
+            mDeadlineDate = Convert.ToDateTime("21/03/2017");
+            mPartPrice = 2.2m;
+            mPartRequired = "Test Part";
+            mRepairStatus = true;
+            return true;
+        }
     }
 }

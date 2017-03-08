@@ -106,19 +106,35 @@ namespace MyClassLibrary
 
 
 
-        public bool Find(string CarManufactuer)        
+        public bool Find(Int32 CarID)        
         {
-            //set the private data member to test the data value.
-            mCarManufacturer = "Audi";
-            mCarModel = "Test Model";
-            mCarColour = "Test Colour";
-            mCarRegistration = "GV06 DTN";
-            mCarNeedsRepair = true;
-            mCarNumberOfDoors = 5;
-            mCarNumberOfSeats = 5;
-            mCarSold = true;
-            //always return true.
-            return true;
+            //Create an instance of the data connection.
+            clsDataConnection DB = new clsDataConnection();
+            //Add the parameter for the CarID to search for.
+            DB.AddParameter("@CarID", CarID);
+            //Execute stored procedure.
+            DB.Execute("sproc_tblCars_FilterByCarID");
+            //If one record is found (There should be 1 or 0)
+            if (DB.Count == 1)
+            {
+                //Copy Data from the database to the private data members.
+                mCarManufacturer = Convert.ToString(DB.DataTable.Rows[0]["CarManufacturer"]);
+                mCarModel = Convert.ToString(DB.DataTable.Rows[0]["CarModel"]);
+                mCarColour = Convert.ToString(DB.DataTable.Rows[0]["CarColour"]);
+                mCarRegistration = Convert.ToString(DB.DataTable.Rows[0]["CarRegistrationPlate"]);
+                mCarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[0]["CarNeedsRepair"]);
+                mCarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[0]["NumOfDoors"]);
+                mCarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[0]["NumOfSeats"]);
+                mCarSold = Convert.ToBoolean(DB.DataTable.Rows[0]["CarSold"]);
+                //return that everything worked okay.
+                return true;
+            }
+            //if no record wa found
+            else
+            {
+                //return false, indicating a problem
+                return false;
+            }
         }
     }
 }

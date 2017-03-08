@@ -136,5 +136,13 @@ namespace MyClassLibrary
                 return false;
             }
         }
+
+        public bool Valid(string carManufacturer, string carModel, string carRegistrationPlate, string carColour, int numOfDoors, int numOfSeats)
+        {
+            return true;
+        }
+
+
+
     }
 }

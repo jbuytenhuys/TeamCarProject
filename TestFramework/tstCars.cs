@@ -310,5 +310,30 @@ namespace TestFramework
             //test to see if the result is correct.      
             Assert.IsTrue(Ok);
         }
-    }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "FH63 GTE";
+            string CarColour = "Yellow";
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+
+
+           
+        }
 }
+

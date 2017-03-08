@@ -65,7 +65,7 @@ namespace Test_Framework
         {
             //create an instance of the class we want to create
             clsCustomer Customer = new clsCustomer();
-            string TestData = "smith";
+            string TestData = "Zad";
             Customer.CustomerFirstName = TestData;
             //test to see that it exists
             Assert.AreEqual(Customer.CustomerFirstName, TestData);
@@ -113,11 +113,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerID != 21)
+            if (Customer.CustomerID != 1)
             {
                 OK = false;
             }
@@ -134,11 +134,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerAddress != "Test Street")
+            if (Customer.CustomerAddress != "20 Austen avenue")
             {
                 OK = false;
             }
@@ -155,7 +155,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
@@ -176,11 +176,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerFirstName != "Charlie")
+            if (Customer.CustomerFirstName != "Zad")
             {
                 OK = false;
             }
@@ -197,11 +197,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerPostcodeOK != "XXX XXX")
+            if (Customer.CustomerPostcodeOK != "NG7 6PE")
             {
                 OK = false;
             }
@@ -218,11 +218,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerLastName != "KHAN")
+            if (Customer.CustomerLastName != "Ali")
             {
                 OK = false;
             }
@@ -239,11 +239,11 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the property
-            if (Customer.DateAddedOK != Convert.ToDateTime("16/09/2015"))
+            if (Customer.DateAddedOK != Convert.ToDateTime("08/03/2017"))
             {
                 OK = false;
             }
@@ -261,7 +261,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 21;
+            Int32 CustomerID = 1;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the property

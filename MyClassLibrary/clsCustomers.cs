@@ -4,7 +4,7 @@ namespace MyClassLibrary
 {
     public class clsCustomer
     {
-       
+
         //privae data member for the CustomerId property
         private Int32 mCustomerID;
         private string mCustomerAddress;
@@ -138,22 +138,35 @@ namespace MyClassLibrary
             }
         }
 
-        
 
-        public bool Find(int customerID)
+
+        public bool Find(int CustomerID)
         {
-            //set the private data member to the test data value
-            mCustomerID = 21;
-            mCustomerEmail = "zadbhatti@hotmail.com";
-            mCustomerFirstName = "Charlie";
-            mCustomerLastName = "KHAN";
-            mCustomerAddress = "Test Street";
-            mActiveOK = true;
-            mDateAddedOK = Convert.ToDateTime("16/09/2015");
-            mCustomerPostCodeOK = "XXX XXX";
-            //always return true
-            return true;
+            //create an instance of the DB connection 
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the customer id to search for
+            DB.AddParameter("@CustomerID", CustomerID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomers_FilterByCustomerNo");
+            //if one record is found
+            if (DB.Count == 1)
+            {
+                mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+                mCustomerEmail = Convert.ToString(DB.DataTable.Rows[0]["CustomerEmail"]);
+                mCustomerFirstName = Convert.ToString(DB.DataTable.Rows[0]["CustomerFirstName"]);
+                mCustomerLastName = Convert.ToString(DB.DataTable.Rows[0]["CustomerLastName"]);
+                mCustomerAddress = Convert.ToString(DB.DataTable.Rows[0]["CustomerAddress"]);
+                mActiveOK = Convert.ToBoolean(DB.DataTable.Rows[0]["ActiveOK"]);
+                mDateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAddedOK"]);
+                mCustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[0]["CustomerPostCodeOK"]);
+                //return everything that worked ok
+                return true;
+            }
+            else
+            {
+                //return false indicaing a problem
+                return false;
+            }
         }
-
     }
 }

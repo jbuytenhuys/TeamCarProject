@@ -12,7 +12,7 @@ namespace TestFramework
         {
             //create instance
             clsCarRepair AnCarRepair = new clsCarRepair();
-
+            //test to see that it exists
             Assert.IsNotNull(AnCarRepair);
         }
 
@@ -21,8 +21,11 @@ namespace TestFramework
         {
             //create instance
             clsCarRepair AnCarRepair = new clsCarRepair();
+            //create some test data
             Int32 TestData = 32;
+            //assign data to the property
             AnCarRepair.DaysInForRepair = TestData;
+            //test to see two values are the same
             Assert.AreEqual(AnCarRepair.DaysInForRepair, TestData);
         }
 
@@ -78,22 +81,6 @@ namespace TestFramework
             
         }
 
-        [TestMethod]
-        public void TestCarRepairIDFound()
-        {
-            //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
-            Boolean Found = false;
-            Boolean OK = true;
-            Int32 CarID = 2;
-            Found = AnCarRepair.Find(CarID);
-            if (AnCarRepair.CarID != 2)
-            {
-                OK = false;
-            }
-            Assert.IsTrue(OK);
-
-        }
 
         [TestMethod]
         public void TestPartRequiredFound()
@@ -102,7 +89,7 @@ namespace TestFramework
             clsCarRepair AnCarRepair = new clsCarRepair();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             Found = AnCarRepair.Find(CarID);
             if (AnCarRepair.PartRequired != "Test Part")
             {
@@ -119,9 +106,9 @@ namespace TestFramework
             clsCarRepair AnCarRepair = new clsCarRepair();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             Found = AnCarRepair.Find(CarID);
-            if (AnCarRepair.PartPrice != 2.2m)
+            if (AnCarRepair.PartPrice != 2.20m)
             {
                 OK = false;
             }
@@ -136,7 +123,7 @@ namespace TestFramework
             clsCarRepair AnCarRepair = new clsCarRepair();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             Found = AnCarRepair.Find(CarID);
             if (AnCarRepair.DeadlineDate != Convert.ToDateTime("21/03/2017"))
             {
@@ -153,9 +140,9 @@ namespace TestFramework
             clsCarRepair AnCarRepair = new clsCarRepair();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             Found = AnCarRepair.Find(CarID);
-            if (AnCarRepair.DaysInForRepair != 32)
+            if (AnCarRepair.DaysInForRepair != 30)
             {
                 OK = false;
             }
@@ -170,9 +157,26 @@ namespace TestFramework
             clsCarRepair AnCarRepair = new clsCarRepair();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             Found = AnCarRepair.Find(CarID);
             if (AnCarRepair.RepairStatus != true)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+
+        }
+
+        [TestMethod]
+        public void TestStaffIDFound()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 CarID = 1;
+            Found = AnCarRepair.Find(CarID);
+            if (AnCarRepair.StaffID != 1)
             {
                 OK = false;
             }

@@ -12,10 +12,10 @@ namespace MyClassLibrary
         private string mName;
         private string mPostcode;
         private string mPostionInCompany;
-        private string mSupplierID;
+        private Int32 mSupplierID;
         private string mSupplierName;
         private string mTitle;
-        private string mWorkExt;
+        private string mWorkExt;              
         private string mWorkNumber;
 
         public clsSupplier()
@@ -105,7 +105,7 @@ namespace MyClassLibrary
             //set the value pf the private data member.
             { mPostionInCompany = value; }
         }
-        public String SupplierID
+        public Int32 SupplierID
         {
             get
             //return the private data.
@@ -160,21 +160,44 @@ namespace MyClassLibrary
             { mWorkNumber = value; }
         }
 
-        public bool Find(string supplierID)
+        public bool Find(Int32 SupplierID)
         {
-            mSupplierID = "1";
-            mAddress = "r";
-            mCity = "b";
-            mCounty = "w";
-            mMoblie = "078";
-            mName = "Gurdip";
-            mSupplierName = "BMW";
-            mPostcode = "B69";
-            mPostionInCompany = "HeadOfSales";
-            mTitle = "Mr";
-            mWorkExt = "313";
-            mWorkNumber = "0121";
-            mDateAdded = Convert.ToDateTime("08/03/2017");
+        
+            //Create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the address no to search for
+            DB.AddParameter("@SupplierID", SupplierID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblSupplier_FilterBySupplierID");
+            //if one record is found (there should be either one or zero)
+            if (DB.Count == 1)
+            {
+                mSupplierID = Convert.ToInt32(DB.DataTable.Rows[0]["SupplierID"]);
+                mAddress = Convert.ToString(DB.DataTable.Rows[0]["Address"]);
+                mCity = Convert.ToString(DB.DataTable.Rows[0]["City"]);
+                mCounty = Convert.ToString(DB.DataTable.Rows[0]["County"]);
+                mMoblie = Convert.ToString(DB.DataTable.Rows[0]["Mobile"]);
+                mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
+                mSupplierName = Convert.ToString(DB.DataTable.Rows[0]["SupplierName"]);
+                mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
+                mPostionInCompany = Convert.ToString(DB.DataTable.Rows[0]["PostionInCompany"]);
+                mTitle = Convert.ToString(DB.DataTable.Rows[0]["Title"]);
+                mWorkExt = Convert.ToString(DB.DataTable.Rows[0]["WorkExt"]);
+                mWorkNumber = Convert.ToString(DB.DataTable.Rows[0]["WorkNumber"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                //return that everything worked ok
+                return true;
+                }
+            //if no record was found
+            else
+            {
+                // return false
+                return false;
+            }
+        }
+
+        public bool Valid(string address, string city, string county, string dateAdded, string mobile, string name, string postcode, string postionInCompany, string supplierName, string title, string workExt, string workNumber)
+        {
             return true;
         }
     }

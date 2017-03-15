@@ -137,5 +137,30 @@ namespace MyClassLibrary
             }
             
         }
+
+        public bool Valid(int DaysInForRepair, string DeadlineDate, decimal PartPrice, string PartRequired)
+        {
+            Boolean OK = true;
+            DateTime DateTemp;
+
+            if (DaysInForRepair == 0)
+            {
+                OK = false;
+            }
+
+            if (DaysInForRepair > 60)
+            {
+                OK = false;
+            }
+
+            DateTemp = Convert.ToDateTime(DeadlineDate);
+
+            if (DateTemp < DateTime.Now.Date)
+            {
+                OK = false;
+            }
+
+            return OK;
+        }
     }
 }

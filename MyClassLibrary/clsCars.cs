@@ -165,6 +165,18 @@ namespace MyClassLibrary
                 //set the flag to OK to false
                 OK = false;
             }
+            //if the CarRegistrationPlate is blank
+            if (CarRegistrationPlate.Length == 0)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the  CarRegistrationPlate is greater than 8 characters.
+            if (CarRegistrationPlate.Length > 8)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
             //return the value of OK
             return OK;
 

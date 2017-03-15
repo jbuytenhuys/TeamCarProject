@@ -109,9 +109,9 @@ namespace TestFramework
         public void SupplierIDOK()
         {
             clsSupplier Supplier = new clsSupplier();
-            String TestData = "12345678";
+            Int32 TestData =1;
             Supplier.SupplierID = TestData;
-            Supplier.SupplierID = TestData;
+            
             Assert.AreEqual(Supplier.SupplierID, TestData);
 
         }
@@ -134,11 +134,11 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void FindMethodOK()
+        public void SupplierFindMethodOK()
         {
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             Assert.IsTrue(Found);
         }
@@ -148,9 +148,9 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.Address != "r")
+            if (AnSupplier.Address != "19A")
             {
                 Ok = false;
             }
@@ -164,9 +164,9 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.City != "b")
+            if (AnSupplier.City != "Birmingham")
             {
                 Ok = false;
             }
@@ -180,7 +180,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.County != "w")
             {
@@ -196,7 +196,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.Mobile != "078")
             {
@@ -212,7 +212,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.Name != "Gurdip")
             {
@@ -228,7 +228,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.SupplierName != "BMW")
             {
@@ -244,9 +244,9 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.PostCode != "B69")
+            if (AnSupplier.PostCode != "B69 2HY")
             {
                 Ok = false;
             }
@@ -260,7 +260,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.PostionInCompany != "HeadOfSales")
             {
@@ -276,7 +276,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.Title != "Mr")
             {
@@ -292,7 +292,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.WorkExt != "313")
             {
@@ -308,9 +308,9 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.WorkNumber != "0121")
+            if (AnSupplier.WorkNumber != "121")
             {
                 Ok = false;
             }
@@ -324,7 +324,7 @@ namespace TestFramework
             clsSupplier AnSupplier = new clsSupplier();
             Boolean Found = false;
             Boolean Ok = true;
-            string SupplierID = "1";
+            Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
             if (AnSupplier.DateAdded != Convert.ToDateTime("08/03/2017"))
             {
@@ -334,6 +334,33 @@ namespace TestFramework
 
 
         }
+        [TestMethod]
+        public void SupplierValidMethodOK()
+        {
+            clsSupplier AnSupplier = new clsSupplier();
+            Boolean OK = false;
+            string Address = "12b";
+            string City = "Birmingham";
+            string County = "eastmidlands";
+            string DateAdded = DateTime.Now.Date.ToString();
+            String Mobile = "078";
+            String Name = "Mark";
+            string Postcode = "CV6";
+            String PostionInCompany = "Accounts";
+            string SupplierName = "Audi";
+            string Title = "Mr";
+            string WorkExt = "312";
+            string WorkNumber = "12134";
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            Assert.IsTrue(OK);
+
+        }
+
+
+
+
+
+
 
     }
 }

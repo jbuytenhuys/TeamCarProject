@@ -137,9 +137,50 @@ namespace MyClassLibrary
             }
         }
 
-        public bool Valid(string carManufacturer, string carModel, string carRegistrationPlate, string carColour, int numOfDoors, int numOfSeats)
+        public bool Valid(string CarManufacturer, string CarModel, string CarRegistrationPlate, string CarColour, int NumOfDoors, int NumOfSeats)
         {
-            return true;
+            //create a boolean variable to flag error
+            Boolean OK = true;
+            //if the Manufacturer is blank
+            if (CarManufacturer.Length == 0)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the manufacturer is greater than 32 characters.
+            if (CarManufacturer.Length > 32)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the car model is blank
+            if (CarModel.Length == 0)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the  car model is greater than 32 characters.
+            if (CarModel.Length > 32)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the CarRegistrationPlate is blank
+            if (CarRegistrationPlate.Length == 0)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the  CarRegistrationPlate is greater than 8 characters.
+            if (CarRegistrationPlate.Length > 8)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //return the value of OK
+            return OK;
+
+
         }
 
 

@@ -91,7 +91,7 @@ namespace Test_Framework
             Assert.AreEqual(Customer.CustomerLastName, TestData);
         }
         [TestMethod]
-        public void FindCustomerIDOK()
+        public void CustomerFindMethodOK()
         {
             //create an instance of the class we want to create
             clsCustomer Customer = new clsCustomer();
@@ -272,5 +272,61 @@ namespace Test_Framework
             //test to see that the result is coorecct
             Assert.IsTrue(OK);
         }
+        [TestMethod]
+        public void CustomerValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method 
+            string CustomerAddress = "20 Austen Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerAddressMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void CustomerAddressMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "";
+            string CustomerEmail = "20 A";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
     }
 }
+

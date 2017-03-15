@@ -168,5 +168,20 @@ namespace MyClassLibrary
                 return false;
             }
         }
+
+        public bool valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK)
+        {
+            //create a boolean variable to flag the error
+            Boolean OK = true;
+            //if the CustomerAddres is is blank 
+
+            if (CustomerAddress.Length ==0)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //return the value of OK
+            return OK;
+        }
     }
 }

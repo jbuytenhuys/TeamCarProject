@@ -121,7 +121,7 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void FindMethodOK()
+        public void CarFindMethodOK()
         {
             //Create an instance of the class we want to create.
             clsCar AnCarID = new clsCar();
@@ -312,7 +312,7 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void ValidMethodOK()
+        public void CarValidMethodOK()
         {
             //create an instance of the class we want to create.
             clsCar AnCarID = new clsCar();
@@ -332,8 +332,52 @@ namespace TestFramework
         }
 
 
-
-           
+        [TestMethod]
+        public void TestCarManufacturerMinlessOne()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = ""; //should trigger an error.
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "FH63 GTE";
+            string CarColour = "Yellow";
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
         }
+
+        [TestMethod]
+        public void TestCarManufacturerMin()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "A"; //should trigger an error.
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "FH63 GTE";
+            string CarColour = "Yellow";
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+
+
+
+
+
+
+    }
 }
 

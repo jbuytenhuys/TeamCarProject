@@ -196,9 +196,15 @@ namespace MyClassLibrary
             }
         }
 
-        public bool Valid(string address, string city, string county, string dateAdded, string mobile, string name, string postcode, string postionInCompany, string supplierName, string title, string workExt, string workNumber)
+
+        public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber)
         {
-            return true;
+            Boolean OK = true;
+            if (Address.Length == 0)
+            {
+                OK = false;
+            }
+            return OK;
         }
     }
 }

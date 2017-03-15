@@ -356,13 +356,36 @@ namespace TestFramework
 
         }
 
+        [TestMethod]
+        public void AddressNoMinLessOne()
+        {
+            clsSupplier AnSupplier = new clsSupplier();
+            Boolean OK = false;
+            string Address = "";
+            string City = "Birmingham";
+            string County = "eastmidlands";
+            string DateAdded = DateTime.Now.Date.ToString();
+            String Mobile = "078";
+            String Name = "Mark";
+            string Postcode = "CV6";
+            String PostionInCompany = "Accounts";
+            string SupplierName = "Audi";
+            string Title = "Mr";
+            string WorkExt = "312";
+            string WorkNumber = "12134";
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            Assert.IsFalse(OK);
 
 
 
 
 
 
-    }
+
+
+        }
+
+        }
 }
 
 

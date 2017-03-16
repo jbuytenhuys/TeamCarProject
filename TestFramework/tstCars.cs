@@ -818,7 +818,166 @@ namespace TestFramework
         }
 
 
+        [TestMethod]
+        public void TestCarColourMinLessOne()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = ""; //should return an error
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
 
+        [TestMethod]
+        public void TestCarColourMin()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "A"; //should be okay.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMinPlusOne()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "AA"; //should be okay.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMaxLessOne()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "31CharactersLongAAAAAAAAAAAAAAA"; //should be okay.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMax()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "32CharactersLongAAAAAAAAAAAAAAAA"; //should be okay.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMaxPlusOne()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "33CharactersLongAAAAAAAAAAAAAAAAA"; //should return an error.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMid()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "16CharactersLong"; //should return an error.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCarColourMaxExtreme()
+        {
+            //create an instance of the class we want to create.
+            clsCar AnCarID = new clsCar();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            string CarManufacturer = "Audi";
+            string CarModel = "RS4";
+            string CarRegistrationPlate = "16CharactersLong";
+            string CarColour = "";
+            CarColour = CarColour.PadRight(50, 'A'); //should trigger an error."1CharactersLong"; //should return an error.
+            Int32 NumOfDoors = 5;
+            Int32 NumOfSeats = 5;
+            //Invoke the method
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
 
 
 

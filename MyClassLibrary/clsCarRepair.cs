@@ -152,10 +152,43 @@ namespace MyClassLibrary
             {
                 OK = false;
             }
+            try
+            {
+                DateTemp = Convert.ToDateTime(DeadlineDate);
+                DateTime TestDate = DateTime.Now.Date;
 
-            DateTemp = Convert.ToDateTime(DeadlineDate);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    OK = false;
+                }
 
-            if (DateTemp < DateTime.Now.Date)
+                if (DateTemp > TestDate.AddDays(60))
+                {
+                    OK = false;
+                }
+            }
+
+            catch
+            {
+                OK = false;
+            }
+            
+            if (PartRequired.Length == 0)
+            {
+                OK = false;
+            }
+
+            if (PartRequired.Length >32)
+            {
+                OK = false;
+            }
+
+            if (PartPrice < 1m)
+            {
+                OK = false;
+            }
+
+            if (PartPrice > 10000m)
             {
                 OK = false;
             }

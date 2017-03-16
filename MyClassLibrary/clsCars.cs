@@ -141,6 +141,8 @@ namespace MyClassLibrary
         {
             //create a boolean variable to flag error
             Boolean OK = true;
+            //Create a temp variable to store numberValues.
+            Int32 NumberTemp;
             //if the Manufacturer is blank
             if (CarManufacturer.Length == 0)
             {
@@ -173,6 +175,41 @@ namespace MyClassLibrary
             }
             //if the  CarRegistrationPlate is greater than 8 characters.
             if (CarRegistrationPlate.Length > 8)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the CarColour is blank
+            if (CarColour.Length == 0)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //if the CarColour is greater than 8 characters.
+            if (CarColour.Length > 32)
+            {
+                //set the flag to OK to false
+                OK = false;
+            }
+            //Try the number of doors validation assuming the data is a valid integer.
+            //try
+           // {
+                //copy the numberofdoors value to the NumberOfDoorsTemp Variable.
+               // NumberTemp = Convert.ToInt32(NumOfDoors);
+                //if the Number of doors is below 2 or above 5
+                if (NumOfDoors < 2 | NumOfDoors > 5)
+                {
+                    //set the flag to OK to false
+                    OK = false;
+                }
+            //}
+            //The data was not an int so catch the data.
+            //catch
+            // {
+            //set the flag to OK to false
+            //  OK = false;
+            //  }
+            if (NumOfSeats < 1 | NumOfSeats > 7)
             {
                 //set the flag to OK to false
                 OK = false;

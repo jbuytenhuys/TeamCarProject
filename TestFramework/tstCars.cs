@@ -949,7 +949,7 @@ namespace TestFramework
             string CarManufacturer = "Audi";
             string CarModel = "RS4";
             string CarRegistrationPlate = "16CharactersLong";
-            string CarColour = "16CharactersLong"; //should return an error.
+            string CarColour = "16CharactersLong"; //should be okay.
             Int32 NumOfDoors = 5;
             Int32 NumOfSeats = 5;
             //Invoke the method
@@ -970,13 +970,13 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "16CharactersLong";
             string CarColour = "";
-            CarColour = CarColour.PadRight(50, 'A'); //should trigger an error."1CharactersLong"; //should return an error.
+            CarColour = CarColour.PadRight(50, 'A'); //should trigger an error.
             Int32 NumOfDoors = 5;
             Int32 NumOfSeats = 5;
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
 

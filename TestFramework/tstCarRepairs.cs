@@ -411,7 +411,7 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(-100);
+            TestDate = TestDate.AddDays(-100);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
@@ -432,7 +432,7 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(-1);
+            TestDate = TestDate.AddDays(-1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
@@ -457,7 +457,7 @@ namespace TestFramework
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
             //Test to see that the result is correct.
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -473,12 +473,12 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(1);
+            TestDate = TestDate.AddDays(1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
             //Test to see that the result is correct.
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -494,12 +494,12 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(59);
+            TestDate = TestDate.AddDays(59);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
             //Test to see that the result is correct.
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -515,12 +515,12 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(60);
+            TestDate = TestDate.AddDays(60);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
             //Test to see that the result is correct.
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -536,7 +536,7 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(61);
+            TestDate = TestDate.AddDays(61);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
@@ -557,13 +557,354 @@ namespace TestFramework
             string PartRequired = "Some part";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
-            TestDate = TestDate.AddYears(1000000);
+            TestDate = TestDate.AddDays(1000);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
             OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
+
+        [TestMethod]
+        public void DeadlineDateInvalidData()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 10;
+            decimal PartPrice = 12.99m;
+            string PartRequired = "Some part";
+            //Enter type that is not a date
+            string DeadlineDate = "Invalid data";
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMinLessOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMin()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "A";
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMinPlusOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "AA";
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMaxLessOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(31, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMax()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(32, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMaxPlusOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(33, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredExtremeMax()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(1000, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartRequiredMid()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 12.99m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceExtremeMin()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = -100m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMinLessOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 0m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMin()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 1m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMinPlusOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 2m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMaxLessOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 9999m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMax()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 10000m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMaxPlusOne()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 10001m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceExtremeMax()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 1000000m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void PartPriceMid()
+        {
+            //create instance
+            clsCarRepair AnCarRepair = new clsCarRepair();
+            //boolean variable to store the result of search
+            Boolean OK = false;
+            //Create some test data to use with the method.
+            Int32 DaysInForRepair = 30;
+            string DeadlineDate = DateTime.Now.Date.ToString();
+            decimal PartPrice = 5000m;
+            string PartRequired = "";
+            PartRequired = PartRequired.PadRight(16, 'A');
+            //Invoke the method
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            //Test to see that the result is correct.
+            Assert.IsTrue(OK);
+        }
+
+
 
 
     }

@@ -8,7 +8,8 @@ namespace MyClassLibrary
 {
     public class clsCar
     {
-        //private data member for the manufacturer property.
+        //private data member
+        private Int32 mCarID;
         private string mCarManufacturer;
         private string mCarModel;
         private string mCarColour;
@@ -17,6 +18,17 @@ namespace MyClassLibrary
         private Int32 mCarNumberOfDoors;
         private Int32 mCarNumberOfSeats;
         private Boolean mCarSold;
+
+        public Int32 CarID
+        {
+            get
+            //return the private data.
+            { return mCarID; }
+
+            set
+            //set the value pf the private data member.
+            { mCarID = value; }
+        }
 
         public string CarColour
         {

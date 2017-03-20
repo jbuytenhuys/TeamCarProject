@@ -2,9 +2,10 @@
 
 namespace MyClassLibrary
 {
-    public class clsCarRepair
+    public class clsCarRepairs
     {
         //Private data members for the records in the database
+        private int mCarRepairID;
         private int mCarID;
         private int mDaysInForRepair;
         private DateTime mDeadlineDate;
@@ -12,6 +13,20 @@ namespace MyClassLibrary
         private string mPartRequired;
         private bool mRepairStatus;
         private int mStaffID;
+
+        public int CarRepairID //public property for CarID
+        {
+            get
+            {
+                //return the private data
+                return mCarRepairID;
+            }
+            set
+            {
+                //set the private data
+                mCarRepairID = value;
+            }
+        }
 
         public int CarID //public property for CarID
         {

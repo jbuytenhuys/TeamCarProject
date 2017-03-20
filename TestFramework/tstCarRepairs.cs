@@ -11,7 +11,7 @@ namespace TestFramework
         public void InstanceOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //test to see that it exists
             Assert.IsNotNull(AnCarRepair);
         }
@@ -20,7 +20,7 @@ namespace TestFramework
         public void DaysInForRepairOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //create some test data
             Int32 TestData = 32;
             //assign data to the property
@@ -33,7 +33,7 @@ namespace TestFramework
         public void DeadlineDateOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //create some test data
             DateTime TestData = DateTime.Now.Date;
             //assign data to the property
@@ -46,7 +46,7 @@ namespace TestFramework
         public void PartPriceOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //create some test data
             decimal TestData = 1699.99m;
             //assign data to the property
@@ -59,7 +59,7 @@ namespace TestFramework
         public void PartRequiredOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //create some test data
             string TestData = "Engine";
             //assign data to the property
@@ -72,7 +72,7 @@ namespace TestFramework
         public void RepairStatusOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //create some test data
             Boolean TestData = true;
             //assign data to the property
@@ -85,7 +85,7 @@ namespace TestFramework
         public void CarRepairFindMethodOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //Create a boolean variable to store the result of validation.
             Boolean Found = false;
             //Create some test data to use with the method.
@@ -102,7 +102,7 @@ namespace TestFramework
         public void TestPartRequiredFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -125,7 +125,7 @@ namespace TestFramework
         public void TestPartPriceFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -148,7 +148,7 @@ namespace TestFramework
         public void TestDeadlineDateFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -171,7 +171,7 @@ namespace TestFramework
         public void TestDaysInForRepairFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -194,7 +194,7 @@ namespace TestFramework
         public void TestRepairStatusFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -217,7 +217,7 @@ namespace TestFramework
         public void TestStaffIDFound()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean Found = false;
             //boolean variable to record if data is okay (assume it is).
@@ -240,7 +240,7 @@ namespace TestFramework
         public void CarRepairValidMethodOK()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -258,7 +258,7 @@ namespace TestFramework
         public void DaysInForRepairMinLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -276,7 +276,7 @@ namespace TestFramework
         public void DaysInForRepairMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -294,7 +294,7 @@ namespace TestFramework
         public void DaysInForRepairMinPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -312,7 +312,7 @@ namespace TestFramework
         public void DaysInForRepairMaxLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -330,7 +330,7 @@ namespace TestFramework
         public void DaysInForRepairMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -348,7 +348,7 @@ namespace TestFramework
         public void DaysInForRepairMid()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -366,7 +366,7 @@ namespace TestFramework
         public void DaysInForRepairMaxPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -384,7 +384,7 @@ namespace TestFramework
         public void DaysInForRepairExtremeMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -402,7 +402,7 @@ namespace TestFramework
         public void DeadlineDateExtremeMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -423,7 +423,7 @@ namespace TestFramework
         public void DeadlineDateMinLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -444,7 +444,7 @@ namespace TestFramework
         public void DeadlineDateMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -464,7 +464,7 @@ namespace TestFramework
         public void DeadlineDateMinplusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -485,7 +485,7 @@ namespace TestFramework
         public void DeadlineDateMaxLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -506,7 +506,7 @@ namespace TestFramework
         public void DeadlineDateMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -527,7 +527,7 @@ namespace TestFramework
         public void DeadlineDateMaxPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -548,7 +548,7 @@ namespace TestFramework
         public void DeadlineDateExtremeMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -569,7 +569,7 @@ namespace TestFramework
         public void DeadlineDateInvalidData()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -588,7 +588,7 @@ namespace TestFramework
         public void PartRequiredMinLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -606,7 +606,7 @@ namespace TestFramework
         public void PartRequiredMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -624,7 +624,7 @@ namespace TestFramework
         public void PartRequiredMinPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -642,7 +642,7 @@ namespace TestFramework
         public void PartRequiredMaxLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -661,7 +661,7 @@ namespace TestFramework
         public void PartRequiredMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -680,7 +680,7 @@ namespace TestFramework
         public void PartRequiredMaxPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -699,7 +699,7 @@ namespace TestFramework
         public void PartRequiredExtremeMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -718,7 +718,7 @@ namespace TestFramework
         public void PartRequiredMid()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -737,7 +737,7 @@ namespace TestFramework
         public void PartPriceExtremeMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -756,7 +756,7 @@ namespace TestFramework
         public void PartPriceMinLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -775,7 +775,7 @@ namespace TestFramework
         public void PartPriceMin()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -794,7 +794,7 @@ namespace TestFramework
         public void PartPriceMinPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -813,7 +813,7 @@ namespace TestFramework
         public void PartPriceMaxLessOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -832,7 +832,7 @@ namespace TestFramework
         public void PartPriceMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -851,7 +851,7 @@ namespace TestFramework
         public void PartPriceMaxPlusOne()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -870,7 +870,7 @@ namespace TestFramework
         public void PartPriceExtremeMax()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
@@ -889,7 +889,7 @@ namespace TestFramework
         public void PartPriceMid()
         {
             //create instance
-            clsCarRepair AnCarRepair = new clsCarRepair();
+            clsCarRepairs AnCarRepair = new clsCarRepairs();
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.

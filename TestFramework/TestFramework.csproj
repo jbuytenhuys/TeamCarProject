@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstCarRepairs.cs" />
+    <Compile Include="tstCarRepairsCollection.cs" />
     <Compile Include="tstCars.cs" />
     <Compile Include="tstCustomers.cs" />
     <Compile Include="tstSuppliers.cs" />

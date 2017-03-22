@@ -1,0 +1,438 @@
+﻿
+body {
+    background-color: darkgray;
+    font-size: 200%;
+    
+}
+#body{
+    background-color: darkgray;
+    font-size: 200%;
+    
+}
+
+#LibraryDefault {
+    text-align:center;
+    font-size: 170%;
+    position:relative;
+    color: #f8f2f2;
+    margin-top:20px;
+    margin-bottom:30px;
+    font-style:italic;
+}
+
+#HomePageTitles {
+    text-align: center;
+    font-size: 200%;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#FormHeading {
+    font-size: 115%;
+    color: white;
+    margin-left:50px;
+}
+
+.FormTextBoxes {
+    height: 50px;
+    width: 300px;
+    font-size:85%;
+    color:white;
+    margin-bottom:5px;
+    background: darkgray;
+    border:solid #5385b5;
+}
+
+#LoggedInAs {
+    margin-top: 50px;
+    margin-right:250px;
+    float: right;
+    color: white;
+}
+
+#AdminLoggedInAs {
+    margin-left: 600px;
+    color: white;
+}
+
+#ManagerLoggedInAs {
+    margin-top: 25px;
+    margin-right:250px;
+    float: right;
+    color: white;
+}
+
+#DefaultPageImageLeft {
+    float: left;
+}
+
+#DefaultPageImageRight {
+    float: right;
+}
+
+.Button {
+    /*Postioning*/
+    position:relative;
+    display: block;
+    margin:auto;
+    height: 100px;
+    width: 550px;
+    
+    /*Aesthetics*/
+    background:#5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius:100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+
+    /*Text*/
+    text-align:center;
+    color: white;
+    font-size:200%;
+}
+
+a.Button {
+    text-decoration: none;
+}
+
+a.Button:hover {
+        background: #2bdde2;
+}
+
+.ButtonForms {
+    /*Postioning*/
+    position:relative;
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    
+    /*Aesthetics*/
+    background:#5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius:100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+
+    /*Text*/
+    text-align:center;
+    color: white;
+    font-size:110%;
+   
+}
+.ButtonConfirmation {
+        /*Postioning*/
+    position:relative;
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    margin-left:200px;
+    
+    /*Aesthetics*/
+    background:#5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius:100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+
+    /*Text*/
+    text-align:center;
+    color: white;
+    font-size:200%;
+}
+
+a.ButtonConfirmation:hover {
+       background: #2bdde2;
+}
+a.ButtonConfirmation {
+    text-decoration: none;
+}
+
+
+input.ButtonForms:hover {
+       background: #2bdde2;
+}
+input.ButtonForms {
+    text-decoration: none;
+}
+
+
+#UserForms {
+    text-align:left;
+    margin-left:250px;
+    color:white;
+    font-size:110%
+}
+
+.ButtonCancel {
+    /*Postioning*/
+    position:relative;
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    margin-right:600px;
+    float:right;
+    
+    /*Aesthetics*/
+    background:#5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius:100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+
+    /*Text*/
+    text-align:center;
+    vertical-align:central;
+    color: white;
+    font-size:190%;
+    
+}
+
+a.ButtonCancel {
+    text-decoration: none;
+}
+
+a.ButtonCancel:hover {
+        background: #2bdde2;
+}
+
+.LoginButtons {
+    /*Postioning*/
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    margin-left:280px;
+    margin-bottom:50px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius: 100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+    /*Text*/
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    color: white;
+    font-size: 150%;
+}
+
+a.HomepageButtons {
+    text-decoration: none;
+}
+
+a.HomepageButtons:hover {
+        background: #2bdde2;
+}
+
+.LogoutButton {
+
+    /*Postioning*/
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    margin-left:670px;
+    margin-bottom:50px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius: 100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+    /*Text*/
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    color: white;
+    font-size: 150%;
+}
+
+a.LogoutButton {
+    text-decoration: none;
+}
+
+a.LogoutButton:hover {
+        background: #2bdde2;
+}
+
+.GoBackButton {
+
+    /*Postioning*/
+    display: block;
+    margin-top: 500px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    margin-left:0px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius: 100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+    /*Text*/
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    color: white;
+    font-size: 150%;
+}
+
+a.GoBackButton {
+    text-decoration: none;
+}
+
+a.GoBackButton:hover {
+        background: #2bdde2;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-color: white;
+    border-spacing: 3px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: top;
+    padding: 1px;
+    color: white;
+    margin-left:550px;
+}
+
+tr:hover {
+    background-color: #2bdde2;
+}
+
+.tableRequests, .thRequests, .tdRequests {
+    border: 1px solid black;
+    border-color: white;
+    border-spacing: 3px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: top;
+    padding: 1px;
+    color: white;
+    margin-left: 300px;
+}
+
+
+
+.EnquiryTextBox {
+    height: 400px;
+    width: 1000px;
+    font-size:85%;
+    color:white;
+    margin-bottom:5px;
+    background: darkgray;
+    border:solid #5385b5;
+    
+}
+
+.AdminEnquiryTextBox {
+    height: 200px;
+    width: 500px;
+    font-size: 85%;
+    color: white;
+    margin-bottom: 5px;
+    background: darkgray;
+    border: solid #5385b5;
+}
+
+.TableButton {
+
+    /*Postioning*/
+    display: block;
+    height: 40px;
+    width: 150px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 1px solid #2f2d2d;
+    border-radius: 100px;
+
+    /*Text*/
+    padding-top: 10px;
+    color: white;
+    font-size: 55%;
+}
+
+#AddBookVerification{
+    margin-left: 300px;
+    font-size: 150%;
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#DropdownMenu {
+    font-size: 100%;
+    color: white;
+    background: darkgray;
+}
+
+.AdminHomepageButton {
+
+    /*Postioning*/
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:left;
+    margin-left:300px;
+    margin-bottom:50px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius: 100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+    /*Text*/
+    text-align: center;
+    color: white;
+    font-size: 190%;
+}
+
+a.AdminHomepageButton {
+    text-decoration: none;
+}
+
+a.AdminHomepageButton:hover {
+        background: #2bdde2;
+}
+
+.AdminCancelButton {
+    
+    /*Postioning*/
+    display: block;
+    margin-top: 5px;
+    height: 100px;
+    width: 500px;
+    float:right;
+    margin-right:300px;
+    margin-bottom:50px;
+    /*Aesthetics*/
+    background: #5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius: 100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+    /*Text*/
+    text-align: center;
+    color: white;
+    font-size: 190%;
+}
+
+a.AdminCancelButton {
+    text-decoration: none;
+}
+
+a.AdminCancelButton:hover {
+        background: #2bdde2;
+}

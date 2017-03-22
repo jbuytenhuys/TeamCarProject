@@ -27,14 +27,15 @@ namespace MyClassLibrary
                 clsCar AnCar = new clsCar();
                 //read in the fields from the current record.
                 AnCar.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
-                AnCar.CarManufacturer = Convert.ToString(DB.DataTable.Rows[Index]["Car Manufacturer"]);
-                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["Car Model"]);
-                AnCar.CarRegistrationPlate = Convert.ToString(DB.DataTable.Rows[Index]["Car Registration Plate"]);
-                AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["Car Colour"]);
-                AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["Number Of Doors"]);
-                AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["Number Of Seats"]);
-                AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["Needs Repair"]);
-                AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["Sold"]);
+                AnCar.CarManufacturer = Convert.ToString(DB.DataTable.Rows[Index]["CarManufacturer"]);
+                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
+                AnCar.CarRegistrationPlate = Convert.ToString(DB.DataTable.Rows[Index]["CarRegistrationPlate"]);
+                AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["CarColour"]);
+                AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfDoors"]);
+                AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfSeats"]);
+                AnCar.TransactionID = Convert.ToInt32(DB.DataTable.Rows[Index]["TransactionID"]);
+                AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarNeedsRepair"]);
+                AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarSold"]);
                 //add the record to the private data member.
                 mCarList.Add(AnCar);
                 //Point at the next record

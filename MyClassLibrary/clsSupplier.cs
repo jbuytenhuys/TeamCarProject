@@ -15,7 +15,7 @@ namespace MyClassLibrary
         private Int32 mSupplierID;
         private string mSupplierName;
         private string mTitle;
-        private string mWorkExt;              
+        private string mWorkExt;
         private string mWorkNumber;
 
         public clsSupplier()
@@ -162,7 +162,7 @@ namespace MyClassLibrary
 
         public bool Find(Int32 SupplierID)
         {
-        
+
             //Create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the address no to search for
@@ -187,7 +187,7 @@ namespace MyClassLibrary
                 mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
                 //return that everything worked ok
                 return true;
-                }
+            }
             //if no record was found
             else
             {
@@ -200,7 +200,110 @@ namespace MyClassLibrary
         public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber)
         {
             Boolean OK = true;
+
+            DateTime DateTemp;
+
             if (Address.Length == 0)
+            {
+                OK = false;
+            }
+            if (Address.Length > 50)
+            {
+                OK = false;
+            }
+            if (City.Length == 0)
+            {
+                OK = false;
+            }
+            if (City.Length > 50)
+            {
+                OK = false;
+            }
+            if (County.Length == 0)
+            {
+                OK = false;
+            }
+            if (County.Length > 50)
+            {
+                OK = false;
+            }
+            if (Name.Length == 0)
+            {
+                OK = false;
+            }
+            if (Name.Length > 50)
+            {
+                OK = false;
+            }
+            if (PostionInCompany.Length == 0)
+            {
+                OK = false;
+            }
+            if (PostionInCompany.Length > 50)
+            {
+                OK = false;
+            }
+            if (SupplierName.Length == 0)
+            {
+                OK = false;
+            }
+            if (SupplierName.Length > 50)
+            {
+                OK = false;
+            }
+            if (Postcode.Length == 0)
+            {
+                OK = false;
+            }
+            if (Postcode.Length > 8)
+            {
+                OK = false;
+            }
+            if (Title.Length == 0)
+            {
+                OK = false;
+            }
+            if (Title.Length > 5)
+            {
+                OK = false;
+            }
+            if (WorkExt.Length == 0)
+            {
+                OK = false;
+            }
+            if (WorkExt.Length > 5)
+            {
+                OK = false;
+            }
+            if (WorkNumber.Length == 0)
+            {
+                OK = false;
+            }
+            if (WorkNumber.Length > 11)
+            {
+                OK = false;
+            }
+            if (Mobile.Length == 0)
+            {
+                OK = false;
+            }
+            if (Mobile.Length > 11)
+            {
+                OK = false;
+            }
+            try
+            {
+                DateTemp = Convert.ToDateTime(DateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    OK = false;
+                }
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    OK = false;
+                }
+            }
+            catch
             {
                 OK = false;
             }
@@ -208,3 +311,8 @@ namespace MyClassLibrary
         }
     }
 }
+
+
+
+
+

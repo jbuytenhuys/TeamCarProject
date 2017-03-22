@@ -169,19 +169,55 @@ namespace MyClassLibrary
             }
         }
 
-        public bool valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK)
+        public bool valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK, string DateAddedOK)
         {
             //create a boolean variable to flag the error
             Boolean OK = true;
+            //create a temporary variable to store the data value
+            DateTime DateTemp;
             //if the CustomerAddres is is blank 
 
-            if (CustomerAddress.Length ==0)
+            if (CustomerAddress.Length == 0)
             {
                 //set the flag OK to false
                 OK = false;
             }
+            //if the CustomerAdress is greater than 20 characters
+            if (CustomerAddress.Length > 20)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //try to date validation assuming the data is a valid date 
+            try
+            {
+                //copy the DateAddeDOK value to the DateTemp Variable 
+                DateTemp = Convert.ToDateTime(DateAddedOK);
+                    //check to see if the date is less than todays date
+                    if (DateTemp < DateTime.Now.Date)
+                {
+                    //set the flag OK to false
+                    OK = false;
+                }
+
+                //check to see if the date is greater then todays time 
+                if
+                    (DateTemp > DateTime.Now.Date)
+                {
+                    //set the flag OK to false
+                    OK = false;
+                }
+            }
+                //the data was not a date so flag an error
+                catch
+            {
+                //set the flag ok to false
+                OK = false;
+            }
+           
             //return the value of OK
             return OK;
         }
+        
     }
 }

@@ -287,7 +287,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -304,8 +304,9 @@ namespace Test_Framework
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Ali";
             string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -317,16 +318,427 @@ namespace Test_Framework
             //boolean variable to store the result of the validation
             Boolean OK = false;
             //create some test data to pass the method
-            string CustomerAddress = "";
-            string CustomerEmail = "20 A";
+            string CustomerAddress = "2";
+            string CustomerEmail = "zadBhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Ali";
             string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK);
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
-    }
+
+        [TestMethod]
+        public void CustomerAddressMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+
+        }
+        [TestMethod]
+        public void CustomerAddressMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+
+        }
+        [TestMethod]
+        public void CustomerAddressMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+
+        }
+        [TestMethod]
+        public void CustomerAddressMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue ";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+
+        }
+        [TestMethod]
+        public void CustomerAddressMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+
+        }
+        [TestMethod]
+        public void CustomerAddressExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeeeeeeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = DateTime.Now.Date.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void DateAddedOKExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //create a variable to store the test data
+            DateTime TestDate;
+            //set the todays date 
+            TestDate = DateTime.Now.Date;
+            //change the data to whatever the date is less than 100 years
+            TestDate = TestDate.AddYears(-100);
+            //comvert the date variable to a string varibale
+            string DateAddedOK = TestDate.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void DateAddedOKMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //create a variable to store the test data
+            DateTime TestDate;
+            //set the todays date 
+            TestDate = DateTime.Now.Date;
+            //change the data to whatever the date is less than 1 day
+            TestDate = TestDate.AddDays(-1);
+            //comvert the date variable to a string varibale
+            string DateAddedOK = TestDate.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void DateAddedOKMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //create a variable to store the test data
+            DateTime TestDate;
+            //set the todays date 
+            TestDate = DateTime.Now.Date;
+            //convery the date variable to a string variable
+            string DateAdded = TestDate.ToString();
+            //comvert the date variable to a string varibale
+            string DateAddedOK = TestDate.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void DateAddedMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //create a variable to store the test data
+            DateTime TestDate;
+            //set the todays date 
+            TestDate = DateTime.Now.Date;
+            //change the data to whatever the date is plus 1 day
+            TestDate = TestDate.AddDays(1);
+            //comvert the date variable to a string varibale
+            string DateAddedOK = TestDate.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void DateAddedExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //create a variable to store the test data
+            DateTime TestDate;
+            //set the todays date 
+            TestDate = DateTime.Now.Date;
+            //change the data to whatever the date is plus 100 years
+            TestDate = TestDate.AddYears(100);
+            //comvert the date variable to a string varibale
+            string DateAddedOK = TestDate.ToString();
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+         [TestMethod]
+        public void DateAddedOKInvalidDate()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PE";
+            //set the DateAdded to a non date Value
+            string DateAddedOK = "this is not a date!";               
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void CustomerPostCodeMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "";
+            string DateAddedOK = "08/03/2017";
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void CustomerPostCodeMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "N";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustomerPostCodeMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustomerPostCodeMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PEE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void CustomerPostCodeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PEEE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustomerPostCodeMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string DateAddedOK = "08/03/2017";
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustomerPostCodeMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenueeeee";
+            string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 ";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+
+
+    }  
 }
 

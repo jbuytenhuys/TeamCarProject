@@ -214,7 +214,34 @@ namespace MyClassLibrary
                 //set the flag ok to false
                 OK = false;
             }
-           
+            
+            //is the postcode blank 
+            if (CustomerPostCodeOK.Length ==0)
+            {
+                //set the flag ok to false 
+                OK = false;
+            }
+
+            //if the postcode is too long
+            if (CustomerPostCodeOK.Length > 9)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+
+            //if the firsname is blank 
+            if (CustomerFirstName.Length ==0)
+            {
+                //set ok flag to false
+                OK = false;
+            }
+
+            //if the name is too long
+            if (CustomerFirstName.Length > 20)
+            {
+                //set the flag to falsew
+                OK = false;
+            }
             //return the value of OK
             return OK;
         }

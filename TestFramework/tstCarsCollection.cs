@@ -46,18 +46,6 @@ namespace TestFramework
 
         }
 
-        [TestMethod]
-        public void CarsCountPropertyOk()
-        {
-            //Create an instance of the class we want to create.
-            clsCarsCollection AllCars = new clsCarsCollection();
-            //Create some test data to assign to the property.
-            Int32 SomeCount = 2;
-            //Assign the data to the property.
-            AllCars.Count = SomeCount;
-            //Test to see that the two values are the same.
-            Assert.AreEqual(AllCars.Count, SomeCount);
-        }
 
         [TestMethod]
         public void CarsThisCarPropertyOk()
@@ -108,5 +96,7 @@ namespace TestFramework
             //Test to see that the two values are the same.
             Assert.AreEqual(AllCars.Count, TestList.Count);
         }
+
+        
     }
 }

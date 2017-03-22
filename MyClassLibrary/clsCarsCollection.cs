@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MyClassLibrary
 {
@@ -9,34 +10,38 @@ namespace MyClassLibrary
 
         public clsCarsCollection()
         {
-            //Create the items of test data.
-            clsCar TestItem = new clsCar();
-            //Set it's properties. 
-            TestItem.CarID = 1;
-            TestItem.CarManufacturer = "Volkswagon";
-            TestItem.CarModel = "Golf";
-            TestItem.CarRegistrationPlate = "DE17 FGH";
-            TestItem.CarColour = "Yellow";
-            TestItem.CarNumberOfDoors = 5;
-            TestItem.CarNumberOfSeats = 5;
-            TestItem.CarNeedsRepair = true;
-            TestItem.CarSold = false;
-            //Add the items to the list.
-            mCarList.Add(TestItem);
-            //Re intialise the object for some new data.
-            TestItem = new clsCar();
-            //set it's properties.
-            TestItem.CarID = 2;
-            TestItem.CarManufacturer = "Mercedes";
-            TestItem.CarModel = "A45";
-            TestItem.CarRegistrationPlate = "AD15 HJK";
-            TestItem.CarColour = "Blue";
-            TestItem.CarNumberOfDoors = 3;
-            TestItem.CarNumberOfSeats = 4;
-            TestItem.CarNeedsRepair = false;
-            TestItem.CarSold = false;
-            //Add the items to the list.
-            mCarList.Add(TestItem);
+            //Variable for index
+            Int32 Index = 0;
+            //variable to store the record count.
+            Int32 RecordCount = 0;
+            //Object for data connection.
+            clsDataConnection DB = new clsDataConnection();
+            //Execute the stored procedure.
+            DB.Execute("sproc_tblCars_SelectAll");
+            //Get the count of records.
+            RecordCount = DB.Count;
+            //While there a records to process.
+            while (Index < RecordCount)
+            {
+                //Create a blank class
+                clsCar AnCar = new clsCar();
+                //read in the fields from the current record.
+                AnCar.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
+                AnCar.CarManufacturer = Convert.ToString(DB.DataTable.Rows[Index]["CarManufacturer"]);
+                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
+                AnCar.CarRegistrationPlate = Convert.ToString(DB.DataTable.Rows[Index]["CarRegistrationPlate"]);
+                AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["CarColour"]);
+                AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfDoors"]);
+                AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfSeats"]);
+                AnCar.TransactionID = Convert.ToInt32(DB.DataTable.Rows[Index]["TransactionID"]);
+                AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarNeedsRepair"]);
+                AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarSold"]);
+                //add the record to the private data member.
+                mCarList.Add(AnCar);
+                //Point at the next record
+                Index++;
+            }
+
 
         }
 

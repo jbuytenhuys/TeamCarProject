@@ -44,19 +44,6 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void CarRepairCountPropertyOK()
-        {
-            //Create an instance of the class
-            clsCarRepairsCollection AllCarRepairs = new clsCarRepairsCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 2;
-            //Assign the data to the property
-            AllCarRepairs.Count = SomeCount;
-            //Test to see if the two values are the same
-            Assert.AreEqual(AllCarRepairs.Count, SomeCount);
-        }
-
-        [TestMethod]
         public void ThisCarRepairPropertyOK()
         {
             //Create an instance of the class
@@ -99,15 +86,6 @@ namespace TestFramework
             AllCarRepairs.CarRepairList = TestList;
             //Test to see if the two values are the same
             Assert.AreEqual(AllCarRepairs.Count, TestList.Count);
-        }
-
-        [TestMethod]
-        public void TwoRecordsPresent()
-        {
-            //Create an instance of the class
-            clsCarRepairsCollection AllCarRepairs = new clsCarRepairsCollection();
-            //Test to see if the two values are the same
-            Assert.AreEqual(AllCarRepairs.Count, 2);
         }
     }
 }

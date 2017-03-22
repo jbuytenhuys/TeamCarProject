@@ -225,11 +225,11 @@ a.ButtonCancel:hover {
     font-size: 150%;
 }
 
-a.HomepageButtons {
+a.LoginButtons {
     text-decoration: none;
 }
 
-a.HomepageButtons:hover {
+a.LoginButtons:hover {
         background: #2bdde2;
 }
 

@@ -14,7 +14,7 @@
     <br />
         <h1 id="FormHeading"> Please enter your Username and Password:</h1>
 
-        <form id="UserForms" action="MechanicHomepage.aspx" method="post" runat="server">
+        <form id="UserForms" action="MainHomepage.aspx" method="post" runat="server">
             Please enter your Username: <input type="text" class="FormTextBoxes" /><br />
             Please enter your Password: <input type="text" class="FormTextBoxes" /><br />
             <br />

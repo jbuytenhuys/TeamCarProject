@@ -25,6 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TCPBackEnd(2)", "TCPBackEnd
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61809"
+		SlnRelativePath = "TCPBackEnd\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -46,6 +47,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TCPFrontEnd", "TCPFrontEnd\
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61810"
+		SlnRelativePath = "TCPFrontEnd\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject

@@ -3,14 +3,26 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 </head>
+
 <body>
-    <form id="form1" runat="server">
-    <div>
+        <h4 id ="HomePageTitles">Please login</h4>
+    <br />
+        <h1 id="FormHeading"> Please enter your Username and Password:</h1>
+
+        <form id="UserForms" action="MainHomepage.aspx" method="post" runat="server">
+            Please enter your Username: <input type="text" class="FormTextBoxes" /><br />
+            Please enter your Password: <input type="text" class="FormTextBoxes" /><br />
+            <br />
+            <div>
+                <input type="submit" class="ButtonForms" value="Login" />
+            </div>
+        </form>
     
-    </div>
-    </form>
+    
 </body>
 </html>

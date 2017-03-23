@@ -13,25 +13,25 @@
     
         <asp:Button ID="btnMechanicLogout" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 17px; top: 42px; position: absolute" Text="Logout" />
 
-        <asp:DropDownList ID="ddlMechanicFilterBy" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 112px; top: 108px; position: absolute; height: 32px; width: 167px"></asp:DropDownList>
+        <asp:DropDownList ID="ddlMechanicFilterBy"  runat="server" style="z-index: 1; left: 112px; top: 108px; position: absolute; height: 32px; width: 167px"></asp:DropDownList>
 
-        <asp:TextBox ID="txtMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 111px; top: 141px; position: absolute; width: 156px">Keyword Filter</asp:TextBox>
+        <asp:TextBox ID="txtMechanicFilter"  runat="server" style="z-index: 1; left: 111px; top: 141px; position: absolute; width: 156px">Keyword Filter</asp:TextBox>
 
         <asp:Button ID="btnMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 113px; top: 190px; position: absolute; height: 35px; width: 109px" Text="Filter" />
 
-        <asp:ListBox ID="lstMechanicRepairs" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 460px; top: 104px; position: absolute; height: 269px; width: 428px"></asp:ListBox>
+        <asp:ListBox ID="lstMechanicRepairs"  runat="server" style="z-index: 1; left: 460px; top: 104px; position: absolute; height: 269px; width: 428px"></asp:ListBox>
 
         <asp:Button ID="btnMechanicListAll" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 463px; top: 408px; position: absolute; height: 39px; width: 177px" Text="List All Repairs" />
 
-        <asp:TextBox ID="txtMechanicRepairID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 108px; position: absolute; height: 17px; width: 263px" ReadOnly="True">RepairID</asp:TextBox>
+        <asp:TextBox ID="txtMechanicRepairID"  runat="server" style="z-index: 1; left: 1021px; top: 108px; position: absolute; height: 17px; width: 263px" ReadOnly="True">RepairID</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicDeadlineDate" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 169px; position: absolute">Deadline Date</asp:TextBox>
+        <asp:TextBox ID="txtMechanicDeadlineDate"  runat="server" style="z-index: 1; left: 1021px; top: 169px; position: absolute">Deadline Date</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartRequired" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1015px; top: 219px; position: absolute">Part Required</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartRequired"  runat="server" style="z-index: 1; left: 1015px; top: 219px; position: absolute">Part Required</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartPrice" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1016px; top: 272px; position: absolute">Part Price</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartPrice"  runat="server" style="z-index: 1; left: 1016px; top: 272px; position: absolute">Part Price</asp:TextBox>
 
-        <asp:CheckBox ID="chkMechanicRepairStatus" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1024px; top: 323px; position: absolute" Text="Repair Status" />
+        <asp:CheckBox ID="chkMechanicRepairStatus"  runat="server" style="z-index: 1; left: 1024px; top: 323px; position: absolute" Text="Repair Status" />
 
         <asp:Button ID="btnMechanicAddRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 424px; position: absolute" Text="Add Repair" />
 

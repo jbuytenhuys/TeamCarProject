@@ -129,8 +129,6 @@ a.ReceptionistButton:hover {
     position:relative;
     display: block;
     margin:auto;
-    height: 100px;
-    width: 550px;
     
     /*Aesthetics*/
     background:#5385b5;
@@ -206,7 +204,7 @@ a.SupplierButton {
 a.SupplierButton {
     text-decoration: none;
 }
-/*fbsehbse*/
+
 a.SupplierButton:hover {
         background: #2bdde2;
 }
@@ -216,4 +214,3 @@ a.SupplierButton:hover {
 
 
 
-/*HI JAKE - PUSS*/

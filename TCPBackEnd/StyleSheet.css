@@ -1,4 +1,4 @@
-﻿
+﻿/*EVERYONE*/
 body {
     background-color: darkgray;
     font-size: 200%;
@@ -51,8 +51,36 @@ input.ButtonForms {
     background: darkgray;
 }
 
+a.HomepageButton {
+    /*Postioning*/
+    position:relative;
+    display: block;
+    margin:auto;
+    height: 100px;
+    width: 550px;
+    
+    /*Aesthetics*/
+    background:#5385b5;
+    border: 2px solid #2f2d2d;
+    border-radius:100px;
+    box-shadow: 0 5px 0 #4e4b4b;
+    text-shadow: 0 6px 6px #000000;
+
+    /*Text*/
+    text-align:center;
+    color: white;  
+}
+
+a.HomepageButton {
+    text-decoration: none;
+}
+
+a.HomepageButton:hover {
+        background: #2bdde2;
+}
 
 
+/*JACKS*/
 
 .ReceptionistButton {
     /*Postioning*/
@@ -83,6 +111,7 @@ a.ReceptionistButton:hover {
 }
 
 
+/*JAKE*/
 .MechanicButton {
     /*Postioning*/
     position:relative;
@@ -111,7 +140,7 @@ a.MechanicButton:hover {
         background: #2bdde2;
 }
 
-
+/*ZAD*/
 a.SalesmanButton {
     /*Postioning*/
     position:relative;
@@ -141,7 +170,7 @@ a.SalesmanButton:hover {
 }
 
 
-
+/*GURDIP*/
 a.SupplierButton {
     /*Postioning*/
     position:relative;
@@ -171,30 +200,3 @@ a.SupplierButton:hover {
 }
 
 
-a.HomepageButton {
-    /*Postioning*/
-    position:relative;
-    display: block;
-    margin:auto;
-    height: 100px;
-    width: 550px;
-    
-    /*Aesthetics*/
-    background:#5385b5;
-    border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
-
-    /*Text*/
-    text-align:center;
-    color: white;  
-}
-
-a.HomepageButton {
-    text-decoration: none;
-}
-
-a.HomepageButton:hover {
-        background: #2bdde2;
-}

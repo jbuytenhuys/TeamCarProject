@@ -17,7 +17,7 @@
 
         <asp:TextBox ID="txtMechanicFilter" CssClass="TextBoxes"  runat="server" style="z-index: 1; left: 111px; top: 180px; position: absolute; width: 156px">Keyword Filter</asp:TextBox>
 
-        <asp:Button ID="btnMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 113px; top: 190px; position: absolute; height: 50px; width: 180px" Text="Filter" />
+        <asp:Button ID="btnMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 113px; top: 220px; position: absolute; height: 50px; width: 180px" Text="Filter" />
 
         <asp:ListBox ID="lstMechanicRepairs" CssClass="ListBoxes" runat="server" style="z-index: 1; left: 460px; top: 104px; position: absolute; height: 269px; width: 428px"></asp:ListBox>
 
@@ -31,7 +31,7 @@
 
         <asp:TextBox ID="txtMechanicPartPrice" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1016px; top: 272px; position: absolute">Part Price</asp:TextBox>
 
-        <asp:CheckBox ID="chkMechanicRepairStatus"  runat="server" style="z-index: 1; left: 1024px; top: 323px; position: absolute" Text="Repair Status" />
+        <asp:CheckBox ID="chkMechanicRepairStatus" CssClass="CheckBox" runat="server" style="z-index: 1; left: 1024px; top: 323px; position: absolute" Text="Repair Status" />
 
         <asp:Button ID="btnMechanicAddRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 425px; position: absolute; height: 50px; width: 180px" Text="Add Repair" />
 

@@ -19,7 +19,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
     {
         MyClassLibrary.clsCarRepairsCollection Repairs = new MyClassLibrary.clsCarRepairsCollection();
         lstMechanicRepairs.DataSource = Repairs.CarRepairList;
-        lstMechanicRepairs.DataValueField = "RepairID";
+        lstMechanicRepairs.DataValueField = "CarRepairID";
         lstMechanicRepairs.DataTextField = "PartRequired";
         lstMechanicRepairs.DataBind();
     }

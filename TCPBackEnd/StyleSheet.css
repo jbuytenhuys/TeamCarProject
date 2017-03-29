@@ -1,11 +1,11 @@
 ﻿/*EVERYONE*/
 body {
-    background-color: darkgray;
+    background-color: silver;
     font-size: 200%;
     
 }
 #body{
-    background-color: darkgray;
+    background-color: silver;
     font-size: 200%;  
 }
 
@@ -19,18 +19,14 @@ body {
     font-style: italic;
 }
 
-a.CheckBoxtext {
-    font-size: 5%;
+.CheckBox {
+    font-size: 75%;
     color: white;
+    
 }
 
 .DropDownMenu {
-    text-align:center;
-    background:#5385b5;
     border: 2px solid #2f2d2d;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
-
 }
 
 input.ButtonForms:hover {
@@ -48,45 +44,35 @@ input.ButtonForms {
 }
 
 .ListBoxes {
-    background: #5385b5;
     border: 2px solid black;
-    color: white;
 }
 
 
 
 .TextBoxes {
-    background: #5385b5;
     border: 2px solid black;
-    color: white;
+    font-size:50%
 }
 
 
-a.HomepageButton {
+.HomepageButton {
     /*Postioning*/
     position:relative;
     display: block;
     margin:auto;
-    height: 100px;
-    width: 550px;
-    
-    /*Aesthetics*/
-    background:#5385b5;
+
     border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
 
     /*Text*/
     text-align:center;
     color: white;  
 }
 
-a.HomepageButton {
+input.HomepageButton {
     text-decoration: none;
 }
 
-a.HomepageButton:hover {
+input.HomepageButton:hover {
         background: #2bdde2;
 }
 
@@ -98,25 +84,20 @@ a.HomepageButton:hover {
     position:relative;
     display: block;
     margin:auto;
-   
-    
-    /*Aesthetics*/
-    background:#5385b5;
+
     border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
 
     /*Text*/
     text-align:center;
-    color: white;  
+    color: white;
+    font-size:75%  
 }
 
-a.ReceptionistButton {
+input.ReceptionistButton {
     text-decoration: none;
 }
 
-a.ReceptionistButton:hover {
+input.ReceptionistButton:hover {
         background: #2bdde2;
 }
 
@@ -130,79 +111,66 @@ a.ReceptionistButton:hover {
     display: block;
     margin:auto;
     
-    /*Aesthetics*/
-    background:#5385b5;
-    border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
+   border: 2px solid #2f2d2d;
 
     /*Text*/
     text-align:center;
-    color: white;  
+    color: black;
+    font-size:75%  
 }
 
-a.MechanicButton {
+input.MechanicButton {
     text-decoration: none;
 }
 
-a.MechanicButton:hover {
+input.MechanicButton:hover {
         background: #2bdde2;
 }
 
 /*ZAD*/
-a.SalesmanButton {
+.SalesmanButton {
     /*Postioning*/
     position:relative;
     display: block;
     margin:auto;
     
-    
-    /*Aesthetics*/
-    background:#5385b5;
     border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
 
     /*Text*/
     text-align:center;
-    color: white;  
+    color: white;
+    font-size:75%  
 }
 
-a.SalesmanButton {
+input.SalesmanButton {
     text-decoration: none;
 }
 
-a.SalesmanButton:hover {
+input.SalesmanButton:hover {
         background: #2bdde2;
 }
 
 
 /*GURDIP*/
-a.SupplierButton {
+.SupplierButton {
     /*Postioning*/
     position:relative;
     display: block;
     margin:auto;
    
-    /*Aesthetics*/
-    background:#5385b5;
     border: 2px solid #2f2d2d;
-    border-radius:100px;
-    box-shadow: 0 5px 0 #4e4b4b;
-    text-shadow: 0 6px 6px #000000;
 
     /*Text*/
     text-align:center;
-    color: white;  
+    color: white;
+    font-size:75%  
 }
 
-a.SupplierButton {
+input.SupplierButton {
     text-decoration: none;
 }
 
-a.SupplierButton:hover {
+input.SupplierButton:hover {
         background: #2bdde2;
 }
 

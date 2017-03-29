@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
 
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistLogout" runat="server" style="z-index: 1; left: 29px; top: 67px; position: absolute; height: 63px; width: 115px" Text="Logout" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistLogout" runat="server" style="z-index: 1; left: 29px; top: 67px; position: absolute; height: 63px; width: 115px" Text="Logout" OnClick="btnReceptionistLogout_Click" />
 
         <asp:DropDownList CssClass="DropDownMenu" ID="DDlstReceptionistManufacturerFilter" runat="server" style="z-index: 1; left: 79px; top: 182px; position: absolute; width: 124px">
         </asp:DropDownList>
@@ -35,18 +35,18 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" />
 
-        <asp:DropDownList ID="DDlstReceptionistManufacturer" runat="server" style="z-index: 1; left: 853px; top: 149px; position: absolute; width: 277px; bottom: 485px;">
+        <asp:DropDownList CssClass="DropDownMenu" ID="DDlstReceptionistManufacturer" runat="server" style="z-index: 1; left: 853px; top: 149px; position: absolute; width: 277px; bottom: 485px;">
         </asp:DropDownList>
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" style="z-index: 1; left: 853px; top: 183px; position: absolute; width: 269px">Car Model</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 853px; top: 183px; position: absolute; width: 269px" OnTextChanged="txtReceptionistCarModel_TextChanged">Car Model</asp:TextBox>
 
-        <asp:TextBox ID="txtReceptionistCarColour" runat="server" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px">Car Colour</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarColour" runat="server" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px">Car Colour</asp:TextBox>
 
-        <asp:TextBox ID="txtReceptionistCarRegistrationPlate" runat="server" style="z-index: 1; left: 852px; top: 268px; position: absolute; width: 276px">Car Registration Plate</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarRegistrationPlate" runat="server" style="z-index: 1; left: 852px; top: 268px; position: absolute; width: 276px">Car Registration Plate</asp:TextBox>
 
-        <asp:TextBox ID="txtReceptionistCarNumberOfDoors" runat="server" style="z-index: 1; left: 852px; top: 311px; position: absolute; width: 279px">Number Of Doors</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfDoors" runat="server" style="z-index: 1; left: 852px; top: 311px; position: absolute; width: 279px">Number Of Doors</asp:TextBox>
 
-        <asp:TextBox ID="txtReceptionistCarNumberOfSeats" runat="server" style="z-index: 1; left: 855px; top: 355px; position: absolute; width: 279px">Number Of Seats</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfSeats" runat="server" style="z-index: 1; left: 855px; top: 355px; position: absolute; width: 279px">Number Of Seats</asp:TextBox>
 
         <asp:CheckBox ID="ChkBoxReceptionistNeedsRepair" CssClass="CheckBoxText" runat="server" style="z-index: 1; left: 881px; top: 395px; position: absolute" Text="Check for yes, leave unchecked for no" />
 
@@ -55,6 +55,8 @@
         <asp:Label ID="lblReceptionistNeedsRepair" runat="server" Font-Size="Large" style="z-index: 1; left: 772px; top: 404px; position: absolute" Text="Needs Repair?"></asp:Label>
 
         <asp:Label ID="lblReceptionistSold" runat="server" Font-Size="Large" style="z-index: 1; left: 774px; top: 470px; position: absolute; margin-bottom: 0px" Text="Sold?"></asp:Label>
+
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarID" runat="server" style="z-index: 1; left: 854px; top: 113px; position: absolute; width: 265px" ReadOnly="True"></asp:TextBox>
 
 
     </form>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassLibrary", "MyClassLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "TestFramework\TestFramework.csproj", "{5FDB00EF-D17B-4BB1-A775-E828D57C72B7}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TCPBackEnd(2)", "TCPBackEnd\", "{CC72482D-6C63-4CCE-8681-523A328713E1}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TCPBackEnd", "TCPBackEnd\", "{CC72482D-6C63-4CCE-8681-523A328713E1}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		ProjectReferences = "{f8ea9e9c-4c79-4590-a375-342a10f47a03}|MyClassLibrary.dll;"

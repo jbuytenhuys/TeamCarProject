@@ -44,6 +44,7 @@
     <Compile Include="clsCarRepairsCollection.cs" />
     <Compile Include="clsCars.cs" />
     <Compile Include="clsCarsCollection.cs" />
+    <Compile Include="clsCustomerCollection.cs" />
     <Compile Include="clsCustomers.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsSupplier.cs" />

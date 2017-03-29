@@ -774,7 +774,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -794,7 +794,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -814,7 +814,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -834,7 +834,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -854,7 +854,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -874,7 +874,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -914,7 +914,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -938,7 +938,7 @@ namespace Test_Framework
         }
 
         [TestMethod]
-        public void CustomerLastNameLessOne()
+        public void CustomerLastNameMaxLessOne()
         {
             //create an instance of the class we want to create
             clsCustomer Customer = new clsCustomer();
@@ -1006,6 +1006,140 @@ namespace Test_Framework
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
             string CustomerEmail = "zadbhatti@hotmail.com";
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Aliiii";//6
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zad@hotmail.co";//max 30 characters min characters 15
+            string CustomerFirstName = "";
+            string CustomerLastName = "Ali";
+            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string DateAddedOK = "08/03/2017";
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void CustomerEmailMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zad@hotmail.com";//max 30 characters min characters 15
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "A";
+            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zad@hotmail.comm";//max 30 characters min characters 15
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Al";
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhattiiiiiiiiii@hotmail.co";//max 30 characters min characters 15
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Aliiiiiiiiiiii";//14
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhattiiiiiiiiii@hotmail.com";//max 30 characters min characters 15
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Aliiiiiiiiiiiii";//15
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhattiiiiiiiiii@hotmail.comm";//max 30 characters min characters 15
+            string CustomerFirstName = "Zad";
+            string CustomerLastName = "Aliiiiiiiiiiiiia";//16
+            string CustomerPostCodeOK = "NG7 6PE";
+            string DateAddedOK = Convert.ToString(DateTime.Now.Date);
+            //invoke the method
+            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void CustomerEmailMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer Customer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean OK = false;
+            //create some test data to pass the method
+            string CustomerAddress = "20 Avenue Avenue";
+            string CustomerEmail = "zadbhatti@hotma";//max 30 characters min characters 15
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Aliiii";//6
             string CustomerPostCodeOK = "NG7 6PE";

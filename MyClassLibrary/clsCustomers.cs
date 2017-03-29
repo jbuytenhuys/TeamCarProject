@@ -7,12 +7,13 @@ namespace MyClassLibrary
 
         //privae data member for the CustomerId property
         private Int32 mCustomerID;
-        private string mCustomerAddress;
+        private string mCustomerAddress;//
         private string mCustomerEmail;
-        private string mCustomerFirstName;
-        private string mCustomerLastName;
-        private string mCustomerPostCodeOK;
-        private DateTime mDateAddedOK;
+        private string mCustomerFirstName;//
+        private string mCustomerLastName;//
+        private string mCustomerPostCodeOK;//
+        private DateTime mDateAddedOK;//
+        /// </summary>
         private Boolean mActiveOK;
 
         //public property for ActiveOK

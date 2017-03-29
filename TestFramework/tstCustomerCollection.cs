@@ -65,4 +65,5 @@ namespace TestFramework
             clsCustomer TestCustomer = new clsCustomer();
             //set the properties of the test objective 
         }
+    }
 }

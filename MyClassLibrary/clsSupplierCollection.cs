@@ -4,6 +4,29 @@ namespace MyClassLibrary
 {
     public class clsSupplierCollection
     {
-        public List<clsSupplier> SupplierList { get; set; }
+        List<clsSupplier> mSupplierList = new List<clsSupplier>();
+        public int Count
+        {
+            get
+            {
+                return mSupplierList.Count;
+            }
+            set
+            {
+            }
+        }
+        public List<clsSupplier> SupplierList
+        {
+            get
+            {
+                return mSupplierList;
+            }
+            set
+            {
+                mSupplierList = value;
+           }
+        }
+        public clsSupplier ThisSupplier { get; set; }
     }
+
 }

@@ -13,7 +13,7 @@
     
         <asp:Button ID="btnMechanicLogout" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 17px; top: 42px; position: absolute" Text="Logout" />
 
-        <asp:DropDownList ID="ddlMechanicFilterBy"  runat="server" style="z-index: 1; left: 112px; top: 108px; position: absolute; height: 32px; width: 167px"></asp:DropDownList>
+        <asp:DropDownList ID="ddlMechanicFilterBy" CssClass="DropDownMenu" runat="server" style="z-index: 1; left: 112px; top: 108px; position: absolute; height: 32px; width: 167px"></asp:DropDownList>
 
         <asp:TextBox ID="txtMechanicFilter"  runat="server" style="z-index: 1; left: 111px; top: 141px; position: absolute; width: 156px">Keyword Filter</asp:TextBox>
 

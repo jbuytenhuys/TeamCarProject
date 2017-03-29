@@ -24,7 +24,7 @@ a.CheckBoxtext {
     color: white;
 }
 
-a.DropDownMenu {
+.DropDownMenu {
     text-align:center;
     background:#5385b5;
     border: 2px solid #2f2d2d;
@@ -48,17 +48,19 @@ input.ButtonForms {
     font-size:110%
 }
 
-.EnquiryTextBox {
-    height: 400px;
-    width: 1000px;
-    font-size:85%;
-    color:white;
-    margin-bottom:5px;
-    background: darkgray;
-    border:solid #5385b5;
-    
+.ListBoxes {
+    background: #5385b5;
+    border: 2px solid black;
+    color: white;
 }
 
+
+
+.TextBoxes {
+    background: #5385b5;
+    border: 2px solid black;
+    color: white;
+}
 
 
 a.HomepageButton {
@@ -97,8 +99,7 @@ a.HomepageButton:hover {
     position:relative;
     display: block;
     margin:auto;
-    height: 100px;
-    width: 550px;
+   
     
     /*Aesthetics*/
     background:#5385b5;
@@ -156,8 +157,7 @@ a.SalesmanButton {
     position:relative;
     display: block;
     margin:auto;
-    height: 100px;
-    width: 550px;
+    
     
     /*Aesthetics*/
     background:#5385b5;
@@ -186,9 +186,7 @@ a.SupplierButton {
     position:relative;
     display: block;
     margin:auto;
-    height: 100px;
-    width: 550px;
-    
+   
     /*Aesthetics*/
     background:#5385b5;
     border: 2px solid #2f2d2d;

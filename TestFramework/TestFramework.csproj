@@ -58,6 +58,7 @@
     <Compile Include="tstCars.cs" />
     <Compile Include="tstCarsCollection.cs" />
     <Compile Include="tstCustomers.cs" />
+    <Compile Include="tstSupplierCollection.cs" />
     <Compile Include="tstSuppliers.cs" />
   </ItemGroup>
   <ItemGroup>

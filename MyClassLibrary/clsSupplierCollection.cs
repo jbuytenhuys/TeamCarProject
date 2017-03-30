@@ -1,4 +1,5 @@
 ﻿using MyClassLibrary;
+using System;
 using System.Collections.Generic;
 
 namespace MyClassLibrary
@@ -30,40 +31,40 @@ namespace MyClassLibrary
         }
         public clsSupplier ThisSupplier { get; set; }
 
-        public clsSupplierCollection()
-        {
-            clsSupplier TestItem = new clsSupplier();
-            TestItem.Address = "1b";
-            TestItem.City = "Birmingham";
-            TestItem.County = "eastmidlands";
-            TestItem.DateAdded = System.DateTime.Now.Date;
-            TestItem.Mobile = "078";
-            TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
-            TestItem.SupplierName = "Audi";
-            TestItem.Title = "Mr";
-            TestItem.WorkExt = "312";
-            TestItem.WorkNumber = "12134";
-            mSupplierList.Add(TestItem);
-            TestItem = new clsSupplier();
-            TestItem.Address = "2b";
-            TestItem.City = "Coventry";
-            TestItem.County = "Westmidlands";
-            TestItem.DateAdded = System.DateTime.Now.Date;
-            TestItem.Mobile = "012";
-            TestItem.Name = "Smith";
-            TestItem.PostCode = "Cv8";
-            TestItem.PostionInCompany = "1ccbbbbbbbbbbbbbbbbbbbb25";
-            TestItem.SupplierName = "BMW";
-            TestItem.Title = "Mrs";
-            TestItem.WorkExt = "222";
-            TestItem.WorkNumber = "11111";
-            mSupplierList.Add(TestItem);
-        }
 
+
+             public clsSupplierCollection()
+        {
+            Int32 Index = 0;
+            Int32 RecordCount = 0;
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_tblSupplier_SelectAll");
+            RecordCount = DB.Count;
+            while (Index < RecordCount)
+            {
+                clsSupplier AnSupplier = new clsSupplier();
+                AnSupplier.SupplierID = Convert.ToInt32(DB.DataTable.Rows[Index]["SupplierID"]);
+                AnSupplier.Address = Convert.ToString(DB.DataTable.Rows[Index]["Address"]);
+                AnSupplier.City = Convert.ToString(DB.DataTable.Rows[Index]["City"]);
+                AnSupplier.County = Convert.ToString(DB.DataTable.Rows[Index]["County"]);
+                AnSupplier.Mobile = Convert.ToString(DB.DataTable.Rows[Index]["Mobile"]);
+                AnSupplier.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
+                AnSupplier.SupplierName = Convert.ToString(DB.DataTable.Rows[Index]["SupplierName"]);
+                AnSupplier.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
+                AnSupplier.PostionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PostionInCompany"]);
+                AnSupplier.Title = Convert.ToString(DB.DataTable.Rows[Index]["Title"]);
+                AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
+                AnSupplier.WorkNumber = Convert.ToString(DB.DataTable.Rows[Index]["WorkNumber"]);
+                AnSupplier.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                //return that everything worked ok
+                mSupplierList.Add(AnSupplier);
+                Index++;
+
+            }
+        }
     }
 }
+
 
      
 

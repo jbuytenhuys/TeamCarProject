@@ -7,6 +7,8 @@ namespace MyClassLibrary
     public class clsSupplierCollection
     {
         List<clsSupplier> mSupplierList = new List<clsSupplier>();
+        clsSupplier mThisSupplier = new clsSupplier();
+       
 
         public int Count
         {
@@ -29,11 +31,20 @@ namespace MyClassLibrary
                 mSupplierList = value;
             }
         }
-        public clsSupplier ThisSupplier { get; set; }
 
+        public clsSupplier ThisSupplier
+        {
+            get
+            {
+                return mThisSupplier;
+            }
+            set
+            {
+                mThisSupplier = value;
+            }
+        }
 
-
-             public clsSupplierCollection()
+        public clsSupplierCollection()
         {
             Int32 Index = 0;
             Int32 RecordCount = 0;
@@ -62,11 +73,30 @@ namespace MyClassLibrary
 
             }
         }
+
+        public int Add()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@City",mThisSupplier.City);
+            DB.AddParameter("@County",mThisSupplier.County); 
+            DB.AddParameter("@DateAdded",mThisSupplier.DateAdded);  
+            DB.AddParameter("@Mobile",mThisSupplier.Mobile);  
+            DB.AddParameter("@Name",mThisSupplier.Name);  
+            DB.AddParameter("@Postcode",mThisSupplier.PostCode); 
+            DB.AddParameter("@PostionInCompany",mThisSupplier.PostionInCompany); 
+            DB.AddParameter("@SupplierName",mThisSupplier.SupplierName); 
+            DB.AddParameter("@Title",mThisSupplier.Title); 
+            DB.AddParameter("@WorkExt",mThisSupplier.WorkExt); 
+            DB.AddParameter("@WorkNumber",mThisSupplier.WorkNumber);
+            return DB.Execute("sproc_tblSupplier_Insert"); 
+        }
     }
 }
 
 
-     
+
+
+
 
 
 

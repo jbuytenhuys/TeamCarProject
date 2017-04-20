@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyClassLibrary;
+using System.Collections.Generic;
 
 namespace Test_Framework
 {
@@ -76,9 +77,9 @@ namespace Test_Framework
             //create an instance of the class we want to create
             clsCustomer Customer = new clsCustomer();
             string TestData = "XXX XXX";
-            Customer.CustomerPostcodeOK = TestData;
+            Customer.CustomerPostCodeOK = TestData;
             //test to see that it exists
-            Assert.AreEqual(Customer.CustomerPostcodeOK, TestData);
+            Assert.AreEqual(Customer.CustomerPostCodeOK, TestData);
         }
         [TestMethod]
         public void CustomerLastNameOK()
@@ -201,7 +202,7 @@ namespace Test_Framework
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerPostcodeOK != "NG7 6PE")
+            if (Customer.CustomerPostCodeOK != "NG7 6PE")
             {
                 OK = false;
             }
@@ -1149,6 +1150,58 @@ namespace Test_Framework
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
+        [TestMethod]
+        public void ThisCustomerPropertyOK()
+
+        {
+            //create an instance of the class we want to create
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //create some test data to assign to the property
+            clsCustomer TestCustomer = new clsCustomer();
+            //set the properties of the test objective
+            TestCustomer.ActiveOK = true;
+            TestCustomer.CustomerAddress = "20 Austen Avenue";
+            TestCustomer.CustomerEmail = "Zadbhatti@hotmail.com";
+            TestCustomer.CustomerFirstName = "zad";
+            TestCustomer.CustomerLastName = "Ali";
+            TestCustomer.CustomerID = 1;
+            TestCustomer.CustomerPostCodeOK = "NG7 6PE";
+            TestCustomer.DateAddedOK = DateTime.Now.Date;
+            //asign the data to the property
+            AllCustomers.ThisCustomer = TestCustomer;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllCustomers.ThisCustomer, TestCustomer);
+        }
+        [TestMethod]
+        public void ListAndCountOK()
+
+        {
+            //create an instance of the class we want to create
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //create some test data to assign to the property
+            //in this case the data needs to be a list of objects 
+            List<clsCustomer> TestList = new List<clsCustomer>();
+            //add an item to the list 
+            //create the item of the test data
+            clsCustomer TestItem = new clsCustomer();
+            //set its properties
+            TestItem.ActiveOK = true;
+            TestItem.CustomerAddress = "20 Austen Avenue";
+            TestItem.CustomerEmail = "zadbhatti@hotmail.com";
+            TestItem.CustomerID = 1;
+            TestItem.CustomerFirstName = "zad";
+            TestItem.CustomerLastName = "Ali";
+            TestItem.CustomerPostCodeOK = "NG7 6PE";
+            TestItem.DateAddedOK = DateTime.Now.Date;
+            //add the data to the test property
+            TestList.Add(TestItem);
+            //assign the data to the property
+            AllCustomers.CustomerList = TestList;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllCustomers.Count, TestList.Count);
+        }
+       
+
     }
 }
 

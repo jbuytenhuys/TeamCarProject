@@ -125,7 +125,7 @@ namespace MyClassLibrary
 
 
         //public properrty for customer postcode 
-        public string CustomerPostcodeOK
+        public string CustomerPostCodeOK
         {
             get
             {
@@ -139,7 +139,7 @@ namespace MyClassLibrary
             }
         }
 
-
+        public clsCustomer ThisCustomer { get; set; }
 
         public bool Find(int CustomerID)
         {

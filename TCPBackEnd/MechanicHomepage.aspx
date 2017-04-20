@@ -29,11 +29,11 @@
 
         <asp:TextBox ID="txtMechanicRepairID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1021px; top: 110px; position: absolute; height: 17px; width: 263px" ReadOnly="True" OnTextChanged="txtMechanicRepairID_TextChanged">RepairID</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicDeadlineDate" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 130px; position: absolute" OnTextChanged="txtMechanicDeadlineDate_TextChanged">Deadline Date</asp:TextBox>
+        <asp:TextBox ID="txtMechanicDeadlineDate" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 150px; position: absolute" OnTextChanged="txtMechanicDeadlineDate_TextChanged">Deadline Date</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartRequired" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 150px; position: absolute" OnTextChanged="txtMechanicPartRequired_TextChanged">Part Required</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartRequired" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 190px; position: absolute" OnTextChanged="txtMechanicPartRequired_TextChanged">Part Required</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartPrice" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 170px; position: absolute" OnTextChanged="txtMechanicPartPrice_TextChanged">Part Price</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartPrice" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 230px; position: absolute" OnTextChanged="txtMechanicPartPrice_TextChanged">Part Price</asp:TextBox>
 
         <asp:CheckBox ID="chkMechanicRepairStatus" CssClass="CheckBox" runat="server" style="z-index: 1; left: 1024px; top: 323px; position: absolute" Text="Repair Status" />
 
@@ -42,6 +42,8 @@
         <asp:Button ID="btnMechanicUpdateRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1220px; top: 425px; position: absolute; height: 50px; width: 180px" Text="UpdateRepair" OnClick="btnMechanicUpdateRepair_Click" />
 
         <asp:Button ID="btnMechanicDeleteRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 487px; position: absolute; height: 50px; width: 180px; margin-bottom: 3px" Text="Delete Repair" OnClick="btnMechanicDeleteRepair_Click" />
+
+        <asp:TextBox ID="txtDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 270px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
 
     </form>
 </body>

@@ -87,5 +87,33 @@ namespace TestFramework
             //Test to see if the two values are the same
             Assert.AreEqual(AllCarRepairs.Count, TestList.Count);
         }
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //Create an instance of the class
+            clsCarRepairsCollection AllCarRepairs = new clsCarRepairsCollection();
+            //create the item of test data
+            clsCarRepairs TestItem = new clsCarRepairs();
+            //Var to store the primary key
+            Int32 PrimaryKey = 0;
+            //Set its properties
+            TestItem.CarRepairID = 2;
+            TestItem.DaysInForRepair = 27;
+            TestItem.DeadlineDate = DateTime.Now.Date.AddDays(60);
+            TestItem.PartPrice = 52.99m;
+            TestItem.PartRequired = "Add test";
+            TestItem.RepairStatus = true;
+            //set this repair to the test data
+            AllCarRepairs.ThisCarRepair = TestItem;
+            //add the record
+            PrimaryKey = AllCarRepairs.Add();
+            //set the primary key of the test data
+            TestItem.CarRepairID = PrimaryKey;
+            //find the record
+            AllCarRepairs.ThisCarRepair.Find(PrimaryKey);
+            //Test to see if the two values are the same
+            Assert.AreEqual(AllCarRepairs.ThisCarRepair, TestItem);
+        }
     }
 }

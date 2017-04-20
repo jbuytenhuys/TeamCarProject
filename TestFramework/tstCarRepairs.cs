@@ -158,7 +158,7 @@ namespace TestFramework
             //Invoke the method.
             Found = AnCarRepair.Find(CarID);
             //Check the DeadlineDate
-            if (AnCarRepair.DeadlineDate != Convert.ToDateTime("21/03/2017"))
+            if (AnCarRepair.DeadlineDate != Convert.ToDateTime("05/05/2017"))
             {
                 OK = false;
             }

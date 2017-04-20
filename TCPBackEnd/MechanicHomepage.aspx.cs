@@ -24,6 +24,14 @@ public partial class MechanicHomepage : System.Web.UI.Page
         lstMechanicRepairs.DataBind();
     }
 
+    void Add()
+    {
+        //create an instance
+        MyClassLibrary.clsCarRepairsCollection CarRepair = new MyClassLibrary.clsCarRepairsCollection();
+        //validate the data on webform
+        
+    }
+
 
     protected void btnMechanicLogout_Click(object sender, EventArgs e)
     {
@@ -78,7 +86,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicAddRepair_Click(object sender, EventArgs e)
     {
-
+        
     }
 
     protected void btnMechanicUpdateRepair_Click(object sender, EventArgs e)

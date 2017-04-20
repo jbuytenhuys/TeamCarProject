@@ -7,6 +7,8 @@ namespace MyClassLibrary
     {
         //Private data member for the list
         List<clsCarRepairs> mCarRepairList = new List<clsCarRepairs>();
+        //private data member for ThisCarRepair
+        clsCarRepairs mThisCarRepair = new clsCarRepairs();
         
         public clsCarRepairsCollection()
         {
@@ -66,6 +68,33 @@ namespace MyClassLibrary
                 ;
             }
         }
-        public clsCarRepairs ThisCarRepair { get; set; }
+        public clsCarRepairs ThisCarRepair
+        {
+            get
+            {
+                //return the private data
+                return mThisCarRepair;
+            }
+            set
+            {
+                //set the private data
+                mThisCarRepair = value;
+            }
+        }
+
+        //add method adds a new record to the database
+        public int Add()
+        {
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set parameters for stored procedure
+            DB.AddParameter("@DaysInForRepair", mThisCarRepair.DaysInForRepair);
+            DB.AddParameter("@DeadlineDate", mThisCarRepair.DeadlineDate);
+            DB.AddParameter("@PartPrice", mThisCarRepair.PartPrice);
+            DB.AddParameter("@PartRequired", mThisCarRepair.PartRequired);
+            DB.AddParameter("@RepairStatus", mThisCarRepair.RepairStatus);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblCarRepairs_Insert");
+        }
     }
 }

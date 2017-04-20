@@ -34,7 +34,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     {
         //store -1 into the session object to indicate this is a new record
         Session["SupplierID"] = -1;
-        //redirect to the data enerty page
+        //redirect to the data enerty pageg
         Response.Redirect("SupplierHomepage.aspx");
     }
 

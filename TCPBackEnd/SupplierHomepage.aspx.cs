@@ -28,6 +28,17 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     }
 
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        //store -1 into the session object to indicate this is a new record
+        Session["SupplierID"] = -1;
+        //redirect to the data enerty pageg
+        Response.Redirect("SupplierHomepage.aspx");
+    }
+
+
 }
 
 

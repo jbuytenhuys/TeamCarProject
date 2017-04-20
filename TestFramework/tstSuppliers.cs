@@ -825,7 +825,7 @@ namespace TestFramework
             string Address = "1b";
             string City = "Birmingham";
             string County = "";
-            County = County.PadRight(500, 'b'); 
+            County = County.PadRight(500, 'b');
             string DateAdded = DateTime.Now.Date.ToString();
             String Mobile = "078";
             String Name = "Mark";
@@ -1302,7 +1302,7 @@ namespace TestFramework
             OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
             Assert.IsTrue(OK);
         }
-                [TestMethod]
+        [TestMethod]
         public void SupplierNameMaxPlusOne()
         {
             clsSupplier AnSupplier = new clsSupplier();
@@ -1338,7 +1338,7 @@ namespace TestFramework
             string Postcode = "CV6";
             String PostionInCompany = "Accounts";
             string SupplierName = "";
-            SupplierName = SupplierName.PadRight(500,'A');
+            SupplierName = SupplierName.PadRight(500, 'A');
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
@@ -1507,7 +1507,7 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "";
-            Postcode = Postcode.PadRight(500,'E');
+            Postcode = Postcode.PadRight(500, 'E');
             String PostionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
@@ -1849,7 +1849,7 @@ namespace TestFramework
             string Postcode = "CV6 7GX";
             String PostionInCompany = "Accounts";
             string SupplierName = "Audi";
-            string Title = "Mr";          
+            string Title = "Mr";
             string WorkExt = "";
             WorkExt = WorkExt.PadRight(500, 'E');
             string WorkNumber = "12134";
@@ -2337,8 +2337,6 @@ namespace TestFramework
             OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
             Assert.IsFalse(OK);
         }
-
-
     }
 }
 

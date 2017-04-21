@@ -105,7 +105,7 @@ namespace MyClassLibrary
             //set parameter for stored procedure
             DB.AddParameter("@CarRepairID", mThisCarRepair.CarRepairID);
             //execute the stored procedure
-            DB.Execute("sproc_tblCarRepairs_Delete");
+            DB.Execute("sproc_tblCarRepairs_Archive");
         }
     }
 }

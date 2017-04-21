@@ -14,7 +14,7 @@ namespace MyClassLibrary
         private bool mRepairStatus;
         private int mStaffID;
 
-        public int CarRepairID //public property for CarID
+        public int CarRepairID //public property for CarRepairID
         {
             get
             {
@@ -122,25 +122,26 @@ namespace MyClassLibrary
         }
 
 
-        public bool Find(int CarID)
+        public bool Find(int CarRepairID)
         {
             //create instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the CarID to search for 
-            DB.AddParameter("@CarID", CarID);
+            DB.AddParameter("@CarRepairID", CarRepairID);
             //execute the stored procedure
             DB.Execute("sproc_tblCarRepairs_FilterByCarID");
             //if one record is found
             if (DB.Count == 1)
             {
                 //copy data from database to the private data members
-                mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
+                mCarRepairID = Convert.ToInt32(DB.DataTable.Rows[0]["CarRepairID"]);
+                //mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
                 mDaysInForRepair = Convert.ToInt32(DB.DataTable.Rows[0]["DaysInForRepair"]);
                 mDeadlineDate = Convert.ToDateTime(DB.DataTable.Rows[0]["DeadlineDate"]);
                 mPartPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["PartPrice"]);
                 mPartRequired = Convert.ToString(DB.DataTable.Rows[0]["PartRequired"]);
                 mRepairStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["RepairStatus"]);
-                mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
+                //mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
                 //return that everything worked OK
                 return true;
             }

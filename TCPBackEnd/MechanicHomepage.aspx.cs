@@ -124,6 +124,11 @@ public partial class MechanicHomepage : System.Web.UI.Page
             //store the data in the session object
             Session["CarRepairID"] = CarRepairID;
             //redirect to delete confirmation page
+            Response.Redirect("MechanicDelete.aspx");
+        }
+        else
+        {
+            lblMechanicError.Text = "please select a record to delete from the list";
         }
     }
 

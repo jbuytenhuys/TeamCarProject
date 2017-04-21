@@ -7,6 +7,8 @@ namespace MyClassLibrary
     {
         //private data member for the list 
         List<clsCustomer> mCustomerList = new List<clsCustomer>();
+        //private data member thisCustomer
+        clsCustomer mThiscustomer = new clsCustomer();
         public int count
         {
             get
@@ -46,7 +48,19 @@ namespace MyClassLibrary
             }
         }
 
-        public clsCustomer ThisCustomer { get; set; }
+        public clsCustomer ThisCustomer
+        {
+            get
+            {
+                //return the private data
+                return mThiscustomer;
+            }
+            set
+            {
+                //set the private data
+                mThiscustomer = value;
+            }
+        }
 
         //constructor for the class
         public clsCustomerCollection()
@@ -81,7 +95,30 @@ namespace MyClassLibrary
                 Index++;
             }
         }
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values of thisCustomer
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure 
+            DB.AddParameter("@CustomerAddress", mThiscustomer.CustomerAddress);
+            DB.AddParameter("@CustomerEmail", mThiscustomer.CustomerEmail);
+            DB.AddParameter("@CustomerfirstName", mThiscustomer.CustomerFirstName);
+            DB.AddParameter("@CustomerLastName", mThiscustomer.CustomerLastName);
+            DB.AddParameter("@CustomerPostCodeOK", mThiscustomer.CustomerPostCodeOK);
+            DB.AddParameter("@DateAddedOK", mThiscustomer.DateAddedOK);
+            DB.AddParameter("@ActiveOK", mThiscustomer.ActiveOK);
+            //execute the qquery returning the primary key value
+            return DB.Execute("sproc_tblCustomers_Insert");
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
     }
+
 }
           
             

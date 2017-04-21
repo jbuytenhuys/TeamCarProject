@@ -96,5 +96,16 @@ namespace MyClassLibrary
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblCarRepairs_Insert");
         }
+
+        //Deletes the record pointed to by ThisCarRepair
+        public void Delete()
+        {
+            //connect to data base
+            clsDataConnection DB = new clsDataConnection();
+            //set parameter for stored procedure
+            DB.AddParameter("@CarRepairID", mThisCarRepair.CarRepairID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCarRepairs_Delete");
+        }
     }
 }

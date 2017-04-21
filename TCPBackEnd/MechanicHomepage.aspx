@@ -21,7 +21,7 @@
 
         <asp:TextBox ID="txtMechanicFilter" CssClass="TextBoxes"  runat="server" OnClick="this.value=''" style="z-index: 1; left: 111px; top: 180px; position: absolute; width: 156px" OnTextChanged="txtMechanicFilter_Click">Keyword Filter</asp:TextBox>
 
-        <asp:Button ID="btnMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 113px; top: 220px; position: absolute; height: 50px; width: 180px" Text="Filter" OnClick="btnMechanicFilter_Click" />
+        <asp:Button ID="btnMechanicFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 111px; top: 225px; position: absolute; height: 50px; width: 180px" Text="Filter" OnClick="btnMechanicFilter_Click" />
 
         <asp:ListBox ID="lstMechanicRepairs" CssClass="ListBoxes" runat="server" style="z-index: 1; left: 460px; top: 104px; position: absolute; height: 269px; width: 428px" OnSelectedIndexChanged="lstMechanicRepairs_SelectedIndexChanged"></asp:ListBox>
 
@@ -44,6 +44,8 @@
         <asp:Button ID="btnMechanicDeleteRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1021px; top: 487px; position: absolute; height: 50px; width: 180px; margin-bottom: 3px" Text="Delete Repair" OnClick="btnMechanicDeleteRepair_Click" />
 
         <asp:TextBox ID="txtDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1021px; top: 270px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
+
+        <asp:Label ID="lblMechanicError" runat="server" style="z-index: 1; left: 1023px; top: 370px; position: absolute" Text="-"></asp:Label>
 
     </form>
 </body>

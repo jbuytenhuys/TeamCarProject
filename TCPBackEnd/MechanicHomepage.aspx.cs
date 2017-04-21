@@ -35,9 +35,18 @@ public partial class MechanicHomepage : System.Web.UI.Page
         {
             //Fetch data entered by user
             CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
-            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToDateTime(txtMechanicDeadlineDate.Text);
-            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
-            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
+            CarRepair.ThisCarRepair.DeadlineDate = Convert.ToDateTime(txtMechanicDeadlineDate.Text);
+            CarRepair.ThisCarRepair.PartPrice = Convert.ToDecimal(txtMechanicPartPrice.Text);
+            CarRepair.ThisCarRepair.PartRequired = txtMechanicPartRequired.Text;
+            CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
+            //add record
+            CarRepair.Add();
+            lblMechanicError.Text = "Repair successfully added";
+        }
+        else
+        {
+            //report error
+            lblMechanicError.Text = "There were problems with the data you have entered, please try again";
         }
     }
 
@@ -70,7 +79,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicListAll_Click(object sender, EventArgs e)
     {
-
+        DisplayRepairs();
     }
 
     protected void txtMechanicRepairID_TextChanged(object sender, EventArgs e)
@@ -95,7 +104,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicAddRepair_Click(object sender, EventArgs e)
     {
-        
+        Add();
     }
 
     protected void btnMechanicUpdateRepair_Click(object sender, EventArgs e)
@@ -105,7 +114,17 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicDeleteRepair_Click(object sender, EventArgs e)
     {
-
+        //var to store the primary key value of the record to be deleted
+        Int32 CarRepairID;
+        //if a record has been selected form the list
+        if (lstMechanicRepairs.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete
+            CarRepairID = Convert.ToInt32(lstMechanicRepairs.SelectedValue);
+            //store the data in the session object
+            Session["CarRepairID"] = CarRepairID;
+            //redirect to delete confirmation page
+        }
     }
 
     

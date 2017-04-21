@@ -288,7 +288,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -307,7 +307,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -326,7 +326,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -346,7 +346,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -366,7 +366,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -386,7 +386,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -406,7 +406,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -426,7 +426,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -446,7 +446,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = DateTime.Now.Date.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -472,7 +472,7 @@ namespace Test_Framework
             //comvert the date variable to a string varibale
             string DateAddedOK = TestDate.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -498,7 +498,7 @@ namespace Test_Framework
             //comvert the date variable to a string varibale
             string DateAddedOK = TestDate.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -524,7 +524,7 @@ namespace Test_Framework
             //comvert the date variable to a string varibale
             string DateAddedOK = TestDate.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -550,7 +550,7 @@ namespace Test_Framework
             //comvert the date variable to a string varibale
             string DateAddedOK = TestDate.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -576,7 +576,7 @@ namespace Test_Framework
             //comvert the date variable to a string varibale
             string DateAddedOK = TestDate.ToString();
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -596,7 +596,7 @@ namespace Test_Framework
             //set the DateAdded to a non date Value
             string DateAddedOK = "this is not a date!";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -615,7 +615,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "";
             string DateAddedOK = "08/03/2017";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -634,7 +634,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "N";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -654,7 +654,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -674,7 +674,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEE";//8
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -693,7 +693,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEE";//9
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -713,7 +713,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = "08/03/2017";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -733,7 +733,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 ";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -753,7 +753,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = "08/03/2017";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -773,7 +773,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -793,7 +793,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -813,7 +813,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -833,7 +833,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -853,7 +853,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -873,7 +873,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -893,7 +893,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = "08/03/2017";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -913,7 +913,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -933,7 +933,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -953,7 +953,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -973,7 +973,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -992,7 +992,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1012,7 +1012,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1031,7 +1031,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = "08/03/2017";
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1051,7 +1051,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PEEEE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1070,7 +1070,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1089,7 +1089,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1108,7 +1108,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1127,7 +1127,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1146,7 +1146,7 @@ namespace Test_Framework
             string CustomerPostCodeOK = "NG7 6PE";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
-            OK = Customer.valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
+            OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }

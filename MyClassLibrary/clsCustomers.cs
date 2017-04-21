@@ -170,7 +170,7 @@ namespace MyClassLibrary
             }
         }
 
-        public bool valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK, string DateAddedOK)
+        public bool Valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK, string DateAddedOK)
         {
             //create a boolean variable to flag the error
             Boolean OK = true;

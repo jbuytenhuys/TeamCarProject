@@ -29,7 +29,16 @@ public partial class MechanicHomepage : System.Web.UI.Page
         //create an instance
         MyClassLibrary.clsCarRepairsCollection CarRepair = new MyClassLibrary.clsCarRepairsCollection();
         //validate the data on webform
-        
+        Boolean OK = CarRepair.ThisCarRepair.Valid(Convert.ToInt32(txtDaysInForRepair.Text), txtMechanicDeadlineDate.Text, Convert.ToDecimal(txtMechanicPartPrice.Text), txtMechanicPartRequired.Text);
+        //if data is okay then add to object
+        if (OK == true)
+        {
+            //Fetch data entered by user
+            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
+            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToDateTime(txtMechanicDeadlineDate.Text);
+            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
+            CarRepair.ThisCarRepair.DaysInForRepair = Convert.ToInt32(txtDaysInForRepair.Text);
+        }
     }
 
 

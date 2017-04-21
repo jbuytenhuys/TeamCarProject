@@ -77,6 +77,7 @@ namespace MyClassLibrary
         public int Add()
         {
             clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@Address", mThisSupplier.Address);
             DB.AddParameter("@City",mThisSupplier.City);
             DB.AddParameter("@County",mThisSupplier.County); 
             DB.AddParameter("@DateAdded",mThisSupplier.DateAdded);  

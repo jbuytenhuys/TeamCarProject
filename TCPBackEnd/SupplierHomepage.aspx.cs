@@ -72,7 +72,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         Add();
-        Response.Redirect("SupplierHomepage");
+        Response.Redirect("SupplierHomepage.aspx");
             
     }
 

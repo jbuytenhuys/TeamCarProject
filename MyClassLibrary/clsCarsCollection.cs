@@ -49,11 +49,20 @@ namespace MyClassLibrary
 
         public int Add()
         {
-            //adds a new record to the database based on the values
-            //set the primary key value of the new record
-            mThisCar.CarID = 5;
-            //return the primary key of the new record
-            return mThisCar.CarID;
+            //adds a new record to the database based on the values of ThisCar
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@CarManufacturer", mThisCar.CarManufacturer);
+            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            DB.AddParameter("@CarRegistrationPlate", mThisCar.CarRegistrationPlate);
+            DB.AddParameter("@CarColour", mThisCar.CarColour);
+            DB.AddParameter("@NumOfDoors", mThisCar.CarNumberOfDoors);
+            DB.AddParameter("@NumOfSeats", mThisCar.CarNumberOfSeats);
+            DB.AddParameter("@TransactionID", mThisCar.TransactionID);
+            DB.AddParameter("@CarNeedsRepair", mThisCar.CarNeedsRepair);
+            DB.AddParameter("CarSold", mThisCar.CarSold);
+            //Execute the query returning the primary key value.
+            return DB.Execute("sproc_tblCars_Insert");
         }
 
 

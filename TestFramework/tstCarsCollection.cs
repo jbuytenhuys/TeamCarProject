@@ -106,9 +106,9 @@ namespace TestFramework
             //Create the item for test data.
             clsCar TestItem = new clsCar();
             //Var to store the primary key
-            Int32 PrimaryKey = 2;
+            Int32 PrimaryKey = 0;
             //set it's properties
-            TestItem.CarID = 2;
+            TestItem.CarID = 1;
             TestItem.CarManufacturer = "Mini";
             TestItem.CarModel = "Paceman";
             TestItem.CarRegistrationPlate = "FE64 JUI";

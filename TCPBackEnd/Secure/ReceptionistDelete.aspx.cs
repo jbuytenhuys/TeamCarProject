@@ -27,11 +27,23 @@ public partial class Secure_ReceptionistDelete : System.Web.UI.Page
         Cars.Delete();
 
     }
+    
+    void ArchiveAndDeleteCar()
+    {
+        //function to Archive and delete the selected record.
+
+        //create a new instance
+        clsCarsCollection Cars = new clsCarsCollection();
+        //find the record to delete
+        Cars.ThisCar.Find(CarID);
+        //Delete the record
+        Cars.ArchiveAndDelete();
+    }
 
     protected void btnDeleteYes_Click(object sender, EventArgs e)
     {
         //delete the car
-        DeleteCar();
+        ArchiveAndDeleteCar();
         //redirect back to receptionist homepage
         Response.Redirect("ReceptionistHomepage.aspx");
     }

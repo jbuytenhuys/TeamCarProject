@@ -76,6 +76,16 @@ namespace MyClassLibrary
             DB.Execute("sproc_tblCars_Delete");
         }
 
+        public void ArchiveAndDelete()
+        {
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure.
+            DB.AddParameter("@CarID", mThisCar.CarID);
+            //Execute the stored procedures.
+            DB.Execute("sproc_tblCars_tblArchive_ArchiveAndDelete");
+        }
+
 
 
 

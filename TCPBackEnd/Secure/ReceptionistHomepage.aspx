@@ -27,7 +27,7 @@
 
         <asp:ListBox CssClass="ListBoxes"  ID="lstBoxReceptionistListCars" runat="server" style="z-index: 1; left: 348px; top: 97px; position: absolute; height: 355px; width: 414px; margin-top: 16px"></asp:ListBox>
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 500px; top: 498px; position: absolute; height: 63px; width: 132px" Text="List All Cars" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 500px; top: 498px; position: absolute; height: 63px; width: 132px" Text="List All Cars" OnClick="btnReceptionistListAllCars_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 810px; top: 555px; position: absolute; height: 51px; width: 102px; margin-bottom: 0px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
 
@@ -35,7 +35,7 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" />
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 849px; top: 187px; position: absolute; width: 288px" OnTextChanged="txtReceptionistCarModel_TextChanged">Car Model</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 849px; top: 187px; position: absolute; width: 288px" >Car Model</asp:TextBox>
 
         <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarRegistrationPlate" runat="server" style="z-index: 1; left: 852px; top: 268px; position: absolute; width: 290px">Car Registration Plate</asp:TextBox>
 
@@ -61,7 +61,7 @@
 
         <p>
             &nbsp;</p>
-        <asp:TextBox ID="txtReceptionistCarManufacturer" runat="server" CssClass="TextBoxes" OnTextChanged="TextBox1_TextChanged" style="z-index: 1; left: 854px; top: 149px; position: absolute; width: 290px">Car Manufacturer</asp:TextBox>
+        <asp:TextBox ID="txtReceptionistCarManufacturer" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 854px; top: 149px; position: absolute; width: 290px">Car Manufacturer</asp:TextBox>
         <p>
             &nbsp;</p>
         <p>

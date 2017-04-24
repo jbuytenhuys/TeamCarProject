@@ -5,8 +5,12 @@ namespace MyClassLibrary
 {
     public class clsCarsCollection
     {
+        
+
         //private data member for the list.
         List<clsCar> mCarList = new List<clsCar>();
+        //private data member for thisCar
+        clsCar mThisCar = new clsCar();
 
         public clsCarsCollection()
         {
@@ -41,9 +45,35 @@ namespace MyClassLibrary
                 //Point at the next record
                 Index++;
             }
-
-
         }
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values
+            //set the primary key value of the new record
+            mThisCar.CarID = 5;
+            //return the primary key of the new record
+            return mThisCar.CarID;
+        }
+
+
+
+
+        //public property for ThisCar
+        public clsCar ThisCar
+        {
+            get
+            {
+                //return the private data
+                return mThisCar;
+            }
+            set
+            {
+                //set the private data
+                mThisCar = value;
+            }
+        }
+
 
         public List<clsCar> CarList
         {
@@ -70,6 +100,6 @@ namespace MyClassLibrary
                 //worry about this later.
             }
         }
-        public clsCar ThisCar { get; set; }
+        
     }
 }

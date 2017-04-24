@@ -126,10 +126,6 @@ namespace MyClassLibrary
         }
 
 
-
-
-
-
         public bool Find(Int32 CarID)        
         {
             //Create an instance of the data connection.

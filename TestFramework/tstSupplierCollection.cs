@@ -110,6 +110,33 @@ namespace TestFramework
 
 
         }
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            clsSupplierCollection AllSuppliers = new clsSupplierCollection();
+            clsSupplier TestItem = new clsSupplier();
+            Int32 PrimaryKey = 0;
+            TestItem.Address = "1b";
+            TestItem.City = "Birmingham";
+            TestItem.County = "eastmidlands";
+            TestItem.DateAdded = System.DateTime.Now.Date;
+            TestItem.Mobile = "078";
+            TestItem.Name = "Mark";
+            TestItem.PostCode = "CV6";
+            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.SupplierName = "Audi";
+            TestItem.Title = "Mr";
+            TestItem.WorkExt = "312";
+            TestItem.WorkNumber = "12134";
+            AllSuppliers.ThisSupplier = TestItem;
+            PrimaryKey = AllSuppliers.Add();
+            TestItem.SupplierID = PrimaryKey;
+            AllSuppliers.ThisSupplier.Find(PrimaryKey);
+            AllSuppliers.Delete();
+            Boolean Found = AllSuppliers.ThisSupplier.Find(PrimaryKey);
+            Assert.IsFalse(Found);
+
+        }
     }
 }
 

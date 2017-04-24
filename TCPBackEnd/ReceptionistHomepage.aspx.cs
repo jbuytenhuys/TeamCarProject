@@ -17,7 +17,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
        
         }
     }
-    
+     
     void DisplayCars()
     {
         //create an instance of the Cars collection.

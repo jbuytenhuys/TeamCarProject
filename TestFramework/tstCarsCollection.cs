@@ -97,6 +97,36 @@ namespace TestFramework
             Assert.AreEqual(AllCars.Count, TestList.Count);
         }
 
-        
+
+        [TestMethod]
+        public void CarAddMethodOK()
+        {
+            //Create an instance of the class we want to create
+            clsCarsCollection AllCars = new clsCarsCollection();
+            //Create the item for test data.
+            clsCar TestItem = new clsCar();
+            //Var to store the primary key
+            Int32 PrimaryKey = 2;
+            //set it's properties
+            TestItem.CarID = 2;
+            TestItem.CarManufacturer = "Mini";
+            TestItem.CarModel = "Paceman";
+            TestItem.CarRegistrationPlate = "FE64 JUI";
+            TestItem.CarColour = "White";
+            TestItem.CarNumberOfDoors = 5;
+            TestItem.CarNumberOfSeats = 4;
+            TestItem.TransactionID = 123243243;
+            TestItem.CarNeedsRepair = false;
+            TestItem.CarSold = false;
+            //Set thiscar to the test data.
+            AllCars.ThisCar = TestItem;
+            //Find the record
+            AllCars.ThisCar.Find(PrimaryKey);
+            //Test to see if the two values are the same.
+            Assert.AreEqual(AllCars.ThisCar, TestItem);
+        }
+
+
+
     }
 }

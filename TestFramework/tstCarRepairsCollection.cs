@@ -147,5 +147,66 @@ namespace TestFramework
             //Test to see if the two values are the same
             Assert.IsFalse(Found);
         }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //Create an instance of the class
+            clsCarRepairsCollection AllCarRepairs = new clsCarRepairsCollection();
+            //create the item of test data
+            clsCarRepairs TestItem = new clsCarRepairs();
+            //Var to store the primary key
+            Int32 PrimaryKey = 0;
+            //Set its properties
+            TestItem.DaysInForRepair = 1;
+            TestItem.DeadlineDate = DateTime.Now.Date.AddDays(9);
+            TestItem.PartPrice = 200.00m;
+            TestItem.PartRequired = "4 new tyres";
+            TestItem.RepairStatus = true;
+            //set this repair to the test data
+            AllCarRepairs.ThisCarRepair = TestItem;
+            //add the record
+            PrimaryKey = AllCarRepairs.Add();
+            //set the primary key of the test data
+            TestItem.CarRepairID = PrimaryKey;
+            //Modify the data
+            TestItem.DaysInForRepair = 2;
+            TestItem.DeadlineDate = DateTime.Now.Date.AddDays(12);
+            TestItem.PartPrice = 210.00m;
+            TestItem.PartRequired = "7 new tyres";
+            TestItem.RepairStatus = false;
+            //set this repair to the new test data
+            AllCarRepairs.ThisCarRepair = TestItem;
+            //Update the record
+            AllCarRepairs.Update();
+            //find the record
+            AllCarRepairs.ThisCarRepair.Find(PrimaryKey);
+            //Test to see if the two values are the same
+            Assert.AreEqual(AllCarRepairs.ThisCarRepair, TestItem);
+        }
+
+        [TestMethod]
+        public void FilterByPartRequiredMethodOK()
+        {
+            //Create an instance of the class containing unfiltered results
+            clsCarRepairsCollection AllCarRepairs = new clsCarRepairsCollection();
+            //Create an instance of the class containing filtered results
+            clsCarRepairsCollection FilteredCarRepairs = new clsCarRepairsCollection();
+            //apply a blank string
+            FilteredCarRepairs.FilterByPartRequired("");
+            //test to see two values are the same
+            Assert.AreEqual(AllCarRepairs.Count, FilteredCarRepairs.Count);
+        }
+
+        [TestMethod]
+        public void FilterByPartRequiredNoneFound()
+        {
+            //Create an instance of the class containing filtered results
+            clsCarRepairsCollection FilteredCarRepairs = new clsCarRepairsCollection();
+            //apply a blank string
+            FilteredCarRepairs.FilterByPartRequired("XXXX");
+            //test to see two values are the same
+            Assert.AreEqual(0, FilteredCarRepairs.Count);
+        }
     }
 }

@@ -29,24 +29,19 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 500px; top: 498px; position: absolute; height: 63px; width: 132px" Text="List All Cars" />
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 925px; top: 554px; position: absolute; height: 51px; width: 86px; margin-bottom: 0px;" Text="Add Car" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 810px; top: 555px; position: absolute; height: 51px; width: 102px; margin-bottom: 0px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistArchive" runat="server" style="z-index: 1; left: 1038px; top: 554px; position: absolute; height: 51px; width: 86px;" Text="Archive" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" />
 
-        <asp:DropDownList CssClass="DropDownMenu" ID="DDlstReceptionistManufacturer" runat="server" style="z-index: 1; left: 853px; top: 149px; position: absolute; width: 277px; bottom: 485px;">
-        </asp:DropDownList>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 849px; top: 187px; position: absolute; width: 288px" OnTextChanged="txtReceptionistCarModel_TextChanged">Car Model</asp:TextBox>
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 853px; top: 183px; position: absolute; width: 269px" OnTextChanged="txtReceptionistCarModel_TextChanged">Car Model</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarRegistrationPlate" runat="server" style="z-index: 1; left: 852px; top: 268px; position: absolute; width: 290px">Car Registration Plate</asp:TextBox>
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarColour" runat="server" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px">Car Colour</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfDoors" runat="server" style="z-index: 1; left: 852px; top: 311px; position: absolute; width: 291px">Number Of Doors</asp:TextBox>
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarRegistrationPlate" runat="server" style="z-index: 1; left: 852px; top: 268px; position: absolute; width: 276px">Car Registration Plate</asp:TextBox>
-
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfDoors" runat="server" style="z-index: 1; left: 852px; top: 311px; position: absolute; width: 279px">Number Of Doors</asp:TextBox>
-
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfSeats" runat="server" style="z-index: 1; left: 855px; top: 355px; position: absolute; width: 279px">Number Of Seats</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarNumberOfSeats" runat="server" style="z-index: 1; left: 852px; top: 355px; position: absolute; width: 290px">Number Of Seats</asp:TextBox>
 
         <asp:CheckBox ID="ChkBoxReceptionistNeedsRepair" CssClass="CheckBoxText" runat="server" style="z-index: 1; left: 881px; top: 395px; position: absolute" Text="Check for yes, leave unchecked for no" />
 
@@ -56,7 +51,26 @@
 
         <asp:Label ID="lblReceptionistSold" runat="server" Font-Size="Large" style="z-index: 1; left: 774px; top: 470px; position: absolute; margin-bottom: 0px" Text="Sold?"></asp:Label>
 
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarID" runat="server" style="z-index: 1; left: 854px; top: 113px; position: absolute; width: 265px" ReadOnly="True"></asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarID" runat="server" style="z-index: 1; left: 854px; top: 113px; position: absolute; width: 284px" ReadOnly="True"></asp:TextBox>
+
+
+        <p>
+            &nbsp;</p>
+
+        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarColour" runat="server" style="z-index: 1; left: 855px; top: 228px; position: absolute; width: 287px">Car Colour</asp:TextBox>
+
+        <p>
+            &nbsp;</p>
+        <asp:TextBox ID="txtReceptionistCarManufacturer" runat="server" CssClass="TextBoxes" OnTextChanged="TextBox1_TextChanged" style="z-index: 1; left: 854px; top: 149px; position: absolute; width: 290px">Car Manufacturer</asp:TextBox>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 303px; top: 594px; position: absolute; width: 427px;" Text=""></asp:Label>
+
+
+        </p>
 
 
     </form>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,12 +11,12 @@ public partial class SupplierDelete : System.Web.UI.Page
     Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        SupplierID = Convert.ToInt32(Session[SupplierID]);
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
 
     }
     void DeleteSupplier()
     {
-        clsDataConnection SupplierBook = new clsDataConnection();
+        clsSupplierCollection SupplierBook = new clsSupplierCollection();
         SupplierBook.ThisSupplier.Find(SupplierID);
         SupplierBook.Delete();
         

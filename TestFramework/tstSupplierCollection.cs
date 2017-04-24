@@ -139,6 +139,47 @@ namespace TestFramework
         }
 
     }
+    [TestMethod]
+    public void UpdateMethodOK()
+    {
+        clsSupplierCollection AllSuppliers = new clsSupplierCollection();
+        clsSupplier TestItem = new clsSupplier();
+        Int32 PrimaryKey = 0;
+        TestItem.Address = "1b";
+        TestItem.City = "Birmingham";
+        TestItem.County = "eastmidlands";
+        TestItem.DateAdded = System.DateTime.Now.Date;
+        TestItem.Mobile = "078";
+        TestItem.Name = "Mark";
+        TestItem.PostCode = "CV6";
+        TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+        TestItem.SupplierName = "Audi";
+        TestItem.Title = "Mr";
+        TestItem.WorkExt = "312";
+        TestItem.WorkNumber = "12134";
+        AllSuppliers.ThisSupplier = TestItem;
+        PrimaryKey = AllSuppliers.Add();
+        TestItem.SupplierID = PrimaryKey;
+        TestItem.Address = "2b";
+        TestItem.City = "Coventry";
+        TestItem.County = "westmidlands";
+        TestItem.DateAdded = System.DateTime.Now.Date;
+        TestItem.Mobile = "079";
+        TestItem.Name = "john";
+        TestItem.PostCode = "CV8";
+        TestItem.PostionInCompany = "1cccccccc";
+        TestItem.SupplierName = "bmw";
+        TestItem.Title = "Mrs";
+        TestItem.WorkExt = "412";
+        TestItem.WorkNumber = "1214";
+        AllSuppliers.Update();
+        AllSuppliers.ThisSupplier.Find(PrimaryKey);
+        Assert.AreEqual(AllSuppliers.ThisSupplier, TestItem);
+
+
+    }
+
+
 }
 
     

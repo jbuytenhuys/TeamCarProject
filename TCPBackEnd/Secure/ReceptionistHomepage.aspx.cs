@@ -22,7 +22,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
     void DisplayCars()
     {
         //create an instance of the Cars collection.
-        MyClassLibrary.clsCarsCollection Cars = new MyClassLibrary.clsCarsCollection();
+        clsCarsCollection Cars = new clsCarsCollection();
         //Set the data source to the list of cars in the collection.
         lstBoxReceptionistListCars.DataSource = Cars.CarList;
         //Set the name of the primary
@@ -60,6 +60,8 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             lblError.Text = "There were problems with the data entered";
         }
     }
+
+    
 
 
     protected void btnReceptionistLogout_Click(object sender, EventArgs e)

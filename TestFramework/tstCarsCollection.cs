@@ -126,6 +126,45 @@ namespace TestFramework
             Assert.AreEqual(AllCars.ThisCar, TestItem);
         }
 
+        [TestMethod]
+        public void CarDeleteMethodOK()
+        {
+            //create an instance of the class we want to create.
+            clsCarsCollection AllCars = new clsCarsCollection();
+            //create the item of test data
+            clsCar TestItem = new clsCar();
+            //variable to store the primary key.
+            Int32 PrimaryKey = 0;
+            //set it's properties.
+            TestItem.CarID = 4;
+            TestItem.CarManufacturer = "BMW";
+            TestItem.CarModel = "i8";
+            TestItem.CarRegistrationPlate = "FE17 GTE";
+            TestItem.CarColour = "yellow";
+            TestItem.CarNumberOfDoors = 5;
+            TestItem.CarNumberOfSeats = 5;
+            TestItem.CarNeedsRepair = false;
+            TestItem.CarSold = true;
+            //set thiscar to the test date
+            AllCars.ThisCar = TestItem;
+            //add the record
+            PrimaryKey = AllCars.Add();
+            //set the primary key of the test data.
+            TestItem.CarID = PrimaryKey;
+            //find the record.
+            AllCars.ThisCar.Find(PrimaryKey);
+            //delete the record.
+            AllCars.Delete();
+            //now find the record.
+            Boolean Found = AllCars.ThisCar.Find(PrimaryKey);
+            //Test to see that the record was not found.
+            Assert.IsFalse(Found);
+
+
+
+           
+        }
+
 
 
     }

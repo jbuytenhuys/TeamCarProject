@@ -65,6 +65,17 @@ namespace MyClassLibrary
             return DB.Execute("sproc_tblCars_Insert");
         }
 
+        public void Delete()
+        {
+            //Deletes the record pointed to by ThisCar
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure.
+            DB.AddParameter("@CarID", mThisCar.CarID);
+            //Execute the stored procedure.
+            DB.Execute("sproc_tblCars_Delete");
+        }
+
 
 
 

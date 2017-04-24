@@ -13,6 +13,8 @@ public partial class MechanicHomepage : System.Web.UI.Page
         {
             DisplayRepairs();
         }
+
+        txtMechanicDeadlineDate.Text = DateTime.Today.AddDays(60).ToShortDateString();
     }
 
     void DisplayRepairs()
@@ -41,6 +43,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
             CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
             //add record
             CarRepair.Add();
+            Response.Redirect("MechanicHomepage.aspx");
             lblMechanicError.Text = "Repair successfully added";
         }
         else

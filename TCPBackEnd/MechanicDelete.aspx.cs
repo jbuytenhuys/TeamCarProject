@@ -23,7 +23,7 @@ public partial class MechanicDelete : System.Web.UI.Page
     protected void btnMechanicDeleteYes_Click(object sender, EventArgs e)
     {
         DeleteRepair();
-        
+        Response.Redirect("MechanicHomepage.aspx");
     }
 
     protected void btnMechanicDeleteNo_Click(object sender, EventArgs e)

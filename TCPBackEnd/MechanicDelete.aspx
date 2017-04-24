@@ -13,7 +13,7 @@
     
     </div>
         <p>
-            Are you sure you want to delete this address?</p>
+            Are you sure you want to delete this Repair?</p>
         <p>
             <asp:Button ID="btnMechanicDeleteYes" CssClass="MechanicButton" runat="server" style="z-index: 1; top: 129px; position: absolute" Text="Yes" OnClick="btnMechanicDeleteYes_Click" />
         </p>

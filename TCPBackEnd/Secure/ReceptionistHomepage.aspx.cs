@@ -8,8 +8,13 @@ using MyClassLibrary;
 
 public partial class ReceptionistHomepage : System.Web.UI.Page
 {
+    //Variable to store the primary key of the record to be deleted.
+    
+
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        
         //if this is the first time the page is displayed.
         if (IsPostBack == false)
         {
@@ -61,7 +66,31 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         }
     }
 
-    
+    protected void btnReceptionistArchive_Click(object sender, EventArgs e)
+    {
+        //var to store the primary key value of the record to be deleted.
+        Int32 CarID;
+        //if a record has been selected from the list
+        if (lstBoxReceptionistListCars.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to delete.
+            CarID = Convert.ToInt32(lstBoxReceptionistListCars.SelectedValue);
+            //store the data in the section object.
+            Session["CarID"] = CarID;
+            //redirect to the delete page.
+            Response.Redirect("ReceptionistDelete.aspx");
+        }
+        else
+        //if no record was found
+        {
+            //display an error.
+            lblError.Text = "Please select a record to be deleted from the list";
+        }
+    }
+
+
+
+
 
 
     protected void btnReceptionistLogout_Click(object sender, EventArgs e)
@@ -87,4 +116,6 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
     {
 
     }
+
+    
 }

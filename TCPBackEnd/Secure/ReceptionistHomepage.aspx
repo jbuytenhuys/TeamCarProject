@@ -31,7 +31,7 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 810px; top: 555px; position: absolute; height: 51px; width: 102px; margin-bottom: 0px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistArchive" runat="server" style="z-index: 1; left: 1038px; top: 554px; position: absolute; height: 51px; width: 86px;" Text="Archive" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistArchive" runat="server" style="z-index: 1; left: 1038px; top: 554px; position: absolute; height: 51px; width: 86px;" Text="Archive" OnClick="btnReceptionistArchive_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" />
 

@@ -87,35 +87,22 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             lblError.Text = "Please select a record to be deleted from the list";
         }
     }
-
-
-
-
-
+    
 
     protected void btnReceptionistLogout_Click(object sender, EventArgs e)
     {
         Response.Redirect("Default.aspx");
     }
-
-
-
-    protected void txtReceptionistCarModel_TextChanged(object sender, EventArgs e)
-    {
        
-    }
-
     protected void btnReceptionistAddCar_Click(object sender, EventArgs e)
     {
        Add();
         
     }
 
-
-    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    protected void btnReceptionistListAllCars_Click(object sender, EventArgs e)
     {
-
+        //update the list box.
+        DisplayCars();
     }
-
-    
 }

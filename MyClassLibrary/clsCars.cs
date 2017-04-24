@@ -138,6 +138,7 @@ namespace MyClassLibrary
             if (DB.Count == 1)
             {
                 //Copy Data from the database to the private data members.
+                mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
                 mCarManufacturer = Convert.ToString(DB.DataTable.Rows[0]["CarManufacturer"]);
                 mCarModel = Convert.ToString(DB.DataTable.Rows[0]["CarModel"]);
                 mCarColour = Convert.ToString(DB.DataTable.Rows[0]["CarColour"]);

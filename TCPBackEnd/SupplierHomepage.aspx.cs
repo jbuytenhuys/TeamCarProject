@@ -73,7 +73,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     {
         Add();
         Response.Redirect("SupplierHomepage.aspx");
-            
+
     }
 
     protected void lstBoxListSupplier_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,7 +135,31 @@ public partial class SupplierHomepage : System.Web.UI.Page
     {
 
     }
+
+ 
+
+
+    protected void btnDelete_Click1(object sender, EventArgs e)
+    {
+        Int32 SupplierID;
+        if (lstBoxListSupplier.SelectedIndex != -1)
+        {
+            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+            Session["SupplierID"] = SupplierID;
+            Response.Redirect("SupplierDelete.aspx");
+        }
+
+        else
+        {
+            Label1.Text = "Please seect a record to delete from the list";
+        }
+
+    }
 }
+
+
+        
+
 
 
 

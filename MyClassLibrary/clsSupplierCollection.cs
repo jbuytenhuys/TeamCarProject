@@ -91,7 +91,16 @@ namespace MyClassLibrary
             DB.AddParameter("@WorkNumber",mThisSupplier.WorkNumber);
             return DB.Execute("sproc_tblSupplier_Insert"); 
         }
+
+        public void Delete()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@SupplierID", mThisSupplier.SupplierID);
+            DB.Execute("sproc_tblSupplier_Delete");
+        }
+    
     }
+   
 }
 
 

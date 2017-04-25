@@ -18,18 +18,31 @@
         <asp:TextBox ID="txtSalesmanFilterBy" runat="server" style="z-index: 1; left: 23px; top: 206px; position: absolute"></asp:TextBox>
         <asp:Button ID="btnSalesmanSearch" runat="server" style="z-index: 1; left: 24px; top: 288px; position: absolute" Text="Search" />
         <asp:ListBox ID="lstSalesmanBox" runat="server" style="z-index: 1; left: 415px; top: 77px; position: absolute; height: 242px; width: 362px"></asp:ListBox>
-        <asp:Button ID="btnSalesmanArchiveCustomer" runat="server" style="z-index: 1; left: 574px; top: 344px; position: absolute" Text="Archive customer" />
-        <asp:TextBox ID="txtSalesmanCustomerID" runat="server" style="z-index: 1; left: 909px; top: 114px; position: absolute">Customer ID</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanFirstName" runat="server" style="z-index: 1; left: 910px; top: 231px; position: absolute; margin-bottom: 2px">First Name</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanLastName" runat="server" style="z-index: 1; left: 912px; top: 265px; position: absolute; margin-top: 0px">Last Name</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanCustomerPostCode" runat="server" style="z-index: 1; left: 911px; top: 301px; position: absolute">Post Code</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanCustomerAddress" runat="server" style="z-index: 1; left: 910px; top: 153px; position: absolute">Customer Address</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanCustomerEmail" runat="server" style="z-index: 1; top: 197px; position: absolute; bottom: 445px; left: 911px">Customer Email</asp:TextBox>
-        <asp:TextBox ID="txtSalesmanDateAddedOK" runat="server" style="z-index: 1; left: 909px; top: 338px; position: absolute">Date Added</asp:TextBox>
-        <asp:CheckBox ID="chkSalesmanActiveOK" runat="server" style="z-index: 1; left: 917px; top: 369px; position: absolute" Text="Active?" />
+        <asp:Button ID="btnSalesmanArchiveCustomer" runat="server" style="z-index: 1; left: 574px; top: 344px; position: absolute" Text="Archive customer" OnClick="btnSalesmanArchiveCustomer_Click" />
+        <asp:TextBox ID="txtSalesmanCustomerID" runat="server" style="z-index: 1; left: 909px; top: 114px; position: absolute" ReadOnly="True">Customer ID</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanFirstName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 910px; top: 231px; position: absolute; margin-bottom: 2px">First Name</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanLastName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 912px; top: 265px; position: absolute; margin-top: 0px">Last Name</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanCustomerPostCode" runat="server" OnClick="this.value=''" style="z-index: 1; left: 911px; top: 301px; position: absolute">Post Code</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanCustomerAddress" runat="server" OnClick="this.value=''" style="z-index: 1; left: 910px; top: 153px; position: absolute">Customer Address</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanCustomerEmail" runat="server" OnClick="this.value=''" style="z-index: 1; top: 197px; position: absolute; bottom: 445px; left: 911px">Customer Email</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanDateAddedOK" runat="server" style="z-index: 1; left: 909px; top: 338px; position: absolute" OnTextChanged="txtSalesmanDateAddedOK_TextChanged" ReadOnly="True">Date Added</asp:TextBox>
+        <asp:CheckBox ID="chkSalesmanActiveOK" runat="server"  style="z-index: 1; left: 917px; top: 377px; position: absolute" Text="Active?" OnCheckedChanged="chkSalesmanActiveOK_CheckedChanged" />
         <asp:Button ID="btnSalesmanAddCustomer" runat="server" style="z-index: 1; left: 851px; top: 439px; position: absolute" Text="Add Customer" OnClick="btnSalesmanAddCustomer_Click" />
-        <asp:Button ID="btnSalesmanUpdateCustomer" runat="server" style="z-index: 1; left: 992px; top: 441px; position: absolute" Text="Update Customer" />
-        <asp:Label ID="lblSalesmanError" runat="server" style="z-index: 1; left: 447px; top: 424px; position: absolute"></asp:Label>
+        <asp:Button ID="btnSalesmanUpdateCustomer" runat="server" style="z-index: 1; left: 992px; top: 441px; position: absolute" Text="Update Customer" OnClick="btnSalesmanUpdateCustomer_Click" />
+        <p>
+        <asp:Label ID="lblSalesmanError" runat="server" style="z-index: 1; left: 453px; top: 520px; position: absolute"></asp:Label>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="btnSalesmanViewDate" runat="server" style="z-index: 1; left: 405px; top: 345px; position: absolute; height: 29px; width: 98px" Text="View Data" OnClick="btnSalesmanViewData_Click" />
+        </p>
     </form>
 </body>
 </html>

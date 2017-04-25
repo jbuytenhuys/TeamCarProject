@@ -18,29 +18,37 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             //update the list box
             DisplayCustomers(); 
         }
-        
-        txtSalesmanDateAddedOK.Text = DateTime.Today.ToShortDateString();
-
         //get the number of the customer to be processed
         CustomerID = Convert.ToInt32(Session["CustomerID"]);
+
+        txtSalesmanDateAddedOK.Text = DateTime.Today.ToShortDateString();
+
+        
     }
 
     void DisplayCustomers()
     {
         //create an instance of the customer collection
         MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
-        //set the data dource to the list of customer in the collection
-        lstSalesmanBox.DataSource = Customer.CustomerList;
-        //set the name of the primary key
-        lstSalesmanBox.DataValueField = "CustomerID";
-        //set the data field to display
-        lstSalesmanBox.DataTextField = "CustomerFirstName";
+        lstSalesmanBox.DataSource = Customer.CustomerList;////set the data dource to the list of customer in the collection
+        lstSalesmanBox.DataValueField = "CustomerID";////set the name of the primary key
+        lstSalesmanBox.DataTextField = "CustomerFirstName";////set the data field to display
         lstSalesmanBox.DataBind();
     }
 
-    protected void btnSalesmanAddCustomer_Click(object sender, EventArgs e)
+    void DisplayRecordData()
     {
-        Add();
+        CustomerID = Convert.ToInt32(Session["CustomerID"]);
+        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();////create an instance of the Customer addresses
+        CustomerBook.ThisCustomer.Find(CustomerID);////find the record to update 
+        //display the data for the record
+        txtSalesmanCustomerAddress.Text = CustomerBook.ThisCustomer.CustomerAddress;
+        txtSalesmanCustomerEmail.Text = CustomerBook.ThisCustomer.CustomerEmail;
+        txtSalesmanFirstName.Text = CustomerBook.ThisCustomer.CustomerFirstName;
+        txtSalesmanLastName.Text = CustomerBook.ThisCustomer.CustomerLastName;
+        txtSalesmanCustomerPostCode.Text = CustomerBook.ThisCustomer.CustomerPostCodeOK;
+        txtSalesmanDateAddedOK.Text = CustomerBook.ThisCustomer.DateAddedOK.ToString();
+        chkSalesmanActiveOK.Checked = CustomerBook.ThisCustomer.ActiveOK;
     }
 
     void Add()
@@ -63,8 +71,9 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 
             //add record
             CustomerBook.Add();
-            lblSalesmanError.Text = "Customer successfully added";
             Response.Redirect("SalesmanHomepage.aspx");
+            lblSalesmanError.Text = "Customer successfully added";
+            
         }
         else
         {
@@ -73,6 +82,58 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         }
     }
 
+    void Update()
+    {
+        //create an instance
+        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
+        //validate the data on webform
+        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
+        //if data is okay then add to object
+        if (OK == true)
+        {
+            //find the record to update
+            CustomerBook.ThisCustomer.Find(CustomerID);
+            CustomerBook.ThisCustomer.CustomerAddress = txtSalesmanCustomerAddress.Text;
+            CustomerBook.ThisCustomer.CustomerEmail = txtSalesmanCustomerEmail.Text;
+            CustomerBook.ThisCustomer.CustomerFirstName = txtSalesmanFirstName.Text;
+            CustomerBook.ThisCustomer.CustomerLastName = txtSalesmanLastName.Text;
+            CustomerBook.ThisCustomer.CustomerPostCodeOK = txtSalesmanCustomerPostCode.Text;
+            CustomerBook.ThisCustomer.DateAddedOK = Convert.ToDateTime(txtSalesmanDateAddedOK.Text);
+            CustomerBook.ThisCustomer.ActiveOK = chkSalesmanActiveOK.Checked;
+            //update the record
+            CustomerBook.Update();
+            Response.Redirect("SalesmanHomepage.aspx");
+            lblSalesmanError.Text = "Customer successfully added";
+        }
+        else
+        {
+            //report error
+            lblSalesmanError.Text = "There were problems with updating the data you have entered, please try again";
+        }
+    }
+
+
+    void FilterCustomerFirstName()
+    {
+        //create an instance of the customer collection
+        MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
+        //set the data dource to the list of customer in the collection
+        Customer.ThisCustomer.CustomerFirstName = txtSalesmanFilterBy.Text;
+        Customer.FilterByCustomerFirstName(Customer.ThisCustomer.CustomerFirstName);
+        lstSalesmanBox.DataSource = Customer.CustomerList;
+        //set the name of the primary key
+        lstSalesmanBox.DataValueField = "CustomerID";
+        //set the data field to display
+        lstSalesmanBox.DataTextField = "CustomerFirstName";
+        lstSalesmanBox.DataBind();
+    }
+
+
+
+    protected void btnSalesmanAddCustomer_Click(object sender, EventArgs e)
+    {
+        Add();
+    }
 
     protected void btnSalesmanHomePage_Click(object sender, EventArgs e)
     {
@@ -133,51 +194,8 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             lblSalesmanError.Text = "There were problems with updating the data you have entered, please try again";
         }
     }
-    void Update()
-    {
-        //create an instance
-        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
-        //validate the data on webform
-        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
-        //if data is okay then add to object
-        if (OK == true)
-        {
-            //find the record to update
-            CustomerBook.ThisCustomer.Find(CustomerID);
-            CustomerBook.ThisCustomer.CustomerAddress = txtSalesmanCustomerAddress.Text;
-            CustomerBook.ThisCustomer.CustomerEmail = txtSalesmanCustomerEmail.Text;
-            CustomerBook.ThisCustomer.CustomerFirstName = txtSalesmanFirstName.Text;
-            CustomerBook.ThisCustomer.CustomerLastName = txtSalesmanLastName.Text;
-            CustomerBook.ThisCustomer.CustomerPostCodeOK = txtSalesmanCustomerPostCode.Text;
-            CustomerBook.ThisCustomer.DateAddedOK = Convert.ToDateTime(txtSalesmanDateAddedOK.Text);
-            CustomerBook.ThisCustomer.ActiveOK = chkSalesmanActiveOK.Checked;
-            //update the record
-            CustomerBook.Update();
-            Response.Redirect("SalesmanHomepage.aspx");
-        }
-        else
-        {
-            //report error
-            lblSalesmanError.Text = "There were problems with updating the data you have entered, please try again";
-        }
-    }
-
-    void DisplayRecordData()
-    {
-        CustomerID = Convert.ToInt32(Session["CustomerID"]);
-        //create an instance of the Customer addresses
-        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
-        //find the record to update 
-        CustomerBook.ThisCustomer.Find(CustomerID);
-        //display the data for the record
-        txtSalesmanCustomerAddress.Text = CustomerBook.ThisCustomer.CustomerAddress;
-        txtSalesmanCustomerEmail.Text = CustomerBook.ThisCustomer.CustomerEmail;
-        txtSalesmanFirstName.Text = CustomerBook.ThisCustomer.CustomerFirstName;
-        txtSalesmanLastName.Text = CustomerBook.ThisCustomer.CustomerLastName;
-        txtSalesmanCustomerPostCode.Text = CustomerBook.ThisCustomer.CustomerPostCodeOK;
-        txtSalesmanDateAddedOK.Text = CustomerBook.ThisCustomer.DateAddedOK.ToString();
-        chkSalesmanActiveOK.Checked = CustomerBook.ThisCustomer.ActiveOK;
-    }
+   
+   
 
     protected void lstSalesmanBox_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -188,25 +206,17 @@ public partial class SalesmanHomepage : System.Web.UI.Page
     {
 
     }
-    void FilterCustomerFirstName()
-    {
-        //create an instance of the customer collection
-        MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
-        //set the data dource to the list of customer in the collection
-        Customer.ThisCustomer.CustomerFirstName = txtSalesmanFilterBy.Text;
-        Customer.FilterByCustomerFirstName(Customer.ThisCustomer.CustomerFirstName);
-        lstSalesmanBox.DataSource = Customer.CustomerList;
-        //set the name of the primary key
-        lstSalesmanBox.DataValueField = "CustomerID";
-        //set the data field to display
-        lstSalesmanBox.DataTextField = "CustomerFirstName";
-        lstSalesmanBox.DataBind();
-    }
+    
 
     protected void btnSalesmanSearch_Click(object sender, EventArgs e)
     {
         FilterCustomerFirstName();
 
+    }
+
+    protected void btnSalesmanReset_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SalesmanHomepage.aspx");
     }
 }
 

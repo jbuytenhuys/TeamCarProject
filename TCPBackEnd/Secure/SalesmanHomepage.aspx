@@ -37,7 +37,8 @@
         <p>
             &nbsp;</p>
         <p>
-            &nbsp;</p>
+            <asp:Button ID="btnSalesmanReset" runat="server" OnClick="btnSalesmanReset_Click" style="z-index: 1; left: 792px; top: 111px; position: absolute; height: 35px; width: 84px" Text="Reset Data" />
+        </p>
         <p>
             &nbsp;</p>
         <p>

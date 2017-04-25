@@ -16,23 +16,13 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         if (IsPostBack == false)
         {
             //update the list box
-            DisplayCustomers();
-            //if this is not a new record
-            if (CustomerID != -1)
-            {
-                //display the current data for the record
-                DisplayCustomers();
-            }
+            DisplayCustomers(); 
         }
+        
         txtSalesmanDateAddedOK.Text = DateTime.Today.ToShortDateString();
 
         //get the number of the customer to be processed
         CustomerID = Convert.ToInt32(Session["CustomerID"]);
-        if (IsPostBack == false)
-        {
-            //populate the list of customers
-            DisplayCustomers();
-        }
     }
 
     void DisplayCustomers()
@@ -153,6 +143,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         if (OK == true)
         {
             //find the record to update
+            CustomerBook.ThisCustomer.Find(CustomerID);
             CustomerBook.ThisCustomer.CustomerAddress = txtSalesmanCustomerAddress.Text;
             CustomerBook.ThisCustomer.CustomerEmail = txtSalesmanCustomerEmail.Text;
             CustomerBook.ThisCustomer.CustomerFirstName = txtSalesmanFirstName.Text;
@@ -162,6 +153,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             CustomerBook.ThisCustomer.ActiveOK = chkSalesmanActiveOK.Checked;
             //update the record
             CustomerBook.Update();
+            Response.Redirect("SalesmanHomepage.aspx");
         }
         else
         {
@@ -183,9 +175,38 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         txtSalesmanFirstName.Text = CustomerBook.ThisCustomer.CustomerFirstName;
         txtSalesmanLastName.Text = CustomerBook.ThisCustomer.CustomerLastName;
         txtSalesmanCustomerPostCode.Text = CustomerBook.ThisCustomer.CustomerPostCodeOK;
-        txtSalesmanDateAddedOK.Text = CustomerBook.ThisCustomer.CustomerPostCodeOK;
         txtSalesmanDateAddedOK.Text = CustomerBook.ThisCustomer.DateAddedOK.ToString();
         chkSalesmanActiveOK.Checked = CustomerBook.ThisCustomer.ActiveOK;
+    }
+
+    protected void lstSalesmanBox_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtSalesmanFilterBy_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    void FilterCustomerFirstName()
+    {
+        //create an instance of the customer collection
+        MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
+        //set the data dource to the list of customer in the collection
+        Customer.ThisCustomer.CustomerFirstName = txtSalesmanFilterBy.Text;
+        Customer.FilterByCustomerFirstName(Customer.ThisCustomer.CustomerFirstName);
+        lstSalesmanBox.DataSource = Customer.CustomerList;
+        //set the name of the primary key
+        lstSalesmanBox.DataValueField = "CustomerID";
+        //set the data field to display
+        lstSalesmanBox.DataTextField = "CustomerFirstName";
+        lstSalesmanBox.DataBind();
+    }
+
+    protected void btnSalesmanSearch_Click(object sender, EventArgs e)
+    {
+        FilterCustomerFirstName();
+
     }
 }
 

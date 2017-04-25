@@ -9,15 +9,17 @@
 </head>
 <body style="height: 509px">
 
+    <form runat="server">
+    
     <p>
         <br />
     </p>
 
-    <form runat="server">
-    
         <p>
 
         <asp:Button ID="btnMechanicReset" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1020px; top: 72px; position: absolute; height: 33px; width: 82px;" Text="Reset" OnClick="btnMechanicReset_Click" />
+
+            <asp:Label ID="lblMechanicUserInfo" runat="server" style="z-index: 1; left: 19px; top: 1px; position: absolute" Text="-"></asp:Label>
 
         </p>
     

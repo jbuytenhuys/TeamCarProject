@@ -17,7 +17,17 @@ public partial class MechanicHomepage : System.Web.UI.Page
         }
         CarRepairID = Convert.ToInt32(Session["CarRepairID"]);
         txtMechanicDeadlineDate.Text = DateTime.Today.AddDays(60).ToShortDateString();
-        
+
+        lblMechanicUserInfo.Text = "the current user is " + User.Identity.Name;
+
+        if (User.IsInRole("Admins") == true)
+        {
+            lblMechanicUserInfo.Text = lblMechanicUserInfo.Text + " the user is an admin";
+        }
+        else
+        {
+            lblMechanicUserInfo.Text = lblMechanicUserInfo.Text + " the user is not an admin";
+        }
         
     }
 
@@ -185,7 +195,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
             //store the data in the session object
             Session["CarRepairID"] = CarRepairID;
             //redirect to delete confirmation page
-            Response.Redirect("MechanicDelete.aspx");
+            Response.Redirect("MechanicArchive.aspx");
         }
         else
         {
@@ -197,7 +207,6 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicViewData_Click(object sender, EventArgs e)
     {
-        Int32 CarRepairID;
 
         if (lstMechanicRepairs.SelectedIndex != -1)
         {

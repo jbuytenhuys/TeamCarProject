@@ -27,7 +27,7 @@
 
         <asp:ListBox CssClass="ListBoxes"  ID="lstBoxReceptionistListCars" runat="server" style="z-index: 1; left: 348px; top: 97px; position: absolute; height: 355px; width: 414px; margin-top: 16px"></asp:ListBox>
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 500px; top: 498px; position: absolute; height: 63px; width: 132px" Text="List All Cars" OnClick="btnReceptionistListAllCars_Click" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 388px; top: 502px; position: absolute; height: 63px; width: 132px" Text="List All Cars" OnClick="btnReceptionistListAllCars_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 810px; top: 555px; position: absolute; height: 51px; width: 102px; margin-bottom: 0px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
 
@@ -53,24 +53,15 @@
 
         <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarID" runat="server" style="z-index: 1; left: 854px; top: 113px; position: absolute; width: 284px" ReadOnly="True"></asp:TextBox>
 
-
-        <p>
-            &nbsp;</p>
-
-        <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarColour" runat="server" style="z-index: 1; left: 855px; top: 228px; position: absolute; width: 287px">Car Colour</asp:TextBox>
-
-        <p>
-            &nbsp;</p>
         <asp:TextBox ID="txtReceptionistCarManufacturer" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 854px; top: 149px; position: absolute; width: 290px">Car Manufacturer</asp:TextBox>
-        <p>
-            &nbsp;</p>
-        <p>
-            &nbsp;</p>
-        <p>
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 303px; top: 594px; position: absolute; width: 427px;" Text=""></asp:Label>
+
+        <asp:Button ID="btnReceptionistEdit" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistEdit_Click" style="z-index: 1; left: 568px; top: 502px; position: absolute; height: 58px; width: 100px; right: 586px" Text="Edit" />
 
 
-        </p>
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 423px; top: 593px; position: absolute"></asp:Label>
+
+
+        <asp:TextBox ID="txtReceptionistCarColour" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 850px; top: 230px; position: absolute; width: 284px">Car Colour</asp:TextBox>
 
 
     </form>

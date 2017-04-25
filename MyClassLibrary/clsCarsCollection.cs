@@ -86,6 +86,25 @@ namespace MyClassLibrary
             DB.Execute("sproc_tblCars_tblArchive_ArchiveAndDelete");
         }
 
+        public void Update()
+        {
+            //update an existing record based on the values of this address
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure.
+            DB.AddParameter("@CarID", mThisCar.CarID);
+            DB.AddParameter("@CarManufacturer", mThisCar.CarManufacturer);
+            DB.AddParameter("@CarID", mThisCar.CarModel);
+            DB.AddParameter("@CarID", mThisCar.CarRegistrationPlate);
+            DB.AddParameter("@CarID", mThisCar.CarColour);
+            DB.AddParameter("@CarID", mThisCar.CarNumberOfDoors);
+            DB.AddParameter("@CarID", mThisCar.CarNumberOfSeats);
+            DB.AddParameter("@CarID", mThisCar.CarNeedsRepair);
+            DB.AddParameter("@CarID", mThisCar.CarSold);
+            //Execute the stored procedure.
+            DB.Execute("sproc_tblCars_Update");
+        }
+
 
 
 

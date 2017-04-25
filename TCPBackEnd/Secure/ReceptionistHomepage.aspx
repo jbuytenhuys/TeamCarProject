@@ -20,10 +20,10 @@
         </asp:DropDownList>
 
 
-        <asp:DropDownList CssClass="DropDownMenu" ID="DDlstReceptionistYearFilter" runat="server" style="z-index: 1; left: 61px; top: 277px; position: absolute; height: 22px; width: 180px">
+        <asp:DropDownList CssClass="DropDownMenu" ID="DDlstReceptionistYearFilter" runat="server" style="z-index: 1; left: 63px; top: 182px; position: absolute; height: 22px; width: 180px">
         </asp:DropDownList>
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistFilterCars" runat="server" style="z-index: 1; left: 83px; top: 316px; position: absolute; height: 53px; width: 122px" Text="Filter Cars" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistFilterCars" runat="server" style="z-index: 1; left: 83px; top: 316px; position: absolute; height: 53px; width: 122px" Text="Filter Cars" OnClick="btnReceptionistFilterCars_Click" />
 
         <asp:ListBox CssClass="ListBoxes"  ID="lstBoxReceptionistListCars" runat="server" style="z-index: 1; left: 348px; top: 97px; position: absolute; height: 355px; width: 414px; margin-top: 16px"></asp:ListBox>
 
@@ -67,6 +67,9 @@
 
 
         <asp:Button ID="btnReceptionistReset" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistReset_Click" style="z-index: 1; left: 901px; top: 54px; position: absolute;" Text="Reset Form" />
+
+
+        <asp:TextBox ID="txtReceptionistFilterByCarManufacturer" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 60px; top: 276px; position: absolute; width: 178px">Car Manufacturer</asp:TextBox>
 
 
     </form>

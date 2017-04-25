@@ -6,7 +6,6 @@ namespace MyClassLibrary
     public class clsCarsCollection
     {
         
-
         //private data member for the list.
         List<clsCar> mCarList = new List<clsCar>();
         //private data member for thisCar
@@ -14,37 +13,12 @@ namespace MyClassLibrary
 
         public clsCarsCollection()
         {
-            //Variable for index
-            Int32 Index = 0;
-            //variable to store the record count.
-            Int32 RecordCount = 0;
             //Object for data connection.
             clsDataConnection DB = new clsDataConnection();
             //Execute the stored procedure.
             DB.Execute("sproc_tblCars_SelectAll");
-            //Get the count of records.
-            RecordCount = DB.Count;
-            //While there a records to process.
-            while (Index < RecordCount)
-            {
-                //Create a blank class
-                clsCar AnCar = new clsCar();
-                //read in the fields from the current record.
-                AnCar.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
-                AnCar.CarManufacturer = Convert.ToString(DB.DataTable.Rows[Index]["CarManufacturer"]);
-                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
-                AnCar.CarRegistrationPlate = Convert.ToString(DB.DataTable.Rows[Index]["CarRegistrationPlate"]);
-                AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["CarColour"]);
-                AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfDoors"]);
-                AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfSeats"]);
-                AnCar.TransactionID = Convert.ToInt32(DB.DataTable.Rows[Index]["TransactionID"]);
-                AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarNeedsRepair"]);
-                AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarSold"]);
-                //add the record to the private data member.
-                mCarList.Add(AnCar);
-                //Point at the next record
-                Index++;
-            }
+            //populate array list with data table.
+            PopulateArray(DB);    
         }
 
         public int Add()
@@ -105,6 +79,51 @@ namespace MyClassLibrary
             DB.Execute("sproc_tblCars_Update");
         }
 
+        public void FilterByCarManufacturer(string CarManufacturer)
+        {
+            //filters the records based on a full or partial car manufacturer.
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the car Manufacturer parameter to the database
+            DB.AddParameter("@CarManufacturer", CarManufacturer);
+            //Execute stored procedure.
+            DB.Execute("sproc_tblCars_FilterByManufacturer");
+            //populate array list with table data.
+            PopulateArray(DB);
+        }
+
+        public void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //Variable for index
+            Int32 Index = 0;
+            //Variable to store the record count.
+            Int32 RecordCount;
+            RecordCount = DB.Count;
+            //clear the private list array.
+            mCarList = new List<clsCar>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //Create a blank class
+                clsCar AnCar = new clsCar();
+                //read in the fields from the current record.
+                AnCar.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
+                AnCar.CarManufacturer = Convert.ToString(DB.DataTable.Rows[Index]["CarManufacturer"]);
+                AnCar.CarModel = Convert.ToString(DB.DataTable.Rows[Index]["CarModel"]);
+                AnCar.CarRegistrationPlate = Convert.ToString(DB.DataTable.Rows[Index]["CarRegistrationPlate"]);
+                AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["CarColour"]);
+                AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfDoors"]);
+                AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfSeats"]);
+                AnCar.TransactionID = Convert.ToInt32(DB.DataTable.Rows[Index]["TransactionID"]);
+                AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarNeedsRepair"]);
+                AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarSold"]);
+                //add the record to the private data member.
+                mCarList.Add(AnCar);
+                //Point at the next record
+                Index++;
+            }
+        }
 
 
 
@@ -149,6 +168,7 @@ namespace MyClassLibrary
                 //worry about this later.
             }
         }
+
         
     }
 }

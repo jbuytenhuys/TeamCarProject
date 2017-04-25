@@ -178,22 +178,23 @@ namespace TestFramework
 
         }
 
-
-
         [TestMethod]
         public void FilterByPostCodeMethodOK()
         {
-            clsSupplierCollection AllSuppliers = new clsSupplierCollection();
-            clsSupplierCollection FilteredSuppliers = new clsSupplierCollection();
-            FilteredSuppliers.FilterByPostCode("");
-            Assert.AreEqual(AllSuppliers.Count, FilteredSuppliers.Count);
+           //filters the records based on a full or partial post code
         }
 
-
+        [TestMethod]
+        public void FilterByPostCodeNoneFound()
+        {
+            clsSupplierCollection FilteredSuppliers = new clsSupplierCollection();
+            FilteredSuppliers.FilterByPostCode("xxx xxx");
+            Assert.AreEqual(0, FilteredSuppliers.Count);
+        }
 
     }
-}
 
+}
 
 
 

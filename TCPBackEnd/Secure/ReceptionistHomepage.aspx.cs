@@ -119,6 +119,12 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         ChkBoxReceptionistSold.Checked = Cars.ThisCar.CarSold;
     }
 
+    void FilterByCarManufacturer()
+    {
+        clsCarsCollection Cars = new clsCarsCollection();
+        Cars.FilterByCarManufacturer(txtReceptionistFilterByCarManufacturer.Text);
+    }
+
     protected void btnReceptionistArchive_Click(object sender, EventArgs e)
     {
         //var to store the primary key value of the record to be deleted.
@@ -207,5 +213,10 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         txtReceptionistCarNumberOfSeats.Text = "Number Of Seats";
         ChkBoxReceptionistNeedsRepair.Checked = false;
         ChkBoxReceptionistSold.Checked = false;
+    }
+
+    protected void btnReceptionistFilterCars_Click(object sender, EventArgs e)
+    {
+        FilterByCarManufacturer();
     }
 }

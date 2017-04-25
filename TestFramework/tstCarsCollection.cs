@@ -204,6 +204,61 @@ namespace TestFramework
             Assert.AreEqual(AllCars.ThisCar, TestItem);
         }
 
+        [TestMethod]
+        public void FilterByCarManufacturerMethodOk()
+        {
+            //Create an instance of the class containing unfiltered results.
+            clsCarsCollection AllCars = new clsCarsCollection();
+            //create an instance of the filtered data.
+            clsCarsCollection FilteredCars = new clsCarsCollection();
+            //Apply a blank string (Should return all records)
+            FilteredCars.FilterByCarManufacturer("");
+            //Test to see that the two values are the same.
+            Assert.AreEqual(AllCars.Count, FilteredCars.Count);
+            
+        }
+
+        [TestMethod]
+        public void FilterByCarManufacturerNoneFound()
+        {
+            //create an instance of the filtered data.
+            clsCarsCollection FilteredCars = new clsCarsCollection();
+            //Apply a blank string (Should return all records)
+            FilteredCars.FilterByCarManufacturer("TestManufacturer");
+            //Test to see that there are no records.
+            Assert.AreEqual(0, FilteredCars.Count);
+        }
+
+        [TestMethod]
+        public void FilterByCarManufacturerDataFound()
+        {
+            //create an instance of the filtered data.
+            clsCarsCollection FilteredCars = new clsCarsCollection();
+            //Variable to store the result.
+            Boolean Ok = true;
+            //apply a car manufacturer that doesn't exist.
+            FilteredCars.FilterByCarManufacturer("Doesntexist");
+            //check that the correct number of records are found.
+            if (FilteredCars.Count == 2)
+            {
+                //check that the first record is ID 1
+                if (FilteredCars.CarList[0].CarID != 1)
+                {
+                    Ok = false;
+                }
+                //check that the first record is ID 2
+                if (FilteredCars.CarList[1].CarID != 2)
+                {
+                    Ok = false;
+                }
+                else
+                {
+                    Ok = false;
+                }
+                //test to see that there are no records.
+                Assert.IsTrue(Ok);
+            }
+        }
 
 
 

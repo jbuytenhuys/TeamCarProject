@@ -14,18 +14,19 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        //get thye number of the Car to be processed.
+        //get the number of the Car to be processed.
         CarID = Convert.ToInt32(Session["CarID"]);
+
         //if this is the first time the page is displayed.
         if (IsPostBack == false)
         {
-            //update the list box.
-            DisplayCars();
+            //populate list box.
+            DisplayAllCars();   
        
         }
     }
      
-    void DisplayCars()
+    void DisplayAllCars()
     {
         //create an instance of the Cars collection.
         clsCarsCollection Cars = new clsCarsCollection();
@@ -78,8 +79,44 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         if (OK == true)
         {
             //find the record to update.
-
+            Cars.ThisCar.Find(CarID);
+            //get the data entered by the user.
+            Cars.ThisCar.CarManufacturer = txtReceptionistCarManufacturer.Text;
+            Cars.ThisCar.CarModel = txtReceptionistCarModel.Text;
+            Cars.ThisCar.CarRegistrationPlate = txtReceptionistCarRegistrationPlate.Text;
+            Cars.ThisCar.CarColour = txtReceptionistCarColour.Text;
+            Cars.ThisCar.CarNumberOfDoors = Convert.ToInt32(txtReceptionistCarNumberOfDoors.Text);
+            Cars.ThisCar.CarNumberOfSeats = Convert.ToInt32(txtReceptionistCarNumberOfSeats.Text);
+            Cars.ThisCar.CarNeedsRepair = ChkBoxReceptionistNeedsRepair.Checked;
+            Cars.ThisCar.CarSold = ChkBoxReceptionistSold.Checked;
+            //update the record
+            Cars.Update();
         }
+        else
+        {
+            //report an error
+            lblError.Text = "There were problems with the data you have entered.";
+        }
+    }
+
+    void DisplayCar()
+    {
+        //get the number of the Car to be processed.
+        CarID = Convert.ToInt32(Session["CarID"]);
+        //create an instance.
+        clsCarsCollection Cars = new clsCarsCollection();
+        //find the record to be displayed.
+        Cars.ThisCar.Find(CarID);
+        //copy properties into textboxes on web form.
+        txtReceptionistCarID.Text = Convert.ToString(Cars.ThisCar.CarID);
+        txtReceptionistCarManufacturer.Text = Cars.ThisCar.CarManufacturer;
+        txtReceptionistCarModel.Text = Cars.ThisCar.CarModel;
+        txtReceptionistCarRegistrationPlate.Text = Cars.ThisCar.CarRegistrationPlate;
+        txtReceptionistCarColour.Text = Cars.ThisCar.CarColour;
+        txtReceptionistCarNumberOfDoors.Text = Convert.ToString(Cars.ThisCar.CarNumberOfDoors);
+        txtReceptionistCarNumberOfSeats.Text = Convert.ToString(Cars.ThisCar.CarNumberOfSeats);
+        ChkBoxReceptionistNeedsRepair.Checked = Cars.ThisCar.CarNeedsRepair;
+        ChkBoxReceptionistSold.Checked = Cars.ThisCar.CarSold;
     }
 
     protected void btnReceptionistArchive_Click(object sender, EventArgs e)
@@ -119,7 +156,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
     protected void btnReceptionistListAllCars_Click(object sender, EventArgs e)
     {
         //update the list box.
-        DisplayCars();
+        DisplayAllCars();
     }
 
     protected void btnReceptionistEdit_Click(object sender, EventArgs e)
@@ -134,19 +171,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             //store the data in the session object.
             Session["CarID"] = CarID;
             lblError.Text = "";
-            clsCarsCollection Cars = new clsCarsCollection();
-            Cars.ThisCar.Find(CarID);
-            txtReceptionistCarID.Text = Convert.ToString(Cars.ThisCar.CarID);
-            txtReceptionistCarManufacturer.Text = Cars.ThisCar.CarManufacturer;
-            txtReceptionistCarModel.Text = Cars.ThisCar.CarModel;
-            txtReceptionistCarRegistrationPlate.Text = Cars.ThisCar.CarRegistrationPlate;
-            txtReceptionistCarColour.Text = Cars.ThisCar.CarColour;
-            txtReceptionistCarNumberOfDoors.Text = Convert.ToString(Cars.ThisCar.CarNumberOfDoors);
-            txtReceptionistCarNumberOfSeats.Text = Convert.ToString(Cars.ThisCar.CarNumberOfSeats);
-
-            
-            
-
+            DisplayCar();
         }
         else
         //If no record has been selected.
@@ -154,5 +179,32 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             //Display an error
             lblError.Text = "Please select a record to be edited.";
         }
+    }
+
+    protected void btnReceptionistUpdate_Click(object sender, EventArgs e)
+    {
+        if (CarID == -1)
+        {
+            //add the new record
+            Add();
+        }
+        else
+        {
+            //update the record
+            Update();
+        }
+    }
+
+    protected void btnReceptionistReset_Click(object sender, EventArgs e)
+    {
+        txtReceptionistCarID.Text = "";
+        txtReceptionistCarManufacturer.Text = "Car Manufacturer";
+        txtReceptionistCarModel.Text = "Car Model";
+        txtReceptionistCarRegistrationPlate.Text = "Car Registration Plate";
+        txtReceptionistCarColour.Text = "Car Colour";
+        txtReceptionistCarNumberOfDoors.Text = "Number of Doors";
+        txtReceptionistCarNumberOfSeats.Text = "Number of Seats";
+        ChkBoxReceptionistNeedsRepair.Checked = false;
+        ChkBoxReceptionistSold.Checked = false;
     }
 }

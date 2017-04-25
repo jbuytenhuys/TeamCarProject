@@ -82,15 +82,15 @@ input.HomepageButton:hover {
 .ReceptionistButton {
     /*Postioning*/
     position:relative;
-    display: block;
-    margin:auto;
+   
+    margin:0px auto auto auto;
 
     border: 2px solid #2f2d2d;
 
     /*Text*/
     text-align:center;
-    color: white;
-    font-size:75%  
+    color: black;
+    font-size:75%
 }
 
 input.ReceptionistButton {

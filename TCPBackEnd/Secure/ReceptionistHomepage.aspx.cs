@@ -197,13 +197,14 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     protected void btnReceptionistReset_Click(object sender, EventArgs e)
     {
+        //reset the text boxes on the web form to original values.
         txtReceptionistCarID.Text = "";
         txtReceptionistCarManufacturer.Text = "Car Manufacturer";
         txtReceptionistCarModel.Text = "Car Model";
         txtReceptionistCarRegistrationPlate.Text = "Car Registration Plate";
         txtReceptionistCarColour.Text = "Car Colour";
-        txtReceptionistCarNumberOfDoors.Text = "Number of Doors";
-        txtReceptionistCarNumberOfSeats.Text = "Number of Seats";
+        txtReceptionistCarNumberOfDoors.Text = "Number Of Doors";
+        txtReceptionistCarNumberOfSeats.Text = "Number Of Seats";
         ChkBoxReceptionistNeedsRepair.Checked = false;
         ChkBoxReceptionistSold.Checked = false;
     }

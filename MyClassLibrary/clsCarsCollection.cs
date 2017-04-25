@@ -94,13 +94,13 @@ namespace MyClassLibrary
             //set the parameters for the stored procedure.
             DB.AddParameter("@CarID", mThisCar.CarID);
             DB.AddParameter("@CarManufacturer", mThisCar.CarManufacturer);
-            DB.AddParameter("@CarID", mThisCar.CarModel);
-            DB.AddParameter("@CarID", mThisCar.CarRegistrationPlate);
-            DB.AddParameter("@CarID", mThisCar.CarColour);
-            DB.AddParameter("@CarID", mThisCar.CarNumberOfDoors);
-            DB.AddParameter("@CarID", mThisCar.CarNumberOfSeats);
-            DB.AddParameter("@CarID", mThisCar.CarNeedsRepair);
-            DB.AddParameter("@CarID", mThisCar.CarSold);
+            DB.AddParameter("@CarModel", mThisCar.CarModel);
+            DB.AddParameter("@CarRegistrationPlate", mThisCar.CarRegistrationPlate);
+            DB.AddParameter("@CarColour", mThisCar.CarColour);
+            DB.AddParameter("@NumOfDoors", mThisCar.CarNumberOfDoors);
+            DB.AddParameter("@NumOfSeats", mThisCar.CarNumberOfSeats);
+            DB.AddParameter("@CarNeedsRepair", mThisCar.CarNeedsRepair);
+            DB.AddParameter("@CarSold", mThisCar.CarSold);
             //Execute the stored procedure.
             DB.Execute("sproc_tblCars_Update");
         }

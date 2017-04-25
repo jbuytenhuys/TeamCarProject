@@ -33,7 +33,7 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistArchive" runat="server" style="z-index: 1; left: 1038px; top: 554px; position: absolute; height: 51px; width: 86px;" Text="Archive" OnClick="btnReceptionistArchive_Click" />
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 930px; top: 554px; position: absolute; height: 51px; width: 86px; right: 471px;" Text="Update" OnClick="btnReceptionistUpdate_Click" />
 
         <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 849px; top: 187px; position: absolute; width: 288px" >Car Model</asp:TextBox>
 
@@ -62,6 +62,9 @@
 
 
         <asp:TextBox ID="txtReceptionistCarColour" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 850px; top: 230px; position: absolute; width: 284px">Car Colour</asp:TextBox>
+
+
+        <asp:Button ID="btnReceptionistReset" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistReset_Click" style="z-index: 1; left: 893px; top: 59px; position: absolute; right: 209px" Text="Reset Form" />
 
 
     </form>

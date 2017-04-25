@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MechanicDelete.aspx.cs" Inherits="MechanicDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MechanicArchive.aspx.cs" Inherits="MechanicDelete" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
     
     </div>
         <p>
-            Are you sure you want to delete this Repair?</p>
+            Are you sure you want to archive this Repair?</p>
         <p>
             <asp:Button ID="btnMechanicDeleteYes" CssClass="MechanicButton" runat="server" style="z-index: 1; top: 129px; position: absolute" Text="Yes" OnClick="btnMechanicDeleteYes_Click" />
         </p>

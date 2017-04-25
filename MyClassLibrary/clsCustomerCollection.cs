@@ -71,7 +71,7 @@ namespace MyClassLibrary
             DB.Execute("sproc_tblCustomers_SelectAll");
             //populate the array list with the dsata table
             PopulateArray(DB);
-            
+
         }
 
         public int Add()
@@ -148,24 +148,22 @@ namespace MyClassLibrary
             while (Index < RecordCount)
             {
                 //create blank customer
-                clsCustomer Customer = new clsCustomer();
+                clsCustomer AnCustomer = new clsCustomer();
                 //read in the fields from the current record
-                Customer.ActiveOK = Convert.ToBoolean(DB.DataTable.Rows[Index]["ActiveOK"]);
-                Customer.CustomerAddress = Convert.ToString(DB.DataTable.Rows[Index]["CustomerAddress"]);
-                Customer.CustomerEmail = Convert.ToString(DB.DataTable.Rows[Index]["CustomerFirstName"]);
-                Customer.CustomerFirstName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerFirstName"]);
-                Customer.CustomerLastName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerLastName"]);
-                Customer.CustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[Index]["CustomerPostCodeOK"]);
-                Customer.DateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAddedOK"]);
+                AnCustomer.ActiveOK = Convert.ToBoolean(DB.DataTable.Rows[Index]["ActiveOK"]);
+                AnCustomer.CustomerAddress = Convert.ToString(DB.DataTable.Rows[Index]["CustomerAddress"]);
+                AnCustomer.CustomerEmail = Convert.ToString(DB.DataTable.Rows[Index]["CustomerFirstName"]);
+                AnCustomer.CustomerFirstName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerFirstName"]);
+                AnCustomer.CustomerLastName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerLastName"]);
+                AnCustomer.CustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[Index]["CustomerPostCodeOK"]);
+                AnCustomer.DateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAddedOK"]);
                 //add the record to the private data mamber
-                mCustomerList.Add(Customer);
+                mCustomerList.Add(AnCustomer);
                 //point at the next record
                 Index++;
-                
             }
         }
     }
-
 }
           
             

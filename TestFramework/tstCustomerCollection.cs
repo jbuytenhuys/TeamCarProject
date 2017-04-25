@@ -184,11 +184,16 @@ namespace TestFramework
             //var to store outcome 
             Boolean OK = true;
             //apply a First Name that doesnt exist
-            FilteredCustomers.FilterByCustomerFirstName("charlie");
+            FilteredCustomers.FilterByCustomerFirstName("uheruhgereruhe");
             //chek that the correct number of record are found
-            if (FilteredCustomers.count ==2)
+            if (FilteredCustomers.count == 2)
             {
-                if (FilteredCustomers.CustomerList[0].CustomerID != 36)
+                if (FilteredCustomers.CustomerList[0].CustomerID != 4)
+                {
+                    OK = false;
+                }
+                //check that the first reecord is Id 5
+                if (FilteredCustomers.CustomerList[1].CustomerID != 5)
                 {
                     OK = false;
                 }
@@ -202,3 +207,4 @@ namespace TestFramework
         }
     }
 }
+       

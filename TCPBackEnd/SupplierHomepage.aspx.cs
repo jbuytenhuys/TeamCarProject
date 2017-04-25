@@ -20,6 +20,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             {
                 DisplaySupplier();
             }
+            txtDateAdded.Text = DateTime.Today.ToShortDateString();
 
         }
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
@@ -155,8 +156,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnDelete_Click1(object sender, EventArgs e)
     {
-        Int32 SupplierID;
-        if (lstBoxListSupplier.SelectedIndex != -1)
+       if (lstBoxListSupplier.SelectedIndex != -1)
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
@@ -169,9 +169,15 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
 
     }
-    protected void BtnEdit_Click(object sender, EventArgs e)
+    protected void BtnUpdate_Click(object sender, EventArgs e)
     {
-        Int32 SupplierID;
+        Update();
+
+    }
+
+    
+    protected void btnDisplayRecord_Click(object sender, EventArgs e)
+    {
         if (lstBoxListSupplier.SelectedIndex != -1)
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
@@ -182,15 +188,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             Label2.Text = "please select a record";
         }
-
-    }
-
-    
-    protected void btnDisplayRecord_Click(object sender, EventArgs e)
-    {
-        Session["SupplierID"] = SupplierID;
-        DisplaySupplier();
-      
     }
 
     void Update()
@@ -220,6 +217,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
     void DisplaySupplier()
     {
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
         SupplierBook.ThisSupplier.Find(SupplierID);
         txtAddress.Text = SupplierBook.ThisSupplier.Address;

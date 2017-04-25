@@ -32,7 +32,7 @@
         <asp:TextBox CssClass="TextBoxes" ID="txtDateAdded" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 530px; position: absolute; width: 264px" >DateAdded</asp:TextBox>
         <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-        <asp:Button ID="BtnEdit" runat="server" OnClick="BtnEdit_Click" Text="Edit" />
+        <asp:Button ID="BtnUpdate" runat="server" OnClick="BtnUpdate_Click" Text="Update" />
         <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
 
         <asp:Button ID="btnDisplayRecord" runat="server" OnClick="btnDisplayRecord_Click" Text="Display Record" />

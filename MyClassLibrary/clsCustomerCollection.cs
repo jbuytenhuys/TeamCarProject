@@ -81,7 +81,6 @@ namespace MyClassLibrary
                 //create a blank address
                 clsCustomer Customer = new clsCustomer();
                 //read in the fields from the current mood
-                Customer.ActiveOK = Convert.ToBoolean(DB.DataTable.Rows[Index]["ActiveOK"]);
                 Customer.CustomerID = Convert.ToInt32(DB.DataTable.Rows[Index]["CustomerID"]);
                 Customer.CustomerAddress = Convert.ToString(DB.DataTable.Rows[Index]["CustomerAddress"]);
                 Customer.CustomerEmail = Convert.ToString(DB.DataTable.Rows[Index]["CustomerEmail"]);
@@ -89,6 +88,7 @@ namespace MyClassLibrary
                 Customer.CustomerLastName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerLastName"]);
                 Customer.CustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[Index]["CustomerPostCodeOK"]);
                 Customer.DateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAddedOK"]);
+                Customer.ActiveOK = Convert.ToBoolean(DB.DataTable.Rows[Index]["ActiveOK"]);
                 //add the record to the private data member
                 mCustomerList.Add(Customer);
                 //point at the next record
@@ -115,7 +115,30 @@ namespace MyClassLibrary
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            //deletes the record pointed to by thiscustomer
+            //connect to database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters fpr the stored procedure
+            DB.AddParameter("@CustomerID", mThiscustomer.CustomerID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomersArchived_Archive");
+        }
+
+        public void Update()
+        {
+            //update an existing record based on the vlaues of thisCustomer
+            //connect to database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the sored procedure
+            DB.AddParameter("CustomerID", mThiscustomer.CustomerID);
+            DB.AddParameter("CustomerAddress", mThiscustomer.CustomerAddress);
+            DB.AddParameter("@CustomerfirstName", mThiscustomer.CustomerFirstName);
+            DB.AddParameter("@CustomerLastName", mThiscustomer.CustomerLastName);
+            DB.AddParameter("@CustomerPostCodeOK", mThiscustomer.CustomerPostCodeOK);
+            DB.AddParameter("@DateAddedOK", mThiscustomer.DateAddedOK);
+            DB.AddParameter("@ActiveOK", mThiscustomer.ActiveOK);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomers_Update");
         }
     }
 

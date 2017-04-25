@@ -14,7 +14,7 @@ namespace MyClassLibrary
         private string mCustomerPostCodeOK;//
         private DateTime mDateAddedOK;//
         /// </summary>
-        private Boolean mActiveOK;
+        private bool mActiveOK;
 
         //public property for ActiveOK
         public bool ActiveOK
@@ -184,7 +184,7 @@ namespace MyClassLibrary
                 OK = false;
             }
             //if the CustomerAdress is greater than 20 characters
-            if (CustomerAddress.Length > 20)
+            if (CustomerAddress.Length > 64)
             {
                 //set the flag OK to false
                 OK = false;
@@ -224,7 +224,7 @@ namespace MyClassLibrary
             }
 
             //if the postcode is too long
-            if (CustomerPostCodeOK.Length > 9)
+            if (CustomerPostCodeOK.Length > 12)
             {
                 //set the flag OK to false
                 OK = false;

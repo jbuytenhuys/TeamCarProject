@@ -177,11 +177,13 @@ namespace TestFramework
             Assert.AreEqual(AllSuppliers.ThisSupplier, TestItem);
 
         }
-
         [TestMethod]
         public void FilterByPostCodeMethodOK()
         {
-           //filters the records based on a full or partial post code
+            clsSupplierCollection AllSuppliers = new clsSupplierCollection();
+            clsSupplierCollection FilteredSuppliers = new clsSupplierCollection();
+            FilteredSuppliers.FilterByPostCode("");
+            Assert.AreEqual(AllSuppliers.Count, FilteredSuppliers.Count);
         }
 
         [TestMethod]
@@ -194,8 +196,8 @@ namespace TestFramework
 
     }
 
-}
 
+}
 
 
 

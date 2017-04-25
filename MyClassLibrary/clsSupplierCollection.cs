@@ -50,7 +50,7 @@ namespace MyClassLibrary
             Int32 RecordCount = 0;
             clsDataConnection DB = new clsDataConnection();
             DB.Execute("sproc_tblSupplier_SelectAll");
-            PopulateArray(DB);
+            RecordCount = DB.Count;
             while (Index < RecordCount)
             {
                 clsSupplier AnSupplier = new clsSupplier();
@@ -150,8 +150,9 @@ namespace MyClassLibrary
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@PostCode", PostCode);
-            DB.Execute("sproc_tblSupplier_FilterBySupplierID");
+            DB.Execute("sproc_tblSupplier_FilterByPostCode");
             PopulateArray(DB);
+           
 
         }
         

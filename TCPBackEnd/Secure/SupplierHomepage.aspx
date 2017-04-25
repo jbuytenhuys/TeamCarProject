@@ -16,7 +16,7 @@
         <br />
     </p>
         <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" />
-        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 31px; top: 179px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
+        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 31px; top: 182px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
         <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click1" />
         <asp:TextBox CssClass="TextBoxes" ID="txtSupplierName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px" OnTextChanged="txtSupplierName_TextChanged">SupplierName</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px" >Title</asp:TextBox>
@@ -38,6 +38,9 @@
         <asp:Button ID="btnDisplayRecord" runat="server" OnClick="btnDisplayRecord_Click" Text="Display Record" />
 
         <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+
+        <asp:TextBox ID="txtFilterPostcode" runat="server" OnTextChanged="txtFilterPostcode_TextChanged">FilterPostcode</asp:TextBox>
+        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" />
 
     </form>
 </body>

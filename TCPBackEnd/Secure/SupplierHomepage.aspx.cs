@@ -232,7 +232,28 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
         txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
     }
+    void Filter()
+    {
+        clsSupplierCollection Supplier = new clsSupplierCollection();
+        Supplier.ThisSupplier.PostCode = txtFilterPostcode.Text;
+        Supplier.FilterByPostCode(Supplier.ThisSupplier.PostCode);
+        lstBoxListSupplier.DataSource = Supplier.SupplierList;
+        lstBoxListSupplier.DataValueField = "SupplierID";
+        lstBoxListSupplier.DataTextField = "Postcode";
+        lstBoxListSupplier.DataBind();
+    }
+
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        Filter();
+    }
+
+    protected void txtFilterPostcode_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }
+
 
 
 

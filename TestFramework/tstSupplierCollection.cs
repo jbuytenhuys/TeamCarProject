@@ -177,9 +177,6 @@ namespace TestFramework
             Assert.AreEqual(AllSuppliers.ThisSupplier, TestItem);
 
         }
-
-
-
         [TestMethod]
         public void FilterByPostCodeMethodOK()
         {
@@ -189,12 +186,18 @@ namespace TestFramework
             Assert.AreEqual(AllSuppliers.Count, FilteredSuppliers.Count);
         }
 
-
+        [TestMethod]
+        public void FilterByPostCodeNoneFound()
+        {
+            clsSupplierCollection FilteredSuppliers = new clsSupplierCollection();
+            FilteredSuppliers.FilterByPostCode("xxx xxx");
+            Assert.AreEqual(0, FilteredSuppliers.Count);
+        }
 
     }
+
+
 }
-
-
 
 
 

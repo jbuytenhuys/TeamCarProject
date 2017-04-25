@@ -117,7 +117,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         lstMechanicRepairs.DataSource = CarRepair.CarRepairList;
         lstMechanicRepairs.DataValueField = "CarRepairID";
         lstMechanicRepairs.DataTextField = "PartRequired";
-        lstMechanicRepairs.DataBind();
+        lstMechanicRepairs.DataBind();  
     }
 
 

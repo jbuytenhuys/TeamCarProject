@@ -13,22 +13,17 @@ public partial class SupplierHomepage : System.Web.UI.Page
     Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack == false)
-        {
-            DisplaySuppliers();
-            if (SupplierID != -1)
-            {
-                DisplaySupplier();
-            }
-            txtDateAdded.Text = DateTime.Today.ToShortDateString();
-
-        }
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
         if (IsPostBack == false)
         {
             DisplaySuppliers();
         }
+        {  
+            txtDateAdded.Text = DateTime.Today.ToShortDateString();
 
+        }
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        
     }
  
 
@@ -171,7 +166,10 @@ public partial class SupplierHomepage : System.Web.UI.Page
     }
     protected void BtnUpdate_Click(object sender, EventArgs e)
     {
+       
         Update();
+        Response.Redirect("SupplierHomepage.aspx");
+
 
     }
 
@@ -182,7 +180,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
-            Response.Redirect("SupplierHomepage.aspx");
+            DisplaySupplier();
         }
         else
         {
@@ -196,6 +194,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text);
         if (OK == true)
         {
+            SupplierBook.ThisSupplier.Find(SupplierID);
             SupplierBook.ThisSupplier.Address = txtAddress.Text;
             SupplierBook.ThisSupplier.City = txtCity.Text;
             SupplierBook.ThisSupplier.County = txtCounty.Text;
@@ -212,7 +211,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
         else
         {
-            Label3.Text = "there were problems with the date enerterd";
+            Label3.Text = "there were problems with the data enerterd";
         }
         }
     void DisplaySupplier()

@@ -16,8 +16,8 @@
         <br />
     </p>
         <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" />
-        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 35px; top: 179px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
-        <asp:Button ID="btnDisplay" runat="server" Text="Display" />
+        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 31px; top: 179px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click1" />
         <asp:TextBox CssClass="TextBoxes" ID="txtSupplierName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px" OnTextChanged="txtSupplierName_TextChanged">SupplierName</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px" >Title</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 250px; position: absolute; width: 264px" >Name</asp:TextBox>
@@ -30,8 +30,14 @@
         <asp:TextBox CssClass="TextBoxes" ID="txtWorkExt" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 460px; position: absolute; width: 264px">WorkExt</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtWorkNumber" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 490px; position: absolute; width: 264px" >WorkNumber</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtDateAdded" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 530px; position: absolute; width: 264px" >DateAdded</asp:TextBox>
-        <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="Button1_Click" />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        <asp:Button ID="BtnUpdate" runat="server" OnClick="BtnUpdate_Click" Text="Update" />
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
+        <asp:Button ID="btnDisplayRecord" runat="server" OnClick="btnDisplayRecord_Click" Text="Display Record" />
+
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
 
     </form>
 </body>

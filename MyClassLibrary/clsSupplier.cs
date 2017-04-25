@@ -196,7 +196,7 @@ namespace MyClassLibrary
             }
         }
 
-    
+
 
         public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber)
         {

@@ -140,7 +140,7 @@ namespace TestFramework
 
     }
     [TestMethod]
-    public void UpdateMethodOK()
+    public void SupplierUpdateMethodOK()
     {
         clsSupplierCollection AllSuppliers = new clsSupplierCollection();
         clsSupplier TestItem = new clsSupplier();
@@ -178,6 +178,7 @@ namespace TestFramework
 
 
     }
+
 
 
 }

@@ -8,15 +8,29 @@ using System.Web.UI.WebControls;
 
 
 public partial class SupplierHomepage : System.Web.UI.Page
+   
 {
+    Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack == false)
         {
             DisplaySuppliers();
+            if (SupplierID != -1)
+            {
+                DisplaySupplier();
+            }
 
         }
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        if (IsPostBack == false)
+        {
+            DisplaySuppliers();
+        }
+
     }
+ 
+
 
     void DisplaySuppliers()
     {
@@ -69,7 +83,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void btnAdd_Click(object sender, EventArgs e)
     {
         Add();
         Response.Redirect("SupplierHomepage.aspx");
@@ -136,7 +150,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     }
 
- 
+
 
 
     protected void btnDelete_Click1(object sender, EventArgs e)
@@ -155,10 +169,81 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
 
     }
+    protected void BtnEdit_Click(object sender, EventArgs e)
+    {
+        Int32 SupplierID;
+        if (lstBoxListSupplier.SelectedIndex != -1)
+        {
+            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+            Session["SupplierID"] = SupplierID;
+            Response.Redirect("SupplierHomepage.aspx");
+        }
+        else
+        {
+            Label2.Text = "please select a record";
+        }
+
+    }
+
+    
+    protected void btnDisplayRecord_Click(object sender, EventArgs e)
+    {
+        Session["SupplierID"] = SupplierID;
+        DisplaySupplier();
+      
+    }
+
+    void Update()
+    {
+        clsSupplierCollection SupplierBook = new clsSupplierCollection();
+        Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text);
+        if (OK == true)
+        {
+            SupplierBook.ThisSupplier.Address = txtAddress.Text;
+            SupplierBook.ThisSupplier.City = txtCity.Text;
+            SupplierBook.ThisSupplier.County = txtCounty.Text;
+            SupplierBook.ThisSupplier.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+            SupplierBook.ThisSupplier.Mobile = txtMobile.Text;
+            SupplierBook.ThisSupplier.Name = txtName.Text;
+            SupplierBook.ThisSupplier.PostCode = txtPostcode.Text;
+            SupplierBook.ThisSupplier.PostionInCompany = txtPostionInCompany.Text;
+            SupplierBook.ThisSupplier.SupplierName = txtSupplierName.Text;
+            SupplierBook.ThisSupplier.Title = txtTitle.Text;
+            SupplierBook.ThisSupplier.WorkExt = txtWorkExt.Text;
+            SupplierBook.ThisSupplier.WorkNumber = txtWorkNumber.Text;
+            SupplierBook.Update();
+        }
+        else
+        {
+            Label3.Text = "there were problems with the date enerterd";
+        }
+        }
+    void DisplaySupplier()
+    {
+        clsSupplierCollection SupplierBook = new clsSupplierCollection();
+        SupplierBook.ThisSupplier.Find(SupplierID);
+        txtAddress.Text = SupplierBook.ThisSupplier.Address;
+        txtCity.Text = SupplierBook.ThisSupplier.City;
+        txtCounty.Text = SupplierBook.ThisSupplier.County;
+        txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToString();
+        txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
+        txtName.Text = SupplierBook.ThisSupplier.Name;
+        txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
+        txtPostionInCompany.Text = SupplierBook.ThisSupplier.PostionInCompany;
+        txtSupplierName.Text = SupplierBook.ThisSupplier.Name;
+        txtTitle.Text = SupplierBook.ThisSupplier.Title;
+        txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
+        txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
+    }
 }
 
 
-        
+
+
+
+
+
+
 
 
 

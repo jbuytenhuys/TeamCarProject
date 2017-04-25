@@ -8,7 +8,7 @@ namespace MyClassLibrary
     {
         List<clsSupplier> mSupplierList = new List<clsSupplier>();
         clsSupplier mThisSupplier = new clsSupplier();
-       
+
 
         public int Count
         {
@@ -78,18 +78,18 @@ namespace MyClassLibrary
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@Address", mThisSupplier.Address);
-            DB.AddParameter("@City",mThisSupplier.City);
-            DB.AddParameter("@County",mThisSupplier.County); 
-            DB.AddParameter("@DateAdded",mThisSupplier.DateAdded);  
-            DB.AddParameter("@Mobile",mThisSupplier.Mobile);  
-            DB.AddParameter("@Name",mThisSupplier.Name);  
-            DB.AddParameter("@Postcode",mThisSupplier.PostCode); 
-            DB.AddParameter("@PostionInCompany",mThisSupplier.PostionInCompany); 
-            DB.AddParameter("@SupplierName",mThisSupplier.SupplierName); 
-            DB.AddParameter("@Title",mThisSupplier.Title); 
-            DB.AddParameter("@WorkExt",mThisSupplier.WorkExt); 
-            DB.AddParameter("@WorkNumber",mThisSupplier.WorkNumber);
-            return DB.Execute("sproc_tblSupplier_Insert"); 
+            DB.AddParameter("@City", mThisSupplier.City);
+            DB.AddParameter("@County", mThisSupplier.County);
+            DB.AddParameter("@DateAdded", mThisSupplier.DateAdded);
+            DB.AddParameter("@Mobile", mThisSupplier.Mobile);
+            DB.AddParameter("@Name", mThisSupplier.Name);
+            DB.AddParameter("@Postcode", mThisSupplier.PostCode);
+            DB.AddParameter("@PostionInCompany", mThisSupplier.PostionInCompany);
+            DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
+            DB.AddParameter("@Title", mThisSupplier.Title);
+            DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
+            DB.AddParameter("@WorkNumber", mThisSupplier.WorkNumber);
+            return DB.Execute("sproc_tblSupplier_Insert");
         }
 
         public void Delete()
@@ -98,10 +98,31 @@ namespace MyClassLibrary
             DB.AddParameter("@SupplierID", mThisSupplier.SupplierID);
             DB.Execute("sproc_tblSupplier_Delete");
         }
-    
+        public void Update()
+        {
+            {
+                clsDataConnection DB = new clsDataConnection();
+                DB.AddParameter("@SupplierID", mThisSupplier.SupplierID);
+                DB.AddParameter("@Address", mThisSupplier.Address);
+                DB.AddParameter("@City", mThisSupplier.City);
+                DB.AddParameter("@County", mThisSupplier.County);
+                DB.AddParameter("@DateAdded", mThisSupplier.DateAdded);
+                DB.AddParameter("@Mobile", mThisSupplier.Mobile);
+                DB.AddParameter("@Name", mThisSupplier.Name);
+                DB.AddParameter("@Postcode", mThisSupplier.PostCode);
+                DB.AddParameter("@PostionInCompany", mThisSupplier.PostionInCompany);
+                DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
+                DB.AddParameter("@Title", mThisSupplier.Title);
+                DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
+                DB.AddParameter("@WorkNumber", mThisSupplier.WorkNumber);
+                DB.Execute("sproc_tblSupplier_Update");
+            }
+
+        }
     }
-   
 }
+     
+
 
 
 

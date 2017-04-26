@@ -16,14 +16,14 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         if (IsPostBack == false)
         {
             //update the list box
-            DisplayCustomers(); 
+            DisplayCustomers();
         }
         //get the number of the customer to be processed
         CustomerID = Convert.ToInt32(Session["CustomerID"]);
 
         txtSalesmanDateAddedOK.Text = DateTime.Today.ToShortDateString();
 
-        
+
     }
 
     void DisplayCustomers()
@@ -73,7 +73,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             CustomerBook.Add();
             Response.Redirect("SalesmanHomepage.aspx");
             lblSalesmanError.Text = "Customer successfully added";
-            
+
         }
         else
         {
@@ -175,11 +175,22 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 
     protected void btnSalesmanUpdateCustomer_Click(object sender, EventArgs e)
     {
-        Update();
+        if (lstSalesmanBox.SelectedIndex != -1)
+        {
+            Update();
+        }
+        else
+        {
+            //report error
+            lblSalesmanError.Text = "Please select data you want to update";
+        }
+        
     }
+       
 
 
-    protected void btnSalesmanViewData_Click(object sender, EventArgs e)
+
+protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     {
         if (lstSalesmanBox.SelectedIndex != -1)
         {
@@ -191,7 +202,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         else
         {
             //report error
-            lblSalesmanError.Text = "There were problems with updating the data you have entered, please try again";
+            lblSalesmanError.Text = "Please select data you want to view";
         }
     }
    
@@ -217,6 +228,11 @@ public partial class SalesmanHomepage : System.Web.UI.Page
     protected void btnSalesmanReset_Click(object sender, EventArgs e)
     {
         Response.Redirect("SalesmanHomepage.aspx");
+    }
+
+    protected void btnSalesmanHomePage_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
     }
 }
 

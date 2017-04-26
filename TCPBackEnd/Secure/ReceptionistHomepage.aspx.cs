@@ -91,6 +91,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarSold = ChkBoxReceptionistSold.Checked;
             //update the record
             Cars.Update();
+            
         }
         else
         {
@@ -202,6 +203,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         {
             //update the record
             Update();
+            
         }
     }
 

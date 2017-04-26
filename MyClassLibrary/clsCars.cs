@@ -212,31 +212,20 @@ namespace MyClassLibrary
                 //set the flag to OK to false
                 OK = false;
             }
-            //Try the number of doors validation assuming the data is a valid integer.
-            //try
-           // {
-                //copy the numberofdoors value to the NumberOfDoorsTemp Variable.
-               // NumberTemp = Convert.ToInt32(NumOfDoors);
-                //if the Number of doors is below 2 or above 5
-                if (NumOfDoors < 2 | NumOfDoors > 5)
-                {
+            
+            if (NumOfDoors < 2 | NumOfDoors > 5)
+            {
                     //set the flag to OK to false
                     OK = false;
-                }
-            //}
-            //The data was not an int so catch the data.
-            //catch
-            // {
-            //set the flag to OK to false
-            //  OK = false;
-            //  }
-            if (NumOfSeats < 1 | NumOfSeats > 7)
-            {
-                //set the flag to OK to false
-                OK = false;
             }
-            //return the value of OK
+             if (NumOfSeats < 1 | NumOfSeats > 7)
+            {
+                    //set the flag to OK to false
+                    OK = false;
+             }
             return OK;
+            
+
 
 
         }

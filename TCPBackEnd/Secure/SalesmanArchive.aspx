@@ -13,7 +13,7 @@
         Are you sure you want to archive this customer?<br />
         <br />
         <asp:Button ID="btnYes" runat="server" Text="Yes" OnClick="btnYes_Click" />
-        <asp:Button ID="btnNo" runat="server" Text="No" />
+        <asp:Button ID="btnNo" runat="server" Text="No" OnClick="btnNo_Click" />
     
     </div>
     </form>

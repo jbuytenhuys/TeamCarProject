@@ -37,4 +37,12 @@ public partial class Secure_SalesmanArchive : System.Web.UI.Page
         //delete the record
         CustomerBook.Delete();
     }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+    {
+        //redirect back to main page
+        Response.Redirect("SalesmanHomepage.aspx");
+    }
+
+
 }

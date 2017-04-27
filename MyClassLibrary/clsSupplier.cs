@@ -4,6 +4,7 @@ namespace MyClassLibrary
 {
     public class clsSupplier
     {
+        //Private data members for the records in the database
         private string mAddress;
         private string mCity;
         private string mCounty;
@@ -17,6 +18,7 @@ namespace MyClassLibrary
         private string mTitle;
         private string mWorkExt;
         private string mWorkNumber;
+        private string mSupplierEmail;
 
         public clsSupplier()
         {
@@ -24,6 +26,17 @@ namespace MyClassLibrary
 
 
         public Boolean Active { get; set; }
+
+        public string SupplierEmail
+        {
+            get
+            //return the private data.
+            { return mSupplierEmail; }
+
+            set
+            //set the value pf the private data member.
+            { mSupplierEmail = value; }
+        }
         public string Address
         {
             get
@@ -185,6 +198,8 @@ namespace MyClassLibrary
                 mWorkExt = Convert.ToString(DB.DataTable.Rows[0]["WorkExt"]);
                 mWorkNumber = Convert.ToString(DB.DataTable.Rows[0]["WorkNumber"]);
                 mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mSupplierEmail = Convert.ToString(DB.DataTable.Rows[0]["SupplierEmail"]);
+
                 //return that everything worked ok
                 return true;
             }
@@ -198,7 +213,7 @@ namespace MyClassLibrary
 
 
 
-        public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber)
+        public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber, string SupplierEmail)
         {
             Boolean OK = true;
 
@@ -289,6 +304,14 @@ namespace MyClassLibrary
                 OK = false;
             }
             if (Mobile.Length > 11)
+            {
+                OK = false;
+            }
+            if (SupplierEmail.Length == 0)
+            {
+                OK = false;
+            }
+            if (SupplierEmail.Length > 50)
             {
                 OK = false;
             }

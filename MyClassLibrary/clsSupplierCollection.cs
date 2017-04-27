@@ -67,6 +67,7 @@ namespace MyClassLibrary
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
                 AnSupplier.WorkNumber = Convert.ToString(DB.DataTable.Rows[Index]["WorkNumber"]);
                 AnSupplier.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                AnSupplier.SupplierEmail = Convert.ToString(DB.DataTable.Rows[Index]["SupplierEmail"]);
                 //return that everything worked ok
                 mSupplierList.Add(AnSupplier);
                 Index++;
@@ -89,6 +90,7 @@ namespace MyClassLibrary
             DB.AddParameter("@Title", mThisSupplier.Title);
             DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
             DB.AddParameter("@WorkNumber", mThisSupplier.WorkNumber);
+            DB.AddParameter("@SupplierEmail", mThisSupplier.SupplierEmail);
             return DB.Execute("sproc_tblSupplier_Insert");
         }
 
@@ -115,6 +117,7 @@ namespace MyClassLibrary
             DB.AddParameter("@Title", mThisSupplier.Title);
             DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
             DB.AddParameter("@WorkNumber", mThisSupplier.WorkNumber);
+            DB.AddParameter("@SupplierEmail", mThisSupplier.SupplierEmail);
             DB.Execute("sproc_tblSupplier_Update");
 
 
@@ -141,6 +144,7 @@ namespace MyClassLibrary
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
                 AnSupplier.WorkNumber = Convert.ToString(DB.DataTable.Rows[Index]["WorkNumber"]);
                 AnSupplier.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                AnSupplier.SupplierEmail = Convert.ToString(DB.DataTable.Rows[Index]["SupplierEmail"]);
                 mSupplierList.Add(AnSupplier);
                 Index++;
             }

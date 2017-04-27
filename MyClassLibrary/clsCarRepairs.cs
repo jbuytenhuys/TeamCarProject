@@ -141,6 +141,7 @@ namespace MyClassLibrary
                 mPartPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["PartPrice"]);
                 mPartRequired = Convert.ToString(DB.DataTable.Rows[0]["PartRequired"]);
                 mRepairStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["RepairStatus"]);
+                mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
                 //mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
                 //return that everything worked OK
                 return true;
@@ -154,20 +155,63 @@ namespace MyClassLibrary
             
         }
 
-        public bool Valid(int DaysInForRepair, string DeadlineDate, decimal PartPrice, string PartRequired)
+        public bool Valid(string DaysInForRepair, string DeadlineDate, string PartPrice, string PartRequired, string CarID)
         {
             Boolean OK = true;
+
+            float val;
+            if (!float.TryParse((Convert.ToString(CarID)), out val))
+            {
+                OK = false;
+            }
+            else
+            {
+                if (Convert.ToInt32(CarID) == 0)
+                {
+                    OK = false;
+                }
+
+                if (Convert.ToString(CarID).Length < 1)
+                {
+                    OK = false;
+                }
+            }
+
+            if (!float.TryParse((Convert.ToString(PartPrice)), out val))
+            {
+                OK = false;
+            }
+            else
+            {
+                if (Convert.ToDecimal(PartPrice) < 1m)
+                {
+                    OK = false;
+                }
+
+                if (Convert.ToDecimal(PartPrice) > 10000m)
+                {
+                    OK = false;
+                }
+            }
+
+            if (!float.TryParse((Convert.ToString(DaysInForRepair)), out val))
+            {
+                OK = false;
+            }
+            else
+            {
+                if (Convert.ToInt32(DaysInForRepair) == 0)
+                {
+                    OK = false;
+                }
+
+                if (Convert.ToInt32(DaysInForRepair) > 60)
+                {
+                    OK = false;
+                }
+            }
+
             DateTime DateTemp;
-
-            if (DaysInForRepair == 0)
-            {
-                OK = false;
-            }
-
-            if (DaysInForRepair > 60)
-            {
-                OK = false;
-            }
             try
             {
                 DateTemp = Convert.ToDateTime(DeadlineDate);
@@ -195,16 +239,6 @@ namespace MyClassLibrary
             }
 
             if (PartRequired.Length >32)
-            {
-                OK = false;
-            }
-
-            if (PartPrice < 1m)
-            {
-                OK = false;
-            }
-
-            if (PartPrice > 10000m)
             {
                 OK = false;
             }

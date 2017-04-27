@@ -128,7 +128,7 @@ namespace TestFramework
             //Create a boolean variable to store the result of validation.
             Boolean Found = false;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Test to see that the result is correct.
@@ -145,7 +145,7 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
@@ -167,7 +167,7 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
@@ -189,7 +189,7 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
@@ -211,7 +211,7 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Check the Manufacturer.
@@ -277,7 +277,7 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean Ok = true;
             //Create some test data to use with the method.
-            Int32 CarID = 2;
+            Int32 CarID = 1;
             //Invoke the method.
             Found = AnCarID.Find(CarID);
             //Check the Manufacturer.

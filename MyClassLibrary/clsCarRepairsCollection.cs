@@ -71,6 +71,7 @@ namespace MyClassLibrary
             DB.AddParameter("@PartPrice", mThisCarRepair.PartPrice);
             DB.AddParameter("@PartRequired", mThisCarRepair.PartRequired);
             DB.AddParameter("@RepairStatus", mThisCarRepair.RepairStatus);
+            DB.AddParameter("@CarID", mThisCarRepair.CarID);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblCarRepairs_Insert");
         }
@@ -136,6 +137,7 @@ namespace MyClassLibrary
                 Arepair.PartPrice = Convert.ToDecimal(DB.DataTable.Rows[Index]["PartPrice"]);
                 Arepair.PartRequired = Convert.ToString(DB.DataTable.Rows[Index]["PartRequired"]);
                 Arepair.RepairStatus = Convert.ToBoolean(DB.DataTable.Rows[Index]["RepairStatus"]);
+                Arepair.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
                 //Add the record to the private data member
                 mCarRepairList.Add(Arepair);
                 //point at the next record

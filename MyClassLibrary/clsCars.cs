@@ -162,8 +162,6 @@ namespace MyClassLibrary
         {
             //create a boolean variable to flag error
             Boolean OK = true;
-            //Create a temp variable to store numberValues.
-            Int32 NumberTemp;
             //if the Manufacturer is blank
             if (CarManufacturer.Length == 0)
             {

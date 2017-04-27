@@ -29,7 +29,7 @@ namespace TestFramework
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
             TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
@@ -51,7 +51,7 @@ namespace TestFramework
             TestSupplier.Mobile = "078";
             TestSupplier.Name = "Mark";
             TestSupplier.PostCode = "CV6";
-            TestSupplier.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestSupplier.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestSupplier.SupplierName = "Audi";
             TestSupplier.Title = "Mr";
             TestSupplier.WorkExt = "312";
@@ -73,7 +73,7 @@ namespace TestFramework
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
             TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
@@ -97,7 +97,7 @@ namespace TestFramework
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
             TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
@@ -124,7 +124,7 @@ namespace TestFramework
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
             TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
@@ -153,7 +153,7 @@ namespace TestFramework
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
             TestItem.PostCode = "CV6";
-            TestItem.PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
@@ -168,7 +168,7 @@ namespace TestFramework
             TestItem.Mobile = "079";
             TestItem.Name = "john";
             TestItem.PostCode = "CV8";
-            TestItem.PostionInCompany = "1cccccccc";
+            TestItem.PositionInCompany = "1cccccccc";
             TestItem.SupplierName = "bmw";
             TestItem.Title = "Mrs";
             TestItem.WorkExt = "412";

@@ -45,7 +45,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         //create an instance
         clsCarsCollection Cars = new clsCarsCollection();
         //validate the data on the web form
-        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text);
+        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text, txtReceptionistSupplierID.Text);
         //if the data is OK then add it to the object.
         if (OK == true)
         {
@@ -58,6 +58,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarNumberOfSeats = Convert.ToInt32(txtReceptionistCarNumberOfSeats.Text);
             Cars.ThisCar.CarNeedsRepair = Convert.ToBoolean(ChkBoxReceptionistNeedsRepair.Checked);
             Cars.ThisCar.CarSold = Convert.ToBoolean(ChkBoxReceptionistSold.Checked);
+            Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
             //add the record
             Cars.Add();
             lblError.Text = "";
@@ -76,7 +77,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         //create an instance.
         clsCarsCollection Cars = new clsCarsCollection();
         //validate the data on the web form.
-        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text);
+        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text, txtReceptionistSupplierID.Text);
         //if the data is OK then add it to the object.
         if (OK == true)
         {
@@ -131,6 +132,17 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         lstBoxReceptionistListCars.DataTextField = "CarRegistrationPlate";       
         lstBoxReceptionistListCars.DataBind();
     }
+
+    void FilterBySupplierEmail()
+    {
+        clsSupplierCollection Cars = new clsSupplierCollection();
+        Cars.FilterBySupplierEmail(txtReceptionistSearchSupplier.Text);
+        lstBoxReceptionistListCars.DataSource = Cars.SupplierList;
+        lstBoxReceptionistListCars.DataValueField = "SupplierID";
+        lstBoxReceptionistListCars.DataTextField = "Email";
+        lstBoxReceptionistListCars.DataBind();
+    }
+
 
     protected void btnReceptionistArchive_Click(object sender, EventArgs e)
     {
@@ -219,4 +231,11 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
     {
         FilterByCarManufacturer();
     }
+
+    protected void btnRec_Click(object sender, EventArgs e)
+    {
+        FilterBySupplierEmail();
+    }
+
+    
 }

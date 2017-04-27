@@ -53,7 +53,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         //create an instance of the address book
         clsSupplierCollection Suppliers = new clsSupplierCollection();
         //validate the data on the web form
-        Boolean OK = Suppliers.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
+        Boolean OK = Suppliers.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPositionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
         //if the data is ok then add it to the object 
         if (OK == true)
         {
@@ -64,7 +64,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             Suppliers.ThisSupplier.Mobile = txtMobile.Text;
             Suppliers.ThisSupplier.Name = txtName.Text;
             Suppliers.ThisSupplier.PostCode = txtPostcode.Text;
-            Suppliers.ThisSupplier.PostionInCompany = txtPostionInCompany.Text;
+            Suppliers.ThisSupplier.PositionInCompany = txtPositionInCompany.Text;
             Suppliers.ThisSupplier.SupplierName = txtSupplierName.Text;
             Suppliers.ThisSupplier.Title = txtTitle.Text;
             Suppliers.ThisSupplier.WorkExt = txtWorkExt.Text;
@@ -193,7 +193,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     void Update()
     {
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
-        Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
+        Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPositionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
         if (OK == true)
         {
             SupplierBook.ThisSupplier.Find(SupplierID);
@@ -204,7 +204,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.Mobile = txtMobile.Text;
             SupplierBook.ThisSupplier.Name = txtName.Text;
             SupplierBook.ThisSupplier.PostCode = txtPostcode.Text;
-            SupplierBook.ThisSupplier.PostionInCompany = txtPostionInCompany.Text;
+            SupplierBook.ThisSupplier.PositionInCompany = txtPositionInCompany.Text;
             SupplierBook.ThisSupplier.SupplierName = txtSupplierName.Text;
             SupplierBook.ThisSupplier.Title = txtTitle.Text;
             SupplierBook.ThisSupplier.WorkExt = txtWorkExt.Text;
@@ -230,7 +230,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
         txtName.Text = SupplierBook.ThisSupplier.Name;
         txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
-        txtPostionInCompany.Text = SupplierBook.ThisSupplier.PostionInCompany;
+        txtPositionInCompany.Text = SupplierBook.ThisSupplier.PositionInCompany;
         txtSupplierName.Text = SupplierBook.ThisSupplier.SupplierName;
         txtTitle.Text = SupplierBook.ThisSupplier.Title;
         txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;

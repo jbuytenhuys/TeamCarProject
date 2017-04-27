@@ -49,7 +49,7 @@
 
         <asp:Button ID="btnMechanicUpdateRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1207px; top: 488px; position: absolute; height: 50px; width: 180px" Text="Update Repair" OnClick="btnMechanicUpdateRepair_Click" />
 
-        <asp:Button ID="btnMechanicDeleteRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1023px; top: 545px; position: absolute; height: 50px; width: 180px; margin-bottom: 3px" Text="Delete Repair" OnClick="btnMechanicDeleteRepair_Click" />
+        <asp:Button ID="btnMechanicDeleteRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1023px; top: 545px; position: absolute; height: 50px; width: 180px; margin-bottom: 3px" Text="Archive Repair" OnClick="btnMechanicDeleteRepair_Click" />
 
         <asp:TextBox ID="txtMechanicDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1023px; top: 385px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
 

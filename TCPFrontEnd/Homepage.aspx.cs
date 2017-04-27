@@ -32,4 +32,9 @@ public partial class Homepage : System.Web.UI.Page
     {
         Response.Redirect("4x4.aspx");
     }
+
+    protected void btnAboutUs_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AboutUs.aspx");
+    }
 }

@@ -9,7 +9,7 @@ namespace MyClassLibrary
     public class clsCar
     {
         //private data member
-        private Int32 mTransactionID;
+        private Int32 mSupplierID;
         private Int32 mCarID;
         private string mCarManufacturer;
         private string mCarModel;
@@ -20,15 +20,15 @@ namespace MyClassLibrary
         private Int32 mCarNumberOfSeats;
         private Boolean mCarSold;
 
-        public Int32 TransactionID
+        public Int32 SupplierID
         {
             get
             //return the private data.
-            { return mTransactionID; }
+            { return mSupplierID; }
 
             set
             //set the value pf the private data member.
-            { mTransactionID = value; }
+            { mSupplierID = value; }
         }
 
         public Int32 CarID
@@ -210,11 +210,6 @@ namespace MyClassLibrary
                 //set the flag to OK to false
                 OK = false;
             }
-            
-           
-             
-            
-
             
             int value;
             if (int.TryParse(NumOfDoors, out value))

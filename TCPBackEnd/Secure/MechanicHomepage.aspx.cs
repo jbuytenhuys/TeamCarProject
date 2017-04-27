@@ -45,6 +45,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         txtMechanicDaysInForRepair.Text = CarRepair.ThisCarRepair.DaysInForRepair.ToString();
         chkMechanicRepairStatus.Checked = CarRepair.ThisCarRepair.RepairStatus;
         txtMechanicCarID.Text = CarRepair.ThisCarRepair.CarID.ToString();
+        txtMechanicStaffID.Text = CarRepair.ThisCarRepair.StaffID.ToString();
     }
 
     void FetchCarID()

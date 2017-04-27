@@ -77,12 +77,14 @@ namespace MyClassLibrary
         }
 
         //Deletes the record pointed to by ThisCarRepair
-        public void Delete()
+        public void Archive()
         {
             //connect to data base
             clsDataConnection DB = new clsDataConnection();
             //set parameter for stored procedure
             DB.AddParameter("@CarRepairID", mThisCarRepair.CarRepairID);
+            DB.AddParameter("@CarID", mThisCarRepair.CarID);
+            DB.AddParameter("@CarNeedsRepair", false);
             //execute the stored procedure
             DB.Execute("sproc_tblCarRepairs_Archive");
         }

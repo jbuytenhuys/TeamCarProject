@@ -141,7 +141,7 @@ namespace TestFramework
             //find the record
             AllCarRepairs.ThisCarRepair.Find(PrimaryKey);
             //Delete the record
-            AllCarRepairs.Delete();
+            AllCarRepairs.Archive();
             //Now find the record
             Boolean Found = AllCarRepairs.ThisCarRepair.Find(PrimaryKey);
             //Test to see if the two values are the same

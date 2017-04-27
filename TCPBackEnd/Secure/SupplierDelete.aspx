@@ -14,13 +14,13 @@
     <p>
         
         <asp:Button ID="BtnYes" runat="server" Text="Yes" OnClick="BtnYes_Click" />
-        <asp:Button ID="BtnNo" runat="server" Text="No" />
+        <asp:Button ID="BtnNo" runat="server" Text="No" OnClick="BtnNo_Click" />
         
         <br />
     </p>
 
 
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="lblconfirmdelete" runat="server" Text="Are you sure you want to delete?"></asp:Label>
 
 
     </form>

@@ -89,6 +89,7 @@ namespace TestFramework
             clsSupplierCollection AllSuppliers = new clsSupplierCollection();
             clsSupplier TestItem = new clsSupplier();
             Int32 PrimaryKey = 0;
+            TestItem.SupplierID = 1;
             TestItem.Address = "1b";
             TestItem.City = "Birmingham";
             TestItem.County = "eastmidlands";

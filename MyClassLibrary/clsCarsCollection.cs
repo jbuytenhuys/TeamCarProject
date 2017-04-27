@@ -91,6 +91,19 @@ namespace MyClassLibrary
             //populate array list with table data.
             PopulateArray(DB);
         }
+        public void FilterByRegPlate(string CarRegistrationPlate)
+        {
+            //filters the records based on a full or partial car manufacturer.
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the car Manufacturer parameter to the database
+            DB.AddParameter("@CarRegistrationPlate", CarRegistrationPlate);
+            //Execute stored procedure.
+            DB.Execute("sproc_tblCars_FilterByCarRegistrationPlate");
+            //populate array list with table data.
+            PopulateArray(DB);
+        }
+
 
         public void PopulateArray(clsDataConnection DB)
         {

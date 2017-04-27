@@ -9,6 +9,7 @@ using MyClassLibrary;
 public partial class MechanicHomepage : System.Web.UI.Page
 {
     Int32 CarRepairID;
+    Int32 CarID;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack == false)
@@ -51,6 +52,16 @@ public partial class MechanicHomepage : System.Web.UI.Page
         txtMechanicPartPrice.Text = CarRepair.ThisCarRepair.PartPrice.ToString();
         txtMechanicDaysInForRepair.Text = CarRepair.ThisCarRepair.DaysInForRepair.ToString();
         chkMechanicRepairStatus.Checked = CarRepair.ThisCarRepair.RepairStatus;
+        txtMechanicCarID.Text = CarRepair.ThisCarRepair.CarID.ToString();
+    }
+
+    void FetchCarID()
+    {
+        CarID = Convert.ToInt32(Session["CarID"]);
+        clsCarsCollection Car = new clsCarsCollection();
+        Car.ThisCar.Find(CarID);
+        txtMechanicCarID.Text = Car.ThisCar.CarID.ToString();
+        
     }
 
     void Add()
@@ -58,7 +69,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         //create an instance
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
         //validate the data on webform
-        Boolean OK = CarRepair.ThisCarRepair.Valid(Convert.ToInt32(txtMechanicDaysInForRepair.Text), txtMechanicDeadlineDate.Text, Convert.ToDecimal(txtMechanicPartPrice.Text), txtMechanicPartRequired.Text);
+        Boolean OK = CarRepair.ThisCarRepair.Valid(txtMechanicDaysInForRepair.Text, txtMechanicDeadlineDate.Text, txtMechanicPartPrice.Text, txtMechanicPartRequired.Text, txtMechanicCarID.Text);
         //if data is okay then add to object
         if (OK == true)
         {
@@ -68,6 +79,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
             CarRepair.ThisCarRepair.PartPrice = Convert.ToDecimal(txtMechanicPartPrice.Text);
             CarRepair.ThisCarRepair.PartRequired = txtMechanicPartRequired.Text;
             CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
+            CarRepair.ThisCarRepair.CarID = Convert.ToInt32(txtMechanicCarID.Text);
             //add record
             CarRepair.Add();
             Response.Redirect("MechanicHomepage.aspx");
@@ -84,7 +96,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         //create an instance
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
         //validate the data on webform
-        Boolean OK = CarRepair.ThisCarRepair.Valid(Convert.ToInt32(txtMechanicDaysInForRepair.Text), txtMechanicDeadlineDate.Text, Convert.ToDecimal(txtMechanicPartPrice.Text), txtMechanicPartRequired.Text);
+        Boolean OK = CarRepair.ThisCarRepair.Valid(txtMechanicDaysInForRepair.Text, txtMechanicDeadlineDate.Text, txtMechanicPartPrice.Text, txtMechanicPartRequired.Text, txtMechanicCarID.Text);
         //if data is okay then add to object
         if (OK == true)
         {
@@ -96,6 +108,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
             CarRepair.ThisCarRepair.PartPrice = Convert.ToDecimal(txtMechanicPartPrice.Text);
             CarRepair.ThisCarRepair.PartRequired = txtMechanicPartRequired.Text;
             CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
+            CarRepair.ThisCarRepair.CarID = Convert.ToInt32(txtMechanicCarID.Text);
             //update record
             CarRepair.Update();
             Response.Redirect("MechanicHomepage.aspx");
@@ -108,7 +121,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         }
     }
 
-    void Filter()
+    void FilterRepairs()
     {
         //create an instance
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
@@ -120,6 +133,16 @@ public partial class MechanicHomepage : System.Web.UI.Page
         lstMechanicRepairs.DataBind();  
     }
 
+    void FilterByRegPlate()
+    {
+        clsCarsCollection Cars = new clsCarsCollection();
+        Cars.ThisCar.CarRegistrationPlate = txtMechanicRegPlateFilter.Text;
+        Cars.FilterByRegPlate(Cars.ThisCar.CarRegistrationPlate);
+        lstMechanicRepairs.DataSource = Cars.CarList;
+        lstMechanicRepairs.DataValueField = "CarID";
+        lstMechanicRepairs.DataTextField = "CarRegistrationPlate";
+        lstMechanicRepairs.DataBind();
+    }
 
 
     protected void btnMechanicLogout_Click(object sender, EventArgs e)
@@ -140,7 +163,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicFilter_Click(object sender, EventArgs e)
     {
-        Filter();
+        FilterRepairs();
     }
 
     protected void lstMechanicRepairs_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,5 +247,35 @@ public partial class MechanicHomepage : System.Web.UI.Page
     protected void btnMechanicReset_Click(object sender, EventArgs e)
     {
         Response.Redirect("MechanicHomepage.aspx");
+    }
+
+    protected void txtMechanicManufacturerFilter_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtMechanicCarID_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnMechanicFetchCarID_Click(object sender, EventArgs e)
+    {
+        if (lstMechanicRepairs.SelectedIndex != -1)
+        {
+            CarID = Convert.ToInt32(lstMechanicRepairs.SelectedValue);
+            Session["CarID"] = CarID;
+            FetchCarID();
+
+        }
+        else
+        {
+            lblMechanicError.Text = ("Please select a record to view from the list");
+        }
+    }
+
+    protected void btnMechanicRegPlateFilter_Click(object sender, EventArgs e)
+    {
+        FilterByRegPlate();
     }
 }

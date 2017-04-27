@@ -89,7 +89,7 @@ namespace TestFramework
             //Create a boolean variable to store the result of validation.
             Boolean Found = false;
             //Create some test data to use with the method.
-            Int32 CarRepairID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
             Found = AnCarRepair.Find(CarRepairID);
             //Test to see that the result is correct.
@@ -108,9 +108,9 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the PartRequired
             if (AnCarRepair.PartRequired != "Test Part")
             {
@@ -131,9 +131,9 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the PartPrice
             if (AnCarRepair.PartPrice != 2.20m)
             {
@@ -154,9 +154,9 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the DeadlineDate
             if (AnCarRepair.DeadlineDate != Convert.ToDateTime("05/05/2017"))
             {
@@ -177,9 +177,9 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the DaysInForRepair
             if (AnCarRepair.DaysInForRepair != 30)
             {
@@ -200,9 +200,9 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the RepairStatus
             if (AnCarRepair.RepairStatus != true)
             {
@@ -223,11 +223,11 @@ namespace TestFramework
             //boolean variable to record if data is okay (assume it is).
             Boolean OK = true;
             //Create some test data to use with the method.
-            Int32 CarID = 1;
+            Int32 CarRepairID = 1028;
             //Invoke the method.
-            Found = AnCarRepair.Find(CarID);
+            Found = AnCarRepair.Find(CarRepairID);
             //Check the StaffID
-            if (AnCarRepair.StaffID != 1)
+            if (AnCarRepair.StaffID != 1000)
             {
                 OK = false;
             }

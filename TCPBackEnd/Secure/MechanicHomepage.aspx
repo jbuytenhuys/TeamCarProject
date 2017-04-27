@@ -9,23 +9,11 @@
 </head>
 <body style="height: 509px">
 
-    <form runat="server">
-    
-    <p>
-        <br />
-    </p>
+        <form id="form1" runat="server">
 
-        <p>
+        <asp:Button ID="btnMechanicReset" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1020px; top: 63px; position: absolute; height: 33px; width: 82px;" Text="Reset" OnClick="btnMechanicReset_Click" />
 
-        <asp:Button ID="btnMechanicReset" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1020px; top: 72px; position: absolute; height: 33px; width: 82px;" Text="Reset" OnClick="btnMechanicReset_Click" />
-
-            <asp:Label ID="lblMechanicUserInfo" runat="server" style="z-index: 1; left: 19px; top: 1px; position: absolute" Text="-"></asp:Label>
-
-        </p>
-    
-        <asp:Button ID="btnMechanicLogout" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 17px; top: 42px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnMechanicLogout_Click" />
-
-        <asp:DropDownList ID="ddlMechanicFilterBy" CssClass="DropDownMenu" runat="server" style="z-index: 1; left: 112px; top: 108px; position: absolute; height: 50px; width: 167px" OnSelectedIndexChanged="ddlMechanicFilterBy_SelectedIndexChanged"></asp:DropDownList>
+        <asp:Button ID="btnMechanicLogout" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 17px; top: 63px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnMechanicLogout_Click" />
 
         <asp:TextBox ID="txtMechanicFilter" CssClass="TextBoxes"  runat="server" OnClick="this.value=''" style="z-index: 1; left: 111px; top: 180px; position: absolute; width: 156px" OnTextChanged="txtMechanicFilter_Click">Keyword Filter</asp:TextBox>
 
@@ -35,15 +23,15 @@
 
         <asp:Button ID="btnMechanicListAll" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 370px; top: 404px; position: absolute; height: 50px; width: 180px" Text="List All Repairs" OnClick="btnMechanicListAll_Click" />
 
-        <asp:TextBox ID="txtMechanicRepairID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1021px; top: 110px; position: absolute; height: 17px; width: 263px" ReadOnly="True" OnTextChanged="txtMechanicRepairID_TextChanged">RepairID</asp:TextBox>
+        <asp:TextBox ID="txtMechanicRepairID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 109px; position: absolute; height: 17px; width: 139px" ReadOnly="True" OnTextChanged="txtMechanicRepairID_TextChanged">RepairID</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicDeadlineDate" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1022px; top: 291px; position: absolute" OnTextChanged="txtMechanicDeadlineDate_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="txtMechanicDeadlineDate" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 305px; position: absolute" OnTextChanged="txtMechanicDeadlineDate_TextChanged"></asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartRequired" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1022px; top: 323px; position: absolute" OnTextChanged="txtMechanicPartRequired_TextChanged">Part Required</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartRequired" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 339px; position: absolute" OnTextChanged="txtMechanicPartRequired_TextChanged">Part Required</asp:TextBox>
 
-        <asp:TextBox ID="txtMechanicPartPrice" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1022px; top: 354px; position: absolute" OnTextChanged="txtMechanicPartPrice_TextChanged">Part Price</asp:TextBox>
+        <asp:TextBox ID="txtMechanicPartPrice" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 368px; position: absolute" OnTextChanged="txtMechanicPartPrice_TextChanged">Part Price</asp:TextBox>
 
-        <asp:CheckBox ID="chkMechanicRepairStatus" CssClass="CheckBox" runat="server" style="z-index: 1; left: 1024px; top: 416px; position: absolute" Text="Repair Status" />
+        <asp:CheckBox ID="chkMechanicRepairStatus" CssClass="CheckBox" runat="server" style="z-index: 1; left: 1023px; top: 427px; position: absolute" Text="Repair Status" />
 
         <asp:Button ID="btnMechanicAddRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1022px; top: 488px; position: absolute; height: 50px; width: 180px" Text="Add Repair" OnClick="btnMechanicAddRepair_Click" />
 
@@ -51,20 +39,31 @@
 
         <asp:Button ID="btnMechanicDeleteRepair" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 1023px; top: 545px; position: absolute; height: 50px; width: 180px; margin-bottom: 3px" Text="Archive Repair" OnClick="btnMechanicDeleteRepair_Click" />
 
-        <asp:TextBox ID="txtMechanicDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1023px; top: 385px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
+        <asp:TextBox ID="txtMechanicDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 400px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
 
-        <asp:Label ID="lblMechanicError" runat="server" style="z-index: 1; left: 1026px; top: 441px; position: absolute" Text="-"></asp:Label>
+        <asp:Label ID="lblMechanicError" runat="server" style="z-index: 1; left: 1025px; top: 446px; position: absolute; width: 10px;" Text="-"></asp:Label>
 
         <asp:Button ID="btnMechanicViewData" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 559px; top: 403px; position: absolute; height: 51px; width: 197px" Text="View Data" OnClick="btnMechanicViewData_Click" />
 
-        <asp:TextBox ID="txtMechanicCarID" CssClass="TextBoxes" runat="server" ReadOnly="True" style="z-index: 1; left: 1018px; top: 192px; position: absolute" OnTextChanged="txtMechanicCarID_TextChanged">CarID</asp:TextBox>
+        <asp:TextBox ID="txtMechanicCarID" CssClass="TextBoxes" runat="server" ReadOnly="True" style="z-index: 1; left: 1057px; top: 191px; position: absolute; bottom: 441px;" OnTextChanged="txtMechanicCarID_TextChanged">CarID</asp:TextBox>
 
-        <asp:Button ID="btnMechanicFetchCarID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 819px; top: 192px; position: absolute; width: 165px;" Text="Fetch CarID" OnClick="btnMechanicFetchCarID_Click" />
+        <asp:Button ID="btnMechanicFetchCarID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 921px; top: 157px; position: absolute; width: 81px; height: 59px; bottom: 440px;" Text="Fetch CarID" OnClick="btnMechanicFetchCarID_Click" Font-Size="Small" />
 
-        <asp:TextBox ID="txtMechanicRegPlateFilter" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1017px; top: 155px; position: absolute">Reg Plate Filter</asp:TextBox>
+        <asp:TextBox ID="txtMechanicRegPlateFilter" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 153px; position: absolute">Reg Plate Filter</asp:TextBox>
 
-        <asp:Button ID="btnMechanicRegPlateFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 819px; top: 152px; position: absolute" Text="Filter" OnClick="btnMechanicRegPlateFilter_Click"/>
+        <asp:Button ID="btnMechanicRegPlateFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 157px; position: absolute; height: 60px; width: 76px;" Text="Filter Cars" OnClick="btnMechanicRegPlateFilter_Click" Font-Size="Small"/>
 
-    </form>
+        <asp:TextBox ID="txtMechanicStaffID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 263px; position: absolute">StaffID</asp:TextBox>
+
+        <asp:Button ID="btnMechanicStaffFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 231px; position: absolute; height: 61px; width: 75px; right: 453px;" Text="Filter staff" OnClick="btnMechanicStaffFilter_Click" Font-Size="Small" />
+
+        <asp:TextBox ID="txtMechanicStaffFilter" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 230px; position: absolute">First Name Filter</asp:TextBox>
+
+        <asp:Button ID="btnMechanicFetchStaffID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 921px; top: 230px; position: absolute; width: 83px; height: 62px;" Text="Fetch StaffID" OnClick="btnMechanicFetchStaffID_Click" Font-Size="Small" />
+
+        <asp:Label ID="lblMechanicUserInfo" runat="server" style="z-index: 1; left: 19px; top: 14px; position: absolute" Text="-"></asp:Label>
+
+        </form>
+
 </body>
 </html>

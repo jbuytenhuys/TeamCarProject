@@ -135,14 +135,13 @@ namespace MyClassLibrary
             {
                 //copy data from database to the private data members
                 mCarRepairID = Convert.ToInt32(DB.DataTable.Rows[0]["CarRepairID"]);
-                //mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
                 mDaysInForRepair = Convert.ToInt32(DB.DataTable.Rows[0]["DaysInForRepair"]);
                 mDeadlineDate = Convert.ToDateTime(DB.DataTable.Rows[0]["DeadlineDate"]);
                 mPartPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["PartPrice"]);
                 mPartRequired = Convert.ToString(DB.DataTable.Rows[0]["PartRequired"]);
                 mRepairStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["RepairStatus"]);
                 mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
-                //mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
+                mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
                 //return that everything worked OK
                 return true;
             }
@@ -155,7 +154,7 @@ namespace MyClassLibrary
             
         }
         //Method to validate data input by the euser
-        public bool Valid(string DaysInForRepair, string DeadlineDate, string PartPrice, string PartRequired, string CarID)
+        public bool Valid(string DaysInForRepair, string DeadlineDate, string PartPrice, string PartRequired, string CarID, string StaffID)
         {
             //create boolean variable and set it to false
             Boolean OK = true;
@@ -173,6 +172,23 @@ namespace MyClassLibrary
                 }
 
                 if (Convert.ToString(CarID).Length < 1)
+                {
+                    OK = false;
+                }
+            }
+
+            if (!float.TryParse((Convert.ToString(StaffID)), out val))
+            {
+                OK = false;
+            }
+            else
+            {
+                if (Convert.ToInt32(StaffID) == 0)
+                {
+                    OK = false;
+                }
+
+                if (Convert.ToString(StaffID).Length < 1)
                 {
                     OK = false;
                 }

@@ -91,6 +91,8 @@ namespace MyClassLibrary
             //populate array list with table data.
             PopulateArray(DB);
         }
+
+        //WRITTEN BY JAKE FOR HIS SYSTEM
         public void FilterByRegPlate(string CarRegistrationPlate)
         {
             //filters the records based on a full or partial car manufacturer.

@@ -96,7 +96,7 @@ namespace MyClassLibrary
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@SupplierID", mThisSupplier.SupplierID);
-            DB.Execute("sproc_tblSupplier_Delete");
+            DB.Execute("sproc_tblSupplier_DeleteMethodOK");
         }
         public void Update()
         {

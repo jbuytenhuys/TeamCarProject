@@ -154,9 +154,10 @@ namespace MyClassLibrary
             }
             
         }
-
+        //Method to validate data input by the euser
         public bool Valid(string DaysInForRepair, string DeadlineDate, string PartPrice, string PartRequired, string CarID)
         {
+            //create boolean variable and set it to false
             Boolean OK = true;
 
             float val;

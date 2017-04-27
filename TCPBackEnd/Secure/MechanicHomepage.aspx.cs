@@ -20,15 +20,6 @@ public partial class MechanicHomepage : System.Web.UI.Page
         txtMechanicDeadlineDate.Text = DateTime.Today.AddDays(60).ToShortDateString();
 
         lblMechanicUserInfo.Text = "the current user is " + User.Identity.Name;
-
-        if (User.IsInRole("Admins") == true)
-        {
-            lblMechanicUserInfo.Text = lblMechanicUserInfo.Text + " the user is an admin";
-        }
-        else
-        {
-            lblMechanicUserInfo.Text = lblMechanicUserInfo.Text + " the user is not an admin";
-        }
         
     }
 

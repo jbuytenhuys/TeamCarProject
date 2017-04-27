@@ -227,7 +227,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtName.Text = SupplierBook.ThisSupplier.Name;
         txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
         txtPostionInCompany.Text = SupplierBook.ThisSupplier.PostionInCompany;
-        txtSupplierName.Text = SupplierBook.ThisSupplier.Name;
+        txtSupplierName.Text = SupplierBook.ThisSupplier.SupplierName;
         txtTitle.Text = SupplierBook.ThisSupplier.Title;
         txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
         txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
@@ -243,6 +243,20 @@ public partial class SupplierHomepage : System.Web.UI.Page
         lstBoxListSupplier.DataBind();
     }
 
+    void Filter2()
+    {
+        clsSupplierCollection Supplier = new clsSupplierCollection();
+        Supplier.ThisSupplier.WorkNumber = txtFilterWorkNumber.Text;
+        Supplier.FilterByWorkNumber(Supplier.ThisSupplier.WorkNumber);
+        lstBoxListSupplier.DataSource = Supplier.SupplierList;
+        lstBoxListSupplier.DataValueField = "SupplierID";
+        lstBoxListSupplier.DataTextField = "WorkNumber";
+        lstBoxListSupplier.DataBind();
+    }
+
+
+
+
     protected void btnSearch_Click(object sender, EventArgs e)
     {
         Filter();
@@ -251,6 +265,22 @@ public partial class SupplierHomepage : System.Web.UI.Page
     protected void txtFilterPostcode_TextChanged(object sender, EventArgs e)
     {
 
+    }
+    protected void txtFilterWorkNumber_TextChanged(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void btnSearchWorkNumber_Click(object sender, EventArgs e)
+    {
+        Filter2();
+    }
+
+    
+
+    protected void reset_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SupplierHomepage.aspx");
     }
 }
 

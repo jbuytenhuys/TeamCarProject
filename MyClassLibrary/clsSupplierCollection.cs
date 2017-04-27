@@ -154,10 +154,23 @@ namespace MyClassLibrary
             PopulateArray(DB);
            
 
+   
         }
+
+        public void FilterByWorkNumber(string WorkNumber)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@WorkNumber", WorkNumber);
+            DB.Execute("sproc_tblSupplier_FilterByWorkNumber");
+            PopulateArray(DB);
+        }
+
         
 
-     
+      
+
+       
+      
     }
 }
 //dd

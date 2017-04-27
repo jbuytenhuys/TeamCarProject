@@ -35,7 +35,7 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 968px; top: 554px; position: absolute; height: 51px; width: 102px;" Text="Update" OnClick="btnReceptionistUpdate_Click" />
 
-        <asp:Button ID="btnReceptionistEdit" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistEdit_Click" style="z-index: 1; left: 555px; top: 499px; position: absolute; height: 66px; width: 105px; " Text="Edit" />
+        <asp:Button ID="btnReceptionistEdit" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistEdit_Click" style="z-index: 1; left: 555px; top: 499px; position: absolute; height: 66px; width: 118px; " Text="View Data" />
 
         <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 849px; top: 187px; position: absolute; width: 288px" >Car Model</asp:TextBox>
 

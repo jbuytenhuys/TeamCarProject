@@ -13,16 +13,16 @@ public partial class MechanicDelete : System.Web.UI.Page
     {
         CarRepairID = Convert.ToInt32(Session["CarRepairID"]); 
     }
-    void DeleteRepair()
+    void ArchiveRepair()
     {
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
         CarRepair.ThisCarRepair.Find(CarRepairID);
-        CarRepair.Delete();
+        CarRepair.Archive();
     }
 
     protected void btnMechanicDeleteYes_Click(object sender, EventArgs e)
     {
-        DeleteRepair();
+        ArchiveRepair();
         Response.Redirect("MechanicHomepage.aspx");
     }
 

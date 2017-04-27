@@ -244,12 +244,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 45;
+            string DaysInForRepair = "45";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -262,12 +263,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 0;
+            string DaysInForRepair = "0";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -280,12 +282,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 1;
+            string DaysInForRepair = "1";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -298,12 +301,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 2;
+            string DaysInForRepair = "2";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -316,12 +320,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 59;
+            string DaysInForRepair = "59";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
+
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -334,12 +340,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 60;
+            string DaysInForRepair = "60";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -352,12 +359,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 60;
+            string DaysInForRepair = "60";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -370,12 +378,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 61;
+            string DaysInForRepair = "61";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -388,12 +397,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 1000000;
+            string DaysInForRepair = "1000000";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -406,15 +416,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-100);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -427,15 +438,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -448,14 +460,15 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -468,15 +481,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -489,15 +503,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(59);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -510,15 +525,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(60);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -531,15 +547,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(61);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -552,15 +569,16 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(1000);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -573,13 +591,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 10;
-            decimal PartPrice = 12.99m;
+            string DaysInForRepair = "10";
+            string PartPrice = "12.99";
             string PartRequired = "Some part";
+            string CarID = "1023";
             //Enter type that is not a date
             string DeadlineDate = "Invalid data";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -592,12 +611,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -610,12 +630,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "A";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -628,12 +649,13 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "AA";
+            string CarID = "1023";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -646,13 +668,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(31, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -665,13 +688,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(32, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -684,13 +708,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(33, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -703,13 +728,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(1000, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -722,13 +748,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 12.99m;
+            string PartPrice = "12.99";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -741,13 +768,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = -100m;
+            string PartPrice = "-100";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -760,13 +788,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 0m;
+            string PartPrice = "0";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -779,13 +808,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 1m;
+            string PartPrice = "1";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -798,13 +828,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 2m;
+            string PartPrice = "2";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -817,13 +848,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 9999m;
+            string PartPrice = "9999";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -836,13 +868,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 10000m;
+            string PartPrice = "10000";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -855,13 +888,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 10001m;
+            string PartPrice = "10001";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -874,13 +908,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 1000000m;
+            string PartPrice = "1000000";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -893,13 +928,14 @@ namespace TestFramework
             //boolean variable to store the result of search
             Boolean OK = false;
             //Create some test data to use with the method.
-            Int32 DaysInForRepair = 30;
+            string DaysInForRepair = "30";
             string DeadlineDate = DateTime.Now.Date.ToString();
-            decimal PartPrice = 5000m;
+            string PartPrice = "5000";
             string PartRequired = "";
+            string CarID = "1023";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }

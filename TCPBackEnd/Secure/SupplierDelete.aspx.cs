@@ -31,4 +31,9 @@ public partial class SupplierDelete : System.Web.UI.Page
 
 
 
+
+    protected void BtnNo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SupplierHomepage.aspx");
+    }
 }

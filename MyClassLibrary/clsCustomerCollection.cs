@@ -87,6 +87,7 @@ namespace MyClassLibrary
             DB.AddParameter("@CustomerPostCodeOK", mThiscustomer.CustomerPostCodeOK);
             DB.AddParameter("@DateAddedOK", mThiscustomer.DateAddedOK);
             DB.AddParameter("@ActiveOK", mThiscustomer.ActiveOK);
+            DB.AddParameter("@CustomerNumber", mThiscustomer.CustomerNumber);
             //execute the qquery returning the primary key value
             return DB.Execute("sproc_tblCustomers_Insert");
         }
@@ -116,6 +117,7 @@ namespace MyClassLibrary
             DB.AddParameter("@CustomerPostCodeOK", mThiscustomer.CustomerPostCodeOK);
             DB.AddParameter("@DateAddedOK", mThiscustomer.DateAddedOK);
             DB.AddParameter("@ActiveOK", mThiscustomer.ActiveOK);
+            DB.AddParameter("@CustomerNumber", mThiscustomer.CustomerNumber);
             //execute the stored procedure
             DB.Execute("sproc_tblCustomers_Update");
         }
@@ -170,6 +172,7 @@ namespace MyClassLibrary
                 Customer.CustomerLastName = Convert.ToString(DB.DataTable.Rows[Index]["CustomerLastName"]);
                 Customer.CustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[Index]["CustomerPostCodeOK"]);
                 Customer.DateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAddedOK"]);
+                Customer.CustomerNumber = Convert.ToString(DB.DataTable.Rows[Index]["CustomerNumber"]);
                 //add the record to the private data mamber
                 mCustomerList.Add(Customer);
                 //point at the next record

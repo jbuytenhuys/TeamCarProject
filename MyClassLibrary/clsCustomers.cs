@@ -13,6 +13,7 @@ namespace MyClassLibrary
         private string mCustomerLastName;//
         private string mCustomerPostCodeOK;//
         private DateTime mDateAddedOK;//
+        private string mCustomerNumber;//
         /// </summary>
         private bool mActiveOK;
 
@@ -107,6 +108,20 @@ namespace MyClassLibrary
             }
         }
 
+        //public property for customer number
+        public string CustomerNumber
+        {
+            get
+            {
+                //return the private data
+                return mCustomerNumber;
+            }
+            set
+            {
+                //set the private data
+                mCustomerNumber = value;
+            }
+        }
 
         //public property for customer lastname
         public string CustomerLastName
@@ -160,6 +175,7 @@ namespace MyClassLibrary
                 mActiveOK = Convert.ToBoolean(DB.DataTable.Rows[0]["ActiveOK"]);
                 mDateAddedOK = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAddedOK"]);
                 mCustomerPostCodeOK = Convert.ToString(DB.DataTable.Rows[0]["CustomerPostCodeOK"]);
+                mCustomerNumber = Convert.ToString(DB.DataTable.Rows[0]["CustomerNumber"]);
                 //return everything that worked ok
                 return true;
             }
@@ -170,7 +186,7 @@ namespace MyClassLibrary
             }
         }
 
-        public bool Valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerLastName, string CustomerPostCodeOK, string DateAddedOK)
+        public bool Valid(string CustomerAddress, string CustomerEmail, string CustomerFirstName, string CustomerNumber, string CustomerLastName, string CustomerPostCodeOK, string DateAddedOK)
         {
             //create a boolean variable to flag the error
             Boolean OK = true;
@@ -260,9 +276,27 @@ namespace MyClassLibrary
                 OK = false;
             }
 
-            
 
-        
+            //if the NUMBER is blank 
+            if (CustomerNumber.Length == 0)
+            {
+                //set ok flag to false
+                OK = false;
+            }
+
+            //if the number is too long
+            if (CustomerNumber.Length > 20)
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+            //if number is blank
+            if (CustomerNumber == "Customer Number")
+            {
+                //dont let it add
+                OK = false;
+            }
+
             //is the postcode blank 
             if (CustomerPostCodeOK.Length ==0)
             {

@@ -18,7 +18,7 @@
         <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" />
        
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 220px; position: absolute; width: 264px" >Title</asp:TextBox>
-        <asp:TextBox CssClass="TextBoxes" ID="txtName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 741px; top: 250px; position: absolute; width: 264px" >Name</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 857px; top: 250px; position: absolute; width: 264px" >Name</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtPostionInCompany" OnClick="this.value=''" runat="server" style="z-index: 1; left: 858px; top: 280px; position: absolute; width: 264px" >PostionInCompany</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtAddress" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 310px; position: absolute; width: 271px" >Address</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtCity" runat="server" OnClick="this.value=''" style="z-index: 1; left: 858px; top: 340px; position: absolute; width: 264px" >City</asp:TextBox>
@@ -34,22 +34,36 @@
 
         <asp:Button ID="btnDisplayRecord" runat="server" OnClick="btnDisplayRecord_Click" Text="Display Record" />
 
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-        <br />
         <br />
         <asp:TextBox ID="txtFilterPostcode" runat="server" OnTextChanged="txtFilterPostcode_TextChanged">FilterPostcode</asp:TextBox>
         <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" />
+
         <br />
-        <br />
-        <br />
-        <br />
-        <asp:TextBox ID="txtFilterWorkNumber" runat="server" OnTextChanged="txtFilterWorkNumber_TextChanged">txtFilterWorkNumber</asp:TextBox>
+         <asp:TextBox ID="txtFilterWorkNumber" runat="server" OnTextChanged="txtFilterWorkNumber_TextChanged">txtFilterWorkNumber</asp:TextBox>
+       
         <asp:Button ID="btnSearchWorkNumber" runat="server" OnClick="btnSearchWorkNumber_Click" Text="Search" />
+          <br />
+          <br />
+
+
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+
+       
+        <br />
+        <br />
+        <br />
+        <asp:TextBox ID="txtFilterSupplierName" runat="server"></asp:TextBox>
+
+       
+          <asp:Button ID="btnSearchSupplierName" runat="server" Text="Button" OnClick="btnSearchSupplierName_Click" />
+
+       
+        <br />
+       
         <br />
         <br />
        
-        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 506px; top: 233px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
-        
+        <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 334px; top: 234px; position: absolute; height: 355px; width: 414px; margin-top: 16px" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
         <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnreset" runat="server" OnClick="reset_Click" Text="reset" />

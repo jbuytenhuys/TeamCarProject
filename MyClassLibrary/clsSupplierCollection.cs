@@ -152,9 +152,9 @@ namespace MyClassLibrary
             DB.AddParameter("@PostCode", PostCode);
             DB.Execute("sproc_tblSupplier_FilterByPostCode");
             PopulateArray(DB);
-           
 
-   
+
+
         }
 
         public void FilterByWorkNumber(string WorkNumber)
@@ -165,14 +165,21 @@ namespace MyClassLibrary
             PopulateArray(DB);
         }
 
-        
+        public void FilterBySupplierName(string SupplierName)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@SupplierName", SupplierName);
+            DB.Execute("sproc_tblSupplier_FilterBySupplierName");
+            PopulateArray(DB);
+        }
 
-      
 
-       
-      
+
+
+
     }
 }
+
 //dd
 
 

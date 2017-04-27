@@ -33,7 +33,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         MyClassLibrary.clsSupplierCollection Suppliers = new MyClassLibrary.clsSupplierCollection();
         lstBoxListSupplier.DataSource = Suppliers.SupplierList;
         lstBoxListSupplier.DataValueField = "SupplierID";
-        lstBoxListSupplier.DataTextField = "Postcode";
+        lstBoxListSupplier.DataTextField = "SupplierID";
         lstBoxListSupplier.DataBind();
 
 
@@ -253,7 +253,9 @@ public partial class SupplierHomepage : System.Web.UI.Page
         lstBoxListSupplier.DataTextField = "WorkNumber";
         lstBoxListSupplier.DataBind();
     }
-
+  
+    
+    
 
 
 
@@ -281,6 +283,26 @@ public partial class SupplierHomepage : System.Web.UI.Page
     protected void reset_Click(object sender, EventArgs e)
     {
         Response.Redirect("SupplierHomepage.aspx");
+    }
+
+
+
+
+    void Filter3()
+    {
+        clsSupplierCollection Supplier = new clsSupplierCollection();
+        Supplier.ThisSupplier.SupplierName = txtFilterSupplierName.Text;
+        Supplier.FilterBySupplierName(Supplier.ThisSupplier.SupplierName);
+        lstBoxListSupplier.DataSource = Supplier.SupplierList;
+        lstBoxListSupplier.DataValueField = "SupplierID";
+        lstBoxListSupplier.DataTextField = "SupplierName";
+        lstBoxListSupplier.DataBind();
+    }
+
+
+    protected void btnSearchSupplierName_Click(object sender, EventArgs e)
+    {
+        Filter3();
     }
 }
 

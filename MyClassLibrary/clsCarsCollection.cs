@@ -32,7 +32,7 @@ namespace MyClassLibrary
             DB.AddParameter("@CarColour", mThisCar.CarColour);
             DB.AddParameter("@NumOfDoors", mThisCar.CarNumberOfDoors);
             DB.AddParameter("@NumOfSeats", mThisCar.CarNumberOfSeats);
-            DB.AddParameter("@TransactionID", mThisCar.TransactionID);
+            DB.AddParameter("@SupplierID", mThisCar.SupplierID);
             DB.AddParameter("@CarNeedsRepair", mThisCar.CarNeedsRepair);
             DB.AddParameter("CarSold", mThisCar.CarSold);
             //Execute the query returning the primary key value.
@@ -52,10 +52,13 @@ namespace MyClassLibrary
 
         public void ArchiveAndDelete()
         {
+            Boolean Sold = true;
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure.
             DB.AddParameter("@CarID", mThisCar.CarID);
+            DB.AddParameter("@CarSold", Sold);
+            DB.AddParameter("@CarRegistrationPlate", mThisCar.CarRegistrationPlate);
             //Execute the stored procedures.
             DB.Execute("sproc_tblCars_tblArchive_ArchiveAndDelete");
         }
@@ -128,7 +131,7 @@ namespace MyClassLibrary
                 AnCar.CarColour = Convert.ToString(DB.DataTable.Rows[Index]["CarColour"]);
                 AnCar.CarNumberOfDoors = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfDoors"]);
                 AnCar.CarNumberOfSeats = Convert.ToInt32(DB.DataTable.Rows[Index]["NumOfSeats"]);
-                AnCar.TransactionID = Convert.ToInt32(DB.DataTable.Rows[Index]["TransactionID"]);
+                AnCar.SupplierID = Convert.ToInt32(DB.DataTable.Rows[Index]["SupplierID"]);
                 AnCar.CarNeedsRepair = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarNeedsRepair"]);
                 AnCar.CarSold = Convert.ToBoolean(DB.DataTable.Rows[Index]["CarSold"]);
                 //add the record to the private data member.

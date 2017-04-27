@@ -62,7 +62,7 @@ namespace MyClassLibrary
                 AnSupplier.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnSupplier.SupplierName = Convert.ToString(DB.DataTable.Rows[Index]["SupplierName"]);
                 AnSupplier.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
-                AnSupplier.PostionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PostionInCompany"]);
+                AnSupplier.PositionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PositionInCompany"]);
                 AnSupplier.Title = Convert.ToString(DB.DataTable.Rows[Index]["Title"]);
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
                 AnSupplier.WorkNumber = Convert.ToString(DB.DataTable.Rows[Index]["WorkNumber"]);
@@ -85,7 +85,7 @@ namespace MyClassLibrary
             DB.AddParameter("@Mobile", mThisSupplier.Mobile);
             DB.AddParameter("@Name", mThisSupplier.Name);
             DB.AddParameter("@Postcode", mThisSupplier.PostCode);
-            DB.AddParameter("@PostionInCompany", mThisSupplier.PostionInCompany);
+            DB.AddParameter("@PositionInCompany", mThisSupplier.PositionInCompany);
             DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
             DB.AddParameter("@Title", mThisSupplier.Title);
             DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
@@ -112,7 +112,7 @@ namespace MyClassLibrary
             DB.AddParameter("@Mobile", mThisSupplier.Mobile);
             DB.AddParameter("@Name", mThisSupplier.Name);
             DB.AddParameter("@Postcode", mThisSupplier.PostCode);
-            DB.AddParameter("@PostionInCompany", mThisSupplier.PostionInCompany);
+            DB.AddParameter("@PositionInCompany", mThisSupplier.PositionInCompany);
             DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
             DB.AddParameter("@Title", mThisSupplier.Title);
             DB.AddParameter("@WorkExt", mThisSupplier.WorkExt);
@@ -139,7 +139,7 @@ namespace MyClassLibrary
                 AnSupplier.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnSupplier.SupplierName = Convert.ToString(DB.DataTable.Rows[Index]["SupplierName"]);
                 AnSupplier.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
-                AnSupplier.PostionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PostionInCompany"]);
+                AnSupplier.PositionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PositionInCompany"]);
                 AnSupplier.Title = Convert.ToString(DB.DataTable.Rows[Index]["Title"]);
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
                 AnSupplier.WorkNumber = Convert.ToString(DB.DataTable.Rows[Index]["WorkNumber"]);
@@ -168,7 +168,7 @@ namespace MyClassLibrary
             //send the car Manufacturer parameter to the database
             DB.AddParameter("@SupplierEmail", SupplierEmail);
             //Execute stored procedure.
-            DB.Execute("sproc_tblSupplier_tblCars_FilterBySupplierEmail");
+            DB.Execute("sproc_tblCars_tblSupplier_FilterBySupplierEmail");
             //populate array list with table data.
             PopulateArray(DB);
         }
@@ -198,7 +198,6 @@ namespace MyClassLibrary
     }
 }
 
-//dd
 
 
 

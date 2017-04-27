@@ -12,7 +12,7 @@ namespace MyClassLibrary
         private string mMoblie;
         private string mName;
         private string mPostcode;
-        private string mPostionInCompany;
+        private string mPositionInCompany;
         private Int32 mSupplierID;
         private string mSupplierName;
         private string mTitle;
@@ -108,15 +108,15 @@ namespace MyClassLibrary
             //set the value pf the private data member.
             { mPostcode = value; }
         }
-        public string PostionInCompany
+        public string PositionInCompany
         {
             get
             //return the private data.
-            { return mPostionInCompany; }
+            { return mPositionInCompany; }
 
             set
             //set the value pf the private data member.
-            { mPostionInCompany = value; }
+            { mPositionInCompany = value; }
         }
         public Int32 SupplierID
         {
@@ -193,7 +193,7 @@ namespace MyClassLibrary
                 mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
                 mSupplierName = Convert.ToString(DB.DataTable.Rows[0]["SupplierName"]);
                 mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
-                mPostionInCompany = Convert.ToString(DB.DataTable.Rows[0]["PostionInCompany"]);
+                mPositionInCompany = Convert.ToString(DB.DataTable.Rows[0]["PositionInCompany"]);
                 mTitle = Convert.ToString(DB.DataTable.Rows[0]["Title"]);
                 mWorkExt = Convert.ToString(DB.DataTable.Rows[0]["WorkExt"]);
                 mWorkNumber = Convert.ToString(DB.DataTable.Rows[0]["WorkNumber"]);
@@ -213,7 +213,7 @@ namespace MyClassLibrary
 
 
 
-        public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PostionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber, string SupplierEmail)
+        public bool Valid(string Address, string City, string County, string DateAdded, string Mobile, string Name, string Postcode, string PositionInCompany, string SupplierName, string Title, string WorkExt, string WorkNumber, string SupplierEmail)
         {
             Boolean OK = true;
 
@@ -251,11 +251,11 @@ namespace MyClassLibrary
             {
                 OK = false;
             }
-            if (PostionInCompany.Length == 0)
+            if (PositionInCompany.Length == 0)
             {
                 OK = false;
             }
-            if (PostionInCompany.Length > 50)
+            if (PositionInCompany.Length > 50)
             {
                 OK = false;
             }

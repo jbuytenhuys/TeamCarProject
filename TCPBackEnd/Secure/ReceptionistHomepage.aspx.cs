@@ -10,6 +10,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 {
     //Variable to store the primary key of the record.
     Int32 CarID;
+    Int32 SupplierID;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -92,6 +93,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarNumberOfSeats = Convert.ToInt32(txtReceptionistCarNumberOfSeats.Text);
             Cars.ThisCar.CarNeedsRepair = ChkBoxReceptionistNeedsRepair.Checked;
             Cars.ThisCar.CarSold = ChkBoxReceptionistSold.Checked;
+            Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
             //update the record
             Cars.Update();
             
@@ -121,6 +123,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         txtReceptionistCarNumberOfSeats.Text = Convert.ToString(Cars.ThisCar.CarNumberOfSeats);
         ChkBoxReceptionistNeedsRepair.Checked = Cars.ThisCar.CarNeedsRepair;
         ChkBoxReceptionistSold.Checked = Cars.ThisCar.CarSold;
+        txtReceptionistSupplierID.Text = Convert.ToString(Cars.ThisCar.SupplierID);
     }
 
     void FilterByCarManufacturer()
@@ -135,12 +138,24 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     void FilterBySupplierEmail()
     {
-        clsSupplierCollection Cars = new clsSupplierCollection();
-        Cars.FilterBySupplierEmail(txtReceptionistSearchSupplier.Text);
-        lstBoxReceptionistListCars.DataSource = Cars.SupplierList;
+        clsSupplierCollection Suppliers = new clsSupplierCollection();
+        Suppliers.FilterBySupplierEmail(txtReceptionistSearchSupplier.Text);
+        lstBoxReceptionistListCars.DataSource = Suppliers.SupplierList;
         lstBoxReceptionistListCars.DataValueField = "SupplierID";
-        lstBoxReceptionistListCars.DataTextField = "Email";
+        lstBoxReceptionistListCars.DataTextField = "SupplierEmail";
         lstBoxReceptionistListCars.DataBind();
+    }
+
+    void DisplayRecord()
+    {
+        //get the number of the Car to be processed.
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        //create an instance.
+        clsSupplierCollection Supplier = new clsSupplierCollection();
+        //find the record to be displayed.
+        Supplier.ThisSupplier.Find(SupplierID);
+        //copy properties into textboxes on web form.
+        txtReceptionistSupplierID.Text = Supplier.ThisSupplier.SupplierID.ToString();
     }
 
 
@@ -184,7 +199,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         DisplayAllCars();
     }
 
-    protected void btnReceptionistEdit_Click(object sender, EventArgs e)
+    protected void btnReceptionistViewSelectedData_Click(object sender, EventArgs e)
     {
         //Variable to store the primary key value of the record to be edited.
         Int32 CarID;
@@ -232,9 +247,33 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         FilterByCarManufacturer();
     }
 
-    protected void btnRec_Click(object sender, EventArgs e)
+    protected void btnReceptionistSearchSupplier_Click(object sender, EventArgs e)
     {
         FilterBySupplierEmail();
+    }
+
+
+
+    protected void btnReceptionistFetchSupplierID_Click(object sender, EventArgs e)
+    {
+        //Variable to store the primary key value of the record to be edited.
+        Int32 SupplierID;
+        //if a record has been selected from the list.
+        if (lstBoxReceptionistListCars.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit.
+            SupplierID = Convert.ToInt32(lstBoxReceptionistListCars.SelectedValue);
+            //store the data in the session object.
+            Session["SupplierID"] = SupplierID;
+            lblError.Text = "";
+            DisplayRecord();
+        }
+        else
+        //If no record has been selected.
+        {
+            //Display an error
+            lblError.Text = "Please select a record to be edited.";
+        }
     }
 
     

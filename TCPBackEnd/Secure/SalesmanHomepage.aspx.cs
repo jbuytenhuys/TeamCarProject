@@ -52,6 +52,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         txtSalesmanCustomerPostCode.Text = CustomerBook.ThisCustomer.CustomerPostCodeOK;
         txtSalesmanDateAddedOK.Text = CustomerBook.ThisCustomer.DateAddedOK.ToString();
         chkSalesmanActiveOK.Checked = CustomerBook.ThisCustomer.ActiveOK;
+        txtCustomerNumber.Text = CustomerBook.ThisCustomer.CustomerNumber;
     }
 
     void Add()
@@ -59,7 +60,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         //create an instance
         MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
         //validate the data on webform
-        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
+        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtCustomerNumber.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
         //if data is okay then add to object
         if (OK == true)
         {
@@ -71,6 +72,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             CustomerBook.ThisCustomer.CustomerPostCodeOK = txtSalesmanCustomerPostCode.Text;
             CustomerBook.ThisCustomer.DateAddedOK = Convert.ToDateTime(txtSalesmanDateAddedOK.Text);
             CustomerBook.ThisCustomer.ActiveOK = chkSalesmanActiveOK.Checked;
+            CustomerBook.ThisCustomer.CustomerNumber = txtCustomerNumber.Text;
 
             //add record
             CustomerBook.Add();
@@ -90,7 +92,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         //create an instance
         MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
         //validate the data on webform
-        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
+        Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtCustomerNumber.Text,  txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
         //if data is okay then add to object
         if (OK == true)
         {
@@ -103,6 +105,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
             CustomerBook.ThisCustomer.CustomerPostCodeOK = txtSalesmanCustomerPostCode.Text;
             CustomerBook.ThisCustomer.DateAddedOK = Convert.ToDateTime(txtSalesmanDateAddedOK.Text);
             CustomerBook.ThisCustomer.ActiveOK = chkSalesmanActiveOK.Checked;
+            CustomerBook.ThisCustomer.CustomerNumber = txtCustomerNumber.Text;
             //update the record
             CustomerBook.Update();
             Response.Redirect("SalesmanHomepage.aspx");
@@ -262,6 +265,16 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     protected void btnFilterByAddress_Click(object sender, EventArgs e)
     {
         FilterCustomerAddress();
+    }
+
+    protected void txtCustomerNumber_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtSalesmanFirstName_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }
 

@@ -53,7 +53,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         //create an instance of the address book
         clsSupplierCollection Suppliers = new clsSupplierCollection();
         //validate the data on the web form
-        Boolean OK = Suppliers.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text);
+        Boolean OK = Suppliers.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
         //if the data is ok then add it to the object 
         if (OK == true)
         {
@@ -69,6 +69,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
             Suppliers.ThisSupplier.Title = txtTitle.Text;
             Suppliers.ThisSupplier.WorkExt = txtWorkExt.Text;
             Suppliers.ThisSupplier.WorkNumber = txtWorkNumber.Text;
+            Suppliers.ThisSupplier.SupplierEmail = txtSupplierEmail.Text;
+
             //add the record
             Suppliers.Add();
         }
@@ -191,7 +193,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     void Update()
     {
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
-        Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text);
+        Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPostionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
         if (OK == true)
         {
             SupplierBook.ThisSupplier.Find(SupplierID);
@@ -207,6 +209,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.Title = txtTitle.Text;
             SupplierBook.ThisSupplier.WorkExt = txtWorkExt.Text;
             SupplierBook.ThisSupplier.WorkNumber = txtWorkNumber.Text;
+            SupplierBook.ThisSupplier.SupplierEmail = txtSupplierEmail.Text;
+
             SupplierBook.Update();
         }
         else

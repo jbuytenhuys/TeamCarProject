@@ -35,7 +35,7 @@ public partial class Secure_ReceptionistDelete : System.Web.UI.Page
         //create a new instance
         clsCarsCollection Cars = new clsCarsCollection();
         //find the record to delete
-        Cars.ThisCar.Find(CarID);
+        Cars.ThisCar.Find(CarID);    
         //Delete the record
         Cars.ArchiveAndDelete();
     }

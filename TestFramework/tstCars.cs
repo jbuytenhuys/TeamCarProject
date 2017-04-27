@@ -323,8 +323,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -344,8 +344,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -364,8 +364,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -384,8 +384,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -404,8 +404,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -425,8 +425,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -445,8 +445,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -465,8 +465,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -486,8 +486,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -506,8 +506,8 @@ namespace TestFramework
             string CarModel = ""; //should trigger an error.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -526,8 +526,8 @@ namespace TestFramework
             string CarModel = "A"; //should be okay.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -546,8 +546,8 @@ namespace TestFramework
             string CarModel = "AA"; //should be okay.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -566,8 +566,8 @@ namespace TestFramework
             string CarModel = "31CharactersLongAAAAAAAAAAAAAAA"; //should be okay.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -586,8 +586,8 @@ namespace TestFramework
             string CarModel = "32CharactersLongAAAAAAAAAAAAAAA"; //should be okay.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -606,8 +606,8 @@ namespace TestFramework
             string CarModel = "33CharactersLongAAAAAAAAAAAAAAAAA"; //should trigger an error.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -627,8 +627,8 @@ namespace TestFramework
             CarModel = CarModel.PadRight(50, 'A'); //should trigger an error.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -647,8 +647,8 @@ namespace TestFramework
             string CarModel = "16CharactersLong";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -667,8 +667,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = ""; //should return an error
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -687,8 +687,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "A"; //should be okay
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -707,8 +707,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "AA"; //should be okay
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -727,8 +727,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "AAAA"; //should be okay
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -747,8 +747,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "AAA AAA"; //should be okay
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -768,8 +768,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "AAAA AAA"; //should be okay
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -788,8 +788,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "AAAA AAAA"; //should return an error
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -809,8 +809,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "16CharactersLong"; //should return an error
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -830,8 +830,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = ""; //should return an error
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -850,8 +850,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "A"; //should be okay.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -870,8 +870,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "AA"; //should be okay.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -890,8 +890,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "31CharactersLongAAAAAAAAAAAAAAA"; //should be okay.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -910,8 +910,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "32CharactersLongAAAAAAAAAAAAAAAA"; //should be okay.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -930,8 +930,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "33CharactersLongAAAAAAAAAAAAAAAAA"; //should return an error.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -950,8 +950,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "16CharactersLong"; //should be okay.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -971,8 +971,8 @@ namespace TestFramework
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "";
             CarColour = CarColour.PadRight(50, 'A'); //should trigger an error.
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5";
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -991,8 +991,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = -32; //should return error.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "-32"; //should return error.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1011,8 +1011,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 1; //should return an error.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "1"; //should return an error.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1031,8 +1031,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 2; //should be okay.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "2"; //should be okay.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1051,8 +1051,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 3; //should be okay.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "3"; //should be okay.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1071,8 +1071,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 4; //should be okay.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "4"; //should be okay.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1091,8 +1091,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5; //should be okay.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "5"; //should be okay.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1111,8 +1111,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 6; //should return an error
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "6"; //should return an error
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1131,8 +1131,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 3; //should be okay.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "3"; //should be okay.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1151,8 +1151,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 32; //should return error.
-            Int32 NumOfSeats = 5;
+            string NumOfDoors = "32"; //should return error.
+            string NumOfSeats = "5";
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1171,8 +1171,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5; 
-            Int32 NumOfSeats = -32; //should return error.
+            string NumOfDoors = "5";
+            string NumOfSeats = "-32"; //should return error.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1191,8 +1191,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 0; //should return error.
+            string NumOfDoors = "5";
+            string NumOfSeats = "0"; //should return error.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1211,8 +1211,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 1; //should be okay.
+            string NumOfDoors = "5";
+            string NumOfSeats = "1"; //should be okay.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1231,8 +1231,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 2; //should be okay.
+            string NumOfDoors = "5";
+            string NumOfSeats = "2"; //should be okay.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1251,8 +1251,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 6; //should be okay.
+            string NumOfDoors = "5";
+            string NumOfSeats = "6"; //should be okay.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1271,8 +1271,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 7; //should be okay.
+            string NumOfDoors = "5";
+            string NumOfSeats = "7"; //should be okay.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1291,8 +1291,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 8; //should be return an error.
+            string NumOfDoors = "5";
+            string NumOfSeats = "8"; //should be return an error.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1312,8 +1312,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 32; //should be return an error.
+            string NumOfDoors = "5";
+            string NumOfSeats = "32"; //should be return an error.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.
@@ -1332,8 +1332,8 @@ namespace TestFramework
             string CarModel = "RS4";
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            Int32 NumOfDoors = 5;
-            Int32 NumOfSeats = 5; //should be okay.
+            string NumOfDoors = "5";
+            string NumOfSeats = "5"; //should be okay.
             //Invoke the method
             OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
             //Test to see that the result is correct.

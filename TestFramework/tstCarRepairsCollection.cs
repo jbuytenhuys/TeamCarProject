@@ -98,12 +98,14 @@ namespace TestFramework
             //Var to store the primary key
             Int32 PrimaryKey = 0;
             //Set its properties
-            TestItem.CarRepairID = 2;
+            TestItem.CarRepairID = 2000;
             TestItem.DaysInForRepair = 27;
             TestItem.DeadlineDate = DateTime.Now.Date.AddDays(60);
             TestItem.PartPrice = 52.99m;
             TestItem.PartRequired = "Add test";
             TestItem.RepairStatus = true;
+            TestItem.CarID = 2000;
+            TestItem.StaffID = 2000;
             //set this repair to the test data
             AllCarRepairs.ThisCarRepair = TestItem;
             //add the record

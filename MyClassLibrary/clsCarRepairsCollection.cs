@@ -72,6 +72,7 @@ namespace MyClassLibrary
             DB.AddParameter("@PartRequired", mThisCarRepair.PartRequired);
             DB.AddParameter("@RepairStatus", mThisCarRepair.RepairStatus);
             DB.AddParameter("@CarID", mThisCarRepair.CarID);
+            DB.AddParameter("@StaffID", mThisCarRepair.StaffID);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblCarRepairs_Insert");
         }
@@ -79,12 +80,13 @@ namespace MyClassLibrary
         //Deletes the record pointed to by ThisCarRepair
         public void Archive()
         {
+            Boolean OK = false;
             //connect to data base
             clsDataConnection DB = new clsDataConnection();
             //set parameter for stored procedure
             DB.AddParameter("@CarRepairID", mThisCarRepair.CarRepairID);
             DB.AddParameter("@CarID", mThisCarRepair.CarID);
-            DB.AddParameter("@CarNeedsRepair", false);
+            DB.AddParameter("@CarNeedsRepair", OK );
             //execute the stored procedure
             DB.Execute("sproc_tblCarRepairs_Archive");
         }
@@ -115,6 +117,7 @@ namespace MyClassLibrary
             //populate array list with the data table
             PopulateArray(DB);
         }
+
 
         void PopulateArray(clsDataConnection DB)
         {

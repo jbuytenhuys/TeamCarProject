@@ -139,6 +139,7 @@ namespace MyClassLibrary
             {
                 //Copy Data from the database to the private data members.
                 mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
+                mSupplierID = Convert.ToInt32(DB.DataTable.Rows[0]["SupplierID"]);
                 mCarManufacturer = Convert.ToString(DB.DataTable.Rows[0]["CarManufacturer"]);
                 mCarModel = Convert.ToString(DB.DataTable.Rows[0]["CarModel"]);
                 mCarColour = Convert.ToString(DB.DataTable.Rows[0]["CarColour"]);
@@ -158,7 +159,7 @@ namespace MyClassLibrary
             }
         }
 
-        public bool Valid(string CarManufacturer, string CarModel, string CarRegistrationPlate, string CarColour, string NumOfDoors, string NumOfSeats)
+        public bool Valid(string CarManufacturer, string CarModel, string CarRegistrationPlate, string CarColour, string NumOfDoors, string NumOfSeats, string SupplierID)
         {
             //create a boolean variable to flag error
             Boolean OK = true;
@@ -233,6 +234,15 @@ namespace MyClassLibrary
                     //set the flag to OK to false
                     OK = false;
                 }
+            }
+            else
+            {
+                OK = false;
+            }
+
+            if (int.TryParse(SupplierID, out value))
+            {
+                
             }
             else
             {

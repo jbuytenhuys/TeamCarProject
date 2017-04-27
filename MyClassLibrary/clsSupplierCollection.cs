@@ -152,10 +152,24 @@ namespace MyClassLibrary
             DB.AddParameter("@PostCode", PostCode);
             DB.Execute("sproc_tblSupplier_FilterByPostCode");
             PopulateArray(DB);
-
-
-
         }
+
+
+        //WRITTEN BY JACK.
+        public void FilterBySupplierEmail(string SupplierEmail)
+        {
+            //filters the records based on a full or partial car manufacturer.
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the car Manufacturer parameter to the database
+            DB.AddParameter("@SupplierEmail", SupplierEmail);
+            //Execute stored procedure.
+            DB.Execute("sproc_tblSupplier_tblCars_FilterBySupplierEmail");
+            //populate array list with table data.
+            PopulateArray(DB);
+        }
+
+
 
         public void FilterByWorkNumber(string WorkNumber)
         {

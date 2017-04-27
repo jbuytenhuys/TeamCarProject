@@ -45,7 +45,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         //create an instance
         clsCarsCollection Cars = new clsCarsCollection();
         //validate the data on the web form
-        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, Convert.ToInt32(txtReceptionistCarNumberOfDoors.Text), Convert.ToInt32(txtReceptionistCarNumberOfSeats.Text));
+        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text);
         //if the data is OK then add it to the object.
         if (OK == true)
         {
@@ -60,6 +60,8 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarSold = Convert.ToBoolean(ChkBoxReceptionistSold.Checked);
             //add the record
             Cars.Add();
+            lblError.Text = "";
+
         }
         else
         {
@@ -74,7 +76,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         //create an instance.
         clsCarsCollection Cars = new clsCarsCollection();
         //validate the data on the web form.
-        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, Convert.ToInt32(txtReceptionistCarNumberOfDoors.Text), Convert.ToInt32(txtReceptionistCarNumberOfSeats.Text));
+        Boolean OK = Cars.ThisCar.Valid(txtReceptionistCarManufacturer.Text, txtReceptionistCarModel.Text, txtReceptionistCarRegistrationPlate.Text, txtReceptionistCarColour.Text, txtReceptionistCarNumberOfDoors.Text, txtReceptionistCarNumberOfSeats.Text);
         //if the data is OK then add it to the object.
         if (OK == true)
         {

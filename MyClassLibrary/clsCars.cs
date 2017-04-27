@@ -158,7 +158,7 @@ namespace MyClassLibrary
             }
         }
 
-        public bool Valid(string CarManufacturer, string CarModel, string CarRegistrationPlate, string CarColour, int NumOfDoors, int NumOfSeats)
+        public bool Valid(string CarManufacturer, string CarModel, string CarRegistrationPlate, string CarColour, string NumOfDoors, string NumOfSeats)
         {
             //create a boolean variable to flag error
             Boolean OK = true;
@@ -213,18 +213,46 @@ namespace MyClassLibrary
                 OK = false;
             }
             
-            if (NumOfDoors < 2 | NumOfDoors > 5)
-            {
-                    //set the flag to OK to false
-                    OK = false;
-            }
-             if (NumOfSeats < 1 | NumOfSeats > 7)
-            {
-                    //set the flag to OK to false
-                    OK = false;
-             }
-            return OK;
+           
+             
             
+
+            
+            int value;
+            if (int.TryParse(NumOfDoors, out value))
+            {
+                if (Convert.ToInt32(NumOfDoors) < 2 | Convert.ToInt32(NumOfDoors) > 5)
+                {
+                    //set the flag to OK to false
+                    OK = false;
+                }
+            }
+            else 
+             {
+                OK = false;
+            }
+
+
+            if (int.TryParse(NumOfSeats, out value))
+            {
+                if (Convert.ToInt32(NumOfSeats) < 1 | Convert.ToInt32(NumOfSeats) > 7)
+                {
+                    //set the flag to OK to false
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+
+            return OK;
+
+
+
+
+
+
 
 
 

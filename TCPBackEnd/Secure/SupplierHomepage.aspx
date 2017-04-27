@@ -19,7 +19,7 @@
        
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 837px; top: 220px; position: absolute; width: 264px" >Title</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 836px; top: 250px; position: absolute; width: 264px" >Name</asp:TextBox>
-        <asp:TextBox CssClass="TextBoxes" ID="txtPostionInCompany" OnClick="this.value=''" runat="server" style="z-index: 1; left: 836px; top: 280px; position: absolute; width: 264px" >PostionInCompany</asp:TextBox>
+        <asp:TextBox CssClass="TextBoxes" ID="txtPositionInCompany" OnClick="this.value=''" runat="server" style="z-index: 1; left: 836px; top: 280px; position: absolute; width: 264px" >PostionInCompany</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtAddress" runat="server" OnClick="this.value=''" style="z-index: 1; left: 836px; top: 310px; position: absolute; width: 271px" >Address</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtCity" runat="server" OnClick="this.value=''" style="z-index: 1; left: 837px; top: 340px; position: absolute; width: 264px" >City</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtCounty" runat="server" OnClick="this.value=''" style="z-index: 1; left: 835px; top: 370px; position: absolute; width: 264px">County</asp:TextBox>

@@ -63,6 +63,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             //add the record
             Cars.Add();
             lblError.Text = "";
+            Response.Redirect("ReceptionistHomepage.aspx");
 
         }
         else

@@ -76,16 +76,16 @@ namespace TestFramework
             Assert.AreEqual(Supplier.PostCode, TestData);
         }
         [TestMethod]
-        public void PostionInCompanyOK()
+        public void PositionInCompanyOK()
         {
             //create an instance of the class we want to create
             clsSupplier Supplier = new clsSupplier();
             //create some test data to assign to the property
             string TestData = "Head of sales";
             //assign the data to the property
-            Supplier.PostionInCompany = TestData;
+            Supplier.PositionInCompany = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(Supplier.PostionInCompany, TestData);
+            Assert.AreEqual(Supplier.PositionInCompany, TestData);
         }
         [TestMethod]
         public void MobileOK()
@@ -346,7 +346,7 @@ namespace TestFramework
 
         }
         [TestMethod]
-        public void TestPostionInCompany()
+        public void TestPositionInCompany()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -357,7 +357,7 @@ namespace TestFramework
             //create some test data 
             Int32 SupplierID = 1;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.PostionInCompany != "HeadOfSales")
+            if (AnSupplier.PositionInCompany != "HeadOfSales")
             {
                 Ok = false;
             }
@@ -466,13 +466,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -491,13 +492,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -517,13 +519,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -543,13 +546,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -569,13 +573,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -595,13 +600,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -620,13 +626,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -647,13 +654,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -674,13 +682,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -699,13 +708,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -726,13 +736,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -752,13 +763,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -778,13 +790,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
+            string SupplierEmail = "Test@Test.com";
             string WorkNumber = "12134";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -803,13 +816,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -828,13 +842,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -856,13 +871,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -882,13 +898,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -907,13 +924,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -934,13 +952,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -960,13 +979,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -986,13 +1006,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1011,13 +1032,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1036,13 +1058,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1064,13 +1087,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1090,13 +1114,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1115,13 +1140,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "M";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1143,13 +1169,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Ma";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1169,13 +1196,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb49";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1195,13 +1223,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb50";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1220,13 +1249,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "1bbbbbbbbbbbbbbbbbbbbbb25";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1246,13 +1276,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb51";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1273,19 +1304,20 @@ namespace TestFramework
             String Name = "";
             Name = Name.PadRight(500, 'c');
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
         }
         [TestMethod]
-        public void PostionInCompanyMinLessOne()
+        public void PositionInCompanyMinLessOne()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1299,18 +1331,19 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "";
+            String PositionInCompany = "";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
         [TestMethod]
-        public void PostionInCompanyMin()
+        public void PositionInCompanyMin()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1324,19 +1357,20 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "A";
+            String PositionInCompany = "A";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
         }
         [TestMethod]
-        public void PostionInCompanyMinPlusOne()
+        public void PositionInCompanyMinPlusOne()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1350,20 +1384,21 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Ac";
+            String PositionInCompany = "Ac";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
         }
 
         [TestMethod]
-        public void PostionInCompanyMaxLessOne()
+        public void PositionInCompanyMaxLessOne()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1377,19 +1412,20 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb49";
+            String PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb49";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
         }
         [TestMethod]
-        public void PostionInCompanyMax()
+        public void PositionInCompanyMax()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1403,18 +1439,19 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb50";
+            String PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb50";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
         [TestMethod]
-        public void PostionInCompanyMid()
+        public void PositionInCompanyMid()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1428,20 +1465,21 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
+            String PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
 
 
         [TestMethod]
-        public void PostionInCompanyMaxPlusOne()
+        public void PositionInCompanyMaxPlusOne()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1455,19 +1493,20 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb51";
+            String PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb51";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
         }
         [TestMethod]
-        public void PostionInCompanyExtremeMax()
+        public void PositionInCompanyExtremeMax()
         {
             //create an instance of the class we want to create
             clsSupplier AnSupplier = new clsSupplier();
@@ -1481,14 +1520,15 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "";
-            PostionInCompany = PostionInCompany.PadRight(500, 'r');
+            String PositionInCompany = "";
+            PositionInCompany = PositionInCompany.PadRight(500, 'r');
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1508,13 +1548,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1534,13 +1575,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "A";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1561,13 +1603,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Ac";
+            String PositionInCompany = "Ac";
             string SupplierName = "Au";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1587,13 +1630,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb49";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1613,13 +1657,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb50";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1638,13 +1683,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "1bbbbbbbbbbbbbbbbbbbbbb25";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1663,13 +1709,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "1bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb51";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1690,14 +1737,15 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "";
             SupplierName = SupplierName.PadRight(500, 'A');
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1717,13 +1765,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1744,13 +1793,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "C";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1771,13 +1821,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1797,13 +1848,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV671GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1823,13 +1875,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "1CV6CVR8";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1848,13 +1901,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CVC4";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -1874,13 +1928,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV67GX3S9";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1901,13 +1956,14 @@ namespace TestFramework
             String Name = "Mark";
             string Postcode = "";
             Postcode = Postcode.PadRight(500, 'E');
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -1927,13 +1983,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -1954,13 +2011,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "M";
             string WorkExt = "312";
+            string SupplierEmail = "Test@Test.com";
             string WorkNumber = "12134";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -1983,13 +2041,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2009,13 +2068,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mis4";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2035,13 +2095,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Miss5";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2060,13 +2121,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mrr4";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2086,13 +2148,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mrrrrr6";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2112,14 +2175,15 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "";
             Title = Title.PadRight(500, 'E');
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2139,13 +2203,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2164,13 +2229,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "1";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2190,13 +2256,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "12";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2217,13 +2284,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "1234";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2243,13 +2311,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "12345";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2269,13 +2338,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "123";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2293,13 +2363,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "123456";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2319,14 +2390,15 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "";
             WorkExt = WorkExt.PadRight(500, 'E');
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2346,13 +2418,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
+            string SupplierEmail = "Test@Test.com";
             string WorkNumber = "";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2371,13 +2444,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "1";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2397,13 +2471,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2423,13 +2498,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "1000000010";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2449,13 +2525,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "10000000011";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2475,13 +2552,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12345";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2500,13 +2578,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "100000000012";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2527,14 +2606,15 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "";
             WorkExt = WorkExt.PadRight(500, '1');
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2554,13 +2634,14 @@ namespace TestFramework
             String Mobile = "";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2580,13 +2661,14 @@ namespace TestFramework
             String Mobile = "1";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";  
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2607,13 +2689,14 @@ namespace TestFramework
             String Mobile = "12";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2634,13 +2717,14 @@ namespace TestFramework
             String Mobile = "1000000010";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
@@ -2660,13 +2744,14 @@ namespace TestFramework
             String Mobile = "10000000011";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2686,13 +2771,14 @@ namespace TestFramework
             String Mobile = "12345";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2713,13 +2799,14 @@ namespace TestFramework
             String Mobile = "100000000012";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2742,13 +2829,14 @@ namespace TestFramework
             Mobile = Mobile.PadRight(500, '2');
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
 
@@ -2771,13 +2859,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2799,13 +2888,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2827,13 +2917,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
@@ -2856,13 +2947,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2885,13 +2977,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }
@@ -2911,13 +3004,14 @@ namespace TestFramework
             String Mobile = "078";
             String Name = "Mark";
             string Postcode = "CV6 7GX";
-            String PostionInCompany = "Accounts";
+            String PositionInCompany = "Accounts";
             string SupplierName = "Audi";
             string Title = "Mr";
             string WorkExt = "312";
             string WorkNumber = "12134";
+            string SupplierEmail = "Test@Test.com";
             //invoke the method
-            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PostionInCompany, SupplierName, Title, WorkExt, WorkNumber);
+            OK = AnSupplier.Valid(Address, City, County, DateAdded, Mobile, Name, Postcode, PositionInCompany, SupplierName, Title, WorkExt, WorkNumber, SupplierEmail);
             //test to see that the result is correct
             Assert.IsFalse(OK);
         }

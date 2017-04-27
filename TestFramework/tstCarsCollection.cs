@@ -115,7 +115,7 @@ namespace TestFramework
             TestItem.CarColour = "White";
             TestItem.CarNumberOfDoors = 5;
             TestItem.CarNumberOfSeats = 4;
-            TestItem.TransactionID = 123243243;
+            TestItem.SupplierID = 4;
             TestItem.CarNeedsRepair = false;
             TestItem.CarSold = false;
             //Set thiscar to the test data.

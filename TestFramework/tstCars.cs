@@ -325,8 +325,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -346,8 +347,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -366,8 +368,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -386,8 +389,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -406,8 +410,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -427,8 +432,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -447,8 +453,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -467,8 +474,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -488,8 +496,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -508,8 +517,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -528,8 +538,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -546,10 +557,11 @@ namespace TestFramework
             string CarModel = "AA"; //should be okay.
             string CarRegistrationPlate = "FH63 GTE";
             string CarColour = "Yellow";
-            string NumOfDoors = "5";
+            string NumOfDoors = "5";            
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -568,8 +580,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -588,8 +601,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -608,8 +622,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -629,8 +644,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -649,8 +665,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -669,8 +686,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -689,8 +707,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -709,8 +728,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -729,8 +749,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -749,8 +770,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -770,8 +792,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -790,8 +813,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -811,8 +835,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -832,8 +857,9 @@ namespace TestFramework
             string CarColour = ""; //should return an error
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -852,8 +878,9 @@ namespace TestFramework
             string CarColour = "A"; //should be okay.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -872,8 +899,9 @@ namespace TestFramework
             string CarColour = "AA"; //should be okay.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -892,8 +920,9 @@ namespace TestFramework
             string CarColour = "31CharactersLongAAAAAAAAAAAAAAA"; //should be okay.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -912,8 +941,9 @@ namespace TestFramework
             string CarColour = "32CharactersLongAAAAAAAAAAAAAAAA"; //should be okay.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -932,8 +962,9 @@ namespace TestFramework
             string CarColour = "33CharactersLongAAAAAAAAAAAAAAAAA"; //should return an error.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -952,8 +983,9 @@ namespace TestFramework
             string CarColour = "16CharactersLong"; //should be okay.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -973,8 +1005,9 @@ namespace TestFramework
             CarColour = CarColour.PadRight(50, 'A'); //should trigger an error.
             string NumOfDoors = "5";
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -993,8 +1026,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "-32"; //should return error.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1013,8 +1047,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "1"; //should return an error.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1033,8 +1068,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "2"; //should be okay.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1053,8 +1089,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "3"; //should be okay.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1073,8 +1110,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "4"; //should be okay.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1093,8 +1131,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5"; //should be okay.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1113,8 +1152,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "6"; //should return an error
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1133,8 +1173,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "3"; //should be okay.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1153,8 +1194,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "32"; //should return error.
             string NumOfSeats = "5";
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1173,8 +1215,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "-32"; //should return error.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1193,8 +1236,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "0"; //should return error.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1213,8 +1257,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "1"; //should be okay.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1233,8 +1278,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "2"; //should be okay.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1253,8 +1299,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "6"; //should be okay.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1273,8 +1320,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "7"; //should be okay.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -1293,8 +1341,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "8"; //should be return an error.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1314,8 +1363,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "32"; //should be return an error.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -1334,8 +1384,9 @@ namespace TestFramework
             string CarColour = "Yellow";
             string NumOfDoors = "5";
             string NumOfSeats = "5"; //should be okay.
+            string SupplierID = "2";
             //Invoke the method
-            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats);
+            OK = AnCarID.Valid(CarManufacturer, CarModel, CarRegistrationPlate, CarColour, NumOfDoors, NumOfSeats, SupplierID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }

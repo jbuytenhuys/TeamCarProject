@@ -249,8 +249,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -268,8 +269,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -287,8 +289,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -306,8 +309,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -325,9 +329,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
-
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -345,8 +349,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -364,8 +369,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -383,8 +389,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -402,8 +409,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -420,12 +428,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-100);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -442,12 +451,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(-1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -464,11 +474,12 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -485,12 +496,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(1);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -507,12 +519,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(59);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -529,12 +542,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(60);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -551,12 +565,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(61);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -573,12 +588,13 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
             TestDate = TestDate.AddDays(1000);
             string DeadlineDate = TestDate.ToString();
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -595,10 +611,11 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "Some part";
             string CarID = "1023";
+            string StaffID = "1";
             //Enter type that is not a date
             string DeadlineDate = "Invalid data";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -616,8 +633,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -635,8 +653,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "A";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -654,8 +673,9 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "AA";
             string CarID = "1023";
+            string StaffID = "1";
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -673,9 +693,10 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(31, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -693,9 +714,10 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(32, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -713,9 +735,10 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(33, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -733,9 +756,10 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(1000, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -753,9 +777,10 @@ namespace TestFramework
             string PartPrice = "12.99";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -773,9 +798,10 @@ namespace TestFramework
             string PartPrice = "-100";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -793,9 +819,10 @@ namespace TestFramework
             string PartPrice = "0";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -813,9 +840,10 @@ namespace TestFramework
             string PartPrice = "1";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -833,9 +861,10 @@ namespace TestFramework
             string PartPrice = "2";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -853,9 +882,10 @@ namespace TestFramework
             string PartPrice = "9999";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -873,9 +903,10 @@ namespace TestFramework
             string PartPrice = "10000";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }
@@ -893,9 +924,10 @@ namespace TestFramework
             string PartPrice = "10001";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -913,9 +945,10 @@ namespace TestFramework
             string PartPrice = "1000000";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsFalse(OK);
         }
@@ -933,9 +966,10 @@ namespace TestFramework
             string PartPrice = "5000";
             string PartRequired = "";
             string CarID = "1023";
+            string StaffID = "1";
             PartRequired = PartRequired.PadRight(16, 'A');
             //Invoke the method
-            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID);
+            OK = AnCarRepair.Valid(DaysInForRepair, DeadlineDate, PartPrice, PartRequired, CarID, StaffID);
             //Test to see that the result is correct.
             Assert.IsTrue(OK);
         }

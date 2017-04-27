@@ -133,6 +133,18 @@ namespace MyClassLibrary
             PopulateArray(DB);
         }
 
+        public void FilterByCustomerAddress(string CustomerAddress)
+        {
+            //filters the record based on full or partial FisrtName
+            //clsDataConnection to the database
+            clsDataConnection DB = new clsDataConnection();
+            //sent the first name parameter to the database
+            DB.AddParameter("@CustomerAddress", CustomerAddress);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblCustomers_FilterByCustomerAddress");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
         void PopulateArray(clsDataConnection DB)
         {
             //populates the array list based on the data table in the paramter DB

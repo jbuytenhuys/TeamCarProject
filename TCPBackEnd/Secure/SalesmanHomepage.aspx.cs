@@ -31,8 +31,10 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         //create an instance of the customer collection
         MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
         lstSalesmanBox.DataSource = Customer.CustomerList;////set the data dource to the list of customer in the collection
-        lstSalesmanBox.DataValueField = "CustomerID";////set the name of the primary key
-        lstSalesmanBox.DataTextField = "CustomerFirstName";////set the data field to display
+        ////set the name of the primary key
+        lstSalesmanBox.DataValueField = "CustomerID";
+        ////set the data field to display
+        lstSalesmanBox.DataTextField = "CustomerFirstName";
         lstSalesmanBox.DataBind();
     }
 
@@ -42,6 +44,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();////create an instance of the Customer addresses
         CustomerBook.ThisCustomer.Find(CustomerID);////find the record to update 
         //display the data for the record
+        txtSalesmanCustomerID.Text = Convert.ToString(CustomerBook.ThisCustomer.CustomerID);
         txtSalesmanCustomerAddress.Text = CustomerBook.ThisCustomer.CustomerAddress;
         txtSalesmanCustomerEmail.Text = CustomerBook.ThisCustomer.CustomerEmail;
         txtSalesmanFirstName.Text = CustomerBook.ThisCustomer.CustomerFirstName;
@@ -128,7 +131,20 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         lstSalesmanBox.DataBind();
     }
 
-
+    void FilterCustomerAddress()
+    {
+        //create an instance of the customer collection
+        MyClassLibrary.clsCustomerCollection Customer = new MyClassLibrary.clsCustomerCollection();
+        //set the data dource to the list of customer in the collection
+        Customer.ThisCustomer.CustomerAddress = txtSalesmanAddress.Text;
+        Customer.FilterByCustomerAddress(Customer.ThisCustomer.CustomerAddress);
+        lstSalesmanBox.DataSource = Customer.CustomerList;
+        //set the name of the primary key
+        lstSalesmanBox.DataValueField = "CustomerID";
+        //set the data field to display
+        lstSalesmanBox.DataTextField = "CustomerAddress";
+        lstSalesmanBox.DataBind();
+    }
 
     protected void btnSalesmanAddCustomer_Click(object sender, EventArgs e)
     {
@@ -198,6 +214,8 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
             //store the data in the session objective
             Session["CustomerID"] = CustomerID;
             DisplayRecordData();
+            lblSalesmanError.Text = "";
+
         }
         else
         {
@@ -222,6 +240,7 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     protected void btnSalesmanSearch_Click(object sender, EventArgs e)
     {
         FilterCustomerFirstName();
+        
 
     }
 
@@ -233,6 +252,16 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     protected void btnSalesmanHomePage_Click1(object sender, EventArgs e)
     {
         Response.Redirect("Default.aspx");
+    }
+
+    protected void txtSalesmanAddress_TextChanged(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void btnFilterByAddress_Click(object sender, EventArgs e)
+    {
+        FilterCustomerAddress();
     }
 }
 

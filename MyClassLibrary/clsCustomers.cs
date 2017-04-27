@@ -176,8 +176,10 @@ namespace MyClassLibrary
             Boolean OK = true;
             //create a temporary variable to store the data value
             DateTime DateTemp;
-            //if the CustomerAddres is is blank 
+            
 
+
+            //if customer address is blank
             if (CustomerAddress.Length == 0)
             {
                 //set the flag OK to false
@@ -189,13 +191,108 @@ namespace MyClassLibrary
                 //set the flag OK to false
                 OK = false;
             }
+            //if the name is CA 
+            if (CustomerAddress == "Customer Address")
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+
+
+            //if the EMAIL is blank 
+            if (CustomerEmail.Length == 0)
+            {
+                //set ok flag to false
+                OK = false;
+            }
+
+            //if the name is too long
+            if (CustomerEmail.Length > 64)
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+            //if the name displays Customer Email
+            if (CustomerEmail == "Customer Email")
+            {
+                //set the flag to falsew
+                OK = false; 
+               
+            }
+
+            //if the FIRSTNAME is blank 
+            if (CustomerFirstName.Length == 0)
+            {
+                //set ok flag to false
+                OK = false;
+            }
+
+            //if the name is too long
+            if (CustomerFirstName.Length > 20)
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+            //if the name displays First Name
+            if (CustomerFirstName == "First Name")
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+
+            //if the LASTNAME is blank 
+            if (CustomerLastName.Length == 0)
+            {
+                //set ok flag to false
+                OK = false;
+            }
+
+            //if the name is too long
+            if (CustomerLastName.Length > 20)
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+            //if the name is too long
+            if (CustomerLastName == "Last Name")
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+
+            
+
+        
+            //is the postcode blank 
+            if (CustomerPostCodeOK.Length ==0)
+            {
+                //set the flag ok to false 
+                OK = false;
+            }
+            
+
+            //if the postcode is too long
+            if (CustomerPostCodeOK.Length > 12)
+            {
+                //set the flag OK to false
+                OK = false;
+            }
+            //if the name is postcode
+            if (CustomerPostCodeOK == "Post Code")
+            {
+                //set the flag to falsew
+                OK = false;
+            }
+
+
+
             //try to date validation assuming the data is a valid date 
             try
             {
                 //copy the DateAddeDOK value to the DateTemp Variable 
                 DateTemp = Convert.ToDateTime(DateAddedOK);
-                    //check to see if the date is less than todays date
-                    if (DateTemp < DateTime.Now.Date)
+                //check to see if the date is less than todays date
+                if (DateTemp < DateTime.Now.Date)
                 {
                     //set the flag OK to false
                     OK = false;
@@ -209,43 +306,19 @@ namespace MyClassLibrary
                     OK = false;
                 }
             }
-                //the data was not a date so flag an error
-                catch
+            //the data was not a date so flag an error
+            catch
             {
                 //set the flag ok to false
                 OK = false;
             }
+
+
             
-            //is the postcode blank 
-            if (CustomerPostCodeOK.Length ==0)
-            {
-                //set the flag ok to false 
-                OK = false;
-            }
 
-            //if the postcode is too long
-            if (CustomerPostCodeOK.Length > 12)
-            {
-                //set the flag OK to false
-                OK = false;
-            }
-
-            //if the firsname is blank 
-            if (CustomerFirstName.Length ==0)
-            {
-                //set ok flag to false
-                OK = false;
-            }
-
-            //if the name is too long
-            if (CustomerFirstName.Length > 20)
-            {
-                //set the flag to falsew
-                OK = false;
-            }
             //return the value of OK
             return OK;
+
         }
-        
     }
 }

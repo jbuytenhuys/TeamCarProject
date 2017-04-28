@@ -25,10 +25,10 @@
         <asp:TextBox ID="txtSalesmanCustomerEmail" runat="server" OnClick="this.value=''" style="z-index: 1; top: 203px; position: absolute; bottom: 439px; left: 909px">Customer Email</asp:TextBox>
         <asp:TextBox ID="txtSalesmanDateAddedOK" runat="server" style="z-index: 1; left: 911px; top: 352px; position: absolute" OnTextChanged="txtSalesmanDateAddedOK_TextChanged" ReadOnly="True">Date Added</asp:TextBox>
         <asp:CheckBox ID="chkSalesmanActiveOK" runat="server"  style="z-index: 1; left: 917px; top: 377px; position: absolute" Text="Active?" OnCheckedChanged="chkSalesmanActiveOK_CheckedChanged" />
-        <asp:Button ID="btnSalesmanAddCustomer" runat="server" style="z-index: 1; left: 394px; top: 382px; position: absolute" Text="Add Customer" OnClick="btnSalesmanAddCustomer_Click" Font-Bold="True" ForeColor="Blue" />
-        <asp:Button ID="btnSalesmanUpdateCustomer" runat="server" style="z-index: 1; left: 551px; top: 383px; position: absolute" Text="Update Customer" OnClick="btnSalesmanUpdateCustomer_Click" Font-Bold="True" ForeColor="Blue" />
+        <asp:Button ID="btnSalesmanAddCustomer" runat="server" style="z-index: 1; left: 469px; top: 383px; position: absolute" Text="Add Customer" OnClick="btnSalesmanAddCustomer_Click" Font-Bold="True" ForeColor="Blue" />
         <p>
         <asp:Label ID="lblSalesmanError" runat="server" style="z-index: 1; left: 363px; top: 453px; position: absolute"></asp:Label>
+            <asp:TextBox ID="txtReceptionistCarID" runat="server"  style="z-index: 1; left: 911px; top: 82px; position: absolute">Receptionist CarID</asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
@@ -46,7 +46,11 @@
             </p>
         <p>
             <asp:Button ID="btnFilterByAddress" runat="server" OnClick="btnFilterByAddress_Click" style="z-index: 1; left: 47px; top: 267px; position: absolute" Text="Filter By Address" />
+        <asp:Button ID="btnSalesmanUpdateCustomer" runat="server" style="z-index: 1; left: 636px; top: 380px; position: absolute" Text="Update Customer" OnClick="btnSalesmanUpdateCustomer_Click" Font-Bold="True" ForeColor="Blue" />
         </p>
+        <asp:Button ID="btnFetchReceptionistCarID" runat="server" OnClick="btnFetchReceptionistCarID_Click" style="z-index: 1; left: 359px; top: 383px; position: absolute" Text="Fetch CarID" />
+        <asp:TextBox ID="txtFilterCarReg" runat="server" style="z-index: 1; left: 218px; top: 480px; position: absolute; margin-top: 0px"></asp:TextBox>
+        <asp:Button ID="btnFilterCarReg" runat="server" OnClick="btnFilterCarReg_Click" style="z-index: 1; left: 149px; top: 479px; position: absolute" Text="Filter" />
     </form>
 </body>
 </html>

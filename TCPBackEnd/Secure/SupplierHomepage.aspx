@@ -9,7 +9,7 @@
 </head>
 <body style="height: 509px">
 
-    <form runat="server" style="height: 643px">
+    <form runat="server" style="height: 868px">
 
         <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" ForeColor="#999999" />
        
@@ -31,18 +31,18 @@
 
 
        
-        <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />
         <asp:Label ID="lblErrorMessageDisplay" runat="server" style="z-index: 1; left: 525px; top: 608px; position: absolute; width: 332px;" Text=""></asp:Label>
 
         <asp:Button ID="btnReset" CssClass="SupplierButton" runat="server" style="  left: 465px; top: 32px; position: absolute; width: 176px;" Text="Reset" OnClick="reset_Click" ForeColor="Black" />
 
         
         
-        <asp:Button ID="btnAdd" CssClass="SupplierButton" runat="server" style="  left: 115px; top: 672px; position: absolute; width: 82px;" Text="ADD" OnClick="btnAdd_Click" ForeColor="Black" />
-        <asp:Label ID="lblErrorMessageAdd" runat="server" style="z-index: 1; left: 204px; top: 675px; position: absolute; width: 316px;" Text=""></asp:Label>
+        <asp:Button ID="btnAdd" CssClass="SupplierButton" runat="server" style="  left: 881px; top: 534px; position: absolute; width: 82px;" Text="ADD" OnClick="btnAdd_Click" ForeColor="Black" />
+        <asp:Label ID="lblErrorMessageAdd" runat="server" style="z-index: 1; left: 974px; top: 543px; position: absolute; width: 316px;" Text=""></asp:Label>
 
-        <asp:Button ID="btnDelete" CssClass="SupplierButton" runat="server" style="  left: 883px; top: 541px; position: absolute; width: 82px; right: 452px;" Text="Delete" OnClick="btnDelete_Click1" ForeColor="Black" />
         <asp:Label ID="lblErrorMessageDelete" runat="server" style="z-index: 1; left: 974px; top: 543px; position: absolute; width: 316px;" Text=""></asp:Label>
+
+        <asp:Label ID="lblErrorMessageUpdate" runat="server" style="z-index: 1; left: 972px; top: 591px; position: absolute; width: 316px;" Text=""></asp:Label>
 
         
         <br />
@@ -88,31 +88,15 @@
         &nbsp;&nbsp;&nbsp;
        
         <asp:ListBox CssClass="ListBoxes"  ID="lstBoxListSupplier" runat="server" style="z-index: 1; left: 337px; top: 61px; position: absolute; height: 511px; width: 414px; margin-top: 16px; right: 403px;" OnSelectedIndexChanged="lstBoxListSupplier_SelectedIndexChanged"></asp:ListBox>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
-        <p style="width: 1116px">
-            &nbsp;</p>
-        <p style="width: 1116px; margin-left: 400px; height: 36px;">
+        
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p style="width: 1116px; margin-left: 400px; height: 36px;">
-
-            &nbsp;</p>
-        <p style="width: 1116px; margin-left: 760px;">
-            &nbsp;</p>
-        <p style="width: 1116px; margin-left: 760px;">
-            <asp:Button ID="BtnUpdate" runat="server" OnClick="BtnUpdate_Click" Text="Update" Height="30px" Width="100px" />
-            &nbsp;&nbsp;
        
-            &nbsp;&nbsp;&nbsp;
-        </p>
-        <p style="width: 1116px">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            &nbsp;
-        </p>
-        <p style="width: 1116px">
-            &nbsp;</p>
+        <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />
+
+        <asp:Button ID="btnDelete" CssClass="SupplierButton" runat="server" style="  left: 849px; top: 643px; position: absolute; width: 125px; right: 180px;" Text="Delete" OnClick="btnDelete_Click1" ForeColor="Black" />
+
+         <asp:Button ID="btnUpdate" CssClass="SupplierButton" runat="server" style="  left: 883px; top: 593px; position: absolute; width: 82px;" Text="Update" OnClick="btnUpdate_Click" ForeColor="Black" />
+
 
     </form>
 </body>

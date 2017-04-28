@@ -13,6 +13,7 @@ namespace MyClassLibrary
         {
             get
             {
+                //return the private data count
                 return mCustomerList.Count;
             }
             set
@@ -39,7 +40,7 @@ namespace MyClassLibrary
         {
             get
             {
-                //return he count of the list
+                //return the count of the list
                 return mCustomerList.Count;
             }
             set

@@ -34,9 +34,16 @@ namespace MyClassLibrary
             DB.AddParameter("@NumOfSeats", mThisCar.CarNumberOfSeats);
             DB.AddParameter("@SupplierID", mThisCar.SupplierID);
             DB.AddParameter("@CarNeedsRepair", mThisCar.CarNeedsRepair);
-            DB.AddParameter("CarSold", mThisCar.CarSold);
+            DB.AddParameter("CarSold", mThisCar.CarSold);          
             //Execute the query returning the primary key value.
             return DB.Execute("sproc_tblCars_Insert");
+        }
+
+        public Boolean CarRegistrationExists()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@CarRegistrationPlate", mThisCar.CarRegistrationPlate);
+            return Convert.ToBoolean(DB.Execute("sproc_tblCars_RegistrationExists"));
         }
 
         public void Delete()

@@ -11,6 +11,8 @@
     <form id="form1" runat="server">
     <div>
     
+        <asp:Image ID="Image5" runat="server" ImageUrl="~/Images/logo.png" style="z-index: 1; left: 725px; top: 23px; position: absolute; height: 123px; width: 127px; margin-right: 14px" />
+    
     </div>
         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/C1.jpg" style="z-index: 1; left: 58px; top: 130px; position: absolute; height: 233px; width: 262px" />
         <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/C2.jpg" style="z-index: 1; left: 58px; top: 399px; position: absolute; height: 230px; width: 258px" />

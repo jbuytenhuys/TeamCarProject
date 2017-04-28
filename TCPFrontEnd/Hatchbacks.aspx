@@ -9,6 +9,7 @@
 </head>
 <body style="height: 639px">
     <form id="form1" runat="server">
+        <asp:Image ID="Image5" runat="server" ImageUrl="~/Images/logo.png" style="z-index: 1; left: 635px; top: 19px; position: absolute; height: 123px; width: 127px" />
         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/HB1.jpg" style="z-index: 1; left: 58px; top: 132px; position: absolute; height: 188px; width: 245px" />
         <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/HB2.jpg" style="z-index: 1; left: 48px; top: 382px; position: absolute; height: 215px; width: 267px" />
         <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/2.0L GOLF GTD.PNG" style="z-index: 1; left: 336px; top: 123px; position: absolute; height: 206px; width: 318px" />

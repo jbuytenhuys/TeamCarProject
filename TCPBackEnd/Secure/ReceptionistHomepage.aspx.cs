@@ -186,7 +186,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     protected void btnReceptionistLogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("../Login.aspx");
     }
        
     protected void btnReceptionistAddCar_Click(object sender, EventArgs e)

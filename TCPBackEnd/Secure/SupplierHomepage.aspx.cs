@@ -44,7 +44,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnSupplierLogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("../Login.aspx");
     }
 
     //function for adding new records 

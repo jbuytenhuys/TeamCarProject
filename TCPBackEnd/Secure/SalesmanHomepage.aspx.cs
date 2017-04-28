@@ -185,7 +185,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
     protected void btnSalesmanHomePage_Click(object sender, EventArgs e)
     {
         //alll done so redirect back to main page
-        Response.Redirect("Default.aspx");
+        Response.Redirect("../Login.aspx");
     }
 
     protected void btnSalesmanArchiveCustomer_Click(object sender, EventArgs e)

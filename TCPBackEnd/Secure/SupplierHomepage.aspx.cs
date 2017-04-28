@@ -33,7 +33,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         MyClassLibrary.clsSupplierCollection Suppliers = new MyClassLibrary.clsSupplierCollection();
         lstBoxListSupplier.DataSource = Suppliers.SupplierList;
         lstBoxListSupplier.DataValueField = "SupplierID";
-        lstBoxListSupplier.DataTextField = "SupplierID";
+        lstBoxListSupplier.DataTextField = "SupplierName";
         lstBoxListSupplier.DataBind();
         
     }

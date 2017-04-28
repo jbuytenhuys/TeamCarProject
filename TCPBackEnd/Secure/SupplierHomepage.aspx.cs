@@ -335,20 +335,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     protected void btnUpdate_Click(object sender, EventArgs e)
     
         {
-            if (lstBoxListSupplier.SelectedIndex != -1)
-            {
-               
-           
-                Update();
-            }
-
-            else
-            {
-                lblErrorMessageUpdate.Text = "Please select a record to from Supplier List to Update";
-            }
-
-
-
+        Update();
         }
     
 }

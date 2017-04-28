@@ -14,6 +14,8 @@
     </div>
         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/lamborghini-aventador.jpg" style="z-index: 1; left: 84px; top: 184px; position: absolute; height: 217px; width: 260px" />
         <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/Lamborghini Aventador .PNG" style="z-index: 1; left: 375px; top: 194px; position: absolute; height: 228px; width: 381px" />
+        <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/logo.png" style="z-index: 1; left: 635px; top: 19px; position: absolute; height: 123px; width: 127px" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 10px; top: 51px; position: absolute" Text="Homepage" />
     </form>
 </body>
 </html>

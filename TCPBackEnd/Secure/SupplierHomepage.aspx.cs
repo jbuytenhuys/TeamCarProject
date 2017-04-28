@@ -286,18 +286,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        {
-            if (lstBoxListSupplier.SelectedIndex != -1)
-            {
-                SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
-                Session["SupplierID"] = SupplierID;
-                Filter();
-            }
-            else
-            {
-                lblErrorMessageDisplay.Text = "Please select a record";
-            }
-        }
+        Filter();
 
     }
 

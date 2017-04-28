@@ -149,6 +149,21 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         lstSalesmanBox.DataBind();
     }
 
+    void FilterCarRegistrationPlate()
+    {
+        //create an instance of the customer collection
+        MyClassLibrary.clsCarsCollection Cars = new MyClassLibrary.clsCarsCollection();
+        //set the data dource to the list of customer in the collection
+        Cars.ThisCar.CarRegistrationPlate = txtFilterCarReg.Text;
+        Cars.FilterByRegPlate(Cars.ThisCar.CarRegistrationPlate);
+        lstSalesmanBox.DataSource = Cars.CarList;
+        //set the name of the primary key
+        lstSalesmanBox.DataValueField = "CarID";
+        //set the data field to display
+        lstSalesmanBox.DataTextField = "CarRegistrationPlate";
+        lstSalesmanBox.DataBind();
+    }
+
     protected void btnSalesmanAddCustomer_Click(object sender, EventArgs e)
     {
         Add();
@@ -276,7 +291,38 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     {
 
     }
+
+    protected void btnFetchReceptionistCarID_Click(object sender, EventArgs e)
+    {
+        
+        //Variable to store the primary key value of the record to be edited.
+        Int32 ReceptionistCarID;
+        //if a record has been selected from the list.
+        if (lstSalesmanBox.SelectedIndex != -1)
+        {
+            //get the primary key value of the record to edit.
+            ReceptionistCarID = Convert.ToInt32(lstSalesmanBox.SelectedValue);
+            //store the data in the session object.
+            Session["ReceptionistCarID"] = ReceptionistCarID;
+            lblSalesmanError.Text = "";
+            DisplayRecordData();
+        }
+        else
+        //If no record has been selected.
+        {
+            //Display an error
+            lblSalesmanError.Text = "Please select a record to be edited.";
+        }
+    }
+
+
+
+    protected void btnFilterCarReg_Click(object sender, EventArgs e)
+    {
+        FilterCarRegistrationPlate();
+    }
 }
+
 
 
 

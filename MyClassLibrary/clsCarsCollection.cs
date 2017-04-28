@@ -95,7 +95,7 @@ namespace MyClassLibrary
             PopulateArray(DB);
         }
 
-        //WRITTEN BY JAKE FOR HIS SYSTEM
+        //WRITTEN BY JAKE FOR HIS SYSTEM AND ALSO USED BY ZADS
         public void FilterByRegPlate(string CarRegistrationPlate)
         {
             //filters the records based on a full or partial car manufacturer.
@@ -109,8 +109,8 @@ namespace MyClassLibrary
             PopulateArray(DB);
         }
 
-      
-
+        
+        
 
         public void PopulateArray(clsDataConnection DB)
         {

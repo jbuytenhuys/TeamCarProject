@@ -35,20 +35,39 @@ public partial class SupplierHomepage : System.Web.UI.Page
         lstBoxListSupplier.DataValueField = "SupplierID";
         lstBoxListSupplier.DataTextField = "SupplierID";
         lstBoxListSupplier.DataBind();
-
-
-
-
+        
     }
 
+
+
+   
 
     protected void btnSupplierLogout_Click(object sender, EventArgs e)
     {
         Response.Redirect("MainHomepage.aspx");
     }
 
-    //function for adding new records 
-    void Add()
+    void DisplaySupplier()
+    {
+        SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        clsSupplierCollection SupplierBook = new clsSupplierCollection();
+        SupplierBook.ThisSupplier.Find(SupplierID);
+        txtAddress.Text = SupplierBook.ThisSupplier.Address;
+        txtCity.Text = SupplierBook.ThisSupplier.City;
+        txtCounty.Text = SupplierBook.ThisSupplier.County;
+        txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToString();
+        txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
+        txtName.Text = SupplierBook.ThisSupplier.Name;
+        txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
+        txtPositionInCompany.Text = SupplierBook.ThisSupplier.PositionInCompany;
+        txtSupplierName.Text = SupplierBook.ThisSupplier.SupplierName;
+        txtTitle.Text = SupplierBook.ThisSupplier.Title;
+        txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
+        txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
+    }
+
+        //function for adding new records 
+        void Add()
     {
         //create an instance of the address book
         clsSupplierCollection Suppliers = new clsSupplierCollection();
@@ -91,7 +110,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
                 SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
                 Session["SupplierID"] = SupplierID;
                 Add();
-
             }
 
             else
@@ -216,7 +234,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
-            Delete();
+            DisplaySupplier();
         }
         else
         {
@@ -265,11 +283,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
         lstBoxListSupplier.DataTextField = "WorkNumber";
         lstBoxListSupplier.DataBind();
     }
-
-
-
-
-
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
@@ -335,8 +348,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             if (lstBoxListSupplier.SelectedIndex != -1)
             {
-                SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
-                Session["SupplierID"] = SupplierID;
+               
+           
                 Update();
             }
 

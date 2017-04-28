@@ -13,13 +13,19 @@ public partial class MechanicHomepage : System.Web.UI.Page
     Int32 StaffID;
     protected void Page_Load(object sender, EventArgs e)
     {
+        //if this is the first time the page is being displayed
         if (IsPostBack == false)
         {
+            //call the function DisplayRecords
             DisplayRepairs();
         }
+        //Set the session value to the CarRepairID variable
         CarRepairID = Convert.ToInt32(Session["CarRepairID"]);
+        //Automatically fill in the Deadline date with 60 days in the future
+        //This is because the business rule is a car may only be in for repair for a maximum of 60 days
+        //the mechanic can change this however if needed
         txtMechanicDeadlineDate.Text = DateTime.Today.AddDays(60).ToShortDateString();
-
+        //display who the current logged in user is
         lblMechanicUserInfo.Text = "the current user is " + User.Identity.Name;
         
     }
@@ -206,6 +212,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicFilter_Click(object sender, EventArgs e)
     {
+        //call the FilterRepairs Function
         FilterRepairs();
     }
 
@@ -216,6 +223,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicListAll_Click(object sender, EventArgs e)
     {
+        //call the DisplayRepairs Function
         DisplayRepairs();
     }
 
@@ -275,16 +283,20 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicViewData_Click(object sender, EventArgs e)
     {
-
+        //if a record from the list has been selected
         if (lstMechanicRepairs.SelectedIndex != -1)
         {
+            //Set the selected value (Primary key) to the variable CarrepairID
             CarRepairID = Convert.ToInt32(lstMechanicRepairs.SelectedValue);
+            //set session as the value of the primary key selected from the listbox
             Session["CarRepairID"] = CarRepairID;
+            //call display record data function
             DisplayRecordData();
 
         }
         else
         {
+            //else show error message
             lblMechanicError.Text = ("Please select a record to view from the list");
         }
     }
@@ -306,10 +318,14 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicFetchCarID_Click(object sender, EventArgs e)
     {
+        //if a record from the list has been selected
         if (lstMechanicRepairs.SelectedIndex != -1)
         {
+            //Set the selected value (Primary key) to the variable CarrepairID
             CarID = Convert.ToInt32(lstMechanicRepairs.SelectedValue);
+            //set session as the value of the primary key selected from the listbox
             Session["CarID"] = CarID;
+            //call fetch Car ID function
             FetchCarID();
 
         }
@@ -331,10 +347,14 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicFetchStaffID_Click(object sender, EventArgs e)
     {
+        //if a record from the list has been selected
         if (lstMechanicRepairs.SelectedIndex != -1)
         {
+            //Set the selected value (Primary key) to the variable CarrepairID
             StaffID = Convert.ToInt32(lstMechanicRepairs.SelectedValue);
+            //set session as the value of the primary key selected from the listbox
             Session["StaffID"] = StaffID;
+            //call fetch Car ID function
             FetchStaffID();
         }
         else

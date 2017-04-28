@@ -91,7 +91,7 @@
         
 
        
-        <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />
+        <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px; height: 41px; right: 833px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />
 
         <asp:Button ID="btnDelete" CssClass="SupplierButton" runat="server" style="  left: 878px; top: 643px; position: absolute; width: 125px; right: 174px;" Text="Delete" OnClick="btnDelete_Click1" ForeColor="Black" />
 

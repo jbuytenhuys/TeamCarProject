@@ -11,10 +11,6 @@
 
     <form runat="server" style="height: 643px">
 
-    <p>
-        
-        <br />
-    </p>
         <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" ForeColor="#999999" />
        
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 885px; top: 158px; position: absolute; width: 267px" >Title</asp:TextBox>
@@ -32,7 +28,7 @@
         <asp:TextBox CssClass="TextBoxes" ID="txtSupplierEmail" runat="server" OnClick="this.value=''" style="z-index: 1; left: 885px; top: 477px; position: absolute; width: 267px; margin-top: 17px;" >SupplierEmail</asp:TextBox>
         <br />
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
        
         <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />

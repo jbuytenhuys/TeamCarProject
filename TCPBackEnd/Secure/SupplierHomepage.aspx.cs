@@ -36,9 +36,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
         lstBoxListSupplier.DataTextField = "SupplierID";
         lstBoxListSupplier.DataBind();
 
-
-
-
     }
 
 

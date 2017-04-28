@@ -34,7 +34,7 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date;
             TestItem.PartPrice = 99.99m;
             TestItem.PartRequired = "Test part";
-            TestItem.RepairStatus = true;
+            
             //Add the item to the list
             TestList.Add(TestItem);
             //Assign the data to the property
@@ -56,7 +56,7 @@ namespace TestFramework
             TestCarRepair.DeadlineDate = DateTime.Now.Date;
             TestCarRepair.PartPrice = 99.99m;
             TestCarRepair.PartRequired = "Test part";
-            TestCarRepair.RepairStatus = true;
+            
             //Assign the data to the property
             AllCarRepairs.ThisCarRepair = TestCarRepair;
             //Test to see if the two values are the same
@@ -79,7 +79,7 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date;
             TestItem.PartPrice = 99.99m;
             TestItem.PartRequired = "Test part";
-            TestItem.RepairStatus = true;
+            
             //Add the item to the list
             TestList.Add(TestItem);
             //Assign the data to the property
@@ -103,7 +103,7 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date.AddDays(60);
             TestItem.PartPrice = 52.99m;
             TestItem.PartRequired = "Add test";
-            TestItem.RepairStatus = true;
+            
             TestItem.CarID = 2000;
             TestItem.StaffID = 2000;
             //set this repair to the test data
@@ -133,7 +133,6 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date.AddDays(9);
             TestItem.PartPrice = 200.00m;
             TestItem.PartRequired = "4 new tyres";
-            TestItem.RepairStatus = true;
             //set this repair to the test data
             AllCarRepairs.ThisCarRepair = TestItem;
             //add the record
@@ -164,7 +163,7 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date.AddDays(9);
             TestItem.PartPrice = 200.00m;
             TestItem.PartRequired = "4 new tyres";
-            TestItem.RepairStatus = true;
+            
             //set this repair to the test data
             AllCarRepairs.ThisCarRepair = TestItem;
             //add the record
@@ -176,7 +175,7 @@ namespace TestFramework
             TestItem.DeadlineDate = DateTime.Now.Date.AddDays(12);
             TestItem.PartPrice = 210.00m;
             TestItem.PartRequired = "7 new tyres";
-            TestItem.RepairStatus = false;
+            
             //set this repair to the new test data
             AllCarRepairs.ThisCarRepair = TestItem;
             //Update the record

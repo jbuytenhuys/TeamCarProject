@@ -69,19 +69,6 @@ namespace TestFramework
         }
 
         [TestMethod]
-        public void RepairStatusOK()
-        {
-            //create instance
-            clsCarRepairs AnCarRepair = new clsCarRepairs();
-            //create some test data
-            Boolean TestData = true;
-            //assign data to the property
-            AnCarRepair.RepairStatus = TestData;
-            //test to see two values are the same
-            Assert.AreEqual(AnCarRepair.RepairStatus, TestData);
-        }
-
-        [TestMethod]
         public void CarRepairFindMethodOK()
         {
             //create instance
@@ -182,29 +169,6 @@ namespace TestFramework
             Found = AnCarRepair.Find(CarRepairID);
             //Check the DaysInForRepair
             if (AnCarRepair.DaysInForRepair != 30)
-            {
-                OK = false;
-            }
-            //test to see if the result is correct.
-            Assert.IsTrue(OK);
-
-        }
-
-        [TestMethod]
-        public void TestRepairStatusFound()
-        {
-            //create instance
-            clsCarRepairs AnCarRepair = new clsCarRepairs();
-            //boolean variable to store the result of search
-            Boolean Found = false;
-            //boolean variable to record if data is okay (assume it is).
-            Boolean OK = true;
-            //Create some test data to use with the method.
-            Int32 CarRepairID = 1028;
-            //Invoke the method.
-            Found = AnCarRepair.Find(CarRepairID);
-            //Check the RepairStatus
-            if (AnCarRepair.RepairStatus != true)
             {
                 OK = false;
             }

@@ -11,7 +11,6 @@ namespace MyClassLibrary
         private DateTime mDeadlineDate;
         private decimal mPartPrice;
         private string mPartRequired;
-        private bool mRepairStatus;
         private int mStaffID;
 
         public int CarRepairID //public property for CarRepairID
@@ -93,19 +92,6 @@ namespace MyClassLibrary
                 mPartRequired = value;
             }
         }
-        public bool RepairStatus //public property for RepairStatus
-        {
-            get
-            {
-                //return the private data
-                return mRepairStatus;
-            }
-            set
-            {
-                //set the private data
-                mRepairStatus = value;
-            }
-        }
 
         public int StaffID //public property for StaffID
         {
@@ -139,7 +125,6 @@ namespace MyClassLibrary
                 mDeadlineDate = Convert.ToDateTime(DB.DataTable.Rows[0]["DeadlineDate"]);
                 mPartPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["PartPrice"]);
                 mPartRequired = Convert.ToString(DB.DataTable.Rows[0]["PartRequired"]);
-                mRepairStatus = Convert.ToBoolean(DB.DataTable.Rows[0]["RepairStatus"]);
                 mCarID = Convert.ToInt32(DB.DataTable.Rows[0]["CarID"]);
                 mStaffID = Convert.ToInt32(DB.DataTable.Rows[0]["StaffID"]);
                 //return that everything worked OK

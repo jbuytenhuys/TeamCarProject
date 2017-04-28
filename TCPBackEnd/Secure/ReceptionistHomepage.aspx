@@ -70,6 +70,9 @@
         <asp:Button ID="btnReceptionistFetchSupplierID" runat="server" CssClass="ReceptionistButton" Font-Size="Medium" style="z-index: 1; left: 692px; top: 180px; position: absolute; height: 33px; width: 140px" Text="Fetch Supplier ID" OnClick="btnReceptionistFetchSupplierID_Click" />
 
 
+        <asp:Label ID="lblReceptionistInfo" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute" Text="-"></asp:Label>
+
+
     </form>
 </body>
 </html>

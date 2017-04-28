@@ -13,7 +13,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        
         if (IsPostBack == false)
         {
             DisplaySuppliers();
@@ -73,6 +73,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
             //add the record
             Suppliers.Add();
+            Response.Redirect("SupplierHomepage.aspx");
 
         }
         else
@@ -201,8 +202,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.WorkExt = txtWorkExt.Text;
             SupplierBook.ThisSupplier.WorkNumber = txtWorkNumber.Text;
             SupplierBook.ThisSupplier.SupplierEmail = txtSupplierEmail.Text;
-
             SupplierBook.Update();
+            Response.Redirect("SupplierHomepage.aspx");
         }
         else
         {
@@ -277,7 +278,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
             {
                 SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
                 Session["SupplierID"] = SupplierID;
-                Delete();
                 Filter();
             }
             else
@@ -338,7 +338,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
                 SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
                 Session["SupplierID"] = SupplierID;
                 Update();
-                Response.Redirect("SupplierHomepage.aspx");
             }
 
             else

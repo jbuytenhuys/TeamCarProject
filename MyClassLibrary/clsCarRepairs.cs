@@ -143,8 +143,9 @@ namespace MyClassLibrary
         {
             //create boolean variable and set it to false
             Boolean OK = true;
-
+            //variable to compare with
             float val;
+            //if convert
             if (!float.TryParse((Convert.ToString(CarID)), out val))
             {
                 OK = false;

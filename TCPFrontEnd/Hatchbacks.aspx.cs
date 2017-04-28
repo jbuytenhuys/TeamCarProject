@@ -11,4 +11,9 @@ public partial class Hatchbacks : System.Web.UI.Page
     {
 
     }
+
+    protected void btnHatchbackHomepage_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Homepage.aspx");
+    }
 }

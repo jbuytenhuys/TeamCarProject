@@ -14,7 +14,7 @@
     </div>
         <asp:Button ID="btnSalesmanHomePage" runat="server" style="z-index: 1; left: 24px; top: 73px; position: absolute; width: 100px; height: 49px;" Text="Home" OnClick="btnSalesmanHomePage_Click1" Font-Bold="True" ForeColor="Blue" />
         <asp:TextBox ID="txtSalesmanFilterBy" runat="server" style="z-index: 1; left: 219px; top: 208px; position: absolute; width: 174px; bottom: 434px;" OnTextChanged="txtSalesmanFilterBy_TextChanged"></asp:TextBox>
-        <asp:Button ID="btnSalesmanSearch" runat="server"  style="z-index: 1; left: 55px; top: 204px; position: absolute" Text="Filter First Name" OnClick="btnSalesmanSearch_Click" />
+        <asp:Button ID="btnSalesmanSearch" runat="server"  style="z-index: 1; left: 55px; top: 204px; position: absolute" Text="Filter First Name" OnClick="btnSalesmanSearch_Click" Font-Bold="True" ForeColor="Blue" />
         <asp:ListBox ID="lstSalesmanBox" runat="server" style="z-index: 1; left: 415px; top: 77px; position: absolute; height: 242px; width: 362px" OnSelectedIndexChanged="lstSalesmanBox_SelectedIndexChanged"></asp:ListBox>
         <asp:Button ID="btnSalesmanArchiveCustomer" runat="server" style="z-index: 1; left: 484px; top: 333px; position: absolute" Text="Archive customer" OnClick="btnSalesmanArchiveCustomer_Click" Font-Bold="True" ForeColor="Blue" />
         <asp:TextBox ID="txtSalesmanCustomerID" runat="server" style="z-index: 1; left: 913px; top: 111px; position: absolute" ReadOnly="True" >Customer ID</asp:TextBox>
@@ -45,12 +45,12 @@
             <asp:Button ID="btnSalesmanViewDate" runat="server" style="z-index: 1; left: 360px; top: 332px; position: absolute; height: 34px; width: 110px; right: 635px;" Text="View Data" OnClick="btnSalesmanViewData_Click" Font-Bold="True" ForeColor="Blue" />
             </p>
         <p>
-            <asp:Button ID="btnFilterByAddress" runat="server" OnClick="btnFilterByAddress_Click" style="z-index: 1; left: 47px; top: 267px; position: absolute" Text="Filter By Address" />
+            <asp:Button ID="btnFilterByAddress" runat="server" OnClick="btnFilterByAddress_Click" style="z-index: 1; left: 47px; top: 267px; position: absolute" Text="Filter By Address" Font-Bold="True" ForeColor="Blue" />
         <asp:Button ID="btnSalesmanUpdateCustomer" runat="server" style="z-index: 1; left: 636px; top: 380px; position: absolute" Text="Update Customer" OnClick="btnSalesmanUpdateCustomer_Click" Font-Bold="True" ForeColor="Blue" />
         </p>
-        <asp:Button ID="btnFetchReceptionistCarID" runat="server" OnClick="btnFetchReceptionistCarID_Click" style="z-index: 1; left: 359px; top: 383px; position: absolute" Text="Fetch CarID" />
+        <asp:Button ID="btnFetchReceptionistCarID" runat="server" OnClick="btnFetchReceptionistCarID_Click" style="z-index: 1; left: 359px; top: 383px; position: absolute" Text="Fetch CarID" Font-Bold="True" ForeColor="Blue" />
         <asp:TextBox ID="txtFilterCarReg" runat="server" style="z-index: 1; left: 218px; top: 480px; position: absolute; margin-top: 0px"></asp:TextBox>
-        <asp:Button ID="btnFilterCarReg" runat="server" OnClick="btnFilterCarReg_Click" style="z-index: 1; left: 149px; top: 479px; position: absolute" Text="Filter" />
+        <asp:Button ID="btnFilterCarReg" runat="server" OnClick="btnFilterCarReg_Click" style="z-index: 1; left: 149px; top: 479px; position: absolute" Text="Filter" Font-Bold="True" ForeColor="Blue" />
     </form>
 </body>
 </html>

@@ -145,7 +145,7 @@ namespace MyClassLibrary
             Boolean OK = true;
             //variable to compare with
             float val;
-            //if convert
+            //validation to make sure data is in correct datatype
             if (!float.TryParse((Convert.ToString(CarID)), out val))
             {
                 OK = false;

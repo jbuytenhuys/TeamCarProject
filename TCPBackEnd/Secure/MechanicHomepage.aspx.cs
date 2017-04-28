@@ -24,6 +24,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
         
     }
 
+    //Function to display records from the database
     void DisplayRepairs()
     {
         clsCarRepairsCollection Repairs = new clsCarRepairsCollection();

@@ -27,18 +27,27 @@ public partial class MechanicHomepage : System.Web.UI.Page
     //Function to display records from the database
     void DisplayRepairs()
     {
+        //Create instance in repair collection class
         clsCarRepairsCollection Repairs = new clsCarRepairsCollection();
+        //set the datasource for the list box to the car repair list
         lstMechanicRepairs.DataSource = Repairs.CarRepairList;
+        //Give each line the value of primary CarRepairID
         lstMechanicRepairs.DataValueField = "CarRepairID";
+        //Show the part required field in the list
         lstMechanicRepairs.DataTextField = "PartRequired";
+        //Bind the data to the list
         lstMechanicRepairs.DataBind();
     }
 
     void DisplayRecordData()
     {
+        //set variable equal to the session number
         CarRepairID = Convert.ToInt32(Session["CarRepairID"]);
+        //Create instance in repair collection class
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
+        //run carRepairId through the find function
         CarRepair.ThisCarRepair.Find(CarRepairID);
+        //assign the data from records in the database to the text boxes
         txtMechanicRepairID.Text = CarRepair.ThisCarRepair.CarRepairID.ToString();
         txtMechanicDeadlineDate.Text = CarRepair.ThisCarRepair.DeadlineDate.ToShortDateString();
         txtMechanicPartRequired.Text = CarRepair.ThisCarRepair.PartRequired;
@@ -50,17 +59,25 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     void FetchCarID()
     {
+        //set variable equal to the session number
         CarID = Convert.ToInt32(Session["CarID"]);
+        //Create instance in car class
         clsCarsCollection Car = new clsCarsCollection();
+        //run carId through the find function
         Car.ThisCar.Find(CarID);
+        //assign the data from record in the database to the text box
         txtMechanicCarID.Text = Car.ThisCar.CarID.ToString();  
     }
 
     void FetchStaffID()
     {
+        //set variable equal to the session number
         StaffID = Convert.ToInt32(Session["StaffID"]);
+        //Create instance in car class
         clsStaffCollection Staff = new clsStaffCollection();
+        //run carId through the find function
         Staff.ThisStaff.Find(StaffID);
+        //assign the data from record in the database to the text box
         txtMechanicStaffID.Text = Staff.ThisStaff.StaffID.ToString();
     }
 
@@ -125,32 +142,48 @@ public partial class MechanicHomepage : System.Web.UI.Page
     {
         //create an instance
         clsCarRepairsCollection CarRepair = new clsCarRepairsCollection();
+        //Pass the text box value through the filter method
         CarRepair.ThisCarRepair.PartRequired = txtMechanicFilter.Text;
         CarRepair.FilterByPartRequired(CarRepair.ThisCarRepair.PartRequired);
+        //set the datasource for the list boc to the car repair list
         lstMechanicRepairs.DataSource = CarRepair.CarRepairList;
+        //Give each line the value of primary CarRepairID
         lstMechanicRepairs.DataValueField = "CarRepairID";
+        //Show the part required field in the list
         lstMechanicRepairs.DataTextField = "PartRequired";
+        //Bind the data to the list
         lstMechanicRepairs.DataBind();  
     }
 
     void FilterByRegPlate()
     {
+        //create an instance
         clsCarsCollection Cars = new clsCarsCollection();
+        //Pass the text box value through the filter method
         Cars.ThisCar.CarRegistrationPlate = txtMechanicRegPlateFilter.Text;
         Cars.FilterByRegPlate(Cars.ThisCar.CarRegistrationPlate);
+        //set the datasource for the list boc to the car repair list
         lstMechanicRepairs.DataSource = Cars.CarList;
+        //Show the part required field in the list
         lstMechanicRepairs.DataValueField = "CarID";
+        //Show the part required field in the list
         lstMechanicRepairs.DataTextField = "CarRegistrationPlate";
+        //Bind the data to the list
         lstMechanicRepairs.DataBind();
     }
 
     void FilterByStaffirstName()
     {
+        //create an instance
         clsStaffCollection Staff = new clsStaffCollection();
+        //Pass the text box value through the filter method
         Staff.FilterByStaffFirstName(txtMechanicStaffFilter.Text);
         lstMechanicRepairs.DataSource = Staff.StaffList;
+        //Show the part required field in the list
         lstMechanicRepairs.DataValueField = "StaffID";
+        //Show the part required field in the list
         lstMechanicRepairs.DataTextField = "StaffFirstName";
+        //Bind the data to the list
         lstMechanicRepairs.DataBind();
     }
 
@@ -208,11 +241,13 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicAddRepair_Click(object sender, EventArgs e)
     {
+        //Call the Add function
         Add();
     }
 
     protected void btnMechanicUpdateRepair_Click(object sender, EventArgs e)
     {
+        //Call the Update function
         Update();
     }
 

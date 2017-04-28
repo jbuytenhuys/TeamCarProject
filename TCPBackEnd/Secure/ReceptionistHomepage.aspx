@@ -13,19 +13,19 @@
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistLogout" runat="server" style="z-index: 1; left: 29px; top: 67px; position: absolute; height: 63px; width: 115px" Text="Logout" OnClick="btnReceptionistLogout_Click" />
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistFilterCars" runat="server" style="z-index: 1; left: 74px; top: 434px; position: absolute; height: 53px; width: 122px" Text="Filter Cars" OnClick="btnReceptionistFilterCars_Click" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistFilterCars" runat="server" style="z-index: 1; left: 52px; top: 431px; position: absolute; height: 53px; width: 131px" Text="Filter Cars" OnClick="btnReceptionistFilterCars_Click" />
 
         <asp:ListBox CssClass="ListBoxes"  ID="lstBoxReceptionistListCars" runat="server" style="z-index: 1; left: 261px; top: 109px; position: absolute; height: 355px; width: 414px; margin-top: 16px"></asp:ListBox>
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 337px; top: 496px; position: absolute; height: 63px; width: 148px" Text="List All Cars" OnClick="btnReceptionistListAllCars_Click" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistListAllCars" runat="server" style="z-index: 1; left: 319px; top: 496px; position: absolute; height: 63px; width: 148px" Text="List All Cars" OnClick="btnReceptionistListAllCars_Click" />
 
-        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 855px; top: 555px; position: absolute; height: 51px; width: 102px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
+        <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistAddCar" runat="server" style="z-index: 1; left: 852px; top: 555px; position: absolute; height: 51px; width: 106px;" Text="Add Car" OnClick="btnReceptionistAddCar_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistArchive" runat="server" style="z-index: 1; left: 1078px; top: 554px; position: absolute; height: 51px; width: 102px;" Text="Archive" OnClick="btnReceptionistArchive_Click" />
 
         <asp:Button CssClass="ReceptionistButton" ID="btnReceptionistUpdate" runat="server" style="z-index: 1; left: 968px; top: 554px; position: absolute; height: 51px; width: 102px;" Text="Update" OnClick="btnReceptionistUpdate_Click" />
 
-        <asp:Button ID="btnReceptionistViewSelectedData" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistViewSelectedData_Click" style="z-index: 1; left: 506px; top: 495px; position: absolute; height: 66px; width: 118px; " Text="View Data" />
+        <asp:Button ID="btnReceptionistViewSelectedData" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistViewSelectedData_Click" style="z-index: 1; left: 489px; top: 495px; position: absolute; height: 66px; width: 130px; " Text="View Data" />
 
         <asp:TextBox CssClass="TextBoxes" ID="txtReceptionistCarModel" runat="server" OnClick="this.value=''" style="z-index: 1; left: 840px; top: 289px; position: absolute; width: 288px" >Car Model</asp:TextBox>
 
@@ -50,7 +50,7 @@
         
 
 
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 423px; top: 593px; position: absolute"></asp:Label>
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 566px; top: 635px; position: absolute"></asp:Label>
 
 
         <asp:TextBox ID="txtReceptionistCarColour" runat="server" OnClick="this.value=''" CssClass="TextBoxes" style="z-index: 1; left: 839px; top: 322px; position: absolute; width: 284px">Car Colour</asp:TextBox>
@@ -59,11 +59,11 @@
         <asp:Button ID="btnReceptionistReset" runat="server" CssClass="ReceptionistButton" OnClick="btnReceptionistReset_Click" style="z-index: 1; left: 880px; top: 67px; position: absolute;" Text="Reset Form" />
 
 
-        <asp:TextBox ID="txtReceptionistFilterByCarManufacturer" runat="server" CssClass="TextBoxes" style="z-index: 1; left: 50px; top: 397px; position: absolute; width: 178px">Car Manufacturer</asp:TextBox>
+        <asp:TextBox ID="txtReceptionistFilterByCarManufacturer" runat="server" CssClass="TextBoxes" OnClick="this.value=''" style="z-index: 1; left: 25px; top: 393px; position: absolute; width: 178px">Car Manufacturer</asp:TextBox>
 
-        <asp:Button ID="btnReceptionistSearchSupplier" runat="server" CssClass="ReceptionistButton" style="z-index: 1; left: 34px; top: 314px; position: absolute; height: 56px; width: 199px" Text="Search Supplier" OnClick="btnReceptionistSearchSupplier_Click" />
+        <asp:Button ID="btnReceptionistSearchSupplier" runat="server" CssClass="ReceptionistButton" style="z-index: 1; left: 18px; top: 313px; position: absolute; height: 56px; width: 199px" Text="Search Supplier" OnClick="btnReceptionistSearchSupplier_Click" />
 
-        <asp:TextBox ID="txtReceptionistSearchSupplier" runat="server" OnClick="this.value=''" CssClass="TextBoxes" style="z-index: 1; left: 29px; top: 259px; position: absolute; width: 190px">Supplier Email</asp:TextBox>
+        <asp:TextBox ID="txtReceptionistSearchSupplier" runat="server" OnClick="this.value=''" CssClass="TextBoxes" style="z-index: 1; left: 22px; top: 265px; position: absolute; width: 190px">Supplier Email</asp:TextBox>
 
         <asp:TextBox ID="txtReceptionistSupplierID" runat="server" CssClass="TextBoxes" ReadOnly="True" style="z-index: 1; left: 837px; top: 184px; position: absolute; width: 283px"></asp:TextBox>
 

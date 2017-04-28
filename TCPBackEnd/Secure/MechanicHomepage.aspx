@@ -39,13 +39,13 @@
 
         <asp:TextBox ID="txtMechanicDaysInForRepair" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 400px; position: absolute"  OnTextChanged="txtMechanicPartPrice_TextChanged">Days In For Repair</asp:TextBox>
 
-        <asp:Label ID="lblMechanicError" runat="server" style="z-index: 1; left: 1025px; top: 446px; position: absolute; width: 10px;" Text="-"></asp:Label>
+        <asp:Label ID="lblMechanicError" runat="server" style="z-index: 1; left: 777px; top: 446px; position: absolute; width: 594px;" Text="-"></asp:Label>
 
         <asp:Button ID="btnMechanicViewData" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 559px; top: 403px; position: absolute; height: 51px; width: 197px" Text="View Data" OnClick="btnMechanicViewData_Click" />
 
         <asp:TextBox ID="txtMechanicCarID" CssClass="TextBoxes" runat="server" ReadOnly="True" style="z-index: 1; left: 1057px; top: 191px; position: absolute; bottom: 441px;" OnTextChanged="txtMechanicCarID_TextChanged">CarID</asp:TextBox>
 
-        <asp:Button ID="btnMechanicFetchCarID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 921px; top: 157px; position: absolute; width: 81px; height: 59px; bottom: 440px;" Text="Fetch CarID" OnClick="btnMechanicFetchCarID_Click" Font-Size="Small" />
+        <asp:Button ID="btnMechanicFetchCarID" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 921px; top: 157px; position: absolute; width: 81px; height: 59px;" Text="Fetch CarID" OnClick="btnMechanicFetchCarID_Click" Font-Size="Small" />
 
         <asp:TextBox ID="txtMechanicRegPlateFilter" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 153px; position: absolute">Reg Plate Filter</asp:TextBox>
 
@@ -53,7 +53,7 @@
 
         <asp:TextBox ID="txtMechanicStaffID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 263px; position: absolute">StaffID</asp:TextBox>
 
-        <asp:Button ID="btnMechanicStaffFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 231px; position: absolute; height: 61px; width: 75px; right: 453px;" Text="Filter staff" OnClick="btnMechanicStaffFilter_Click" Font-Size="Small" />
+        <asp:Button ID="btnMechanicStaffFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 231px; position: absolute; height: 61px; width: 75px;" Text="Filter staff" OnClick="btnMechanicStaffFilter_Click" Font-Size="Small" />
 
         <asp:TextBox ID="txtMechanicStaffFilter" CssClass="TextBoxes" runat="server" OnClick="this.value=''" style="z-index: 1; left: 1057px; top: 230px; position: absolute">First Name Filter</asp:TextBox>
 

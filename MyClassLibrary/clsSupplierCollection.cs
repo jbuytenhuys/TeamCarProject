@@ -102,7 +102,6 @@ namespace MyClassLibrary
         }
         public void Update()
         {
-
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@SupplierID", mThisSupplier.SupplierID);
             DB.AddParameter("@Address", mThisSupplier.Address);
@@ -119,8 +118,6 @@ namespace MyClassLibrary
             DB.AddParameter("@WorkNumber", mThisSupplier.WorkNumber);
             DB.AddParameter("@SupplierEmail", mThisSupplier.SupplierEmail);
             DB.Execute("sproc_tblSupplier_Update");
-
-
         }
         void PopulateArray(clsDataConnection DB)
         {

@@ -77,14 +77,13 @@ public partial class SupplierHomepage : System.Web.UI.Page
         else
         {
             //Report error
-            Label1.Text = "there were problems with the data entered";
+            lblErrorMessageAdd.Text = "There were problems with the data entered";
         }
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         Add();
-        Response.Redirect("SupplierHomepage.aspx");
 
     }
 
@@ -161,19 +160,25 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
         else
         {
-            Label1.Text = "Please seect a record to delete from the list";
+            lblErrorMessageDelete.Text = "Please seect a record to delete from the list";
         }
 
     }
     protected void BtnUpdate_Click(object sender, EventArgs e)
     {
 
-        Update();
-        Response.Redirect("SupplierHomepage.aspx");
-
+        if (lstBoxListSupplier.SelectedIndex != -1)
+        {
+            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+            Session["SupplierID"] = SupplierID;
+            AddSupplier();
+        }
+        else
+        {
+            lblErrorMessageAdd.Text = "Please select a record";
+        }
 
     }
-
 
     protected void btnDisplayRecord_Click(object sender, EventArgs e)
     {
@@ -181,11 +186,11 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
-            DisplaySupplier();
+            AddSupplier();
         }
         else
         {
-            Label2.Text = "please select a record";
+            lblErrorMessageDisplay.Text = "Please select a record";
         }
     }
 
@@ -214,10 +219,10 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
         else
         {
-            Label3.Text = "there were problems with the data enerterd";
+            lblErrorMessageAdd.Text = "There were problems with the data entered";
         }
     }
-    void DisplaySupplier()
+    void AddSupplier()
     {
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
@@ -264,8 +269,22 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnSearch_Click(object sender, EventArgs e)
     {
-        Filter();
+        {
+            if (lstBoxListSupplier.SelectedIndex != -1)
+            {
+                SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+                Session["SupplierID"] = SupplierID;
+                AddSupplier();
+                Filter();
+            }
+            else
+            {
+                lblErrorMessageDisplay.Text = "Please select a record";
+            }
+        }
+        
     }
+
 
     protected void txtFilterPostcode_TextChanged(object sender, EventArgs e)
     {

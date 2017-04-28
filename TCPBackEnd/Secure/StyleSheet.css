@@ -156,14 +156,14 @@ input.SalesmanButton:hover {
     /*Postioning*/
     position:relative;
     display: block;
-    margin:auto;
+    margin:auto auto 28px auto;
    
     border: 2px solid #2f2d2d;
 
     /*Text*/
     text-align:center;
     color: white;
-    font-size:75%  
+    font-size:75%
 }
 
 input.SupplierButton {

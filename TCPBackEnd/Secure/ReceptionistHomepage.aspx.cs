@@ -25,6 +25,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             DisplayAllCars();   
        
         }
+        lblReceptionistInfo.Text = "the current user is " + User.Identity.Name;
     }
      
     void DisplayAllCars()
@@ -114,8 +115,11 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarSold = ChkBoxReceptionistSold.Checked;
             Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
             //update the record
-            Cars.Update();
-            Response.Redirect("ReceptionistHomepage.aspx");
+                Cars.Update();
+                lblError.Text = "";
+                Response.Redirect("ReceptionistHomepage.aspx");
+            
+            
             
         }
         else

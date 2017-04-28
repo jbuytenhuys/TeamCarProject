@@ -37,12 +37,12 @@
 
         
         
-        <asp:Button ID="btnAdd" CssClass="SupplierButton" runat="server" style="  left: 881px; top: 534px; position: absolute; width: 82px;" Text="ADD" OnClick="btnAdd_Click" ForeColor="Black" />
-        <asp:Label ID="lblErrorMessageAdd" runat="server" style="z-index: 1; left: 974px; top: 543px; position: absolute; width: 316px;" Text=""></asp:Label>
+        <asp:Button ID="btnAdd" CssClass="SupplierButton" runat="server" style="  left: 881px; top: 534px; position: absolute; width: 125px;" Text="ADD" OnClick="btnAdd_Click" ForeColor="Black" />
+        <asp:Label ID="lblErrorMessageAdd" runat="server" style="z-index: 1; left: 1016px; top: 529px; position: absolute; width: 316px;" Text=""></asp:Label>
 
-        <asp:Label ID="lblErrorMessageDelete" runat="server" style="z-index: 1; left: 974px; top: 543px; position: absolute; width: 316px;" Text=""></asp:Label>
+        <asp:Label ID="lblErrorMessageDelete" runat="server" style="z-index: 1; left: 1014px; top: 654px; position: absolute; width: 316px;" Text=""></asp:Label>
 
-        <asp:Label ID="lblErrorMessageUpdate" runat="server" style="z-index: 1; left: 972px; top: 591px; position: absolute; width: 316px;" Text=""></asp:Label>
+        <asp:Label ID="lblErrorMessageUpdate" runat="server" style="z-index: 1; left: 1013px; top: 597px; position: absolute; width: 316px;" Text=""></asp:Label>
 
         
         <br />
@@ -93,9 +93,9 @@
        
         <asp:Button ID="btnDisplayRecord" CssClass="SupplierButton" runat="server" style="  left: 337px; top: 607px; position: absolute; width: 176px;" Text="Display Record" OnClick="btnDisplayRecord_Click" ForeColor="Black" />
 
-        <asp:Button ID="btnDelete" CssClass="SupplierButton" runat="server" style="  left: 849px; top: 643px; position: absolute; width: 125px; right: 180px;" Text="Delete" OnClick="btnDelete_Click1" ForeColor="Black" />
+        <asp:Button ID="btnDelete" CssClass="SupplierButton" runat="server" style="  left: 878px; top: 643px; position: absolute; width: 125px; right: 174px;" Text="Delete" OnClick="btnDelete_Click1" ForeColor="Black" />
 
-         <asp:Button ID="btnUpdate" CssClass="SupplierButton" runat="server" style="  left: 883px; top: 593px; position: absolute; width: 82px;" Text="Update" OnClick="btnUpdate_Click" ForeColor="Black" />
+         <asp:Button ID="btnUpdate" CssClass="SupplierButton" runat="server" style="  left: 879px; top: 593px; position: absolute; width: 125px;" Text="Update" OnClick="btnUpdate_Click" ForeColor="Black" />
 
 
     </form>

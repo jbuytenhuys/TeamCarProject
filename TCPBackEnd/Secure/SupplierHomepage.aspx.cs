@@ -90,18 +90,14 @@ public partial class SupplierHomepage : System.Web.UI.Page
                 SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
                 Session["SupplierID"] = SupplierID;
                 Add();
-                Response.Redirect("SupplierHomepage.aspx");
+
             }
 
             else
             {
                 lblErrorMessageAdd.Text = "There is something wrong with the data entered please review";
             }
-
-
-
         }
-
     }
 
     protected void lstBoxListSupplier_SelectedIndexChanged(object sender, EventArgs e)

@@ -61,9 +61,17 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarSold = Convert.ToBoolean(ChkBoxReceptionistSold.Checked);
             Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
             //add the record
-            Cars.Add();
-            lblError.Text = "";
-            Response.Redirect("ReceptionistHomepage.aspx");
+            if (Convert.ToInt32(Cars.CarRegistrationExists()) == 0)
+            {
+                lblError.Text = "Car Reg already exists";
+            }
+            else
+            {
+                Cars.Add();
+                lblError.Text = "";
+                Response.Redirect("ReceptionistHomepage.aspx");
+            }
+            
 
         }
         else
@@ -72,6 +80,16 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             lblError.Text = "There were problems with the data entered";
         }
     }
+
+        void CarRegExists()
+        {
+        clsCarsCollection Cars = new clsCarsCollection();
+        Cars.ThisCar.CarRegistrationPlate = txtReceptionistCarRegistrationPlate.Text;
+        Cars.CarRegistrationExists();
+
+        }
+
+    
 
     void Update()
         //function for updating records.

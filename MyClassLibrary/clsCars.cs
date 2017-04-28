@@ -199,6 +199,7 @@ namespace MyClassLibrary
                 //set the flag to OK to false
                 OK = false;
             }
+            
             //if the CarColour is blank
             if (CarColour.Length == 0)
             {

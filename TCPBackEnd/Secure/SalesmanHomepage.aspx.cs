@@ -282,7 +282,7 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
 
     protected void btnSalesmanHomePage_Click1(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("../Login.aspx");
     }
 
     protected void txtSalesmanAddress_TextChanged(object sender, EventArgs e)

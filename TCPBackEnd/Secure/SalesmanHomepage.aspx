@@ -28,7 +28,7 @@
         <asp:Button ID="btnSalesmanAddCustomer" runat="server" style="z-index: 1; left: 469px; top: 383px; position: absolute" Text="Add Customer" OnClick="btnSalesmanAddCustomer_Click" Font-Bold="True" ForeColor="Blue" />
         <p>
         <asp:Label ID="lblSalesmanError" runat="server" style="z-index: 1; left: 363px; top: 453px; position: absolute"></asp:Label>
-            <asp:TextBox ID="txtReceptionistCarID" runat="server"  style="z-index: 1; left: 911px; top: 82px; position: absolute">Receptionist CarID</asp:TextBox>
+            <asp:TextBox ID="txtReceptionistCarID" runat="server"  style="z-index: 1; left: 911px; top: 82px; position: absolute" ReadOnly="True">Receptionist CarID</asp:TextBox>
         </p>
         <p>
             &nbsp;</p>

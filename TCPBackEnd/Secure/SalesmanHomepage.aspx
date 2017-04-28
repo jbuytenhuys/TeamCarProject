@@ -17,7 +17,7 @@
         <asp:Button ID="btnSalesmanSearch" runat="server"  style="z-index: 1; left: 55px; top: 204px; position: absolute" Text="Filter First Name" OnClick="btnSalesmanSearch_Click" />
         <asp:ListBox ID="lstSalesmanBox" runat="server" style="z-index: 1; left: 415px; top: 77px; position: absolute; height: 242px; width: 362px" OnSelectedIndexChanged="lstSalesmanBox_SelectedIndexChanged"></asp:ListBox>
         <asp:Button ID="btnSalesmanArchiveCustomer" runat="server" style="z-index: 1; left: 484px; top: 333px; position: absolute" Text="Archive customer" OnClick="btnSalesmanArchiveCustomer_Click" Font-Bold="True" ForeColor="Blue" />
-        <asp:TextBox ID="txtSalesmanCustomerID" runat="server" style="z-index: 1; left: 913px; top: 111px; position: absolute" ReadOnly="True">Customer ID</asp:TextBox>
+        <asp:TextBox ID="txtSalesmanCustomerID" runat="server" style="z-index: 1; left: 913px; top: 111px; position: absolute" ReadOnly="True" OnTextChanged="txtSalesmanCustomerID_TextChanged">Customer ID</asp:TextBox>
         <asp:TextBox ID="txtSalesmanFirstName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 913px; top: 141px; position: absolute; margin-bottom: 2px" OnTextChanged="txtSalesmanFirstName_TextChanged">First Name</asp:TextBox>
         <asp:TextBox ID="txtSalesmanLastName" runat="server" OnClick="this.value=''" style="z-index: 1; left: 911px; top: 172px; position: absolute; margin-top: 0px">Last Name</asp:TextBox>
         <asp:TextBox ID="txtSalesmanCustomerPostCode" runat="server" OnClick="this.value=''" style="z-index: 1; left: 909px; top: 315px; position: absolute">Post Code</asp:TextBox>

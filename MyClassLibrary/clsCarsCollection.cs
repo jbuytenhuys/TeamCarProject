@@ -18,7 +18,7 @@ namespace MyClassLibrary
             //Execute the stored procedure.
             DB.Execute("sproc_tblCars_SelectAll");
             //populate array list with data table.
-            PopulateArray(DB);    
+            PopulateArray(DB);
         }
 
         public int Add()

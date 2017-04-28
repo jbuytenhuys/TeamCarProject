@@ -25,7 +25,8 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             DisplayAllCars();   
        
         }
-        lblReceptionistInfo.Text = "the current user is " + User.Identity.Name;
+        //Displays who the current user is.
+        lblReceptionistInfo.Text = "The current User is " + User.Identity.Name;
     }
      
     void DisplayAllCars()
@@ -44,6 +45,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     void Add()
     {
+        //function to add a car.
         //create an instance
         clsCarsCollection Cars = new clsCarsCollection();
         //validate the data on the web form
@@ -254,7 +256,9 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             CarID = Convert.ToInt32(lstBoxReceptionistListCars.SelectedValue);
             //store the data in the session object.
             Session["CarID"] = CarID;
+            //set the error label to a blank string.
             lblError.Text = "";
+            //display the record.
             DisplayCar();
         }
         else
@@ -311,7 +315,9 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             SupplierID = Convert.ToInt32(lstBoxReceptionistListCars.SelectedValue);
             //store the data in the session object.
             Session["SupplierID"] = SupplierID;
+            //set the error label to a blank string.
             lblError.Text = "";
+            //display the record.
             DisplayRecord();
         }
         else

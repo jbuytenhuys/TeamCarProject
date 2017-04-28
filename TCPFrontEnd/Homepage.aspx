@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="../TCPBackEnd/Secure/StyleSheet.css"/>
 </head>
 <body style="height: 611px">
     <form id="form1" runat="server">

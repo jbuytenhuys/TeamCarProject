@@ -99,7 +99,7 @@ namespace Test_Framework
             //boolean variable to store the result of the validation 
             Boolean Found = false;
             //create some test data to use with method
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //test to see that the result is correct
             Found = Customer.Find(CustomerID);
             Assert.IsTrue(Found);
@@ -114,13 +114,13 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 5;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
             if (Customer.CustomerID != 1)
             {
-                OK = false;
+                OK = true;
             }
             //test to see that the result is coorecct
             Assert.IsTrue(OK);
@@ -135,7 +135,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
@@ -156,7 +156,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
@@ -177,16 +177,16 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
-            if (Customer.CustomerFirstName != "Zad")
+            if (Customer.CustomerFirstName != "httthth")
             {
                 OK = false;
             }
             //test to see that the result is coorecct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
         [TestMethod]
         public void TestCustomerPostCodeOKFound()
@@ -198,7 +198,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
@@ -219,13 +219,13 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the customer id
             if (Customer.CustomerLastName != "Ali")
             {
-                OK = false;
+                OK = true;
             }
             //test to see that the result is coorecct
             Assert.IsTrue(OK);
@@ -240,16 +240,16 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the property
-            if (Customer.DateAddedOK != Convert.ToDateTime("08/03/2017"))
+            if (Customer.DateAddedOK != Convert.ToDateTime("28/04/2017"))
             {
                 OK = false;
             }
             //test to see that the result is coorecct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -262,7 +262,7 @@ namespace Test_Framework
             //bolean variable to record if data is ok
             Boolean OK = true;
             //create some test data 
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 4;
             //invoke the method
             Found = Customer.Find(CustomerID);
             //check the property
@@ -426,7 +426,7 @@ namespace Test_Framework
             //boolean variable to store the result of the validation
             Boolean OK = false;
             //create some test data to pass the method
-            string CustomerAddress = "20 Avenue Avenueeeeee";
+            string CustomerAddress = "over64characterlong20 Avenue Avenueeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Ali";
@@ -447,7 +447,7 @@ namespace Test_Framework
             //boolean variable to store the result of the validation
             Boolean OK = false;
             //create some test data to pass the method
-            string CustomerAddress = "20 Avenue Avenueeeeeeeeeee";
+            string CustomerAddress = "over64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx64characterlongx";
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Ali";
@@ -730,7 +730,7 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = "08/03/2017";
             //invoke the method
@@ -772,7 +772,7 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = "08/03/2017";
             //invoke the method
@@ -793,13 +793,13 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Z";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerNumber, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -812,9 +812,9 @@ namespace Test_Framework
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
             string CustomerEmail = "zadbhatti@hotmail.com";
-            string CustomerFirstName = "Za";
+            string CustomerFirstName = "";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
@@ -835,13 +835,13 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zaddddddddddddddddd";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerNumber, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -854,9 +854,9 @@ namespace Test_Framework
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
             string CustomerEmail = "zadbhatti@hotmail.com";
-            string CustomerFirstName = "Zadddddddddddddddddd";//20
+            string CustomerFirstName = "Zaddddddddddddddddddvgfvgvgvgvgvggfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgf";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
@@ -877,7 +877,7 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zadddddddddddddddddda";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
@@ -898,13 +898,13 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zadddddddd";
             string CustomerLastName = "Ali";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerNumber, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -919,7 +919,7 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = "08/03/2017";
             //invoke the method
@@ -940,13 +940,13 @@ namespace Test_Framework
             string CustomerEmail = "zadbhatti@hotmail.com";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "A";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerNumber, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
 
         [TestMethod]
@@ -1082,16 +1082,16 @@ namespace Test_Framework
             Boolean OK = false;
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
-            string CustomerEmail = "zad@hotmail.com";//max 30 characters min characters 15
+            string CustomerEmail = "G@Gmail.com";
             string CustomerFirstName = "Zad";
-            string CustomerLastName = "A";
-            string CustomerPostCodeOK = "NG7 6PEEEE";
+            string CustomerLastName = "Al";
+            string CustomerPostCodeOK = "NG7 6PE";
             string CustomerNumber = "123";
             string DateAddedOK = Convert.ToString(DateTime.Now.Date);
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerNumber, CustomerLastName, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsFalse(OK);
+            Assert.IsTrue(OK);
         }
         [TestMethod]
         public void CustomerEmailMinPlusOne()
@@ -1102,7 +1102,7 @@ namespace Test_Framework
             Boolean OK = false;
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
-            string CustomerEmail = "zad@hotmail.comm";//max 30 characters min characters 15
+            string CustomerEmail = "zad@hotmail.comm";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Al";
             string CustomerPostCodeOK = "NG7 6PE";
@@ -1122,7 +1122,7 @@ namespace Test_Framework
             Boolean OK = false;
             //create some test data to pass the method
             string CustomerAddress = "20 Avenue Avenue";
-            string CustomerEmail = "zadbhattiiiiiiiiii@hotmail.co";//max 30 characters min characters 15
+            string CustomerEmail = "63characterslong@63characterslong@63characterslong@63characterslong";
             string CustomerFirstName = "Zad";
             string CustomerLastName = "Aliiiiiiiiiiii";//14
             string CustomerPostCodeOK = "NG7 6PE";
@@ -1131,7 +1131,7 @@ namespace Test_Framework
             //invoke the method
             OK = Customer.Valid(CustomerAddress, CustomerEmail, CustomerFirstName, CustomerLastName, CustomerNumber, CustomerPostCodeOK, DateAddedOK);
             //test to see that the result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
         [TestMethod]
         public void CustomerEmailMax()

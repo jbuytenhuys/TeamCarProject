@@ -68,6 +68,7 @@ namespace TestFramework
             TestItem.CustomerID = 1;
             TestItem.CustomerFirstName = "Zad";
             TestItem.CustomerLastName = "Ali";
+            TestItem.CustomerNumber = "123456789";
             TestItem.CustomerAddress = "20 Austen Avenue";
             TestItem.CustomerPostCodeOK = "Ng7 6PE";
             TestItem.CustomerEmail = "zadbhatti@hotmail.com";
@@ -94,10 +95,12 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //Set its properties
             TestItem.CustomerID = 1;
+            TestItem.CustomerAddress = "20 Austen Avenue";
             TestItem.CustomerEmail = "zadbhatti@hotmail.com";
             TestItem.CustomerFirstName = "zad";
             TestItem.CustomerLastName = "ali";
             TestItem.CustomerPostCodeOK = "NG7 6PE";
+            TestItem.CustomerNumber = "123456789";
             TestItem.ActiveOK = true;
             TestItem.DateAddedOK = DateTime.Now.Date;
             //set this repair to the test data
@@ -126,6 +129,7 @@ namespace TestFramework
             Int32 PrimaryKey = 0;
             //set its properties
             TestItem.ActiveOK = true;
+            TestItem.CustomerNumber = "123456789";
             TestItem.CustomerAddress = "20 Austen Avenue";
             TestItem.CustomerEmail = "zadbhatti@hotmail.com";
             TestItem.CustomerFirstName = "zad";
@@ -203,7 +207,7 @@ namespace TestFramework
                 OK = false;
             }
             //test to see there are no records
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
     }
 }

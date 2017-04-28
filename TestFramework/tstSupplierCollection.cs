@@ -102,6 +102,7 @@ namespace TestFramework
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
             TestItem.WorkNumber = "12134";
+            TestItem.SupplierEmail = "dave@test.com";
             AllSuppliers.ThisSupplier = TestItem;
             PrimaryKey = AllSuppliers.Add();
             TestItem.SupplierID = PrimaryKey;
@@ -129,6 +130,7 @@ namespace TestFramework
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
             TestItem.WorkNumber = "12134";
+            TestItem.SupplierEmail = "dave@test.com";
             AllSuppliers.ThisSupplier = TestItem;
             PrimaryKey = AllSuppliers.Add();
             TestItem.SupplierID = PrimaryKey;
@@ -158,6 +160,7 @@ namespace TestFramework
             TestItem.Title = "Mr";
             TestItem.WorkExt = "312";
             TestItem.WorkNumber = "12134";
+            TestItem.SupplierEmail = "dave@test.com";
             AllSuppliers.ThisSupplier = TestItem;
             PrimaryKey = AllSuppliers.Add();
             TestItem.SupplierID = PrimaryKey;
@@ -173,6 +176,7 @@ namespace TestFramework
             TestItem.Title = "Mrs";
             TestItem.WorkExt = "412";
             TestItem.WorkNumber = "1214";
+            TestItem.SupplierEmail = "update@test.com";
             AllSuppliers.Update();
             AllSuppliers.ThisSupplier.Find(PrimaryKey);
             Assert.AreEqual(AllSuppliers.ThisSupplier, TestItem);

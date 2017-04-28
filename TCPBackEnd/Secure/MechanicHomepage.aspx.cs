@@ -156,7 +156,7 @@ public partial class MechanicHomepage : System.Web.UI.Page
 
     protected void btnMechanicLogout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("../Login.aspx");
     }
 
 

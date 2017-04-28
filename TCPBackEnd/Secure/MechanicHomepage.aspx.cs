@@ -43,7 +43,6 @@ public partial class MechanicHomepage : System.Web.UI.Page
         txtMechanicPartRequired.Text = CarRepair.ThisCarRepair.PartRequired;
         txtMechanicPartPrice.Text = CarRepair.ThisCarRepair.PartPrice.ToString();
         txtMechanicDaysInForRepair.Text = CarRepair.ThisCarRepair.DaysInForRepair.ToString();
-        chkMechanicRepairStatus.Checked = CarRepair.ThisCarRepair.RepairStatus;
         txtMechanicCarID.Text = CarRepair.ThisCarRepair.CarID.ToString();
         txtMechanicStaffID.Text = CarRepair.ThisCarRepair.StaffID.ToString();
     }
@@ -78,7 +77,6 @@ public partial class MechanicHomepage : System.Web.UI.Page
             CarRepair.ThisCarRepair.DeadlineDate = Convert.ToDateTime(txtMechanicDeadlineDate.Text);
             CarRepair.ThisCarRepair.PartPrice = Convert.ToDecimal(txtMechanicPartPrice.Text);
             CarRepair.ThisCarRepair.PartRequired = txtMechanicPartRequired.Text;
-            CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
             CarRepair.ThisCarRepair.CarID = Convert.ToInt32(txtMechanicCarID.Text);
             CarRepair.ThisCarRepair.StaffID = Convert.ToInt32(txtMechanicStaffID.Text);
             //add record
@@ -108,7 +106,6 @@ public partial class MechanicHomepage : System.Web.UI.Page
             CarRepair.ThisCarRepair.DeadlineDate = Convert.ToDateTime(txtMechanicDeadlineDate.Text);
             CarRepair.ThisCarRepair.PartPrice = Convert.ToDecimal(txtMechanicPartPrice.Text);
             CarRepair.ThisCarRepair.PartRequired = txtMechanicPartRequired.Text;
-            CarRepair.ThisCarRepair.RepairStatus = chkMechanicRepairStatus.Checked;
             CarRepair.ThisCarRepair.CarID = Convert.ToInt32(txtMechanicCarID.Text);
             CarRepair.ThisCarRepair.StaffID = Convert.ToInt32(txtMechanicStaffID.Text);
             //update record

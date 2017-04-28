@@ -70,7 +70,6 @@ namespace MyClassLibrary
             DB.AddParameter("@DeadlineDate", mThisCarRepair.DeadlineDate);
             DB.AddParameter("@PartPrice", mThisCarRepair.PartPrice);
             DB.AddParameter("@PartRequired", mThisCarRepair.PartRequired);
-            DB.AddParameter("@RepairStatus", mThisCarRepair.RepairStatus);
             DB.AddParameter("@CarID", mThisCarRepair.CarID);
             DB.AddParameter("@StaffID", mThisCarRepair.StaffID);
             //execute the query returning the primary key value
@@ -101,7 +100,6 @@ namespace MyClassLibrary
             DB.AddParameter("@DeadlineDate", mThisCarRepair.DeadlineDate);
             DB.AddParameter("@PartPrice", mThisCarRepair.PartPrice);
             DB.AddParameter("@PartRequired", mThisCarRepair.PartRequired);
-            DB.AddParameter("@RepairStatus", mThisCarRepair.RepairStatus);
             //execute stored procedure
             DB.Execute("sproc_tblCarRepairs_Update");
         }
@@ -141,7 +139,6 @@ namespace MyClassLibrary
                 Arepair.DeadlineDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["DeadlineDate"]);
                 Arepair.PartPrice = Convert.ToDecimal(DB.DataTable.Rows[Index]["PartPrice"]);
                 Arepair.PartRequired = Convert.ToString(DB.DataTable.Rows[Index]["PartRequired"]);
-                Arepair.RepairStatus = Convert.ToBoolean(DB.DataTable.Rows[Index]["RepairStatus"]);
                 Arepair.CarID = Convert.ToInt32(DB.DataTable.Rows[Index]["CarID"]);
                 //Add the record to the private data member
                 mCarRepairList.Add(Arepair);

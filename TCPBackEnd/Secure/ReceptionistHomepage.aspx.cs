@@ -8,7 +8,7 @@ using MyClassLibrary;
 
 public partial class ReceptionistHomepage : System.Web.UI.Page
 {
-    //Variable to store the primary key of the record.
+    //Variable to store the primary key of the record and forigen key.
     Int32 CarID;
     Int32 SupplierID;
 
@@ -61,15 +61,18 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.CarNeedsRepair = Convert.ToBoolean(ChkBoxReceptionistNeedsRepair.Checked);
             Cars.ThisCar.CarSold = Convert.ToBoolean(ChkBoxReceptionistSold.Checked);
             Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
-            //add the record
+            //test to see if the registration exists.
             if (Convert.ToInt32(Cars.CarRegistrationExists()) == 0)
             {
                 lblError.Text = "Car Reg already exists";
             }
             else
             {
+                //add the record.
                 Cars.Add();
+                //set lbl to empty
                 lblError.Text = "";
+                //reload/refresh the page.
                 Response.Redirect("ReceptionistHomepage.aspx");
             }
             
@@ -82,12 +85,16 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
         }
     }
 
+        
         void CarRegExists()
+        //funtion to test if the car registration exists.
         {
+        //create instance of class.
         clsCarsCollection Cars = new clsCarsCollection();
+        //get the car registration plate entered by the user.
         Cars.ThisCar.CarRegistrationPlate = txtReceptionistCarRegistrationPlate.Text;
+        //check the registration.
         Cars.CarRegistrationExists();
-
         }
 
     
@@ -152,21 +159,33 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     void FilterByCarManufacturer()
     {
+        //create an instance of the class.
         clsCarsCollection Cars = new clsCarsCollection();
+        //get the manufacturer the user wants to filter by.
         Cars.FilterByCarManufacturer(txtReceptionistFilterByCarManufacturer.Text);
+        //Set the data source to the list of cars in the collection.       
         lstBoxReceptionistListCars.DataSource = Cars.CarList;
-        lstBoxReceptionistListCars.DataValueField = "CarID";        
-        lstBoxReceptionistListCars.DataTextField = "CarRegistrationPlate";       
+        //Set the name of the primary
+        lstBoxReceptionistListCars.DataValueField = "CarID";
+        //set the data field to display.        
+        lstBoxReceptionistListCars.DataTextField = "CarRegistrationPlate";
+        //Bind the data to the list.    
         lstBoxReceptionistListCars.DataBind();
     }
 
     void FilterBySupplierEmail()
     {
+        //create an instance of the class.
         clsSupplierCollection Suppliers = new clsSupplierCollection();
+        //get the supplier email the user wants to filter by.
         Suppliers.FilterBySupplierEmail(txtReceptionistSearchSupplier.Text);
+        //Set the data source to the list of cars in the collection.
         lstBoxReceptionistListCars.DataSource = Suppliers.SupplierList;
+        //Set the name of the primary
         lstBoxReceptionistListCars.DataValueField = "SupplierID";
+        //set the data field to display. 
         lstBoxReceptionistListCars.DataTextField = "SupplierEmail";
+        //Bind the data to the list.
         lstBoxReceptionistListCars.DataBind();
     }
 
@@ -208,6 +227,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     protected void btnReceptionistLogout_Click(object sender, EventArgs e)
     {
+        //redirect to the login page.
         Response.Redirect("../Login.aspx");
     }
        
@@ -268,11 +288,13 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
 
     protected void btnReceptionistFilterCars_Click(object sender, EventArgs e)
     {
+        //filter by car manufacturer.
         FilterByCarManufacturer();
     }
 
     protected void btnReceptionistSearchSupplier_Click(object sender, EventArgs e)
     {
+        //filter by supplier email.
         FilterBySupplierEmail();
     }
 

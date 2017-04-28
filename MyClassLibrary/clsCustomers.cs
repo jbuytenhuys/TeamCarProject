@@ -68,10 +68,12 @@ namespace MyClassLibrary
         {
             get
             {
+                //return the private data
                 return mCustomerID;
             }
             set
             {
+                //set the private data
                 mCustomerID = value;
             }
         }
@@ -347,9 +349,7 @@ namespace MyClassLibrary
                 OK = false;
             }
 
-
             
-
             //return the value of OK
             return OK;
 

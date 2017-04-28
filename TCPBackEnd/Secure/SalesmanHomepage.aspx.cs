@@ -41,8 +41,11 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 
     void DisplayRecordData()
     {
+
+        //fuction to display selected customer data
         CustomerID = Convert.ToInt32(Session["CustomerID"]);
-        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();////create an instance of the Customer addresses
+        ////create an instance of the Customer addresses
+        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
         CustomerBook.ThisCustomer.Find(CustomerID);////find the record to update 
         //display the data for the record
         txtSalesmanCustomerID.Text = Convert.ToString(CustomerBook.ThisCustomer.CustomerID);
@@ -237,6 +240,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 
 
 
+    //function to view data
 protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     {
         if (lstSalesmanBox.SelectedIndex != -1)
@@ -330,6 +334,7 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
 
     protected void btnFilterCarReg_Click(object sender, EventArgs e)
     {
+        //filter by
         FilterCarRegistrationPlate();
     }
 }

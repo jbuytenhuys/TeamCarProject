@@ -9,6 +9,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 {
     //variable to store the primary key with page level scop
     Int32 CustomerID;
+    Int32 ReceptionistCarID;
     //this function handles the load event for the page
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -55,10 +56,20 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         txtCustomerNumber.Text = CustomerBook.ThisCustomer.CustomerNumber;
     }
 
-    void Add()
+    void DisplayCarId()
     {
-        //create an instance
-        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
+        //get the number of the Car to be processed.
+        ReceptionistCarID = Convert.ToInt32(Session["ReceptionstCarID"]);
+        //create an instance.
+        clsCarsCollection ReceptionistCarID = new clsCarsCollection();
+        //find the record to be displayed.
+        ReceptionistCarID.ThisReceptionist.Find(ReceptionistCarID);
+        //copy properties into textboxes on web form.
+        txtReceptionistCarID.Text = ReceptionistCarID.ThisReceptionst.ReceptionstCarID.ToString();
+    }
+
+    //create an instance
+    MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
         //validate the data on webform
         Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtCustomerNumber.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
         //if data is okay then add to object

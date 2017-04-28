@@ -97,6 +97,7 @@ public partial class ReceptionistHomepage : System.Web.UI.Page
             Cars.ThisCar.SupplierID = Convert.ToInt32(txtReceptionistSupplierID.Text);
             //update the record
             Cars.Update();
+            Response.Redirect("ReceptionistHomepage.aspx");
             
         }
         else

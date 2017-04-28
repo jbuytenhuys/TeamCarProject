@@ -9,7 +9,7 @@ public partial class SalesmanHomepage : System.Web.UI.Page
 {
     //variable to store the primary key with page level scop
     Int32 CustomerID;
-    Int32 ReceptionistCarID;
+    Int32 CarID;
     //this function handles the load event for the page
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -56,20 +56,22 @@ public partial class SalesmanHomepage : System.Web.UI.Page
         txtCustomerNumber.Text = CustomerBook.ThisCustomer.CustomerNumber;
     }
 
-    void DisplayCarId()
+    void DisplayCarID()
     {
         //get the number of the Car to be processed.
-        ReceptionistCarID = Convert.ToInt32(Session["ReceptionstCarID"]);
+        CarID = Convert.ToInt32(Session["CarID"]);
         //create an instance.
-        clsCarsCollection ReceptionistCarID = new clsCarsCollection();
+        MyClassLibrary.clsCarsCollection ReceptionistCarID = new MyClassLibrary.clsCarsCollection();
         //find the record to be displayed.
-        ReceptionistCarID.ThisReceptionist.Find(ReceptionistCarID);
+        ReceptionistCarID.ThisCar.Find(CarID);
         //copy properties into textboxes on web form.
-        txtReceptionistCarID.Text = ReceptionistCarID.ThisReceptionst.ReceptionstCarID.ToString();
+        txtReceptionistCarID.Text = ReceptionistCarID.ThisCar.CarID.ToString();
     }
 
-    //create an instance
-    MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
+    void Add()
+    {
+        //create an instance
+        MyClassLibrary.clsCustomerCollection CustomerBook = new MyClassLibrary.clsCustomerCollection();
         //validate the data on webform
         Boolean OK = CustomerBook.ThisCustomer.Valid(txtSalesmanCustomerAddress.Text, txtSalesmanCustomerEmail.Text, txtCustomerNumber.Text, txtSalesmanFirstName.Text, txtSalesmanLastName.Text, txtSalesmanCustomerPostCode.Text, txtSalesmanDateAddedOK.Text);
         //if data is okay then add to object
@@ -306,17 +308,15 @@ protected void btnSalesmanViewData_Click(object sender, EventArgs e)
     protected void btnFetchReceptionistCarID_Click(object sender, EventArgs e)
     {
         
-        //Variable to store the primary key value of the record to be edited.
-        Int32 ReceptionistCarID;
         //if a record has been selected from the list.
         if (lstSalesmanBox.SelectedIndex != -1)
         {
             //get the primary key value of the record to edit.
-            ReceptionistCarID = Convert.ToInt32(lstSalesmanBox.SelectedValue);
+            CarID = Convert.ToInt32(lstSalesmanBox.SelectedValue);
             //store the data in the session object.
-            Session["ReceptionistCarID"] = ReceptionistCarID;
+            Session["CarID"] = CarID;
             lblSalesmanError.Text = "";
-            DisplayRecordData();
+            DisplayCarID();
         }
         else
         //If no record has been selected.

@@ -73,17 +73,34 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
             //add the record
             Suppliers.Add();
+            
         }
         else
         {
             //Report error
-            lblErrorMessageAdd.Text = "There were problems with the data entered";
+            lblErrorMessageAdd.Text = "there were problems with the data entered";
         }
     }
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
-        Add();
+        {
+            if (lstBoxListSupplier.SelectedIndex != -1)
+            {
+                SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+                Session["SupplierID"] = SupplierID;
+                Add();
+                Response.Redirect("SupplierHomepage.aspx");
+            }
+
+            else
+            {
+                lblErrorMessageAdd.Text = "There is something wrong with the data entered please review";
+            }
+
+
+
+        }
 
     }
 
@@ -155,6 +172,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
+            DisplaySupplier();
             Response.Redirect("SupplierDelete.aspx");
         }
 
@@ -166,35 +184,25 @@ public partial class SupplierHomepage : System.Web.UI.Page
     }
     protected void BtnUpdate_Click(object sender, EventArgs e)
     {
-
         if (lstBoxListSupplier.SelectedIndex != -1)
         {
             SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
             Session["SupplierID"] = SupplierID;
-            AddSupplier();
+            Update();
+            Response.Redirect("SupplierHomepage.aspx");
         }
+
         else
         {
-            lblErrorMessageAdd.Text = "Please select a record";
+            lblErrorMessageUpdate.Text = "Please select a record to from Supplier List to Update";
         }
+
+        
 
     }
 
-    protected void btnDisplayRecord_Click(object sender, EventArgs e)
-    {
-        if (lstBoxListSupplier.SelectedIndex != -1)
-        {
-            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
-            Session["SupplierID"] = SupplierID;
-            AddSupplier();
-        }
-        else
-        {
-            lblErrorMessageDisplay.Text = "Please select a record";
-        }
-    }
 
-    void Update()
+   void Update()
     {
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
         Boolean OK = SupplierBook.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPositionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
@@ -219,10 +227,23 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
         else
         {
-            lblErrorMessageAdd.Text = "There were problems with the data entered";
+            lblErrorMessageAdd.Text = "There were problems with the data enerter";
         }
     }
-    void AddSupplier()
+    protected void btnDisplayRecord_Click(object sender, EventArgs e)
+    {
+        if (lstBoxListSupplier.SelectedIndex != -1)
+        {
+            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+            Session["SupplierID"] = SupplierID;
+            DisplaySupplier();
+        }
+        else
+        {
+            lblErrorMessageDisplay.Text = "Please select a record";
+        }
+    }
+    void DisplaySupplier()
     {
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
@@ -240,6 +261,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
         txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
     }
+
     void Filter()
     {
         clsSupplierCollection Supplier = new clsSupplierCollection();
@@ -274,7 +296,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             {
                 SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
                 Session["SupplierID"] = SupplierID;
-                AddSupplier();
+                DisplaySupplier();
                 Filter();
             }
             else

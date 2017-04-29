@@ -71,9 +71,9 @@ namespace TestFramework
             //create some test data to assign to the property
             string TestData = "B69 2HY";
             //assign the data to the property
-            Supplier.PostCode = TestData;
+            Supplier.Postcode = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(Supplier.PostCode, TestData);
+            Assert.AreEqual(Supplier.Postcode, TestData);
         }
         [TestMethod]
         public void PositionInCompanyOK()
@@ -336,7 +336,7 @@ namespace TestFramework
             //create some test data 
             Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.PostCode != "CV6")
+            if (AnSupplier.Postcode != "CV6")
             {
                 Ok = false;
             }

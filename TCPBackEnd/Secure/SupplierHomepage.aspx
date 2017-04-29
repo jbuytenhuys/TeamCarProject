@@ -31,7 +31,7 @@
 
 
        
-        <asp:Label ID="lblErrorMessageDisplay" runat="server" style="z-index: 1; left: 525px; top: 608px; position: absolute; width: 332px;" Text=""></asp:Label>
+        <asp:Label ID="lblErrorMessageDisplay" runat="server" style="z-index: 1; left: 349px; top: 662px; position: absolute; width: 332px;" Text=""></asp:Label>
 
         <asp:Button ID="btnReset" CssClass="SupplierButton" runat="server" style="  left: 638px; top: 25px; position: absolute; width: 176px;" Text="Reset" OnClick="reset_Click" ForeColor="Black" />
 

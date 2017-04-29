@@ -61,7 +61,7 @@ namespace MyClassLibrary
                 AnSupplier.Mobile = Convert.ToString(DB.DataTable.Rows[Index]["Mobile"]);
                 AnSupplier.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnSupplier.SupplierName = Convert.ToString(DB.DataTable.Rows[Index]["SupplierName"]);
-                AnSupplier.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
+                AnSupplier.Postcode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
                 AnSupplier.PositionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PositionInCompany"]);
                 AnSupplier.Title = Convert.ToString(DB.DataTable.Rows[Index]["Title"]);
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);
@@ -84,7 +84,7 @@ namespace MyClassLibrary
             DB.AddParameter("@DateAdded", mThisSupplier.DateAdded);
             DB.AddParameter("@Mobile", mThisSupplier.Mobile);
             DB.AddParameter("@Name", mThisSupplier.Name);
-            DB.AddParameter("@Postcode", mThisSupplier.PostCode);
+            DB.AddParameter("@Postcode", mThisSupplier.Postcode);
             DB.AddParameter("@PositionInCompany", mThisSupplier.PositionInCompany);
             DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
             DB.AddParameter("@Title", mThisSupplier.Title);
@@ -110,7 +110,7 @@ namespace MyClassLibrary
             DB.AddParameter("@DateAdded", mThisSupplier.DateAdded);
             DB.AddParameter("@Mobile", mThisSupplier.Mobile);
             DB.AddParameter("@Name", mThisSupplier.Name);
-            DB.AddParameter("@Postcode", mThisSupplier.PostCode);
+            DB.AddParameter("@Postcode", mThisSupplier.Postcode);
             DB.AddParameter("@PositionInCompany", mThisSupplier.PositionInCompany);
             DB.AddParameter("@SupplierName", mThisSupplier.SupplierName);
             DB.AddParameter("@Title", mThisSupplier.Title);
@@ -135,7 +135,7 @@ namespace MyClassLibrary
                 AnSupplier.Mobile = Convert.ToString(DB.DataTable.Rows[Index]["Mobile"]);
                 AnSupplier.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnSupplier.SupplierName = Convert.ToString(DB.DataTable.Rows[Index]["SupplierName"]);
-                AnSupplier.PostCode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
+                AnSupplier.Postcode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
                 AnSupplier.PositionInCompany = Convert.ToString(DB.DataTable.Rows[Index]["PositionInCompany"]);
                 AnSupplier.Title = Convert.ToString(DB.DataTable.Rows[Index]["Title"]);
                 AnSupplier.WorkExt = Convert.ToString(DB.DataTable.Rows[Index]["WorkExt"]);

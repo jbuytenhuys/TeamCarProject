@@ -98,7 +98,7 @@ namespace MyClassLibrary
             //set the value pf the private data member.
             { mName = value; }
         }
-        public string PostCode
+        public string Postcode
         {
             get
             //return the private data.

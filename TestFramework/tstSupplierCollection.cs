@@ -28,7 +28,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
+            TestItem.Postcode = "CV6";
             TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
@@ -50,7 +50,7 @@ namespace TestFramework
             TestSupplier.DateAdded = System.DateTime.Now.Date;
             TestSupplier.Mobile = "078";
             TestSupplier.Name = "Mark";
-            TestSupplier.PostCode = "CV6";
+            TestSupplier.Postcode = "CV6";
             TestSupplier.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestSupplier.SupplierName = "Audi";
             TestSupplier.Title = "Mr";
@@ -72,7 +72,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
+            TestItem.Postcode = "CV6";
             TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
@@ -96,7 +96,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
+            TestItem.Postcode = "CV6";
             TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
@@ -124,7 +124,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
+            TestItem.Postcode = "CV6";
             TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
@@ -154,7 +154,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "078";
             TestItem.Name = "Mark";
-            TestItem.PostCode = "CV6";
+            TestItem.Postcode = "CV6";
             TestItem.PositionInCompany = "1bbbbbbbbbbbbbbbbbbbbbb25";
             TestItem.SupplierName = "Audi";
             TestItem.Title = "Mr";
@@ -170,7 +170,7 @@ namespace TestFramework
             TestItem.DateAdded = System.DateTime.Now.Date;
             TestItem.Mobile = "079";
             TestItem.Name = "john";
-            TestItem.PostCode = "CV8";
+            TestItem.Postcode = "CV8";
             TestItem.PositionInCompany = "1cccccccc";
             TestItem.SupplierName = "bmw";
             TestItem.Title = "Mrs";

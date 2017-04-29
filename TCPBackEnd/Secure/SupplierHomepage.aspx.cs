@@ -61,7 +61,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToString();
         txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
         txtName.Text = SupplierBook.ThisSupplier.Name;
-        txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
+        txtPostcode.Text = SupplierBook.ThisSupplier.Postcode;
         txtPositionInCompany.Text = SupplierBook.ThisSupplier.PositionInCompany;
         txtSupplierName.Text = SupplierBook.ThisSupplier.SupplierName;
         txtTitle.Text = SupplierBook.ThisSupplier.Title;
@@ -85,7 +85,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             Suppliers.ThisSupplier.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
             Suppliers.ThisSupplier.Mobile = txtMobile.Text;
             Suppliers.ThisSupplier.Name = txtName.Text;
-            Suppliers.ThisSupplier.PostCode = txtPostcode.Text;
+            Suppliers.ThisSupplier.Postcode = txtPostcode.Text;
             Suppliers.ThisSupplier.PositionInCompany = txtPositionInCompany.Text;
             Suppliers.ThisSupplier.SupplierName = txtSupplierName.Text;
             Suppliers.ThisSupplier.Title = txtTitle.Text;
@@ -154,7 +154,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
             SupplierBook.ThisSupplier.Mobile = txtMobile.Text;
             SupplierBook.ThisSupplier.Name = txtName.Text;
-            SupplierBook.ThisSupplier.PostCode = txtPostcode.Text;
+            SupplierBook.ThisSupplier.Postcode = txtPostcode.Text;
             SupplierBook.ThisSupplier.PositionInCompany = txtPositionInCompany.Text;
             SupplierBook.ThisSupplier.SupplierName = txtSupplierName.Text;
             SupplierBook.ThisSupplier.Title = txtTitle.Text;
@@ -162,7 +162,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.WorkNumber = txtWorkNumber.Text;
             SupplierBook.ThisSupplier.SupplierEmail = txtSupplierEmail.Text;
             SupplierBook.Update();
-            Response.Redirect("SupplierHomepage.aspx");
+            
         }
         else
         {
@@ -193,7 +193,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToString();
         txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
         txtName.Text = SupplierBook.ThisSupplier.Name;
-        txtPostcode.Text = SupplierBook.ThisSupplier.PostCode;
+        txtPostcode.Text = SupplierBook.ThisSupplier.Postcode;
         txtPositionInCompany.Text = SupplierBook.ThisSupplier.PositionInCompany;
         txtSupplierName.Text = SupplierBook.ThisSupplier.SupplierName;
         txtTitle.Text = SupplierBook.ThisSupplier.Title;
@@ -206,8 +206,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
     void Filter()
     {
         clsSupplierCollection Supplier = new clsSupplierCollection();
-        Supplier.ThisSupplier.PostCode = txtFilterPostcode.Text;
-        Supplier.FilterByPostCode(Supplier.ThisSupplier.PostCode);
+        Supplier.ThisSupplier.Postcode = txtFilterPostcode.Text;
+        Supplier.FilterByPostCode(Supplier.ThisSupplier.Postcode);
         lstBoxListSupplier.DataSource = Supplier.SupplierList;
         lstBoxListSupplier.DataValueField = "SupplierID";
         lstBoxListSupplier.DataTextField = "Postcode";

@@ -11,8 +11,8 @@
 
     <form runat="server" style="height: 868px">
 
-        <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 730px; top: 18px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" ForeColor="#999999" />
-       
+        <asp:Button ID="btnSupplierLogout" CssClass="SupplierButton" runat="server" style="z-index: 1; left: 969px; top: 19px; position: absolute; height: 50px; width: 180px" Text="Logout" OnClick="btnSupplierLogout_Click" ForeColor="#999999" />
+       <asp:Label ID="lblListOfSuppliers" runat="server" Text="List Of Suppliers" style="z-index: 1; left: 341px; top: 35px; position: absolute; width: 267px" ></asp:Label>
         <asp:TextBox CssClass="TextBoxes" ID="txtTitle" runat="server" OnClick="this.value=''" style="z-index: 1; left: 885px; top: 158px; position: absolute; width: 267px" >Title</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtName" runat="server" OnClick="this.value=''" Style="z-index: 1; left: 885px; top: 186px; position: absolute; width: 267px; right: 245px;">Name</asp:TextBox>
         <asp:TextBox CssClass="TextBoxes" ID="txtPositionInCompany" runat="server" OnClick="this.value=''" Style="z-index: 1; left: 885px; top: 214px; position: absolute; width: 267px">PositionInCompany</asp:TextBox>
@@ -33,7 +33,7 @@
        
         <asp:Label ID="lblErrorMessageDisplay" runat="server" style="z-index: 1; left: 525px; top: 608px; position: absolute; width: 332px;" Text=""></asp:Label>
 
-        <asp:Button ID="btnReset" CssClass="SupplierButton" runat="server" style="  left: 465px; top: 32px; position: absolute; width: 176px;" Text="Reset" OnClick="reset_Click" ForeColor="Black" />
+        <asp:Button ID="btnReset" CssClass="SupplierButton" runat="server" style="  left: 638px; top: 25px; position: absolute; width: 176px;" Text="Reset" OnClick="reset_Click" ForeColor="Black" />
 
         
         

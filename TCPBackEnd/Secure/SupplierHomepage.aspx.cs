@@ -67,6 +67,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtTitle.Text = SupplierBook.ThisSupplier.Title;
         txtWorkExt.Text = SupplierBook.ThisSupplier.WorkExt;
         txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
+        txtSupplierEmail.Text = SupplierBook.ThisSupplier.SupplierEmail;
     }
 
         
@@ -162,7 +163,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
             SupplierBook.ThisSupplier.WorkNumber = txtWorkNumber.Text;
             SupplierBook.ThisSupplier.SupplierEmail = txtSupplierEmail.Text;
             SupplierBook.Update();
-            
+            Response.Redirect("SupplierHomepage.aspx");
+
         }
         else
         {

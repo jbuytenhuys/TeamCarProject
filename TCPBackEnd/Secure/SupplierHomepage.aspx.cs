@@ -40,7 +40,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         //bind the data to list 
         lstBoxListSupplier.DataBind();
     }
-     protected void btnSupplierLogout_Click(object sender, EventArgs e)
+    protected void btnSupplierLogout_Click(object sender, EventArgs e)
     {
         //redirect to the mainhompage
         Response.Redirect("MainHomepage.aspx");
@@ -58,7 +58,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtAddress.Text = SupplierBook.ThisSupplier.Address;
         txtCity.Text = SupplierBook.ThisSupplier.City;
         txtCounty.Text = SupplierBook.ThisSupplier.County;
-        txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToString();
+        txtDateAdded.Text = SupplierBook.ThisSupplier.DateAdded.ToShortDateString();
         txtMobile.Text = SupplierBook.ThisSupplier.Mobile;
         txtName.Text = SupplierBook.ThisSupplier.Name;
         txtPostcode.Text = SupplierBook.ThisSupplier.Postcode;
@@ -70,8 +70,8 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtSupplierEmail.Text = SupplierBook.ThisSupplier.SupplierEmail;
     }
 
-        
-        void Add() //function for adding new records 
+
+    void Add() //function for adding new records 
     {
         //Create instance in Supplier collection class
         clsSupplierCollection Suppliers = new clsSupplierCollection();
@@ -139,8 +139,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
 
     }
-        
-
 
     void Update()
     {
@@ -275,11 +273,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         Filter3();
     }
 
-    protected void btnUpdate_Click(object sender, EventArgs e)
-    
-        {
-        Update();
-        }
+
 
     protected void lstBoxListSupplier_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -344,7 +338,23 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
 
 
+
+    protected void btnUpdate_Click(object sender, EventArgs e)
+    {
+        if (lstBoxListSupplier.SelectedIndex != 1)
+        {
+            SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+            Session["SupplierID"] = SupplierID;
+            Update();
+        }
+
+        else
+        {
+            lblErrorMessageAdd.Text = "There is something wrong with the data entered please review";
+        }
+    }
 }
+  
 
 
 

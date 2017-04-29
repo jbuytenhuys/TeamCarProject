@@ -186,7 +186,7 @@ namespace TestFramework
             //boolean variable to store the result of the validation 
             Boolean Found = false;
             //create some test data to use with method
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //test to see that the result is correct
             Found = AnSupplier.Find(SupplierID);
             Assert.IsTrue(Found);
@@ -201,11 +201,11 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //invoke the method
             Found = AnSupplier.Find(SupplierID);
             //check the customer id
-            if (AnSupplier.Address != "12")
+            if (AnSupplier.Address != "1b")
             {
                 Ok = false;
             }
@@ -224,11 +224,11 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //invoke the method
             Found = AnSupplier.Find(SupplierID);
             //check the customer id
-            if (AnSupplier.City != "leicester")
+            if (AnSupplier.City != "Birmingham")
             {
                 Ok = false;
             }
@@ -247,10 +247,10 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //check the customer id
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.County != "leicestershire")
+            if (AnSupplier.County != "eastmidlands")
             {
                 Ok = false;
             }
@@ -269,10 +269,10 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //check the customer id
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.Mobile != "0777777")
+            if (AnSupplier.Mobile != "078")
             {
                 Ok = false;
             }
@@ -291,10 +291,10 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             //check the customer id
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.Name != "dave")
+            if (AnSupplier.Name != "Mark")
             {
                 Ok = false;
             }
@@ -313,9 +313,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.SupplierName != "supplies4u")
+            if (AnSupplier.SupplierName != "Audi")
             {
                 Ok = false;
             }
@@ -334,9 +334,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.PostCode != "le8 0ns")
+            if (AnSupplier.PostCode != "CV6")
             {
                 Ok = false;
             }
@@ -355,9 +355,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.PositionInCompany != "head")
+            if (AnSupplier.PositionInCompany != "1bbbbbbbbbbbbbbbbbbbbbb25")
             {
                 Ok = false;
             }
@@ -376,9 +376,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.Title != "mr")
+            if (AnSupplier.Title != "Mr")
             {
                 Ok = false;
             }
@@ -397,9 +397,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.WorkExt != "313")
+            if (AnSupplier.WorkExt != "312")
             {
                 Ok = false;
             }
@@ -418,9 +418,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.WorkNumber != "073743434")
+            if (AnSupplier.WorkNumber != "12134")
             {
                 Ok = false;
             }
@@ -439,9 +439,9 @@ namespace TestFramework
             //boolean variable to record if data is ok
             Boolean Ok = true;
             //create some test data 
-            Int32 SupplierID = 2;
+            Int32 SupplierID = 30;
             Found = AnSupplier.Find(SupplierID);
-            if (AnSupplier.DateAdded != Convert.ToDateTime("24/12/2017"))
+            if (AnSupplier.DateAdded != Convert.ToDateTime("29/04/2017"))
             {
                 Ok = false;
             }

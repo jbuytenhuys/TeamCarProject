@@ -13,45 +13,48 @@ public partial class SupplierHomepage : System.Web.UI.Page
     Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        //if this is the first time the page is being displayed
         if (IsPostBack == false)
         {
+            //Update the list box
             DisplaySuppliers();
         }
         {
+            //auto add the date to current day
             txtDateAdded.Text = DateTime.Today.ToShortDateString();
 
         }
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
 
     }
-
-
-
     void DisplaySuppliers()
     {
+        //Create and instance of the supplier collection
         MyClassLibrary.clsSupplierCollection Suppliers = new MyClassLibrary.clsSupplierCollection();
+        //set the data source to the list of suppliers in the collection
         lstBoxListSupplier.DataSource = Suppliers.SupplierList;
+        //set the name of the primary key
         lstBoxListSupplier.DataValueField = "SupplierID";
+        //set the data.filed to display
         lstBoxListSupplier.DataTextField = "SupplierName";
+        //bind the data to list 
         lstBoxListSupplier.DataBind();
-        
     }
-
-
-
-   
-
-    protected void btnSupplierLogout_Click(object sender, EventArgs e)
+     protected void btnSupplierLogout_Click(object sender, EventArgs e)
     {
+        //redirect to the mainhompage
         Response.Redirect("MainHomepage.aspx");
     }
 
     void DisplaySupplier()
     {
+        //set variable equal to the session number
         SupplierID = Convert.ToInt32(Session["SupplierID"]);
+        //Create instance in Supplier collection class
         clsSupplierCollection SupplierBook = new clsSupplierCollection();
+        //run SupplierID through the find function
         SupplierBook.ThisSupplier.Find(SupplierID);
+        //assign the data from records in the database to the text boxes
         txtAddress.Text = SupplierBook.ThisSupplier.Address;
         txtCity.Text = SupplierBook.ThisSupplier.City;
         txtCounty.Text = SupplierBook.ThisSupplier.County;
@@ -66,10 +69,10 @@ public partial class SupplierHomepage : System.Web.UI.Page
         txtWorkNumber.Text = SupplierBook.ThisSupplier.WorkNumber;
     }
 
-        //function for adding new records 
-        void Add()
+        
+        void Add() //function for adding new records 
     {
-        //create an instance of the address book
+        //Create instance in Supplier collection class
         clsSupplierCollection Suppliers = new clsSupplierCollection();
         //validate the data on the web form
         Boolean OK = Suppliers.ThisSupplier.Valid(txtAddress.Text, txtCity.Text, txtCounty.Text, txtDateAdded.Text, txtMobile.Text, txtName.Text, txtPostcode.Text, txtPositionInCompany.Text, txtSupplierName.Text, txtTitle.Text, txtWorkExt.Text, txtWorkNumber.Text, txtSupplierEmail.Text);
@@ -118,68 +121,6 @@ public partial class SupplierHomepage : System.Web.UI.Page
             }
         }
     }
-
-    protected void lstBoxListSupplier_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtSupplierName_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtName_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtPostionInCompany_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtAddress_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtCity_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtCounty_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtPostcode_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtMoblie_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtWorkExt_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtWorkNumber_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-    protected void txtDateAdded_TextChanged(object sender, EventArgs e)
-    {
-
-    }
-
-
 
     protected void btnDelete_Click1(object sender, EventArgs e)
     {
@@ -337,7 +278,70 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
         Update();
         }
-    
+
+    protected void lstBoxListSupplier_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtSupplierName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtPostionInCompany_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtAddress_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtCity_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtCounty_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtPostcode_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtMoblie_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtWorkExt_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtWorkNumber_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtDateAdded_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+
+
+
 }
 
 

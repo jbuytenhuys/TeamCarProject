@@ -210,7 +210,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         Supplier.FilterByPostCode(Supplier.ThisSupplier.Postcode);
         lstBoxListSupplier.DataSource = Supplier.SupplierList;
         lstBoxListSupplier.DataValueField = "SupplierID";
-        lstBoxListSupplier.DataTextField = "Postcode";
+        lstBoxListSupplier.DataTextField = "SupplierName";
         lstBoxListSupplier.DataBind();
     }
 
@@ -221,7 +221,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         Supplier.FilterByWorkNumber(Supplier.ThisSupplier.WorkNumber);
         lstBoxListSupplier.DataSource = Supplier.SupplierList;
         lstBoxListSupplier.DataValueField = "SupplierID";
-        lstBoxListSupplier.DataTextField = "WorkNumber";
+        lstBoxListSupplier.DataTextField = "SupplierName";
         lstBoxListSupplier.DataBind();
     }
 

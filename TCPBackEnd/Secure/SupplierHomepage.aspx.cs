@@ -13,7 +13,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
     Int32 SupplierID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if this is the first time the page is being displayed
+        
         if (IsPostBack == false)
         {
             //Update the list box

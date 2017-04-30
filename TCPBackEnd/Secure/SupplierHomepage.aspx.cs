@@ -111,7 +111,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         {
             if (lstBoxListSupplier.SelectedIndex != -1)
             {
-                SupplierID = Convert.ToInt32(lstBoxListSupplier.SelectedValue);
+                
                 Session["SupplierID"] = SupplierID;
                 Add();
             }

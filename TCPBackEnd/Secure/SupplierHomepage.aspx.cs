@@ -108,19 +108,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
-        {
-            if (lstBoxListSupplier.SelectedIndex != -1)
-            {
-                
-                Session["SupplierID"] = SupplierID;
-                Add();
-            }
-
-            else
-            {
-                lblErrorMessageAdd.Text = "There is something wrong with the data entered please review";
-            }
-        }
+        Add();
     }
 
     protected void btnDelete_Click1(object sender, EventArgs e)
@@ -135,7 +123,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
         else
         {
-            lblErrorMessageDelete.Text = "Please seect a record to delete from the list";
+            lblErrorMessageDelete.Text = "Please select a record to delete from the list";
         }
 
     }
@@ -166,7 +154,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
         }
         else
         {
-            lblErrorMessageAdd.Text = "There were problems with the data enerter";
+            lblErrorMessageAdd.Text = "There were problems with the data entered";
         }
     }
     protected void btnDisplayRecord_Click(object sender, EventArgs e)
@@ -341,16 +329,7 @@ public partial class SupplierHomepage : System.Web.UI.Page
 
     protected void btnUpdate_Click(object sender, EventArgs e)
     {
-        if (lstBoxListSupplier.SelectedIndex != 1)
-        {
-            Session["SupplierID"] = SupplierID;
-            Update();
-        }
-
-        else
-        {
-            lblErrorMessageAdd.Text = "There is something wrong with the data entered please review";
-        }
+        Update();
     }
 }
   

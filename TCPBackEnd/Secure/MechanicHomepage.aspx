@@ -51,7 +51,7 @@
 
         <asp:Button ID="btnMechanicRegPlateFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 157px; position: absolute; height: 60px; width: 76px;" Text="Filter Cars" OnClick="btnMechanicRegPlateFilter_Click" Font-Size="Small"/>
 
-        <asp:TextBox ID="txtMechanicStaffID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 263px; position: absolute">StaffID</asp:TextBox>
+        <asp:TextBox ID="txtMechanicStaffID" CssClass="TextBoxes" runat="server" style="z-index: 1; left: 1057px; top: 263px; position: absolute" ReadOnly="True">StaffID</asp:TextBox>
 
         <asp:Button ID="btnMechanicStaffFilter" CssClass="MechanicButton" runat="server" style="z-index: 1; left: 829px; top: 231px; position: absolute; height: 61px; width: 75px;" Text="Filter staff" OnClick="btnMechanicStaffFilter_Click" Font-Size="Small" />
 
